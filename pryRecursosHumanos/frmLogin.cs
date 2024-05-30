@@ -21,5 +21,15 @@ namespace pryRecursosHumanos
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pcbCerrar_Click(object sender, EventArgs e)
+        {
+           this.Close();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
