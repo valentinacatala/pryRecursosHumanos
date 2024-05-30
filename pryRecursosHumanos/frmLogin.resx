@@ -346,7 +346,7 @@
         AAAAAAAAAAAAAAAAwJtc1w/sa19IzjwjGwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAN8AAADiCAMAAAD5w+JtAAAABGdBTUEAALGPC/xhBQAAASNQTFRF////
         MDAw/0NwJiYmAAAA+/v7IyMjHR0dICAgGBgY+Pj49fX1GhoaKSkpLCwsFBQU1NTUwsLCuLi43t7e5ubm

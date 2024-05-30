@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsulta));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListar = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.pcbMinimizar = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.cmbFiltrar = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListar
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MistyRose;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 103);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(648, 436);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvListar.AllowUserToAddRows = false;
+            this.dgvListar.AllowUserToDeleteRows = false;
+            this.dgvListar.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListar.Location = new System.Drawing.Point(12, 103);
+            this.dgvListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListar.Name = "dgvListar";
+            this.dgvListar.ReadOnly = true;
+            this.dgvListar.RowHeadersWidth = 51;
+            this.dgvListar.RowTemplate.Height = 24;
+            this.dgvListar.Size = new System.Drawing.Size(648, 436);
+            this.dgvListar.TabIndex = 0;
             // 
             // btnListar
             // 
@@ -119,30 +119,30 @@
             this.pcbMinimizar.TabStop = false;
             this.pcbMinimizar.Click += new System.EventHandler(this.pcbMinimizar_Click);
             // 
-            // label1
+            // lblFiltrar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 18);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Filtrar";
+            this.lblFiltrar.AutoSize = true;
+            this.lblFiltrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrar.Location = new System.Drawing.Point(12, 61);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(56, 18);
+            this.lblFiltrar.TabIndex = 6;
+            this.lblFiltrar.Text = "Filtrar";
             // 
-            // comboBox1
+            // cmbFiltrar
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbFiltrar.FormattingEnabled = true;
+            this.cmbFiltrar.Items.AddRange(new object[] {
             "Poner Que filtar",
             "Prueba",
             "Hola xd"});
-            this.comboBox1.Location = new System.Drawing.Point(90, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 23);
-            this.comboBox1.TabIndex = 7;
+            this.cmbFiltrar.Location = new System.Drawing.Point(90, 57);
+            this.cmbFiltrar.Name = "cmbFiltrar";
+            this.cmbFiltrar.Size = new System.Drawing.Size(274, 23);
+            this.cmbFiltrar.TabIndex = 7;
             // 
             // frmConsulta
             // 
@@ -150,12 +150,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(672, 550);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbFiltrar);
+            this.Controls.Add(this.lblFiltrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListar);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -163,7 +163,7 @@
             this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsulta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).EndInit();
@@ -174,13 +174,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pcbCerrar;
         private System.Windows.Forms.PictureBox pcbMinimizar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblFiltrar;
+        private System.Windows.Forms.ComboBox cmbFiltrar;
     }
 }
