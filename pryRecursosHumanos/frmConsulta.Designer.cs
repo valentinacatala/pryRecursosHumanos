@@ -110,7 +110,7 @@
             // 
             this.pcbMinimizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pcbMinimizar.Image")));
-            this.pcbMinimizar.Location = new System.Drawing.Point(597, 9);
+            this.pcbMinimizar.Location = new System.Drawing.Point(609, 9);
             this.pcbMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.pcbMinimizar.Name = "pcbMinimizar";
             this.pcbMinimizar.Size = new System.Drawing.Size(22, 18);

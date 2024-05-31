@@ -52,7 +52,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cmbModificarNombre = new System.Windows.Forms.ComboBox();
+            this.cboDni = new System.Windows.Forms.ComboBox();
             this.txtModificarAclaraciones = new System.Windows.Forms.TextBox();
             this.btnCancelarModificar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -65,10 +65,8 @@
             this.txtModificarDireccion = new System.Windows.Forms.TextBox();
             this.txtModificarApellido = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtModificarDNI = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -77,7 +75,7 @@
             this.pbEliminarFoto = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.cmbNombre = new System.Windows.Forms.ComboBox();
+            this.cboDniEliminar = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btnCancelarEliminar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -85,13 +83,11 @@
             this.label28 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.lblDNI = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.cmbFiltrar = new System.Windows.Forms.ComboBox();
@@ -114,6 +110,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.pcbMinimizar = new System.Windows.Forms.PictureBox();
+            this.lblDNI = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtModificarDNI = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
@@ -393,7 +393,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.cmbModificarNombre);
+            this.tabPage2.Controls.Add(this.txtModificarDNI);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.cboDni);
             this.tabPage2.Controls.Add(this.txtModificarAclaraciones);
             this.tabPage2.Controls.Add(this.btnCancelarModificar);
             this.tabPage2.Controls.Add(this.btnModificar);
@@ -406,10 +408,8 @@
             this.tabPage2.Controls.Add(this.txtModificarDireccion);
             this.tabPage2.Controls.Add(this.txtModificarApellido);
             this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.txtModificarDNI);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.label35);
@@ -422,15 +422,15 @@
             this.tabPage2.Text = "Modificar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // cmbModificarNombre
+            // cboDni
             // 
-            this.cmbModificarNombre.BackColor = System.Drawing.Color.SeaShell;
-            this.cmbModificarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbModificarNombre.FormattingEnabled = true;
-            this.cmbModificarNombre.Location = new System.Drawing.Point(28, 48);
-            this.cmbModificarNombre.Name = "cmbModificarNombre";
-            this.cmbModificarNombre.Size = new System.Drawing.Size(192, 23);
-            this.cmbModificarNombre.TabIndex = 0;
+            this.cboDni.BackColor = System.Drawing.Color.SeaShell;
+            this.cboDni.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboDni.FormattingEnabled = true;
+            this.cboDni.Location = new System.Drawing.Point(28, 48);
+            this.cboDni.Name = "cboDni";
+            this.cboDni.Size = new System.Drawing.Size(192, 23);
+            this.cboDni.TabIndex = 0;
             // 
             // txtModificarAclaraciones
             // 
@@ -504,7 +504,7 @@
             // 
             this.txtModificarCorreo.BackColor = System.Drawing.Color.SeaShell;
             this.txtModificarCorreo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.txtModificarCorreo.Location = new System.Drawing.Point(29, 146);
+            this.txtModificarCorreo.Location = new System.Drawing.Point(29, 196);
             this.txtModificarCorreo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtModificarCorreo.Name = "txtModificarCorreo";
             this.txtModificarCorreo.Size = new System.Drawing.Size(190, 23);
@@ -525,7 +525,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.label10.Location = new System.Drawing.Point(25, 127);
+            this.label10.Location = new System.Drawing.Point(25, 177);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(132, 15);
@@ -563,16 +563,6 @@
             this.label11.TabIndex = 27;
             this.label11.Text = "Foto";
             // 
-            // txtModificarDNI
-            // 
-            this.txtModificarDNI.BackColor = System.Drawing.Color.SeaShell;
-            this.txtModificarDNI.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.txtModificarDNI.Location = new System.Drawing.Point(29, 197);
-            this.txtModificarDNI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtModificarDNI.Name = "txtModificarDNI";
-            this.txtModificarDNI.Size = new System.Drawing.Size(190, 23);
-            this.txtModificarDNI.TabIndex = 15;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -594,17 +584,6 @@
             this.label13.Size = new System.Drawing.Size(121, 15);
             this.label13.TabIndex = 23;
             this.label13.Text = "Fecha de Ingreso ";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.label14.Location = new System.Drawing.Point(29, 179);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 15);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "DNI";
             // 
             // label15
             // 
@@ -635,17 +614,19 @@
             this.label35.Location = new System.Drawing.Point(29, 30);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(59, 15);
+            this.label35.Size = new System.Drawing.Size(31, 15);
             this.label35.TabIndex = 28;
-            this.label35.Text = "Nombre";
+            this.label35.Text = "DNI";
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblDNI);
+            this.tabPage3.Controls.Add(this.label20);
             this.tabPage3.Controls.Add(this.txtEliminarAclaraciones);
             this.tabPage3.Controls.Add(this.pbEliminarFoto);
             this.tabPage3.Controls.Add(this.label27);
             this.tabPage3.Controls.Add(this.label36);
-            this.tabPage3.Controls.Add(this.cmbNombre);
+            this.tabPage3.Controls.Add(this.cboDniEliminar);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.btnCancelarEliminar);
             this.tabPage3.Controls.Add(this.btnEliminar);
@@ -653,13 +634,11 @@
             this.tabPage3.Controls.Add(this.label28);
             this.tabPage3.Controls.Add(this.lblTelefono);
             this.tabPage3.Controls.Add(this.lblDireccion);
-            this.tabPage3.Controls.Add(this.lblDNI);
             this.tabPage3.Controls.Add(this.lblCorreo);
             this.tabPage3.Controls.Add(this.lblApellido);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.label20);
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -713,15 +692,15 @@
             this.label36.TabIndex = 40;
             this.label36.Text = "Aclaraciones";
             // 
-            // cmbNombre
+            // cboDniEliminar
             // 
-            this.cmbNombre.BackColor = System.Drawing.Color.SeaShell;
-            this.cmbNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbNombre.FormattingEnabled = true;
-            this.cmbNombre.Location = new System.Drawing.Point(27, 52);
-            this.cmbNombre.Name = "cmbNombre";
-            this.cmbNombre.Size = new System.Drawing.Size(192, 23);
-            this.cmbNombre.TabIndex = 0;
+            this.cboDniEliminar.BackColor = System.Drawing.Color.SeaShell;
+            this.cboDniEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboDniEliminar.FormattingEnabled = true;
+            this.cboDniEliminar.Location = new System.Drawing.Point(27, 52);
+            this.cboDniEliminar.Name = "cboDniEliminar";
+            this.cboDniEliminar.Size = new System.Drawing.Size(192, 23);
+            this.cboDniEliminar.TabIndex = 0;
             // 
             // label16
             // 
@@ -730,9 +709,9 @@
             this.label16.Location = new System.Drawing.Point(28, 34);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 15);
+            this.label16.Size = new System.Drawing.Size(31, 15);
             this.label16.TabIndex = 37;
-            this.label16.Text = "Nombre";
+            this.label16.Text = "DNI";
             // 
             // btnCancelarEliminar
             // 
@@ -796,20 +775,11 @@
             this.lblDireccion.Size = new System.Drawing.Size(188, 22);
             this.lblDireccion.TabIndex = 28;
             // 
-            // lblDNI
-            // 
-            this.lblDNI.BackColor = System.Drawing.Color.SeaShell;
-            this.lblDNI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDNI.Location = new System.Drawing.Point(31, 211);
-            this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(188, 22);
-            this.lblDNI.TabIndex = 27;
-            // 
             // lblCorreo
             // 
             this.lblCorreo.BackColor = System.Drawing.Color.SeaShell;
             this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCorreo.Location = new System.Drawing.Point(31, 158);
+            this.lblCorreo.Location = new System.Drawing.Point(31, 209);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(188, 22);
             this.lblCorreo.TabIndex = 26;
@@ -839,7 +809,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.label18.Location = new System.Drawing.Point(28, 143);
+            this.label18.Location = new System.Drawing.Point(32, 194);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(132, 15);
@@ -856,17 +826,6 @@
             this.label19.Size = new System.Drawing.Size(71, 15);
             this.label19.TabIndex = 22;
             this.label19.Text = "Dirección";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.label20.Location = new System.Drawing.Point(32, 196);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 15);
-            this.label20.TabIndex = 23;
-            this.label20.Text = "DNI";
             // 
             // label21
             // 
@@ -1124,7 +1083,7 @@
             // 
             this.pcbMinimizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pcbMinimizar.Image")));
-            this.pcbMinimizar.Location = new System.Drawing.Point(478, 9);
+            this.pcbMinimizar.Location = new System.Drawing.Point(483, 9);
             this.pcbMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.pcbMinimizar.Name = "pcbMinimizar";
             this.pcbMinimizar.Size = new System.Drawing.Size(22, 18);
@@ -1132,6 +1091,47 @@
             this.pcbMinimizar.TabIndex = 11;
             this.pcbMinimizar.TabStop = false;
             this.pcbMinimizar.Click += new System.EventHandler(this.pcbMinimizar_Click);
+            // 
+            // lblDNI
+            // 
+            this.lblDNI.BackColor = System.Drawing.Color.SeaShell;
+            this.lblDNI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDNI.Location = new System.Drawing.Point(31, 156);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(188, 22);
+            this.lblDNI.TabIndex = 44;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.label20.Location = new System.Drawing.Point(32, 141);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 15);
+            this.label20.TabIndex = 43;
+            this.label20.Text = "Nombre";
+            // 
+            // txtModificarDNI
+            // 
+            this.txtModificarDNI.BackColor = System.Drawing.Color.SeaShell;
+            this.txtModificarDNI.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.txtModificarDNI.Location = new System.Drawing.Point(29, 146);
+            this.txtModificarDNI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModificarDNI.Name = "txtModificarDNI";
+            this.txtModificarDNI.Size = new System.Drawing.Size(190, 23);
+            this.txtModificarDNI.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.label14.Location = new System.Drawing.Point(29, 128);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 15);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Nombre";
             // 
             // frmAdmin
             // 
@@ -1198,13 +1198,11 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnCancelarRegistrar;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lblFechaIngreso;
         private System.Windows.Forms.Label label28;
@@ -1227,7 +1225,7 @@
         private System.Windows.Forms.PictureBox pcbCerrar;
         private System.Windows.Forms.PictureBox pcbMinimizar;
         private System.Windows.Forms.TextBox txtRegistrarAclaraciones;
-        private System.Windows.Forms.ComboBox cmbModificarNombre;
+        private System.Windows.Forms.ComboBox cboDni;
         private System.Windows.Forms.TextBox txtModificarAclaraciones;
         private System.Windows.Forms.Button btnCancelarModificar;
         private System.Windows.Forms.Button btnModificar;
@@ -1240,10 +1238,8 @@
         private System.Windows.Forms.TextBox txtModificarDireccion;
         private System.Windows.Forms.TextBox txtModificarApellido;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtModificarDNI;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
@@ -1251,7 +1247,7 @@
         private System.Windows.Forms.PictureBox pbEliminarFoto;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox cmbNombre;
+        private System.Windows.Forms.ComboBox cboDniEliminar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cmbFiltrar;
         private System.Windows.Forms.Label label37;
@@ -1260,5 +1256,9 @@
         private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtModificarDNI;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblDNI;
+        private System.Windows.Forms.Label label20;
     }
 }
