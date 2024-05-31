@@ -26,5 +26,11 @@ namespace pryRecursosHumanos
         {
             Application.Exit();
         }
+
+        private void frmConsulta_Load(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleados(dgvListar);
+        }
     }
 }

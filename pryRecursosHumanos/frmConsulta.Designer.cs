@@ -163,6 +163,7 @@
             this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsulta";
+            this.Load += new System.EventHandler(this.frmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
