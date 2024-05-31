@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
-    public partial class frmAdmin : Form
+    public partial class frmRegistrarUser : Form
     {
-        public frmAdmin()
+        public frmRegistrarUser()
         {
             InitializeComponent();
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pcbMinimizar_Click(object sender, EventArgs e)

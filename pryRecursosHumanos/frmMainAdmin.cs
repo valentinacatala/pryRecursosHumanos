@@ -10,16 +10,24 @@ using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
-    public partial class frmAdmin : Form
+    public partial class frmMainAdmin : Form
     {
-        public frmAdmin()
+        public frmMainAdmin()
         {
             InitializeComponent();
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
+            frmAdmin admin = new frmAdmin();
+            admin.Show();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmRegistrarUser user = new frmRegistrarUser();
+            user.Show();
         }
 
         private void pcbMinimizar_Click(object sender, EventArgs e)
@@ -29,7 +37,7 @@ namespace pryRecursosHumanos
 
         private void pcbCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Application.Exit();
         }
     }
 }
