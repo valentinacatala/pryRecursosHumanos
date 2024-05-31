@@ -48,8 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsArea.cs" />
+    <Compile Include="clsCiudades.cs" />
     <Compile Include="clsConexionBaseDatos.cs" />
     <Compile Include="clsEmpleado.cs" />
+    <Compile Include="clsLicencia.cs" />
+    <Compile Include="clsMedioContactos.cs" />
+    <Compile Include="clsPaises.cs" />
+    <Compile Include="clsProvincias.cs" />
+    <Compile Include="clsTipoContactos.cs" />
+    <Compile Include="clsUsuarios.cs" />
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
