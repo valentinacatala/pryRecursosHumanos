@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsConexionBaseDatos.cs" />
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
