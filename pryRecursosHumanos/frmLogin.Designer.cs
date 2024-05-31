@@ -58,7 +58,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtContraseña.BackColor = System.Drawing.Color.SeaShell;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(259, 140);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
@@ -80,7 +80,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtUsuario.BackColor = System.Drawing.Color.SeaShell;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(259, 69);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);

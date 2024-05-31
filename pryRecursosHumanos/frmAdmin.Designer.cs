@@ -178,7 +178,7 @@
             // 
             // txtRegistrarAclaraciones
             // 
-            this.txtRegistrarAclaraciones.BackColor = System.Drawing.Color.White;
+            this.txtRegistrarAclaraciones.BackColor = System.Drawing.Color.SeaShell;
             this.txtRegistrarAclaraciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRegistrarAclaraciones.Location = new System.Drawing.Point(262, 277);
             this.txtRegistrarAclaraciones.Multiline = true;
@@ -234,6 +234,7 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.BackColor = System.Drawing.Color.SeaShell;
             this.txtTelefono.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtTelefono.Location = new System.Drawing.Point(28, 305);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -243,6 +244,7 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.BackColor = System.Drawing.Color.SeaShell;
             this.txtCorreo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtCorreo.Location = new System.Drawing.Point(27, 145);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -274,6 +276,7 @@
             // 
             // txtDireccion
             // 
+            this.txtDireccion.BackColor = System.Drawing.Color.SeaShell;
             this.txtDireccion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtDireccion.Location = new System.Drawing.Point(27, 251);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -283,6 +286,7 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.BackColor = System.Drawing.Color.SeaShell;
             this.txtApellido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtApellido.Location = new System.Drawing.Point(27, 95);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -303,6 +307,7 @@
             // 
             // txtDNI
             // 
+            this.txtDNI.BackColor = System.Drawing.Color.SeaShell;
             this.txtDNI.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtDNI.Location = new System.Drawing.Point(27, 196);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -334,6 +339,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.SeaShell;
             this.txtNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtNombre.Location = new System.Drawing.Point(27, 48);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -418,7 +424,7 @@
             // 
             // cmbModificarNombre
             // 
-            this.cmbModificarNombre.BackColor = System.Drawing.Color.MistyRose;
+            this.cmbModificarNombre.BackColor = System.Drawing.Color.SeaShell;
             this.cmbModificarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbModificarNombre.FormattingEnabled = true;
             this.cmbModificarNombre.Location = new System.Drawing.Point(28, 48);
@@ -428,7 +434,7 @@
             // 
             // txtModificarAclaraciones
             // 
-            this.txtModificarAclaraciones.BackColor = System.Drawing.Color.White;
+            this.txtModificarAclaraciones.BackColor = System.Drawing.Color.SeaShell;
             this.txtModificarAclaraciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModificarAclaraciones.Location = new System.Drawing.Point(264, 278);
             this.txtModificarAclaraciones.Multiline = true;
@@ -473,8 +479,8 @@
             // 
             // dtpModificarIngreso
             // 
-            this.dtpModificarIngreso.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dtpModificarIngreso.CalendarMonthBackground = System.Drawing.SystemColors.InactiveBorder;
+            this.dtpModificarIngreso.CalendarForeColor = System.Drawing.Color.SeaShell;
+            this.dtpModificarIngreso.CalendarMonthBackground = System.Drawing.Color.SeaShell;
             this.dtpModificarIngreso.CalendarTrailingForeColor = System.Drawing.Color.Gray;
             this.dtpModificarIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpModificarIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -486,6 +492,7 @@
             // 
             // txtModificarTelefono
             // 
+            this.txtModificarTelefono.BackColor = System.Drawing.Color.SeaShell;
             this.txtModificarTelefono.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtModificarTelefono.Location = new System.Drawing.Point(30, 306);
             this.txtModificarTelefono.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -495,6 +502,7 @@
             // 
             // txtModificarCorreo
             // 
+            this.txtModificarCorreo.BackColor = System.Drawing.Color.SeaShell;
             this.txtModificarCorreo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtModificarCorreo.Location = new System.Drawing.Point(29, 146);
             this.txtModificarCorreo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -526,6 +534,7 @@
             // 
             // txtModificarDireccion
             // 
+            this.txtModificarDireccion.BackColor = System.Drawing.Color.SeaShell;
             this.txtModificarDireccion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtModificarDireccion.Location = new System.Drawing.Point(29, 252);
             this.txtModificarDireccion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -535,6 +544,7 @@
             // 
             // txtModificarApellido
             // 
+            this.txtModificarApellido.BackColor = System.Drawing.Color.SeaShell;
             this.txtModificarApellido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtModificarApellido.Location = new System.Drawing.Point(29, 96);
             this.txtModificarApellido.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -555,6 +565,7 @@
             // 
             // txtModificarDNI
             // 
+            this.txtModificarDNI.BackColor = System.Drawing.Color.SeaShell;
             this.txtModificarDNI.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.txtModificarDNI.Location = new System.Drawing.Point(29, 197);
             this.txtModificarDNI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -704,7 +715,7 @@
             // 
             // cmbNombre
             // 
-            this.cmbNombre.BackColor = System.Drawing.Color.MistyRose;
+            this.cmbNombre.BackColor = System.Drawing.Color.SeaShell;
             this.cmbNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbNombre.FormattingEnabled = true;
             this.cmbNombre.Location = new System.Drawing.Point(27, 52);
@@ -749,9 +760,9 @@
             // 
             // lblFechaIngreso
             // 
-            this.lblFechaIngreso.BackColor = System.Drawing.Color.MistyRose;
+            this.lblFechaIngreso.BackColor = System.Drawing.Color.SeaShell;
             this.lblFechaIngreso.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFechaIngreso.Location = new System.Drawing.Point(32, 372);
+            this.lblFechaIngreso.Location = new System.Drawing.Point(31, 363);
             this.lblFechaIngreso.Name = "lblFechaIngreso";
             this.lblFechaIngreso.Size = new System.Drawing.Size(187, 22);
             this.lblFechaIngreso.TabIndex = 34;
@@ -760,7 +771,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.label28.Location = new System.Drawing.Point(32, 354);
+            this.label28.Location = new System.Drawing.Point(31, 345);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(118, 15);
@@ -769,7 +780,7 @@
             // 
             // lblTelefono
             // 
-            this.lblTelefono.BackColor = System.Drawing.Color.MistyRose;
+            this.lblTelefono.BackColor = System.Drawing.Color.SeaShell;
             this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTelefono.Location = new System.Drawing.Point(31, 307);
             this.lblTelefono.Name = "lblTelefono";
@@ -778,7 +789,7 @@
             // 
             // lblDireccion
             // 
-            this.lblDireccion.BackColor = System.Drawing.Color.MistyRose;
+            this.lblDireccion.BackColor = System.Drawing.Color.SeaShell;
             this.lblDireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDireccion.Location = new System.Drawing.Point(31, 257);
             this.lblDireccion.Name = "lblDireccion";
@@ -787,7 +798,7 @@
             // 
             // lblDNI
             // 
-            this.lblDNI.BackColor = System.Drawing.Color.MistyRose;
+            this.lblDNI.BackColor = System.Drawing.Color.SeaShell;
             this.lblDNI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDNI.Location = new System.Drawing.Point(31, 211);
             this.lblDNI.Name = "lblDNI";
@@ -796,7 +807,7 @@
             // 
             // lblCorreo
             // 
-            this.lblCorreo.BackColor = System.Drawing.Color.MistyRose;
+            this.lblCorreo.BackColor = System.Drawing.Color.SeaShell;
             this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCorreo.Location = new System.Drawing.Point(31, 158);
             this.lblCorreo.Name = "lblCorreo";
@@ -805,7 +816,7 @@
             // 
             // lblApellido
             // 
-            this.lblApellido.BackColor = System.Drawing.Color.MistyRose;
+            this.lblApellido.BackColor = System.Drawing.Color.SeaShell;
             this.lblApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblApellido.Location = new System.Drawing.Point(31, 109);
             this.lblApellido.Name = "lblApellido";
@@ -886,7 +897,7 @@
             // 
             // cmbFiltrar
             // 
-            this.cmbFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmbFiltrar.BackColor = System.Drawing.Color.SeaShell;
             this.cmbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbFiltrar.FormattingEnabled = true;

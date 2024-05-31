@@ -131,7 +131,7 @@
             // 
             // cmbFiltrar
             // 
-            this.cmbFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmbFiltrar.BackColor = System.Drawing.Color.SeaShell;
             this.cmbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbFiltrar.FormattingEnabled = true;
