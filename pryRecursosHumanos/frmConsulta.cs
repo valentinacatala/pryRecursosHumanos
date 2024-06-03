@@ -32,5 +32,13 @@ namespace pryRecursosHumanos
             clsEmpleado empleado = new clsEmpleado();
             empleado.listarEmpleados(dgvListar);
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.registrarUsuario(new clsUsuarios());
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleados(dgvListar);
+        }
     }
 }

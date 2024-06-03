@@ -136,5 +136,11 @@ namespace pryRecursosHumanos
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla);
 		}
+
+		public void agregarEmpleado()
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.agregarEmpleado(this);
+        }
 	}
 }

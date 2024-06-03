@@ -10,28 +10,35 @@ namespace pryRecursosHumanos
     {
 		private int idUsuario;
 		private int cuit;
-		private int contraseña;
+		private int contrasena;
 		private bool admin;
 
-        public int IdUsuario
-		{
-			get { return idUsuario; }
-			set { idUsuario = value; }
-		}
         public int Cuit
         {
             get { return cuit; }
             set { cuit = value; }
         }
-        public int Contraseña
+        public int IdUsuario
+		{
+			get { return idUsuario; }
+			set { idUsuario = value; }
+		}
+        public int Contrasena
         {
-            get { return contraseña; }
-            set { contraseña = value; }
+            get { return contrasena; }
+            set { contrasena = value; }
         }
         public bool Admin
         {
             get { return admin; }
             set { admin = value; }
+        }
+
+        public void registrar()
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            // LLENER LOS DATOS DEL USUARIO ANTES DE LLAMAR A ESTE METODO
+            BD.registrarUsuario(this);
         }
     }
 }
