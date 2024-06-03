@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pryRecursosHumanos
 {
-    internal class clsUsuarios
+    public class clsUsuarios
     {
 		private int idUsuario;
 		private int cuit;

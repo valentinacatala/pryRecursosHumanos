@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pryRecursosHumanos
 {
-    internal class clsCiudades
+    public class clsCiudades
     {
 		private int idCiudad;
 		private clsProvincias idProvincia;

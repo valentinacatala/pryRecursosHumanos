@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pryRecursosHumanos
 {
-    internal class clsLicencia
+    public class clsLicencia
     {
 		private int idLicencia;
 		private string nombre;

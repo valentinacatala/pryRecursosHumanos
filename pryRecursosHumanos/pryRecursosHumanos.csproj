@@ -47,15 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAlergias.cs" />
     <Compile Include="clsArea.cs" />
     <Compile Include="clsCiudades.cs" />
     <Compile Include="clsConexionBaseDatos.cs" />
+    <Compile Include="clsDiscapacidades.cs" />
     <Compile Include="clsEmpleado.cs" />
+    <Compile Include="clsEnfermedadesPatologicas.cs" />
+    <Compile Include="clsEstado.cs" />
+    <Compile Include="clsFichaMedica.cs" />
     <Compile Include="clsLicencia.cs" />
+    <Compile Include="clsLicenciasEmpleados.cs" />
+    <Compile Include="clsMedicamentoFichaMedica.cs" />
+    <Compile Include="clsMedicamentos.cs" />
     <Compile Include="clsMedioContactos.cs" />
     <Compile Include="clsPaises.cs" />
+    <Compile Include="clsPresentismo.cs" />
     <Compile Include="clsProvincias.cs" />
+    <Compile Include="clsSanciones.cs" />
+    <Compile Include="clsSancionesEmpleados.cs" />
+    <Compile Include="clsSueldos.cs" />
     <Compile Include="clsTipoContactos.cs" />
+    <Compile Include="clsTitulo.cs" />
     <Compile Include="clsUsuarios.cs" />
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
