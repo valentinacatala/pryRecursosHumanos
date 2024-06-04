@@ -85,7 +85,6 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnCancelarRegistrar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -95,7 +94,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -109,8 +107,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -741,15 +737,12 @@
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.comboBox4);
             this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.txtTelefono);
             this.tabPage1.Controls.Add(this.txtCorreo);
             this.tabPage1.Controls.Add(this.txtApellido);
-            this.tabPage1.Controls.Add(this.txtDNI);
             this.tabPage1.Controls.Add(this.txtNombre);
             this.tabPage1.Controls.Add(this.btnCancelarRegistrar);
             this.tabPage1.Controls.Add(this.btnRegistrar);
@@ -759,7 +752,6 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -775,7 +767,7 @@
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.SeaShell;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtTelefono.Location = new System.Drawing.Point(27, 564);
+            this.txtTelefono.Location = new System.Drawing.Point(27, 513);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(190, 26);
@@ -785,7 +777,7 @@
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.SeaShell;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCorreo.Location = new System.Drawing.Point(27, 239);
+            this.txtCorreo.Location = new System.Drawing.Point(27, 188);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(190, 26);
@@ -810,16 +802,6 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(190, 26);
             this.txtApellido.TabIndex = 1;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.BackColor = System.Drawing.Color.SeaShell;
-            this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtDNI.Location = new System.Drawing.Point(27, 135);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(190, 26);
-            this.txtDNI.TabIndex = 3;
             // 
             // txtNombre
             // 
@@ -881,7 +863,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label6.Location = new System.Drawing.Point(27, 544);
+            this.label6.Location = new System.Drawing.Point(27, 493);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 20);
@@ -892,7 +874,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(27, 220);
+            this.label2.Location = new System.Drawing.Point(27, 169);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
@@ -920,17 +902,6 @@
             this.label7.Size = new System.Drawing.Size(143, 20);
             this.label7.TabIndex = 7;
             this.label7.Text = "Fecha de Ingreso ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label3.Location = new System.Drawing.Point(27, 117);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "DNI";
             // 
             // label5
             // 
@@ -977,7 +948,7 @@
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtDireccion);
-            this.groupBox1.Location = new System.Drawing.Point(23, 273);
+            this.groupBox1.Location = new System.Drawing.Point(23, 222);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(204, 264);
             this.groupBox1.TabIndex = 12;
@@ -1057,7 +1028,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.SeaShell;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(27, 187);
+            this.textBox1.Location = new System.Drawing.Point(27, 136);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(190, 26);
@@ -1067,33 +1038,12 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label25.Location = new System.Drawing.Point(27, 169);
+            this.label25.Location = new System.Drawing.Point(27, 118);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(47, 20);
             this.label25.TabIndex = 14;
             this.label25.Text = "CUIT";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox2.Location = new System.Drawing.Point(27, 616);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 26);
-            this.textBox2.TabIndex = 15;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label26.Location = new System.Drawing.Point(27, 595);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(83, 20);
-            this.label26.TabIndex = 16;
-            this.label26.Text = "Instagram";
             // 
             // comboBox4
             // 
@@ -1118,17 +1068,17 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label30.Location = new System.Drawing.Point(29, 647);
+            this.label30.Location = new System.Drawing.Point(30, 546);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(61, 20);
+            this.label30.Size = new System.Drawing.Size(98, 20);
             this.label30.TabIndex = 20;
-            this.label30.Text = "Estado";
+            this.label30.Text = "Estado Civil";
             // 
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(27, 668);
+            this.comboBox5.Location = new System.Drawing.Point(28, 567);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(190, 28);
             this.comboBox5.TabIndex = 14;
@@ -1227,7 +1177,6 @@
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnCancelarRegistrar;
         private System.Windows.Forms.Button btnRegistrar;
@@ -1237,7 +1186,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1249,8 +1197,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label30;
