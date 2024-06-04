@@ -8,7 +8,7 @@ namespace pryRecursosHumanos
 {
     public class clsLicencia
     {
-		private int idLicencia;
+        private int idLicencia;
 		private string nombre;
 		private int tiempo;//consultar tipo de dato
 

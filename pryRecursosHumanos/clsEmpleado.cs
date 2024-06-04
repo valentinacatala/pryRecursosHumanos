@@ -11,7 +11,7 @@ namespace pryRecursosHumanos
     {
 		private int cuit;
 		private clsLicencia licencia;
-		private clsSanciones sanciones;
+		private List<clsSanciones> sanciones;
 		private clsArea area;
 		private clsFichaMedica fichaMedica;
 		private clsUsuarios usuario;
@@ -24,11 +24,11 @@ namespace pryRecursosHumanos
 		private DateTime fechaNacimiento;
 		private string foto;
 		private clsCiudades ciudad;
-		private clsMedioContactos mediosContacto;
+		private List<clsMedioContactos> mediosContacto;
 		private clsEstado estado;
 		private clsTitulo titulo;
 		private string instagram;
-		private clsTipoContactos tiposContacto;
+		private List<clsTipoContactos> tiposContacto;
 
 		public int Cuit
 		{
@@ -40,7 +40,7 @@ namespace pryRecursosHumanos
 			get { return licencia; }
 			set { licencia = value; }
 		}
-		public clsSanciones Sanciones
+		public List<clsSanciones> Sanciones
         {
 			get { return sanciones; }
 			set { sanciones = value; }
@@ -105,7 +105,7 @@ namespace pryRecursosHumanos
 			get { return ciudad; }
 			set { ciudad = value; }
 		}
-		public clsMedioContactos MediosContacto
+		public List<clsMedioContactos> MediosContacto
         {
 			get { return mediosContacto; }
 			set { mediosContacto = value; }
@@ -125,7 +125,7 @@ namespace pryRecursosHumanos
 			get { return instagram; }
 			set { instagram = value; }
 		}
-		public clsTipoContactos TiposContacto
+		public List<clsTipoContactos> TiposContacto
         {
 			get { return tiposContacto; }
 			set { tiposContacto = value; }
@@ -137,10 +137,11 @@ namespace pryRecursosHumanos
 			BD.listarEmpleados(dgvGrilla);
 		}
 
-		public void agregarEmpleado()
+		public void agregarEmpleado(clsEmpleado nuevoEmpleado)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
-            BD.agregarEmpleado(this);
+
+            BD.agregarEmpleado(nuevoEmpleado);
         }
 	}
 }
