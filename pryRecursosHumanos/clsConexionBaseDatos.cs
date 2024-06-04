@@ -47,8 +47,86 @@ namespace pryRecursosHumanos
         public void agregarEmpleado(clsEmpleado nuevoEmpleado)
         {
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
+            nuevoEmpleado.Cuit = 125478;
+            bool empleadoNoExiste = validarEmpleado(nuevoEmpleado);
+            if (empleadoNoExiste)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Empleados(Nombre, IdArea) VALUES ('{nuevoEmpleado.Cuit}', '{2}')";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ya existe un usuario con ese CUIT");
+            }
         }
 
+        public bool validarEmpleado(clsEmpleado empleado)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Nombre = '{empleado.Cuit}'";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+
+                if (tablaEmpleados.Rows.Count == 0) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        public bool iniciarSesion(clsUsuarios usuario)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT Nombre, Admin FROM Empleados WHERE Nombre = '{usuario.Cuit}' AND Contraseña = '{usuario.Contrasena}'";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+
+                if (tablaEmpleados.Rows.Count == 1) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
+        }
         public void registrarUsuario(clsUsuarios nuevoUsuario)
         {
             // REHACER CUANDO EXISTAN LOS DATOS
@@ -81,8 +159,6 @@ namespace pryRecursosHumanos
             {
                 MessageBox.Show("Ya existe un usuario con ese CUIT");
             }
-
-
         }
 
         public bool validarUsuario(clsUsuarios usuario)
@@ -111,10 +187,6 @@ namespace pryRecursosHumanos
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
         }
 
-        public bool iniciarSesion(clsUsuarios usuario)
-        {
-            return true;
-            // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
-        }
+
     }
 }
