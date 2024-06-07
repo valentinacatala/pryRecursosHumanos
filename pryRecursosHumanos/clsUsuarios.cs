@@ -40,7 +40,7 @@ namespace pryRecursosHumanos
             // LLENER LOS DATOS DEL USUARIO ANTES DE LLAMAR A ESTE METODO
             BD.registrarUsuario(nuevoUsuario);
         }
-        public bool Iniciar(clsUsuarios User)
+        public List<bool> Iniciar(clsUsuarios User)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             // LLENER LOS DATOS DEL USUARIO ANTES DE LLAMAR A ESTE METODO

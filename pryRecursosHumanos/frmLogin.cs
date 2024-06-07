@@ -37,11 +37,20 @@ namespace pryRecursosHumanos
             clsUsuarios usuario = new clsUsuarios();
             usuario.Cuit = long.Parse(txtUsuario.Text);
             usuario.Contrasena = txtContraseña.Text;
-            bool inicio = usuario.Iniciar(usuario);
-
-            if (inicio == true)
+            List<bool> inicio = usuario.Iniciar(usuario);
+            if (inicio[0] == true)
             {
                 MessageBox.Show("¡Inicio de sesión exitoso!", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (inicio[1])
+                {
+                    frmAdmin frmAdmin = new frmAdmin();
+                    frmAdmin.ShowDialog();
+                }
+                else
+                {
+                    frmConsulta frmConsulta = new frmConsulta();
+                    frmConsulta.ShowDialog();
+                }
             }
             else
             {

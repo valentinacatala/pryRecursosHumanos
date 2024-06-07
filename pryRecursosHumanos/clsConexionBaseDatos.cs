@@ -30,7 +30,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "SELECT E.IdEmpleado, E.Nombre, A.Nombre FROM Empleados E, Areas A WHERE E.IdArea = A.IdArea";
+                comando.CommandText = "SELECT * FROM Empleados";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -44,6 +44,7 @@ namespace pryRecursosHumanos
             
         }
         #endregion
+
         #region agregarEmpleado
         public void agregarEmpleado(clsEmpleado nuevoEmpleado)
         {
@@ -102,9 +103,11 @@ namespace pryRecursosHumanos
             }
         }
         #endregion
+
         #region inicioSesion
-        public bool iniciarSesion(clsUsuarios usuario)
+        public List<bool> iniciarSesion(clsUsuarios usuario)
         {
+            List<bool> user = new List<bool>();
             try
             {
                 conexion = new OleDbConnection(cadena);
@@ -112,23 +115,24 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT Nombre, Admin FROM Empleados WHERE Nombre = '{usuario.Cuit}' AND Contraseña = '{usuario.Contrasena}'";
+                comando.CommandText = $"SELECT Cuit, Admin FROM Usuarios WHERE Cuit = {usuario.Cuit} AND Contraseña = '{usuario.Contrasena}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
                 adaptador.Fill(tablaEmpleados);
 
-                if (tablaEmpleados.Rows.Count == 1) return true;
-                else return false;
+                if (tablaEmpleados.Rows.Count == 1) { user.Add(true); user.Add(Convert.ToBoolean(tablaEmpleados.Rows[0][1])); return user; }
+                else { user.Add(false); user.Add(Convert.ToBoolean(tablaEmpleados.Rows[0]["Admin"])); return user; }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
+                return null;
             }
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
         }
         #endregion
+        
         #region registrarUsuario
         public void registrarUsuario(clsUsuarios nuevoUsuario)
         {
@@ -143,7 +147,8 @@ namespace pryRecursosHumanos
 
                     comando.Connection = conexion;
                     comando.CommandType = CommandType.Text;
-                    comando.CommandText = $"INSERT INTO Empleados(Nombre, IdArea) VALUES ('{nuevoUsuario.Cuit}', '{2}')";
+                    comando.CommandText = $@"INSERT INTO Usuarios(Cuit, Contraseña, Admin) 
+                                VALUES ({nuevoUsuario.Cuit}, '{nuevoUsuario.Contrasena}', {nuevoUsuario.Admin})";
 
                     conexion.Open();
                     comando.ExecuteNonQuery();
@@ -171,7 +176,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Empleados WHERE Nombre = '{usuario.Cuit}'";
+                comando.CommandText = $"SELECT * FROM Usuarios WHERE Cuit = {usuario.Cuit}";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
