@@ -26,5 +26,10 @@ namespace pryRecursosHumanos
         {
             Application.Exit();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
