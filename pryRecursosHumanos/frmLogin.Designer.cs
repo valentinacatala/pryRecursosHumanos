@@ -104,11 +104,12 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.pcbCerrar);
             this.panel2.Controls.Add(this.pcbMinimizar);
-            this.panel2.Location = new System.Drawing.Point(223, 0);
+            this.panel2.Location = new System.Drawing.Point(222, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 33);
+            this.panel2.Size = new System.Drawing.Size(254, 33);
             this.panel2.TabIndex = 4;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pcbCerrar
             // 

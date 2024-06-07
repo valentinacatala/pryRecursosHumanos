@@ -53,6 +53,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(727, 33);
             this.panel2.TabIndex = 5;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pcbCerrar
             // 
@@ -82,9 +83,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(68, 84);
+            this.pictureBox1.Location = new System.Drawing.Point(393, 88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 181);
+            this.pictureBox1.Size = new System.Drawing.Size(263, 189);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -93,7 +94,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(395, 84);
+            this.pictureBox2.Location = new System.Drawing.Point(63, 88);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(263, 189);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 281);
+            this.label1.Location = new System.Drawing.Point(70, 285);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 25);
             this.label1.TabIndex = 7;
@@ -115,7 +116,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(382, 281);
+            this.label2.Location = new System.Drawing.Point(369, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(302, 25);
             this.label2.TabIndex = 7;
