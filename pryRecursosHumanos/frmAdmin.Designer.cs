@@ -37,161 +37,190 @@
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label90 = new System.Windows.Forms.Label();
+            this.cboListarApellido = new System.Windows.Forms.ComboBox();
+            this.btnBorrarApellido = new System.Windows.Forms.Button();
+            this.btnListarApellido = new System.Windows.Forms.Button();
+            this.dgvListarApellido = new System.Windows.Forms.DataGridView();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.label91 = new System.Windows.Forms.Label();
+            this.cboListarPais = new System.Windows.Forms.ComboBox();
+            this.btnBorrarPais = new System.Windows.Forms.Button();
+            this.btnListarPais = new System.Windows.Forms.Button();
+            this.dgvListarPais = new System.Windows.Forms.DataGridView();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.label92 = new System.Windows.Forms.Label();
+            this.cboListarEstado = new System.Windows.Forms.ComboBox();
+            this.btnListarBorrar = new System.Windows.Forms.Button();
+            this.btnListarEstado = new System.Windows.Forms.Button();
+            this.dgvListarEstado = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.lblDNI = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtEliminarAclaraciones = new System.Windows.Forms.TextBox();
-            this.pbEliminarFoto = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.lblFechaIngreso = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtEliminarDni = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.txtEliminarAclaraciones = new System.Windows.Forms.TextBox();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.pbEliminarFoto = new System.Windows.Forms.PictureBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lblFechaIngreso = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCancelarEliminar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label88 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtModificarInstagram = new System.Windows.Forms.TextBox();
+            this.txtModificarCorreo = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtModificarTelefono = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtModificarDomicilio = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
+            this.dtpModificarFecha = new System.Windows.Forms.DateTimePicker();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtModificarNombre = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtModificarSueldo = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtDniModificar = new System.Windows.Forms.TextBox();
             this.btnCancelarModificar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.btnPresentismoModificar = new System.Windows.Forms.Button();
+            this.btnPresentismoCancelar = new System.Windows.Forms.Button();
+            this.label89 = new System.Windows.Forms.Label();
+            this.txtPresentismoAclaraciones = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
+            this.dtpPresentismoFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblPresentismoNombre = new System.Windows.Forms.Label();
+            this.lblPresentismoApellido = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtPresentismoDni = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.txtLicenciaDni = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.cboLicenciaTipo = new System.Windows.Forms.ComboBox();
+            this.txtLicenciaAclaraciones = new System.Windows.Forms.TextBox();
+            this.lblLicenciaNombre = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox25 = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label70 = new System.Windows.Forms.Label();
+            this.dtpLicenciaFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblLicenciaApellido = new System.Windows.Forms.Label();
+            this.txtLicenciaTiempo = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.btnLicenciaCancelar = new System.Windows.Forms.Button();
+            this.btnLicenciaModificar = new System.Windows.Forms.Button();
             this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label85 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label83 = new System.Windows.Forms.Label();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.btnSancionesCancelar = new System.Windows.Forms.Button();
+            this.btnSancionesModificar = new System.Windows.Forms.Button();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.label80 = new System.Windows.Forms.Label();
+            this.txtSancionesDni = new System.Windows.Forms.TextBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.txtSancionesAclaraciones = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.lblSancionesApellido = new System.Windows.Forms.Label();
+            this.cboSancionesEstado = new System.Windows.Forms.ComboBox();
+            this.lblSancionesNombre = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.cboSancionesTipo = new System.Windows.Forms.ComboBox();
+            this.dtpSancionesFecha = new System.Windows.Forms.DateTimePicker();
+            this.label83 = new System.Windows.Forms.Label();
+            this.txtSancionesTiempo = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label86 = new System.Windows.Forms.Label();
+            this.btnCancelar1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNombreContacto = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtNumeroContacto = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSiguiente1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtInstagram = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtCuit = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboCuidad = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboProvincia = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboEmpleadoPais = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label87 = new System.Windows.Forms.Label();
+            this.btnSiguiente2 = new System.Windows.Forms.Button();
+            this.btnCancelar2 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cboEstadoEmpleado = new System.Windows.Forms.ComboBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtSueldo = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.cboSeleccionarArea = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtTituloUniversidad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.txtTituloNombre = new System.Windows.Forms.TextBox();
+            this.rbNo = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rbSi = new System.Windows.Forms.RadioButton();
             this.label32 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
@@ -220,6 +249,9 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label37 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
@@ -241,38 +273,6 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label92 = new System.Windows.Forms.Label();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -281,10 +281,13 @@
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.tabPage14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).BeginInit();
             this.tabPage15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarPais)).BeginInit();
             this.tabPage16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -293,7 +296,9 @@
             this.groupBox12.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.tabPage11.SuspendLayout();
+            this.groupBox18.SuspendLayout();
             this.tabPage12.SuspendLayout();
+            this.groupBox19.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -306,7 +311,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -317,11 +322,6 @@
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
-            this.groupBox18.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.groupBox20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -418,10 +418,10 @@
             // tabPage14
             // 
             this.tabPage14.Controls.Add(this.label90);
-            this.tabPage14.Controls.Add(this.comboBox16);
-            this.tabPage14.Controls.Add(this.button15);
-            this.tabPage14.Controls.Add(this.button16);
-            this.tabPage14.Controls.Add(this.dataGridView1);
+            this.tabPage14.Controls.Add(this.cboListarApellido);
+            this.tabPage14.Controls.Add(this.btnBorrarApellido);
+            this.tabPage14.Controls.Add(this.btnListarApellido);
+            this.tabPage14.Controls.Add(this.dgvListarApellido);
             this.tabPage14.Location = new System.Drawing.Point(4, 28);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
@@ -430,70 +430,80 @@
             this.tabPage14.Text = "Listar por Apellido";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
-            // comboBox16
+            // label90
             // 
-            this.comboBox16.BackColor = System.Drawing.Color.MistyRose;
-            this.comboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Items.AddRange(new object[] {
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.Location = new System.Drawing.Point(17, 23);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(96, 17);
+            this.label90.TabIndex = 16;
+            this.label90.Text = "Seleccionar";
+            // 
+            // cboListarApellido
+            // 
+            this.cboListarApellido.BackColor = System.Drawing.Color.MistyRose;
+            this.cboListarApellido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboListarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboListarApellido.FormattingEnabled = true;
+            this.cboListarApellido.Items.AddRange(new object[] {
             "Poner Que filtar",
             "Prueba",
             "Hola xd"});
-            this.comboBox16.Location = new System.Drawing.Point(119, 20);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(245, 24);
-            this.comboBox16.TabIndex = 12;
+            this.cboListarApellido.Location = new System.Drawing.Point(119, 20);
+            this.cboListarApellido.Name = "cboListarApellido";
+            this.cboListarApellido.Size = new System.Drawing.Size(245, 24);
+            this.cboListarApellido.TabIndex = 12;
             // 
-            // button15
+            // btnBorrarApellido
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(456, 20);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(67, 25);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "Borrar";
-            this.button15.UseVisualStyleBackColor = false;
+            this.btnBorrarApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBorrarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBorrarApellido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarApellido.Location = new System.Drawing.Point(456, 20);
+            this.btnBorrarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBorrarApellido.Name = "btnBorrarApellido";
+            this.btnBorrarApellido.Size = new System.Drawing.Size(67, 25);
+            this.btnBorrarApellido.TabIndex = 14;
+            this.btnBorrarApellido.Text = "Borrar";
+            this.btnBorrarApellido.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // btnListarApellido
             // 
-            this.button16.BackColor = System.Drawing.Color.MistyRose;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(383, 20);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(67, 25);
-            this.button16.TabIndex = 13;
-            this.button16.Text = "Listar";
-            this.button16.UseVisualStyleBackColor = false;
+            this.btnListarApellido.BackColor = System.Drawing.Color.MistyRose;
+            this.btnListarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarApellido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarApellido.Location = new System.Drawing.Point(383, 20);
+            this.btnListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarApellido.Name = "btnListarApellido";
+            this.btnListarApellido.Size = new System.Drawing.Size(67, 25);
+            this.btnListarApellido.TabIndex = 13;
+            this.btnListarApellido.Text = "Listar";
+            this.btnListarApellido.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvListarApellido
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 54);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(508, 458);
-            this.dataGridView1.TabIndex = 15;
+            this.dgvListarApellido.AllowUserToAddRows = false;
+            this.dgvListarApellido.AllowUserToDeleteRows = false;
+            this.dgvListarApellido.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListarApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListarApellido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarApellido.Location = new System.Drawing.Point(15, 54);
+            this.dgvListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListarApellido.Name = "dgvListarApellido";
+            this.dgvListarApellido.ReadOnly = true;
+            this.dgvListarApellido.RowHeadersWidth = 51;
+            this.dgvListarApellido.RowTemplate.Height = 24;
+            this.dgvListarApellido.Size = new System.Drawing.Size(508, 458);
+            this.dgvListarApellido.TabIndex = 15;
             // 
             // tabPage15
             // 
             this.tabPage15.Controls.Add(this.label91);
-            this.tabPage15.Controls.Add(this.comboBox17);
-            this.tabPage15.Controls.Add(this.button17);
-            this.tabPage15.Controls.Add(this.button18);
-            this.tabPage15.Controls.Add(this.dataGridView2);
+            this.tabPage15.Controls.Add(this.cboListarPais);
+            this.tabPage15.Controls.Add(this.btnBorrarPais);
+            this.tabPage15.Controls.Add(this.btnListarPais);
+            this.tabPage15.Controls.Add(this.dgvListarPais);
             this.tabPage15.Location = new System.Drawing.Point(4, 28);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
@@ -502,13 +512,80 @@
             this.tabPage15.Text = "Listar por Pais";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Location = new System.Drawing.Point(17, 19);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(96, 17);
+            this.label91.TabIndex = 21;
+            this.label91.Text = "Seleccionar";
+            // 
+            // cboListarPais
+            // 
+            this.cboListarPais.BackColor = System.Drawing.Color.MistyRose;
+            this.cboListarPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboListarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboListarPais.FormattingEnabled = true;
+            this.cboListarPais.Items.AddRange(new object[] {
+            "Poner Que filtar",
+            "Prueba",
+            "Hola xd"});
+            this.cboListarPais.Location = new System.Drawing.Point(119, 16);
+            this.cboListarPais.Name = "cboListarPais";
+            this.cboListarPais.Size = new System.Drawing.Size(245, 24);
+            this.cboListarPais.TabIndex = 17;
+            // 
+            // btnBorrarPais
+            // 
+            this.btnBorrarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBorrarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBorrarPais.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarPais.Location = new System.Drawing.Point(456, 16);
+            this.btnBorrarPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBorrarPais.Name = "btnBorrarPais";
+            this.btnBorrarPais.Size = new System.Drawing.Size(67, 25);
+            this.btnBorrarPais.TabIndex = 19;
+            this.btnBorrarPais.Text = "Borrar";
+            this.btnBorrarPais.UseVisualStyleBackColor = false;
+            // 
+            // btnListarPais
+            // 
+            this.btnListarPais.BackColor = System.Drawing.Color.MistyRose;
+            this.btnListarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarPais.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarPais.Location = new System.Drawing.Point(383, 16);
+            this.btnListarPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarPais.Name = "btnListarPais";
+            this.btnListarPais.Size = new System.Drawing.Size(67, 25);
+            this.btnListarPais.TabIndex = 18;
+            this.btnListarPais.Text = "Listar";
+            this.btnListarPais.UseVisualStyleBackColor = false;
+            // 
+            // dgvListarPais
+            // 
+            this.dgvListarPais.AllowUserToAddRows = false;
+            this.dgvListarPais.AllowUserToDeleteRows = false;
+            this.dgvListarPais.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListarPais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListarPais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarPais.Location = new System.Drawing.Point(15, 50);
+            this.dgvListarPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListarPais.Name = "dgvListarPais";
+            this.dgvListarPais.ReadOnly = true;
+            this.dgvListarPais.RowHeadersWidth = 51;
+            this.dgvListarPais.RowTemplate.Height = 24;
+            this.dgvListarPais.Size = new System.Drawing.Size(508, 458);
+            this.dgvListarPais.TabIndex = 20;
+            // 
             // tabPage16
             // 
             this.tabPage16.Controls.Add(this.label92);
-            this.tabPage16.Controls.Add(this.comboBox18);
-            this.tabPage16.Controls.Add(this.button19);
-            this.tabPage16.Controls.Add(this.button20);
-            this.tabPage16.Controls.Add(this.dataGridView3);
+            this.tabPage16.Controls.Add(this.cboListarEstado);
+            this.tabPage16.Controls.Add(this.btnListarBorrar);
+            this.tabPage16.Controls.Add(this.btnListarEstado);
+            this.tabPage16.Controls.Add(this.dgvListarEstado);
             this.tabPage16.Location = new System.Drawing.Point(4, 28);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
@@ -517,11 +594,78 @@
             this.tabPage16.Text = "Listar por Estado";
             this.tabPage16.UseVisualStyleBackColor = true;
             // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.Location = new System.Drawing.Point(17, 19);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(96, 17);
+            this.label92.TabIndex = 21;
+            this.label92.Text = "Seleccionar";
+            // 
+            // cboListarEstado
+            // 
+            this.cboListarEstado.BackColor = System.Drawing.Color.MistyRose;
+            this.cboListarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboListarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboListarEstado.FormattingEnabled = true;
+            this.cboListarEstado.Items.AddRange(new object[] {
+            "Poner Que filtar",
+            "Prueba",
+            "Hola xd"});
+            this.cboListarEstado.Location = new System.Drawing.Point(119, 16);
+            this.cboListarEstado.Name = "cboListarEstado";
+            this.cboListarEstado.Size = new System.Drawing.Size(245, 24);
+            this.cboListarEstado.TabIndex = 17;
+            // 
+            // btnListarBorrar
+            // 
+            this.btnListarBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnListarBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarBorrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarBorrar.Location = new System.Drawing.Point(456, 16);
+            this.btnListarBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarBorrar.Name = "btnListarBorrar";
+            this.btnListarBorrar.Size = new System.Drawing.Size(67, 25);
+            this.btnListarBorrar.TabIndex = 19;
+            this.btnListarBorrar.Text = "Borrar";
+            this.btnListarBorrar.UseVisualStyleBackColor = false;
+            // 
+            // btnListarEstado
+            // 
+            this.btnListarEstado.BackColor = System.Drawing.Color.MistyRose;
+            this.btnListarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarEstado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarEstado.Location = new System.Drawing.Point(383, 16);
+            this.btnListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarEstado.Name = "btnListarEstado";
+            this.btnListarEstado.Size = new System.Drawing.Size(67, 25);
+            this.btnListarEstado.TabIndex = 18;
+            this.btnListarEstado.Text = "Listar";
+            this.btnListarEstado.UseVisualStyleBackColor = false;
+            // 
+            // dgvListarEstado
+            // 
+            this.dgvListarEstado.AllowUserToAddRows = false;
+            this.dgvListarEstado.AllowUserToDeleteRows = false;
+            this.dgvListarEstado.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListarEstado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListarEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarEstado.Location = new System.Drawing.Point(15, 50);
+            this.dgvListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListarEstado.Name = "dgvListarEstado";
+            this.dgvListarEstado.ReadOnly = true;
+            this.dgvListarEstado.RowHeadersWidth = 51;
+            this.dgvListarEstado.RowTemplate.Height = 24;
+            this.dgvListarEstado.Size = new System.Drawing.Size(508, 458);
+            this.dgvListarEstado.TabIndex = 20;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox20);
-            this.tabPage3.Controls.Add(this.button14);
-            this.tabPage3.Controls.Add(this.button13);
+            this.tabPage3.Controls.Add(this.btnEliminar);
+            this.tabPage3.Controls.Add(this.btnCancelarEliminar);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage3.Name = "tabPage3";
@@ -531,79 +675,33 @@
             this.tabPage3.Text = "Eliminar";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox30
+            // groupBox20
             // 
-            this.textBox30.BackColor = System.Drawing.Color.MistyRose;
-            this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox30.Location = new System.Drawing.Point(11, 60);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox30.Multiline = true;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(190, 22);
-            this.textBox30.TabIndex = 71;
-            // 
-            // lblDNI
-            // 
-            this.lblDNI.BackColor = System.Drawing.Color.SeaShell;
-            this.lblDNI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDNI.Location = new System.Drawing.Point(10, 162);
-            this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(188, 22);
-            this.lblDNI.TabIndex = 44;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label20.Location = new System.Drawing.Point(11, 147);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 16);
-            this.label20.TabIndex = 43;
-            this.label20.Text = "Nombre";
-            // 
-            // txtEliminarAclaraciones
-            // 
-            this.txtEliminarAclaraciones.BackColor = System.Drawing.Color.SeaShell;
-            this.txtEliminarAclaraciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEliminarAclaraciones.Location = new System.Drawing.Point(239, 288);
-            this.txtEliminarAclaraciones.Multiline = true;
-            this.txtEliminarAclaraciones.Name = "txtEliminarAclaraciones";
-            this.txtEliminarAclaraciones.Size = new System.Drawing.Size(219, 107);
-            this.txtEliminarAclaraciones.TabIndex = 39;
-            // 
-            // pbEliminarFoto
-            // 
-            this.pbEliminarFoto.BackColor = System.Drawing.Color.MistyRose;
-            this.pbEliminarFoto.InitialImage = null;
-            this.pbEliminarFoto.Location = new System.Drawing.Point(239, 59);
-            this.pbEliminarFoto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pbEliminarFoto.Name = "pbEliminarFoto";
-            this.pbEliminarFoto.Size = new System.Drawing.Size(219, 192);
-            this.pbEliminarFoto.TabIndex = 42;
-            this.pbEliminarFoto.TabStop = false;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(239, 40);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 15);
-            this.label27.TabIndex = 41;
-            this.label27.Text = "Foto";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label36.Location = new System.Drawing.Point(239, 270);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(86, 16);
-            this.label36.TabIndex = 40;
-            this.label36.Text = "Aclaraciones";
+            this.groupBox20.Controls.Add(this.label16);
+            this.groupBox20.Controls.Add(this.label21);
+            this.groupBox20.Controls.Add(this.label19);
+            this.groupBox20.Controls.Add(this.txtEliminarDni);
+            this.groupBox20.Controls.Add(this.label18);
+            this.groupBox20.Controls.Add(this.lblNombre);
+            this.groupBox20.Controls.Add(this.label17);
+            this.groupBox20.Controls.Add(this.label20);
+            this.groupBox20.Controls.Add(this.lblApellido);
+            this.groupBox20.Controls.Add(this.txtEliminarAclaraciones);
+            this.groupBox20.Controls.Add(this.lblCorreo);
+            this.groupBox20.Controls.Add(this.pbEliminarFoto);
+            this.groupBox20.Controls.Add(this.lblDireccion);
+            this.groupBox20.Controls.Add(this.label27);
+            this.groupBox20.Controls.Add(this.lblTelefono);
+            this.groupBox20.Controls.Add(this.label36);
+            this.groupBox20.Controls.Add(this.label28);
+            this.groupBox20.Controls.Add(this.lblFechaIngreso);
+            this.groupBox20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox20.Location = new System.Drawing.Point(22, 24);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(491, 417);
+            this.groupBox20.TabIndex = 74;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Datos del Empleado";
             // 
             // label16
             // 
@@ -616,84 +714,16 @@
             this.label16.TabIndex = 37;
             this.label16.Text = "Ingresar DNI";
             // 
-            // lblFechaIngreso
+            // label21
             // 
-            this.lblFechaIngreso.BackColor = System.Drawing.Color.SeaShell;
-            this.lblFechaIngreso.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFechaIngreso.Location = new System.Drawing.Point(10, 369);
-            this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(187, 22);
-            this.lblFechaIngreso.TabIndex = 34;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label28.Location = new System.Drawing.Point(10, 351);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(112, 16);
-            this.label28.TabIndex = 31;
-            this.label28.Text = "Fecha de Ingreso";
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.BackColor = System.Drawing.Color.SeaShell;
-            this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTelefono.Location = new System.Drawing.Point(10, 313);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(188, 22);
-            this.lblTelefono.TabIndex = 29;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.BackColor = System.Drawing.Color.SeaShell;
-            this.lblDireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDireccion.Location = new System.Drawing.Point(10, 263);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(188, 22);
-            this.lblDireccion.TabIndex = 28;
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.BackColor = System.Drawing.Color.SeaShell;
-            this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCorreo.Location = new System.Drawing.Point(10, 215);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(188, 22);
-            this.lblCorreo.TabIndex = 26;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.BackColor = System.Drawing.Color.SeaShell;
-            this.lblApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblApellido.Location = new System.Drawing.Point(10, 115);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(188, 22);
-            this.lblApellido.TabIndex = 25;
-            this.lblApellido.Click += new System.EventHandler(this.label22_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label17.Location = new System.Drawing.Point(7, 298);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 16);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "Teléfono";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label18.Location = new System.Drawing.Point(11, 200);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(118, 16);
-            this.label18.TabIndex = 21;
-            this.label18.Text = "Correo Electrónico";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label21.Location = new System.Drawing.Point(11, 99);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(57, 16);
+            this.label21.TabIndex = 24;
+            this.label21.Text = "Apellido";
             // 
             // label19
             // 
@@ -706,16 +736,184 @@
             this.label19.TabIndex = 22;
             this.label19.Text = "Dirección";
             // 
-            // label21
+            // txtEliminarDni
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label21.Location = new System.Drawing.Point(11, 99);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 16);
-            this.label21.TabIndex = 24;
-            this.label21.Text = "Apellido";
+            this.txtEliminarDni.BackColor = System.Drawing.Color.MistyRose;
+            this.txtEliminarDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtEliminarDni.Location = new System.Drawing.Point(11, 60);
+            this.txtEliminarDni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtEliminarDni.Multiline = true;
+            this.txtEliminarDni.Name = "txtEliminarDni";
+            this.txtEliminarDni.Size = new System.Drawing.Size(190, 22);
+            this.txtEliminarDni.TabIndex = 71;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label18.Location = new System.Drawing.Point(11, 200);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(118, 16);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Correo Electrónico";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.BackColor = System.Drawing.Color.SeaShell;
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Location = new System.Drawing.Point(10, 162);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(188, 22);
+            this.lblNombre.TabIndex = 44;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label17.Location = new System.Drawing.Point(7, 298);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(61, 16);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "Teléfono";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label20.Location = new System.Drawing.Point(11, 147);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 16);
+            this.label20.TabIndex = 43;
+            this.label20.Text = "Nombre";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.BackColor = System.Drawing.Color.SeaShell;
+            this.lblApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblApellido.Location = new System.Drawing.Point(10, 115);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(188, 22);
+            this.lblApellido.TabIndex = 25;
+            this.lblApellido.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // txtEliminarAclaraciones
+            // 
+            this.txtEliminarAclaraciones.BackColor = System.Drawing.Color.SeaShell;
+            this.txtEliminarAclaraciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEliminarAclaraciones.Location = new System.Drawing.Point(239, 288);
+            this.txtEliminarAclaraciones.Multiline = true;
+            this.txtEliminarAclaraciones.Name = "txtEliminarAclaraciones";
+            this.txtEliminarAclaraciones.Size = new System.Drawing.Size(219, 107);
+            this.txtEliminarAclaraciones.TabIndex = 39;
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.BackColor = System.Drawing.Color.SeaShell;
+            this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCorreo.Location = new System.Drawing.Point(10, 215);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(188, 22);
+            this.lblCorreo.TabIndex = 26;
+            // 
+            // pbEliminarFoto
+            // 
+            this.pbEliminarFoto.BackColor = System.Drawing.Color.MistyRose;
+            this.pbEliminarFoto.InitialImage = null;
+            this.pbEliminarFoto.Location = new System.Drawing.Point(239, 59);
+            this.pbEliminarFoto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbEliminarFoto.Name = "pbEliminarFoto";
+            this.pbEliminarFoto.Size = new System.Drawing.Size(219, 192);
+            this.pbEliminarFoto.TabIndex = 42;
+            this.pbEliminarFoto.TabStop = false;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.BackColor = System.Drawing.Color.SeaShell;
+            this.lblDireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDireccion.Location = new System.Drawing.Point(10, 263);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(188, 22);
+            this.lblDireccion.TabIndex = 28;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(239, 40);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(36, 15);
+            this.label27.TabIndex = 41;
+            this.label27.Text = "Foto";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.BackColor = System.Drawing.Color.SeaShell;
+            this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTelefono.Location = new System.Drawing.Point(10, 313);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(188, 22);
+            this.lblTelefono.TabIndex = 29;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label36.Location = new System.Drawing.Point(239, 270);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(86, 16);
+            this.label36.TabIndex = 40;
+            this.label36.Text = "Aclaraciones";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label28.Location = new System.Drawing.Point(10, 351);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(112, 16);
+            this.label28.TabIndex = 31;
+            this.label28.Text = "Fecha de Ingreso";
+            // 
+            // lblFechaIngreso
+            // 
+            this.lblFechaIngreso.BackColor = System.Drawing.Color.SeaShell;
+            this.lblFechaIngreso.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFechaIngreso.Location = new System.Drawing.Point(10, 369);
+            this.lblFechaIngreso.Name = "lblFechaIngreso";
+            this.lblFechaIngreso.Size = new System.Drawing.Size(187, 22);
+            this.lblFechaIngreso.TabIndex = 34;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(268, 474);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(98, 41);
+            this.btnEliminar.TabIndex = 73;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelarEliminar
+            // 
+            this.btnCancelarEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelarEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelarEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarEliminar.Location = new System.Drawing.Point(129, 474);
+            this.btnCancelarEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelarEliminar.Name = "btnCancelarEliminar";
+            this.btnCancelarEliminar.Size = new System.Drawing.Size(98, 41);
+            this.btnCancelarEliminar.TabIndex = 72;
+            this.btnCancelarEliminar.Text = "Cancelar";
+            this.btnCancelarEliminar.UseVisualStyleBackColor = false;
             // 
             // tabPage2
             // 
@@ -747,9 +945,9 @@
             this.tabPage9.Controls.Add(this.label88);
             this.tabPage9.Controls.Add(this.groupBox17);
             this.tabPage9.Controls.Add(this.groupBox12);
-            this.tabPage9.Controls.Add(this.textBox16);
+            this.tabPage9.Controls.Add(this.txtModificarSueldo);
             this.tabPage9.Controls.Add(this.label59);
-            this.tabPage9.Controls.Add(this.textBox6);
+            this.tabPage9.Controls.Add(this.txtDniModificar);
             this.tabPage9.Controls.Add(this.btnCancelarModificar);
             this.tabPage9.Controls.Add(this.btnModificar);
             this.tabPage9.Controls.Add(this.label35);
@@ -761,13 +959,23 @@
             this.tabPage9.Text = "Datos Personales";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.Location = new System.Drawing.Point(149, 18);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(258, 24);
+            this.label88.TabIndex = 64;
+            this.label88.Text = "MODIFICAR EMPLEADO";
+            // 
             // groupBox17
             // 
             this.groupBox17.Controls.Add(this.label11);
-            this.groupBox17.Controls.Add(this.textBox15);
-            this.groupBox17.Controls.Add(this.textBox18);
+            this.groupBox17.Controls.Add(this.txtModificarInstagram);
+            this.groupBox17.Controls.Add(this.txtModificarCorreo);
             this.groupBox17.Controls.Add(this.label13);
-            this.groupBox17.Controls.Add(this.textBox21);
+            this.groupBox17.Controls.Add(this.txtModificarTelefono);
             this.groupBox17.Controls.Add(this.label14);
             this.groupBox17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox17.Location = new System.Drawing.Point(273, 116);
@@ -788,25 +996,25 @@
             this.label11.TabIndex = 8;
             this.label11.Text = "Instagram";
             // 
-            // textBox15
+            // txtModificarInstagram
             // 
-            this.textBox15.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox15.Location = new System.Drawing.Point(10, 167);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(189, 22);
-            this.textBox15.TabIndex = 7;
+            this.txtModificarInstagram.BackColor = System.Drawing.Color.SeaShell;
+            this.txtModificarInstagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtModificarInstagram.Location = new System.Drawing.Point(10, 167);
+            this.txtModificarInstagram.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModificarInstagram.Name = "txtModificarInstagram";
+            this.txtModificarInstagram.Size = new System.Drawing.Size(189, 22);
+            this.txtModificarInstagram.TabIndex = 7;
             // 
-            // textBox18
+            // txtModificarCorreo
             // 
-            this.textBox18.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox18.Location = new System.Drawing.Point(10, 49);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(189, 22);
-            this.textBox18.TabIndex = 2;
+            this.txtModificarCorreo.BackColor = System.Drawing.Color.SeaShell;
+            this.txtModificarCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtModificarCorreo.Location = new System.Drawing.Point(10, 49);
+            this.txtModificarCorreo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModificarCorreo.Name = "txtModificarCorreo";
+            this.txtModificarCorreo.Size = new System.Drawing.Size(189, 22);
+            this.txtModificarCorreo.TabIndex = 2;
             // 
             // label13
             // 
@@ -819,15 +1027,15 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Teléfono";
             // 
-            // textBox21
+            // txtModificarTelefono
             // 
-            this.textBox21.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox21.Location = new System.Drawing.Point(10, 107);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(189, 22);
-            this.textBox21.TabIndex = 5;
+            this.txtModificarTelefono.BackColor = System.Drawing.Color.SeaShell;
+            this.txtModificarTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtModificarTelefono.Location = new System.Drawing.Point(10, 107);
+            this.txtModificarTelefono.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModificarTelefono.Name = "txtModificarTelefono";
+            this.txtModificarTelefono.Size = new System.Drawing.Size(189, 22);
+            this.txtModificarTelefono.TabIndex = 5;
             // 
             // label14
             // 
@@ -843,13 +1051,13 @@
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.label9);
-            this.groupBox12.Controls.Add(this.textBox22);
+            this.groupBox12.Controls.Add(this.txtModificarDomicilio);
             this.groupBox12.Controls.Add(this.label34);
-            this.groupBox12.Controls.Add(this.dateTimePicker8);
+            this.groupBox12.Controls.Add(this.dtpModificarFecha);
             this.groupBox12.Controls.Add(this.textBox17);
             this.groupBox12.Controls.Add(this.label66);
             this.groupBox12.Controls.Add(this.textBox19);
-            this.groupBox12.Controls.Add(this.textBox20);
+            this.groupBox12.Controls.Add(this.txtModificarNombre);
             this.groupBox12.Controls.Add(this.label68);
             this.groupBox12.Controls.Add(this.label69);
             this.groupBox12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -871,15 +1079,15 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Domicilio";
             // 
-            // textBox22
+            // txtModificarDomicilio
             // 
-            this.textBox22.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox22.Location = new System.Drawing.Point(10, 242);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(190, 22);
-            this.textBox22.TabIndex = 28;
+            this.txtModificarDomicilio.BackColor = System.Drawing.Color.SeaShell;
+            this.txtModificarDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtModificarDomicilio.Location = new System.Drawing.Point(10, 242);
+            this.txtModificarDomicilio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModificarDomicilio.Name = "txtModificarDomicilio";
+            this.txtModificarDomicilio.Size = new System.Drawing.Size(190, 22);
+            this.txtModificarDomicilio.TabIndex = 28;
             // 
             // label34
             // 
@@ -892,16 +1100,16 @@
             this.label34.TabIndex = 27;
             this.label34.Text = "Fecha de Nacimiento";
             // 
-            // dateTimePicker8
+            // dtpModificarFecha
             // 
-            this.dateTimePicker8.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker8.Location = new System.Drawing.Point(11, 189);
-            this.dateTimePicker8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(192, 21);
-            this.dateTimePicker8.TabIndex = 26;
+            this.dtpModificarFecha.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpModificarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpModificarFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpModificarFecha.Location = new System.Drawing.Point(11, 189);
+            this.dtpModificarFecha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpModificarFecha.Name = "dtpModificarFecha";
+            this.dtpModificarFecha.Size = new System.Drawing.Size(192, 21);
+            this.dtpModificarFecha.TabIndex = 26;
             // 
             // textBox17
             // 
@@ -934,15 +1142,15 @@
             this.textBox19.Size = new System.Drawing.Size(190, 22);
             this.textBox19.TabIndex = 1;
             // 
-            // textBox20
+            // txtModificarNombre
             // 
-            this.textBox20.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox20.Location = new System.Drawing.Point(10, 40);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(190, 22);
-            this.textBox20.TabIndex = 0;
+            this.txtModificarNombre.BackColor = System.Drawing.Color.SeaShell;
+            this.txtModificarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtModificarNombre.Location = new System.Drawing.Point(10, 40);
+            this.txtModificarNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModificarNombre.Name = "txtModificarNombre";
+            this.txtModificarNombre.Size = new System.Drawing.Size(190, 22);
+            this.txtModificarNombre.TabIndex = 0;
             // 
             // label68
             // 
@@ -966,15 +1174,15 @@
             this.label69.TabIndex = 7;
             this.label69.Text = "Nombre";
             // 
-            // textBox16
+            // txtModificarSueldo
             // 
-            this.textBox16.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox16.Location = new System.Drawing.Point(280, 357);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(189, 22);
-            this.textBox16.TabIndex = 56;
+            this.txtModificarSueldo.BackColor = System.Drawing.Color.SeaShell;
+            this.txtModificarSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtModificarSueldo.Location = new System.Drawing.Point(280, 357);
+            this.txtModificarSueldo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModificarSueldo.Name = "txtModificarSueldo";
+            this.txtModificarSueldo.Size = new System.Drawing.Size(189, 22);
+            this.txtModificarSueldo.TabIndex = 56;
             // 
             // label59
             // 
@@ -987,15 +1195,15 @@
             this.label59.TabIndex = 57;
             this.label59.Text = "Sueldo";
             // 
-            // textBox6
+            // txtDniModificar
             // 
-            this.textBox6.BackColor = System.Drawing.Color.MistyRose;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox6.Location = new System.Drawing.Point(47, 78);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 54;
+            this.txtDniModificar.BackColor = System.Drawing.Color.MistyRose;
+            this.txtDniModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtDniModificar.Location = new System.Drawing.Point(47, 78);
+            this.txtDniModificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtDniModificar.Name = "txtDniModificar";
+            this.txtDniModificar.Size = new System.Drawing.Size(190, 22);
+            this.txtDniModificar.TabIndex = 54;
             // 
             // btnCancelarModificar
             // 
@@ -1036,18 +1244,18 @@
             // 
             // tabPage10
             // 
-            this.tabPage10.Controls.Add(this.button8);
-            this.tabPage10.Controls.Add(this.button7);
+            this.tabPage10.Controls.Add(this.btnPresentismoModificar);
+            this.tabPage10.Controls.Add(this.btnPresentismoCancelar);
             this.tabPage10.Controls.Add(this.label89);
-            this.tabPage10.Controls.Add(this.textBox23);
+            this.tabPage10.Controls.Add(this.txtPresentismoAclaraciones);
             this.tabPage10.Controls.Add(this.label10);
             this.tabPage10.Controls.Add(this.label65);
-            this.tabPage10.Controls.Add(this.dateTimePicker3);
-            this.tabPage10.Controls.Add(this.label64);
-            this.tabPage10.Controls.Add(this.label63);
+            this.tabPage10.Controls.Add(this.dtpPresentismoFecha);
+            this.tabPage10.Controls.Add(this.lblPresentismoNombre);
+            this.tabPage10.Controls.Add(this.lblPresentismoApellido);
             this.tabPage10.Controls.Add(this.label61);
             this.tabPage10.Controls.Add(this.label62);
-            this.tabPage10.Controls.Add(this.textBox11);
+            this.tabPage10.Controls.Add(this.txtPresentismoDni);
             this.tabPage10.Controls.Add(this.label60);
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Name = "tabPage10";
@@ -1058,16 +1266,52 @@
             this.tabPage10.UseVisualStyleBackColor = true;
             this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
             // 
-            // textBox23
+            // btnPresentismoModificar
             // 
-            this.textBox23.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox23.Location = new System.Drawing.Point(273, 95);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(199, 198);
-            this.textBox23.TabIndex = 65;
+            this.btnPresentismoModificar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnPresentismoModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPresentismoModificar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnPresentismoModificar.Location = new System.Drawing.Point(273, 357);
+            this.btnPresentismoModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPresentismoModificar.Name = "btnPresentismoModificar";
+            this.btnPresentismoModificar.Size = new System.Drawing.Size(98, 42);
+            this.btnPresentismoModificar.TabIndex = 70;
+            this.btnPresentismoModificar.Text = "Modificar";
+            this.btnPresentismoModificar.UseVisualStyleBackColor = false;
+            // 
+            // btnPresentismoCancelar
+            // 
+            this.btnPresentismoCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPresentismoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPresentismoCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnPresentismoCancelar.Location = new System.Drawing.Point(143, 357);
+            this.btnPresentismoCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPresentismoCancelar.Name = "btnPresentismoCancelar";
+            this.btnPresentismoCancelar.Size = new System.Drawing.Size(98, 42);
+            this.btnPresentismoCancelar.TabIndex = 69;
+            this.btnPresentismoCancelar.Text = "Cancelar";
+            this.btnPresentismoCancelar.UseVisualStyleBackColor = false;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.Location = new System.Drawing.Point(133, 23);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(272, 24);
+            this.label89.TabIndex = 68;
+            this.label89.Text = "ESTADO DEL EMPLEADO";
+            // 
+            // txtPresentismoAclaraciones
+            // 
+            this.txtPresentismoAclaraciones.BackColor = System.Drawing.Color.SeaShell;
+            this.txtPresentismoAclaraciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPresentismoAclaraciones.Location = new System.Drawing.Point(273, 95);
+            this.txtPresentismoAclaraciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPresentismoAclaraciones.Multiline = true;
+            this.txtPresentismoAclaraciones.Name = "txtPresentismoAclaraciones";
+            this.txtPresentismoAclaraciones.Size = new System.Drawing.Size(199, 198);
+            this.txtPresentismoAclaraciones.TabIndex = 65;
             // 
             // label10
             // 
@@ -1091,39 +1335,39 @@
             this.label65.TabIndex = 29;
             this.label65.Text = "Fecha de la falta";
             // 
-            // dateTimePicker3
+            // dtpPresentismoFecha
             // 
-            this.dateTimePicker3.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(51, 272);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(190, 21);
-            this.dateTimePicker3.TabIndex = 28;
+            this.dtpPresentismoFecha.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpPresentismoFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPresentismoFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPresentismoFecha.Location = new System.Drawing.Point(51, 272);
+            this.dtpPresentismoFecha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpPresentismoFecha.Name = "dtpPresentismoFecha";
+            this.dtpPresentismoFecha.Size = new System.Drawing.Size(190, 21);
+            this.dtpPresentismoFecha.TabIndex = 28;
             // 
-            // label64
+            // lblPresentismoNombre
             // 
-            this.label64.BackColor = System.Drawing.Color.SeaShell;
-            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label64.Location = new System.Drawing.Point(51, 203);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(190, 22);
-            this.label64.TabIndex = 62;
-            this.label64.Click += new System.EventHandler(this.label64_Click);
+            this.lblPresentismoNombre.BackColor = System.Drawing.Color.SeaShell;
+            this.lblPresentismoNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPresentismoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.lblPresentismoNombre.Location = new System.Drawing.Point(51, 203);
+            this.lblPresentismoNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPresentismoNombre.Name = "lblPresentismoNombre";
+            this.lblPresentismoNombre.Size = new System.Drawing.Size(190, 22);
+            this.lblPresentismoNombre.TabIndex = 62;
+            this.lblPresentismoNombre.Click += new System.EventHandler(this.label64_Click);
             // 
-            // label63
+            // lblPresentismoApellido
             // 
-            this.label63.BackColor = System.Drawing.Color.SeaShell;
-            this.label63.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label63.Location = new System.Drawing.Point(51, 151);
-            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(190, 22);
-            this.label63.TabIndex = 61;
+            this.lblPresentismoApellido.BackColor = System.Drawing.Color.SeaShell;
+            this.lblPresentismoApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPresentismoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.lblPresentismoApellido.Location = new System.Drawing.Point(51, 151);
+            this.lblPresentismoApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPresentismoApellido.Name = "lblPresentismoApellido";
+            this.lblPresentismoApellido.Size = new System.Drawing.Size(190, 22);
+            this.lblPresentismoApellido.TabIndex = 61;
             // 
             // label61
             // 
@@ -1147,16 +1391,16 @@
             this.label62.TabIndex = 58;
             this.label62.Text = "Apellido";
             // 
-            // textBox11
+            // txtPresentismoDni
             // 
-            this.textBox11.BackColor = System.Drawing.Color.MistyRose;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox11.Location = new System.Drawing.Point(51, 95);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(190, 22);
-            this.textBox11.TabIndex = 56;
+            this.txtPresentismoDni.BackColor = System.Drawing.Color.MistyRose;
+            this.txtPresentismoDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPresentismoDni.Location = new System.Drawing.Point(51, 95);
+            this.txtPresentismoDni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPresentismoDni.Multiline = true;
+            this.txtPresentismoDni.Name = "txtPresentismoDni";
+            this.txtPresentismoDni.Size = new System.Drawing.Size(190, 22);
+            this.txtPresentismoDni.TabIndex = 56;
             // 
             // label60
             // 
@@ -1172,8 +1416,8 @@
             // tabPage11
             // 
             this.tabPage11.Controls.Add(this.groupBox18);
-            this.tabPage11.Controls.Add(this.button10);
-            this.tabPage11.Controls.Add(this.button9);
+            this.tabPage11.Controls.Add(this.btnLicenciaCancelar);
+            this.tabPage11.Controls.Add(this.btnLicenciaModificar);
             this.tabPage11.Location = new System.Drawing.Point(4, 25);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
@@ -1182,82 +1426,82 @@
             this.tabPage11.Text = "Licencia";
             this.tabPage11.UseVisualStyleBackColor = true;
             // 
-            // label71
+            // groupBox18
             // 
-            this.label71.BackColor = System.Drawing.Color.SeaShell;
-            this.label71.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label71.Location = new System.Drawing.Point(24, 182);
-            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(190, 22);
-            this.label71.TabIndex = 68;
+            this.groupBox18.Controls.Add(this.txtLicenciaDni);
+            this.groupBox18.Controls.Add(this.label70);
+            this.groupBox18.Controls.Add(this.cboLicenciaTipo);
+            this.groupBox18.Controls.Add(this.txtLicenciaAclaraciones);
+            this.groupBox18.Controls.Add(this.lblLicenciaNombre);
+            this.groupBox18.Controls.Add(this.label12);
+            this.groupBox18.Controls.Add(this.label15);
+            this.groupBox18.Controls.Add(this.label67);
+            this.groupBox18.Controls.Add(this.dtpLicenciaFecha);
+            this.groupBox18.Controls.Add(this.lblLicenciaApellido);
+            this.groupBox18.Controls.Add(this.txtLicenciaTiempo);
+            this.groupBox18.Controls.Add(this.label73);
+            this.groupBox18.Controls.Add(this.label75);
+            this.groupBox18.Controls.Add(this.label74);
+            this.groupBox18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox18.Location = new System.Drawing.Point(24, 23);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(493, 363);
+            this.groupBox18.TabIndex = 73;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Datos del Empleado";
             // 
-            // label72
+            // txtLicenciaDni
             // 
-            this.label72.BackColor = System.Drawing.Color.SeaShell;
-            this.label72.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label72.Location = new System.Drawing.Point(24, 120);
-            this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(190, 22);
-            this.label72.TabIndex = 67;
+            this.txtLicenciaDni.BackColor = System.Drawing.Color.MistyRose;
+            this.txtLicenciaDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtLicenciaDni.Location = new System.Drawing.Point(24, 64);
+            this.txtLicenciaDni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtLicenciaDni.Multiline = true;
+            this.txtLicenciaDni.Name = "txtLicenciaDni";
+            this.txtLicenciaDni.Size = new System.Drawing.Size(190, 22);
+            this.txtLicenciaDni.TabIndex = 64;
             // 
-            // label73
+            // label70
             // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label73.Location = new System.Drawing.Point(24, 165);
-            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(56, 16);
-            this.label73.TabIndex = 66;
-            this.label73.Text = "Nombre";
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label70.Location = new System.Drawing.Point(24, 223);
+            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(35, 16);
+            this.label70.TabIndex = 30;
+            this.label70.Text = "Tipo";
             // 
-            // label74
+            // cboLicenciaTipo
             // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label74.Location = new System.Drawing.Point(24, 100);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(57, 16);
-            this.label74.TabIndex = 65;
-            this.label74.Text = "Apellido";
+            this.cboLicenciaTipo.BackColor = System.Drawing.Color.SeaShell;
+            this.cboLicenciaTipo.FormattingEnabled = true;
+            this.cboLicenciaTipo.Location = new System.Drawing.Point(24, 243);
+            this.cboLicenciaTipo.Name = "cboLicenciaTipo";
+            this.cboLicenciaTipo.Size = new System.Drawing.Size(197, 23);
+            this.cboLicenciaTipo.TabIndex = 31;
             // 
-            // textBox26
+            // txtLicenciaAclaraciones
             // 
-            this.textBox26.BackColor = System.Drawing.Color.MistyRose;
-            this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox26.Location = new System.Drawing.Point(24, 64);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox26.Multiline = true;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(190, 22);
-            this.textBox26.TabIndex = 64;
+            this.txtLicenciaAclaraciones.BackColor = System.Drawing.Color.SeaShell;
+            this.txtLicenciaAclaraciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtLicenciaAclaraciones.Location = new System.Drawing.Point(259, 118);
+            this.txtLicenciaAclaraciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtLicenciaAclaraciones.Multiline = true;
+            this.txtLicenciaAclaraciones.Name = "txtLicenciaAclaraciones";
+            this.txtLicenciaAclaraciones.Size = new System.Drawing.Size(203, 211);
+            this.txtLicenciaAclaraciones.TabIndex = 36;
             // 
-            // label75
+            // lblLicenciaNombre
             // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(24, 45);
-            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(42, 15);
-            this.label75.TabIndex = 63;
-            this.label75.Text = "D.N.I ";
-            // 
-            // textBox24
-            // 
-            this.textBox24.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox24.Location = new System.Drawing.Point(259, 118);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(203, 211);
-            this.textBox24.TabIndex = 36;
+            this.lblLicenciaNombre.BackColor = System.Drawing.Color.SeaShell;
+            this.lblLicenciaNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLicenciaNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.lblLicenciaNombre.Location = new System.Drawing.Point(24, 182);
+            this.lblLicenciaNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLicenciaNombre.Name = "lblLicenciaNombre";
+            this.lblLicenciaNombre.Size = new System.Drawing.Size(190, 22);
+            this.lblLicenciaNombre.TabIndex = 68;
             // 
             // label12
             // 
@@ -1281,27 +1525,6 @@
             this.label15.TabIndex = 37;
             this.label15.Text = "Aclaraciones";
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(259, 65);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(197, 21);
-            this.dateTimePicker2.TabIndex = 34;
-            // 
-            // textBox25
-            // 
-            this.textBox25.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox25.Location = new System.Drawing.Point(24, 295);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(197, 22);
-            this.textBox25.TabIndex = 32;
-            // 
             // label67
             // 
             this.label67.AutoSize = true;
@@ -1313,30 +1536,101 @@
             this.label67.TabIndex = 33;
             this.label67.Text = "Tiempo";
             // 
-            // comboBox10
+            // dtpLicenciaFecha
             // 
-            this.comboBox10.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(24, 243);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(197, 23);
-            this.comboBox10.TabIndex = 31;
+            this.dtpLicenciaFecha.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpLicenciaFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpLicenciaFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpLicenciaFecha.Location = new System.Drawing.Point(259, 65);
+            this.dtpLicenciaFecha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpLicenciaFecha.Name = "dtpLicenciaFecha";
+            this.dtpLicenciaFecha.Size = new System.Drawing.Size(197, 21);
+            this.dtpLicenciaFecha.TabIndex = 34;
             // 
-            // label70
+            // lblLicenciaApellido
             // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label70.Location = new System.Drawing.Point(24, 223);
-            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(35, 16);
-            this.label70.TabIndex = 30;
-            this.label70.Text = "Tipo";
+            this.lblLicenciaApellido.BackColor = System.Drawing.Color.SeaShell;
+            this.lblLicenciaApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLicenciaApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.lblLicenciaApellido.Location = new System.Drawing.Point(24, 120);
+            this.lblLicenciaApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLicenciaApellido.Name = "lblLicenciaApellido";
+            this.lblLicenciaApellido.Size = new System.Drawing.Size(190, 22);
+            this.lblLicenciaApellido.TabIndex = 67;
+            // 
+            // txtLicenciaTiempo
+            // 
+            this.txtLicenciaTiempo.BackColor = System.Drawing.Color.SeaShell;
+            this.txtLicenciaTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtLicenciaTiempo.Location = new System.Drawing.Point(24, 295);
+            this.txtLicenciaTiempo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtLicenciaTiempo.Name = "txtLicenciaTiempo";
+            this.txtLicenciaTiempo.Size = new System.Drawing.Size(197, 22);
+            this.txtLicenciaTiempo.TabIndex = 32;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label73.Location = new System.Drawing.Point(24, 165);
+            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(56, 16);
+            this.label73.TabIndex = 66;
+            this.label73.Text = "Nombre";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Location = new System.Drawing.Point(24, 45);
+            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(42, 15);
+            this.label75.TabIndex = 63;
+            this.label75.Text = "D.N.I ";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label74.Location = new System.Drawing.Point(24, 100);
+            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(57, 16);
+            this.label74.TabIndex = 65;
+            this.label74.Text = "Apellido";
+            // 
+            // btnLicenciaCancelar
+            // 
+            this.btnLicenciaCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLicenciaCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLicenciaCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnLicenciaCancelar.Location = new System.Drawing.Point(147, 422);
+            this.btnLicenciaCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLicenciaCancelar.Name = "btnLicenciaCancelar";
+            this.btnLicenciaCancelar.Size = new System.Drawing.Size(98, 42);
+            this.btnLicenciaCancelar.TabIndex = 72;
+            this.btnLicenciaCancelar.Text = "Cancelar";
+            this.btnLicenciaCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnLicenciaModificar
+            // 
+            this.btnLicenciaModificar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnLicenciaModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLicenciaModificar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnLicenciaModificar.Location = new System.Drawing.Point(283, 422);
+            this.btnLicenciaModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLicenciaModificar.Name = "btnLicenciaModificar";
+            this.btnLicenciaModificar.Size = new System.Drawing.Size(98, 42);
+            this.btnLicenciaModificar.TabIndex = 71;
+            this.btnLicenciaModificar.Text = "Modificar";
+            this.btnLicenciaModificar.UseVisualStyleBackColor = false;
             // 
             // tabPage12
             // 
-            this.tabPage12.Controls.Add(this.button12);
-            this.tabPage12.Controls.Add(this.button11);
+            this.tabPage12.Controls.Add(this.btnSancionesCancelar);
+            this.tabPage12.Controls.Add(this.btnSancionesModificar);
             this.tabPage12.Controls.Add(this.groupBox19);
             this.tabPage12.Location = new System.Drawing.Point(4, 25);
             this.tabPage12.Name = "tabPage12";
@@ -1346,143 +1640,79 @@
             this.tabPage12.Text = "Sanciones";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
-            // textBox29
+            // btnSancionesCancelar
             // 
-            this.textBox29.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox29.Location = new System.Drawing.Point(267, 180);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox29.Multiline = true;
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(199, 162);
-            this.textBox29.TabIndex = 84;
+            this.btnSancionesCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSancionesCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSancionesCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnSancionesCancelar.Location = new System.Drawing.Point(152, 441);
+            this.btnSancionesCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSancionesCancelar.Name = "btnSancionesCancelar";
+            this.btnSancionesCancelar.Size = new System.Drawing.Size(98, 41);
+            this.btnSancionesCancelar.TabIndex = 89;
+            this.btnSancionesCancelar.Text = "Cancelar";
+            this.btnSancionesCancelar.UseVisualStyleBackColor = false;
             // 
-            // label85
+            // btnSancionesModificar
             // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label85.Location = new System.Drawing.Point(267, 161);
-            this.label85.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(86, 16);
-            this.label85.TabIndex = 83;
-            this.label85.Text = "Aclaraciones";
+            this.btnSancionesModificar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSancionesModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSancionesModificar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnSancionesModificar.Location = new System.Drawing.Point(290, 441);
+            this.btnSancionesModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSancionesModificar.Name = "btnSancionesModificar";
+            this.btnSancionesModificar.Size = new System.Drawing.Size(98, 41);
+            this.btnSancionesModificar.TabIndex = 88;
+            this.btnSancionesModificar.Text = "Modificar";
+            this.btnSancionesModificar.UseVisualStyleBackColor = false;
             // 
-            // comboBox12
+            // groupBox19
             // 
-            this.comboBox12.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(23, 310);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(204, 23);
-            this.comboBox12.TabIndex = 82;
+            this.groupBox19.Controls.Add(this.label80);
+            this.groupBox19.Controls.Add(this.txtSancionesDni);
+            this.groupBox19.Controls.Add(this.label79);
+            this.groupBox19.Controls.Add(this.txtSancionesAclaraciones);
+            this.groupBox19.Controls.Add(this.label78);
+            this.groupBox19.Controls.Add(this.label85);
+            this.groupBox19.Controls.Add(this.lblSancionesApellido);
+            this.groupBox19.Controls.Add(this.cboSancionesEstado);
+            this.groupBox19.Controls.Add(this.lblSancionesNombre);
+            this.groupBox19.Controls.Add(this.label81);
+            this.groupBox19.Controls.Add(this.label84);
+            this.groupBox19.Controls.Add(this.label82);
+            this.groupBox19.Controls.Add(this.cboSancionesTipo);
+            this.groupBox19.Controls.Add(this.dtpSancionesFecha);
+            this.groupBox19.Controls.Add(this.label83);
+            this.groupBox19.Controls.Add(this.txtSancionesTiempo);
+            this.groupBox19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox19.Location = new System.Drawing.Point(23, 19);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(494, 385);
+            this.groupBox19.TabIndex = 87;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Datos del Empleado";
             // 
-            // label81
+            // label80
             // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label81.Location = new System.Drawing.Point(23, 290);
-            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(50, 16);
-            this.label81.TabIndex = 81;
-            this.label81.Text = "Estado";
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(23, 47);
+            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(42, 15);
+            this.label80.TabIndex = 69;
+            this.label80.Text = "D.N.I ";
             // 
-            // label82
+            // txtSancionesDni
             // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label82.Location = new System.Drawing.Point(269, 99);
-            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(98, 16);
-            this.label82.TabIndex = 80;
-            this.label82.Text = "Fecha de Inicio";
-            // 
-            // dateTimePicker9
-            // 
-            this.dateTimePicker9.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker9.Location = new System.Drawing.Point(270, 119);
-            this.dateTimePicker9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker9.Name = "dateTimePicker9";
-            this.dateTimePicker9.Size = new System.Drawing.Size(196, 21);
-            this.dateTimePicker9.TabIndex = 79;
-            // 
-            // textBox28
-            // 
-            this.textBox28.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox28.Location = new System.Drawing.Point(270, 65);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(196, 22);
-            this.textBox28.TabIndex = 77;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label83.Location = new System.Drawing.Point(270, 47);
-            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(54, 16);
-            this.label83.TabIndex = 78;
-            this.label83.Text = "Tiempo";
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(23, 251);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(204, 23);
-            this.comboBox15.TabIndex = 76;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label84.Location = new System.Drawing.Point(23, 231);
-            this.label84.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(35, 16);
-            this.label84.TabIndex = 75;
-            this.label84.Text = "Tipo";
-            // 
-            // label76
-            // 
-            this.label76.BackColor = System.Drawing.Color.SeaShell;
-            this.label76.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label76.Location = new System.Drawing.Point(23, 184);
-            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(190, 22);
-            this.label76.TabIndex = 74;
-            // 
-            // label77
-            // 
-            this.label77.BackColor = System.Drawing.Color.SeaShell;
-            this.label77.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label77.Location = new System.Drawing.Point(23, 122);
-            this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(190, 22);
-            this.label77.TabIndex = 73;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label78.Location = new System.Drawing.Point(23, 167);
-            this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(56, 16);
-            this.label78.TabIndex = 72;
-            this.label78.Text = "Nombre";
+            this.txtSancionesDni.BackColor = System.Drawing.Color.MistyRose;
+            this.txtSancionesDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtSancionesDni.Location = new System.Drawing.Point(23, 66);
+            this.txtSancionesDni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSancionesDni.Multiline = true;
+            this.txtSancionesDni.Name = "txtSancionesDni";
+            this.txtSancionesDni.Size = new System.Drawing.Size(190, 22);
+            this.txtSancionesDni.TabIndex = 70;
             // 
             // label79
             // 
@@ -1495,27 +1725,143 @@
             this.label79.TabIndex = 71;
             this.label79.Text = "Apellido";
             // 
-            // textBox27
+            // txtSancionesAclaraciones
             // 
-            this.textBox27.BackColor = System.Drawing.Color.MistyRose;
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox27.Location = new System.Drawing.Point(23, 66);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox27.Multiline = true;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(190, 22);
-            this.textBox27.TabIndex = 70;
+            this.txtSancionesAclaraciones.BackColor = System.Drawing.Color.SeaShell;
+            this.txtSancionesAclaraciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtSancionesAclaraciones.Location = new System.Drawing.Point(267, 180);
+            this.txtSancionesAclaraciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSancionesAclaraciones.Multiline = true;
+            this.txtSancionesAclaraciones.Name = "txtSancionesAclaraciones";
+            this.txtSancionesAclaraciones.Size = new System.Drawing.Size(199, 162);
+            this.txtSancionesAclaraciones.TabIndex = 84;
             // 
-            // label80
+            // label78
             // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(23, 47);
-            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(42, 15);
-            this.label80.TabIndex = 69;
-            this.label80.Text = "D.N.I ";
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label78.Location = new System.Drawing.Point(23, 167);
+            this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(56, 16);
+            this.label78.TabIndex = 72;
+            this.label78.Text = "Nombre";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label85.Location = new System.Drawing.Point(267, 161);
+            this.label85.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(86, 16);
+            this.label85.TabIndex = 83;
+            this.label85.Text = "Aclaraciones";
+            // 
+            // lblSancionesApellido
+            // 
+            this.lblSancionesApellido.BackColor = System.Drawing.Color.SeaShell;
+            this.lblSancionesApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSancionesApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.lblSancionesApellido.Location = new System.Drawing.Point(23, 122);
+            this.lblSancionesApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSancionesApellido.Name = "lblSancionesApellido";
+            this.lblSancionesApellido.Size = new System.Drawing.Size(190, 22);
+            this.lblSancionesApellido.TabIndex = 73;
+            // 
+            // cboSancionesEstado
+            // 
+            this.cboSancionesEstado.BackColor = System.Drawing.Color.SeaShell;
+            this.cboSancionesEstado.FormattingEnabled = true;
+            this.cboSancionesEstado.Location = new System.Drawing.Point(23, 310);
+            this.cboSancionesEstado.Name = "cboSancionesEstado";
+            this.cboSancionesEstado.Size = new System.Drawing.Size(204, 23);
+            this.cboSancionesEstado.TabIndex = 82;
+            // 
+            // lblSancionesNombre
+            // 
+            this.lblSancionesNombre.BackColor = System.Drawing.Color.SeaShell;
+            this.lblSancionesNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSancionesNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.lblSancionesNombre.Location = new System.Drawing.Point(23, 184);
+            this.lblSancionesNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSancionesNombre.Name = "lblSancionesNombre";
+            this.lblSancionesNombre.Size = new System.Drawing.Size(190, 22);
+            this.lblSancionesNombre.TabIndex = 74;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label81.Location = new System.Drawing.Point(23, 290);
+            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(50, 16);
+            this.label81.TabIndex = 81;
+            this.label81.Text = "Estado";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label84.Location = new System.Drawing.Point(23, 231);
+            this.label84.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(35, 16);
+            this.label84.TabIndex = 75;
+            this.label84.Text = "Tipo";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label82.Location = new System.Drawing.Point(269, 99);
+            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(98, 16);
+            this.label82.TabIndex = 80;
+            this.label82.Text = "Fecha de Inicio";
+            // 
+            // cboSancionesTipo
+            // 
+            this.cboSancionesTipo.BackColor = System.Drawing.Color.SeaShell;
+            this.cboSancionesTipo.FormattingEnabled = true;
+            this.cboSancionesTipo.Location = new System.Drawing.Point(23, 251);
+            this.cboSancionesTipo.Name = "cboSancionesTipo";
+            this.cboSancionesTipo.Size = new System.Drawing.Size(204, 23);
+            this.cboSancionesTipo.TabIndex = 76;
+            // 
+            // dtpSancionesFecha
+            // 
+            this.dtpSancionesFecha.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpSancionesFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpSancionesFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpSancionesFecha.Location = new System.Drawing.Point(270, 119);
+            this.dtpSancionesFecha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpSancionesFecha.Name = "dtpSancionesFecha";
+            this.dtpSancionesFecha.Size = new System.Drawing.Size(196, 21);
+            this.dtpSancionesFecha.TabIndex = 79;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label83.Location = new System.Drawing.Point(270, 47);
+            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(54, 16);
+            this.label83.TabIndex = 78;
+            this.label83.Text = "Tiempo";
+            // 
+            // txtSancionesTiempo
+            // 
+            this.txtSancionesTiempo.BackColor = System.Drawing.Color.SeaShell;
+            this.txtSancionesTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtSancionesTiempo.Location = new System.Drawing.Point(270, 65);
+            this.txtSancionesTiempo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSancionesTiempo.Name = "txtSancionesTiempo";
+            this.txtSancionesTiempo.Size = new System.Drawing.Size(196, 22);
+            this.txtSancionesTiempo.TabIndex = 77;
             // 
             // tabControl1
             // 
@@ -1562,9 +1908,9 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.label86);
-            this.tabPage5.Controls.Add(this.button2);
+            this.tabPage5.Controls.Add(this.btnCancelar1);
             this.tabPage5.Controls.Add(this.groupBox5);
-            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.btnSiguiente1);
             this.tabPage5.Controls.Add(this.groupBox4);
             this.tabPage5.Controls.Add(this.groupBox3);
             this.tabPage5.Controls.Add(this.groupBox1);
@@ -1576,23 +1922,33 @@
             this.tabPage5.Text = "Paso 1";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // label86
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button2.Location = new System.Drawing.Point(270, 457);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.Location = new System.Drawing.Point(184, 3);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(130, 24);
+            this.label86.TabIndex = 43;
+            this.label86.Text = "EMPLEADO";
+            // 
+            // btnCancelar1
+            // 
+            this.btnCancelar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnCancelar1.Location = new System.Drawing.Point(270, 457);
+            this.btnCancelar1.Name = "btnCancelar1";
+            this.btnCancelar1.Size = new System.Drawing.Size(98, 42);
+            this.btnCancelar1.TabIndex = 1;
+            this.btnCancelar1.Text = "Cancelar";
+            this.btnCancelar1.UseVisualStyleBackColor = false;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox3);
+            this.groupBox5.Controls.Add(this.txtNombreContacto);
             this.groupBox5.Controls.Add(this.label38);
-            this.groupBox5.Controls.Add(this.textBox12);
+            this.groupBox5.Controls.Add(this.txtNumeroContacto);
             this.groupBox5.Controls.Add(this.label39);
             this.groupBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(270, 308);
@@ -1602,15 +1958,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tipo de Contactos";
             // 
-            // textBox3
+            // txtNombreContacto
             // 
-            this.textBox3.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox3.Location = new System.Drawing.Point(10, 43);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 22);
-            this.textBox3.TabIndex = 0;
+            this.txtNombreContacto.BackColor = System.Drawing.Color.SeaShell;
+            this.txtNombreContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNombreContacto.Location = new System.Drawing.Point(10, 43);
+            this.txtNombreContacto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNombreContacto.Name = "txtNombreContacto";
+            this.txtNombreContacto.Size = new System.Drawing.Size(189, 22);
+            this.txtNombreContacto.TabIndex = 0;
             // 
             // label38
             // 
@@ -1623,15 +1979,15 @@
             this.label38.TabIndex = 6;
             this.label38.Text = "Número del contacto";
             // 
-            // textBox12
+            // txtNumeroContacto
             // 
-            this.textBox12.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox12.Location = new System.Drawing.Point(10, 93);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(189, 22);
-            this.textBox12.TabIndex = 1;
+            this.txtNumeroContacto.BackColor = System.Drawing.Color.SeaShell;
+            this.txtNumeroContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNumeroContacto.Location = new System.Drawing.Point(10, 93);
+            this.txtNumeroContacto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNumeroContacto.Name = "txtNumeroContacto";
+            this.txtNumeroContacto.Size = new System.Drawing.Size(189, 22);
+            this.txtNumeroContacto.TabIndex = 1;
             // 
             // label39
             // 
@@ -1644,23 +2000,23 @@
             this.label39.TabIndex = 6;
             this.label39.Text = "Nombre de un contacto";
             // 
-            // button1
+            // btnSiguiente1
             // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(395, 457);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Siguiente";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSiguiente1.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSiguiente1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSiguiente1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnSiguiente1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSiguiente1.Location = new System.Drawing.Point(395, 457);
+            this.btnSiguiente1.Name = "btnSiguiente1";
+            this.btnSiguiente1.Size = new System.Drawing.Size(98, 42);
+            this.btnSiguiente1.TabIndex = 0;
+            this.btnSiguiente1.Text = "Siguiente";
+            this.btnSiguiente1.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.txtInstagram);
             this.groupBox4.Controls.Add(this.txtCorreo);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.txtTelefono);
@@ -1684,15 +2040,15 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Instagram";
             // 
-            // textBox4
+            // txtInstagram
             // 
-            this.textBox4.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox4.Location = new System.Drawing.Point(7, 146);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 22);
-            this.textBox4.TabIndex = 2;
+            this.txtInstagram.BackColor = System.Drawing.Color.SeaShell;
+            this.txtInstagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtInstagram.Location = new System.Drawing.Point(7, 146);
+            this.txtInstagram.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtInstagram.Name = "txtInstagram";
+            this.txtInstagram.Size = new System.Drawing.Size(189, 22);
+            this.txtInstagram.TabIndex = 2;
             // 
             // txtCorreo
             // 
@@ -1739,10 +2095,10 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.dateTimePicker4);
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.dtpFechaNacimiento);
+            this.groupBox3.Controls.Add(this.txtCuit);
             this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtDni);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.txtApellido);
             this.groupBox3.Controls.Add(this.txtNombre);
@@ -1767,26 +2123,26 @@
             this.label30.TabIndex = 27;
             this.label30.Text = "Fecha de Nacimiento";
             // 
-            // dateTimePicker4
+            // dtpFechaNacimiento
             // 
-            this.dateTimePicker4.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(8, 231);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(192, 21);
-            this.dateTimePicker4.TabIndex = 4;
+            this.dtpFechaNacimiento.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(8, 231);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(192, 21);
+            this.dtpFechaNacimiento.TabIndex = 4;
             // 
-            // textBox8
+            // txtCuit
             // 
-            this.textBox8.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox8.Location = new System.Drawing.Point(10, 183);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(190, 22);
-            this.textBox8.TabIndex = 3;
+            this.txtCuit.BackColor = System.Drawing.Color.SeaShell;
+            this.txtCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtCuit.Location = new System.Drawing.Point(10, 183);
+            this.txtCuit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(190, 22);
+            this.txtCuit.TabIndex = 3;
             // 
             // label26
             // 
@@ -1799,15 +2155,15 @@
             this.label26.TabIndex = 22;
             this.label26.Text = "CUIT";
             // 
-            // textBox1
+            // txtDni
             // 
-            this.textBox1.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(10, 135);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtDni.BackColor = System.Drawing.Color.SeaShell;
+            this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtDni.Location = new System.Drawing.Point(10, 135);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(190, 22);
+            this.txtDni.TabIndex = 2;
             // 
             // label25
             // 
@@ -1864,11 +2220,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cboCuidad);
             this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cboProvincia);
             this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cboEmpleadoPais);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtDireccion);
@@ -1881,14 +2237,14 @@
             this.groupBox1.Text = "Dirección";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBox3
+            // cboCuidad
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(10, 204);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(190, 23);
-            this.comboBox3.TabIndex = 3;
+            this.cboCuidad.BackColor = System.Drawing.Color.SeaShell;
+            this.cboCuidad.FormattingEnabled = true;
+            this.cboCuidad.Location = new System.Drawing.Point(10, 204);
+            this.cboCuidad.Name = "cboCuidad";
+            this.cboCuidad.Size = new System.Drawing.Size(190, 23);
+            this.cboCuidad.TabIndex = 3;
             // 
             // label24
             // 
@@ -1901,14 +2257,14 @@
             this.label24.TabIndex = 12;
             this.label24.Text = "Ciudad";
             // 
-            // comboBox2
+            // cboProvincia
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(10, 152);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(190, 23);
-            this.comboBox2.TabIndex = 2;
+            this.cboProvincia.BackColor = System.Drawing.Color.SeaShell;
+            this.cboProvincia.FormattingEnabled = true;
+            this.cboProvincia.Location = new System.Drawing.Point(10, 152);
+            this.cboProvincia.Name = "cboProvincia";
+            this.cboProvincia.Size = new System.Drawing.Size(190, 23);
+            this.cboProvincia.TabIndex = 2;
             // 
             // label23
             // 
@@ -1921,14 +2277,14 @@
             this.label23.TabIndex = 10;
             this.label23.Text = "Provincia";
             // 
-            // comboBox1
+            // cboEmpleadoPais
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 23);
-            this.comboBox1.TabIndex = 1;
+            this.cboEmpleadoPais.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEmpleadoPais.FormattingEnabled = true;
+            this.cboEmpleadoPais.Location = new System.Drawing.Point(10, 97);
+            this.cboEmpleadoPais.Name = "cboEmpleadoPais";
+            this.cboEmpleadoPais.Size = new System.Drawing.Size(190, 23);
+            this.cboEmpleadoPais.TabIndex = 1;
             // 
             // label22
             // 
@@ -1965,13 +2321,13 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.label87);
-            this.tabPage6.Controls.Add(this.button21);
-            this.tabPage6.Controls.Add(this.button3);
+            this.tabPage6.Controls.Add(this.btnSiguiente2);
+            this.tabPage6.Controls.Add(this.btnCancelar2);
             this.tabPage6.Controls.Add(this.groupBox6);
             this.tabPage6.Controls.Add(this.groupBox16);
             this.tabPage6.Controls.Add(this.groupBox2);
             this.tabPage6.Controls.Add(this.label29);
-            this.tabPage6.Controls.Add(this.pictureBox1);
+            this.tabPage6.Controls.Add(this.pbFotoEmpleado);
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -1980,21 +2336,43 @@
             this.tabPage6.Text = "Paso 2";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // label87
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button3.Location = new System.Drawing.Point(272, 409);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 42);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.Location = new System.Drawing.Point(188, 15);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(130, 24);
+            this.label87.TabIndex = 46;
+            this.label87.Text = "EMPLEADO";
+            // 
+            // btnSiguiente2
+            // 
+            this.btnSiguiente2.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSiguiente2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSiguiente2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnSiguiente2.Location = new System.Drawing.Point(391, 409);
+            this.btnSiguiente2.Name = "btnSiguiente2";
+            this.btnSiguiente2.Size = new System.Drawing.Size(98, 42);
+            this.btnSiguiente2.TabIndex = 1;
+            this.btnSiguiente2.Text = "Siguiente";
+            this.btnSiguiente2.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar2
+            // 
+            this.btnCancelar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnCancelar2.Location = new System.Drawing.Point(272, 409);
+            this.btnCancelar2.Name = "btnCancelar2";
+            this.btnCancelar2.Size = new System.Drawing.Size(98, 42);
+            this.btnCancelar2.TabIndex = 2;
+            this.btnCancelar2.Text = "Cancelar";
+            this.btnCancelar2.UseVisualStyleBackColor = false;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.comboBox8);
+            this.groupBox6.Controls.Add(this.cboEstadoEmpleado);
             this.groupBox6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(272, 283);
             this.groupBox6.Name = "groupBox6";
@@ -2003,23 +2381,23 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Estado del empleado";
             // 
-            // comboBox8
+            // cboEstadoEmpleado
             // 
-            this.comboBox8.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(12, 36);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(191, 23);
-            this.comboBox8.TabIndex = 0;
+            this.cboEstadoEmpleado.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEstadoEmpleado.FormattingEnabled = true;
+            this.cboEstadoEmpleado.Location = new System.Drawing.Point(12, 36);
+            this.cboEstadoEmpleado.Name = "cboEstadoEmpleado";
+            this.cboEstadoEmpleado.Size = new System.Drawing.Size(191, 23);
+            this.cboEstadoEmpleado.TabIndex = 0;
             // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.label7);
-            this.groupBox16.Controls.Add(this.textBox14);
+            this.groupBox16.Controls.Add(this.txtSueldo);
             this.groupBox16.Controls.Add(this.label56);
-            this.groupBox16.Controls.Add(this.comboBox13);
+            this.groupBox16.Controls.Add(this.cboSeleccionarArea);
             this.groupBox16.Controls.Add(this.label57);
-            this.groupBox16.Controls.Add(this.dateTimePicker7);
+            this.groupBox16.Controls.Add(this.dtpFechaIngreso);
             this.groupBox16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox16.Location = new System.Drawing.Point(272, 42);
             this.groupBox16.Name = "groupBox16";
@@ -2039,15 +2417,15 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "Seleccionar un área";
             // 
-            // textBox14
+            // txtSueldo
             // 
-            this.textBox14.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox14.Location = new System.Drawing.Point(13, 174);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(189, 22);
-            this.textBox14.TabIndex = 2;
+            this.txtSueldo.BackColor = System.Drawing.Color.SeaShell;
+            this.txtSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtSueldo.Location = new System.Drawing.Point(13, 174);
+            this.txtSueldo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSueldo.Name = "txtSueldo";
+            this.txtSueldo.Size = new System.Drawing.Size(189, 22);
+            this.txtSueldo.TabIndex = 2;
             // 
             // label56
             // 
@@ -2060,14 +2438,14 @@
             this.label56.TabIndex = 28;
             this.label56.Text = "Sueldo";
             // 
-            // comboBox13
+            // cboSeleccionarArea
             // 
-            this.comboBox13.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(12, 52);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(187, 23);
-            this.comboBox13.TabIndex = 0;
+            this.cboSeleccionarArea.BackColor = System.Drawing.Color.SeaShell;
+            this.cboSeleccionarArea.FormattingEnabled = true;
+            this.cboSeleccionarArea.Location = new System.Drawing.Point(12, 52);
+            this.cboSeleccionarArea.Name = "cboSeleccionarArea";
+            this.cboSeleccionarArea.Size = new System.Drawing.Size(187, 23);
+            this.cboSeleccionarArea.TabIndex = 0;
             // 
             // label57
             // 
@@ -2080,25 +2458,25 @@
             this.label57.TabIndex = 7;
             this.label57.Text = "Fecha de Ingreso ";
             // 
-            // dateTimePicker7
+            // dtpFechaIngreso
             // 
-            this.dateTimePicker7.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker7.Location = new System.Drawing.Point(12, 117);
-            this.dateTimePicker7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(187, 21);
-            this.dateTimePicker7.TabIndex = 1;
+            this.dtpFechaIngreso.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(12, 117);
+            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpFechaIngreso.Name = "dtpFechaIngreso";
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(187, 21);
+            this.dtpFechaIngreso.TabIndex = 1;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtTituloUniversidad);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.txtTituloNombre);
+            this.groupBox2.Controls.Add(this.rbNo);
             this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.rbSi);
             this.groupBox2.Controls.Add(this.label32);
             this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(39, 283);
@@ -2109,15 +2487,15 @@
             this.groupBox2.Text = "Titulo";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // textBox7
+            // txtTituloUniversidad
             // 
-            this.textBox7.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox7.Location = new System.Drawing.Point(11, 170);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(188, 22);
-            this.textBox7.TabIndex = 3;
+            this.txtTituloUniversidad.BackColor = System.Drawing.Color.SeaShell;
+            this.txtTituloUniversidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtTituloUniversidad.Location = new System.Drawing.Point(11, 170);
+            this.txtTituloUniversidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTituloUniversidad.Name = "txtTituloUniversidad";
+            this.txtTituloUniversidad.Size = new System.Drawing.Size(188, 22);
+            this.txtTituloUniversidad.TabIndex = 3;
             // 
             // label8
             // 
@@ -2130,27 +2508,27 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "Universidad";
             // 
-            // textBox9
+            // txtTituloNombre
             // 
-            this.textBox9.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox9.Location = new System.Drawing.Point(11, 112);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(188, 22);
-            this.textBox9.TabIndex = 2;
+            this.txtTituloNombre.BackColor = System.Drawing.Color.SeaShell;
+            this.txtTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtTituloNombre.Location = new System.Drawing.Point(11, 112);
+            this.txtTituloNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTituloNombre.Name = "txtTituloNombre";
+            this.txtTituloNombre.Size = new System.Drawing.Size(188, 22);
+            this.txtTituloNombre.TabIndex = 2;
             // 
-            // radioButton3
+            // rbNo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton3.Location = new System.Drawing.Point(112, 61);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(43, 20);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "No";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbNo.AutoSize = true;
+            this.rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.rbNo.Location = new System.Drawing.Point(112, 61);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(43, 20);
+            this.rbNo.TabIndex = 1;
+            this.rbNo.TabStop = true;
+            this.rbNo.Text = "No";
+            this.rbNo.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
@@ -2163,17 +2541,17 @@
             this.label31.TabIndex = 26;
             this.label31.Text = "Nombre";
             // 
-            // radioButton4
+            // rbSi
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton4.Location = new System.Drawing.Point(39, 61);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(37, 20);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Si";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbSi.AutoSize = true;
+            this.rbSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.rbSi.Location = new System.Drawing.Point(39, 61);
+            this.rbSi.Name = "rbSi";
+            this.rbSi.Size = new System.Drawing.Size(37, 20);
+            this.rbSi.TabIndex = 0;
+            this.rbSi.TabStop = true;
+            this.rbSi.Text = "Si";
+            this.rbSi.UseVisualStyleBackColor = true;
             // 
             // label32
             // 
@@ -2197,16 +2575,16 @@
             this.label29.TabIndex = 32;
             this.label29.Text = "Foto";
             // 
-            // pictureBox1
+            // pbFotoEmpleado
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.MistyRose;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 61);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 205);
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
+            this.pbFotoEmpleado.BackColor = System.Drawing.Color.MistyRose;
+            this.pbFotoEmpleado.InitialImage = null;
+            this.pbFotoEmpleado.Location = new System.Drawing.Point(39, 61);
+            this.pbFotoEmpleado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbFotoEmpleado.Name = "pbFotoEmpleado";
+            this.pbFotoEmpleado.Size = new System.Drawing.Size(220, 205);
+            this.pbFotoEmpleado.TabIndex = 33;
+            this.pbFotoEmpleado.TabStop = false;
             // 
             // tabPage7
             // 
@@ -2225,6 +2603,30 @@
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Paso 3";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.button22.Location = new System.Drawing.Point(268, 415);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(98, 42);
+            this.button22.TabIndex = 1;
+            this.button22.Text = "Cancelar";
+            this.button22.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.MistyRose;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.button4.Location = new System.Drawing.Point(399, 415);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(98, 42);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Siguiente";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // groupBox11
             // 
@@ -2558,6 +2960,40 @@
             this.tabPage8.Text = "Paso 4";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(129, 20);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(272, 24);
+            this.label37.TabIndex = 54;
+            this.label37.Text = "ESTADO DEL EMPLEADO";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.MistyRose;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.button6.Location = new System.Drawing.Point(285, 451);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(98, 42);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Finalizar Registro";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.button5.Location = new System.Drawing.Point(157, 451);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(98, 42);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Cancelar";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.textBox5);
@@ -2797,442 +3233,6 @@
             this.dateTimePicker5.Size = new System.Drawing.Size(201, 21);
             this.dateTimePicker5.TabIndex = 0;
             // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.MistyRose;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button21.Location = new System.Drawing.Point(391, 409);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(98, 42);
-            this.button21.TabIndex = 1;
-            this.button21.Text = "Siguiente";
-            this.button21.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.MistyRose;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button4.Location = new System.Drawing.Point(399, 415);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 42);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Siguiente";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button22
-            // 
-            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button22.Location = new System.Drawing.Point(268, 415);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(98, 42);
-            this.button22.TabIndex = 1;
-            this.button22.Text = "Cancelar";
-            this.button22.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button5.Location = new System.Drawing.Point(157, 451);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 42);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.MistyRose;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button6.Location = new System.Drawing.Point(285, 451);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 42);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Finalizar Registro";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(129, 20);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(272, 24);
-            this.label37.TabIndex = 54;
-            this.label37.Text = "ESTADO DEL EMPLEADO";
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(184, 3);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(130, 24);
-            this.label86.TabIndex = 43;
-            this.label86.Text = "EMPLEADO";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(188, 15);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(130, 24);
-            this.label87.TabIndex = 46;
-            this.label87.Text = "EMPLEADO";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(149, 18);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(258, 24);
-            this.label88.TabIndex = 64;
-            this.label88.Text = "MODIFICAR EMPLEADO";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.Location = new System.Drawing.Point(133, 23);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(272, 24);
-            this.label89.TabIndex = 68;
-            this.label89.Text = "ESTADO DEL EMPLEADO";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button7.Location = new System.Drawing.Point(143, 357);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(98, 42);
-            this.button7.TabIndex = 69;
-            this.button7.Text = "Cancelar";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.MistyRose;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button8.Location = new System.Drawing.Point(273, 357);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(98, 42);
-            this.button8.TabIndex = 70;
-            this.button8.Text = "Modificar";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.MistyRose;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button9.Location = new System.Drawing.Point(283, 422);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(98, 42);
-            this.button9.TabIndex = 71;
-            this.button9.Text = "Modificar";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button10.Location = new System.Drawing.Point(147, 422);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(98, 42);
-            this.button10.TabIndex = 72;
-            this.button10.Text = "Cancelar";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.textBox26);
-            this.groupBox18.Controls.Add(this.label70);
-            this.groupBox18.Controls.Add(this.comboBox10);
-            this.groupBox18.Controls.Add(this.textBox24);
-            this.groupBox18.Controls.Add(this.label71);
-            this.groupBox18.Controls.Add(this.label12);
-            this.groupBox18.Controls.Add(this.label15);
-            this.groupBox18.Controls.Add(this.label67);
-            this.groupBox18.Controls.Add(this.dateTimePicker2);
-            this.groupBox18.Controls.Add(this.label72);
-            this.groupBox18.Controls.Add(this.textBox25);
-            this.groupBox18.Controls.Add(this.label73);
-            this.groupBox18.Controls.Add(this.label75);
-            this.groupBox18.Controls.Add(this.label74);
-            this.groupBox18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(24, 23);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(493, 363);
-            this.groupBox18.TabIndex = 73;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Datos del Empleado";
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.label80);
-            this.groupBox19.Controls.Add(this.textBox27);
-            this.groupBox19.Controls.Add(this.label79);
-            this.groupBox19.Controls.Add(this.textBox29);
-            this.groupBox19.Controls.Add(this.label78);
-            this.groupBox19.Controls.Add(this.label85);
-            this.groupBox19.Controls.Add(this.label77);
-            this.groupBox19.Controls.Add(this.comboBox12);
-            this.groupBox19.Controls.Add(this.label76);
-            this.groupBox19.Controls.Add(this.label81);
-            this.groupBox19.Controls.Add(this.label84);
-            this.groupBox19.Controls.Add(this.label82);
-            this.groupBox19.Controls.Add(this.comboBox15);
-            this.groupBox19.Controls.Add(this.dateTimePicker9);
-            this.groupBox19.Controls.Add(this.label83);
-            this.groupBox19.Controls.Add(this.textBox28);
-            this.groupBox19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.Location = new System.Drawing.Point(23, 19);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(494, 385);
-            this.groupBox19.TabIndex = 87;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Datos del Empleado";
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.MistyRose;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button11.Location = new System.Drawing.Point(290, 441);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(98, 41);
-            this.button11.TabIndex = 88;
-            this.button11.Text = "Modificar";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button12.Location = new System.Drawing.Point(152, 441);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(98, 41);
-            this.button12.TabIndex = 89;
-            this.button12.Text = "Cancelar";
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(129, 474);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(98, 41);
-            this.button13.TabIndex = 72;
-            this.button13.Text = "Cancelar";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.MistyRose;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(268, 474);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(98, 41);
-            this.button14.TabIndex = 73;
-            this.button14.Text = "Eliminar";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.label16);
-            this.groupBox20.Controls.Add(this.label21);
-            this.groupBox20.Controls.Add(this.label19);
-            this.groupBox20.Controls.Add(this.textBox30);
-            this.groupBox20.Controls.Add(this.label18);
-            this.groupBox20.Controls.Add(this.lblDNI);
-            this.groupBox20.Controls.Add(this.label17);
-            this.groupBox20.Controls.Add(this.label20);
-            this.groupBox20.Controls.Add(this.lblApellido);
-            this.groupBox20.Controls.Add(this.txtEliminarAclaraciones);
-            this.groupBox20.Controls.Add(this.lblCorreo);
-            this.groupBox20.Controls.Add(this.pbEliminarFoto);
-            this.groupBox20.Controls.Add(this.lblDireccion);
-            this.groupBox20.Controls.Add(this.label27);
-            this.groupBox20.Controls.Add(this.lblTelefono);
-            this.groupBox20.Controls.Add(this.label36);
-            this.groupBox20.Controls.Add(this.label28);
-            this.groupBox20.Controls.Add(this.lblFechaIngreso);
-            this.groupBox20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox20.Location = new System.Drawing.Point(22, 24);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(491, 417);
-            this.groupBox20.TabIndex = 74;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Datos del Empleado";
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(17, 23);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(96, 17);
-            this.label90.TabIndex = 16;
-            this.label90.Text = "Seleccionar";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(17, 19);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(96, 17);
-            this.label91.TabIndex = 21;
-            this.label91.Text = "Seleccionar";
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.BackColor = System.Drawing.Color.MistyRose;
-            this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Items.AddRange(new object[] {
-            "Poner Que filtar",
-            "Prueba",
-            "Hola xd"});
-            this.comboBox17.Location = new System.Drawing.Point(119, 16);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(245, 24);
-            this.comboBox17.TabIndex = 17;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(456, 16);
-            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(67, 25);
-            this.button17.TabIndex = 19;
-            this.button17.Text = "Borrar";
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.MistyRose;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(383, 16);
-            this.button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(67, 25);
-            this.button18.TabIndex = 18;
-            this.button18.Text = "Listar";
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(15, 50);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(508, 458);
-            this.dataGridView2.TabIndex = 20;
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(17, 19);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(96, 17);
-            this.label92.TabIndex = 21;
-            this.label92.Text = "Seleccionar";
-            // 
-            // comboBox18
-            // 
-            this.comboBox18.BackColor = System.Drawing.Color.MistyRose;
-            this.comboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Items.AddRange(new object[] {
-            "Poner Que filtar",
-            "Prueba",
-            "Hola xd"});
-            this.comboBox18.Location = new System.Drawing.Point(119, 16);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(245, 24);
-            this.comboBox18.TabIndex = 17;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.Location = new System.Drawing.Point(456, 16);
-            this.button19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(67, 25);
-            this.button19.TabIndex = 19;
-            this.button19.Text = "Borrar";
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.MistyRose;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(383, 16);
-            this.button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(67, 25);
-            this.button20.TabIndex = 18;
-            this.button20.Text = "Listar";
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(15, 50);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(508, 458);
-            this.dataGridView3.TabIndex = 20;
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3257,12 +3257,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).EndInit();
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarPais)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
@@ -3275,7 +3279,11 @@
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
             this.tabPage11.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
             this.tabPage12.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -3296,7 +3304,7 @@
             this.groupBox16.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -3317,14 +3325,6 @@
             this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox18.PerformLayout();
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3335,7 +3335,7 @@
         private System.Windows.Forms.PictureBox pcbMinimizar;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label lblDNI;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtEliminarAclaraciones;
         private System.Windows.Forms.PictureBox pbEliminarFoto;
@@ -3365,43 +3365,43 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboCuidad;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboProvincia;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboEmpleadoPais;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtInstagram;
+        private System.Windows.Forms.Button btnSiguiente1;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pbFotoEmpleado;
+        private System.Windows.Forms.Button btnCancelar1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNombreContacto;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtNumeroContacto;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtTituloUniversidad;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.TextBox txtTituloNombre;
+        private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.RadioButton radioButton7;
@@ -3430,16 +3430,16 @@
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCancelar2;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cboEstadoEmpleado;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtSueldo;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.ComboBox cboSeleccionarArea;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
+        private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
@@ -3464,85 +3464,85 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtDniModificar;
         private System.Windows.Forms.Button btnCancelarModificar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtPresentismoDni;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label lblPresentismoApellido;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label lblPresentismoNombre;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.DateTimePicker dtpPresentismoFecha;
+        private System.Windows.Forms.TextBox txtModificarSueldo;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtModificarInstagram;
+        private System.Windows.Forms.TextBox txtModificarCorreo;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtModificarTelefono;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtModificarDomicilio;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.DateTimePicker dateTimePicker8;
+        private System.Windows.Forms.DateTimePicker dtpModificarFecha;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtModificarNombre;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txtPresentismoAclaraciones;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtLicenciaAclaraciones;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.DateTimePicker dtpLicenciaFecha;
+        private System.Windows.Forms.TextBox txtLicenciaTiempo;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox cboLicenciaTipo;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label lblLicenciaNombre;
+        private System.Windows.Forms.Label lblLicenciaApellido;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox txtLicenciaDni;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox txtSancionesAclaraciones;
         private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox cboSancionesEstado;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.DateTimePicker dateTimePicker9;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.DateTimePicker dtpSancionesFecha;
+        private System.Windows.Forms.TextBox txtSancionesTiempo;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.ComboBox cboSancionesTipo;
         private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label lblSancionesNombre;
+        private System.Windows.Forms.Label lblSancionesApellido;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox txtSancionesDni;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.TextBox txtEliminarDni;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.TabPage tabPage14;
-        private System.Windows.Forms.ComboBox comboBox16;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cboListarApellido;
+        private System.Windows.Forms.Button btnBorrarApellido;
+        private System.Windows.Forms.Button btnListarApellido;
+        private System.Windows.Forms.DataGridView dgvListarApellido;
         private System.Windows.Forms.TabPage tabPage15;
         private System.Windows.Forms.TabPage tabPage16;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button btnSiguiente2;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label37;
@@ -3551,28 +3551,28 @@
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnPresentismoModificar;
+        private System.Windows.Forms.Button btnPresentismoCancelar;
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnLicenciaCancelar;
+        private System.Windows.Forms.Button btnLicenciaModificar;
+        private System.Windows.Forms.Button btnSancionesCancelar;
+        private System.Windows.Forms.Button btnSancionesModificar;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnCancelarEliminar;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.Label label91;
-        private System.Windows.Forms.ComboBox comboBox17;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox cboListarPais;
+        private System.Windows.Forms.Button btnBorrarPais;
+        private System.Windows.Forms.Button btnListarPais;
+        private System.Windows.Forms.DataGridView dgvListarPais;
         private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.ComboBox comboBox18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.ComboBox cboListarEstado;
+        private System.Windows.Forms.Button btnListarBorrar;
+        private System.Windows.Forms.Button btnListarEstado;
+        private System.Windows.Forms.DataGridView dgvListarEstado;
     }
 }
