@@ -9,11 +9,11 @@ namespace pryRecursosHumanos
     public class clsUsuarios
     {
 		private int idUsuario;
-		private int cuit;
-		private int contrasena;
+		private long cuit;
+		private string contrasena;
 		private bool admin;
 
-        public int Cuit
+        public long Cuit
         {
             get { return cuit; }
             set { cuit = value; }
@@ -23,7 +23,7 @@ namespace pryRecursosHumanos
 			get { return idUsuario; }
 			set { idUsuario = value; }
 		}
-        public int Contrasena
+        public string Contrasena
         {
             get { return contrasena; }
             set { contrasena = value; }
@@ -34,11 +34,17 @@ namespace pryRecursosHumanos
             set { admin = value; }
         }
 
-        public void registrar()
+        public void registrar(clsUsuarios nuevoUsuario)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             // LLENER LOS DATOS DEL USUARIO ANTES DE LLAMAR A ESTE METODO
-            BD.registrarUsuario(this);
+            BD.registrarUsuario(nuevoUsuario);
+        }
+        public bool Iniciar(clsUsuarios User)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            // LLENER LOS DATOS DEL USUARIO ANTES DE LLAMAR A ESTE METODO
+            return BD.iniciarSesion(User);
         }
     }
 }

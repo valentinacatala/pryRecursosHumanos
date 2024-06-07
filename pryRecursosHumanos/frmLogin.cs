@@ -31,5 +31,22 @@ namespace pryRecursosHumanos
         {
 
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            clsUsuarios usuario = new clsUsuarios();
+            usuario.Cuit = long.Parse(txtUsuario.Text);
+            usuario.Contrasena = txtContraseña.Text;
+            bool inicio = usuario.Iniciar(usuario);
+
+            if (inicio == true)
+            {
+                MessageBox.Show("¡Inicio de sesión exitoso!", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos. Intente nuevamente.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

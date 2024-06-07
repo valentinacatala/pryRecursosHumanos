@@ -20,7 +20,7 @@ namespace pryRecursosHumanos
         {
             cadena = ConfigurationManager.ConnectionStrings["CadenaConexion"].ConnectionString;
         }
-
+        #region listarEmpleado
         public void listarEmpleados(DataGridView dgvGrilla)
         {
             try
@@ -43,11 +43,11 @@ namespace pryRecursosHumanos
             }
             
         }
-
+        #endregion
+        #region agregarEmpleado
         public void agregarEmpleado(clsEmpleado nuevoEmpleado)
         {
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
-            nuevoEmpleado.Cuit = 125478;
             bool empleadoNoExiste = validarEmpleado(nuevoEmpleado);
             if (empleadoNoExiste)
             {
@@ -77,7 +77,6 @@ namespace pryRecursosHumanos
                 MessageBox.Show("Ya existe un usuario con ese CUIT");
             }
         }
-
         public bool validarEmpleado(clsEmpleado empleado)
         {
             try
@@ -102,6 +101,8 @@ namespace pryRecursosHumanos
                 return false;
             }
         }
+        #endregion
+        #region inicioSesion
         public bool iniciarSesion(clsUsuarios usuario)
         {
             try
@@ -127,10 +128,11 @@ namespace pryRecursosHumanos
             }
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
         }
+        #endregion
+        #region registrarUsuario
         public void registrarUsuario(clsUsuarios nuevoUsuario)
         {
             // REHACER CUANDO EXISTAN LOS DATOS
-            nuevoUsuario.Cuit = 125478;
             bool usuarioNoExiste = validarUsuario(nuevoUsuario);
             if (usuarioNoExiste)
             {
@@ -160,7 +162,6 @@ namespace pryRecursosHumanos
                 MessageBox.Show("Ya existe un usuario con ese CUIT");
             }
         }
-
         public bool validarUsuario(clsUsuarios usuario)
         {
             try
@@ -186,7 +187,7 @@ namespace pryRecursosHumanos
             }
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
         }
-
+        #endregion
 
     }
 }

@@ -1097,6 +1097,7 @@
             this.btnRegistrarUsuario.TabIndex = 0;
             this.btnRegistrarUsuario.Text = "Registrar";
             this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
+            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
             // 
             // panel2
             // 
