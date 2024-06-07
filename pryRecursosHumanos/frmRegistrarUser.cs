@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
-    public partial class frmConsulta : Form
+    public partial class frmRegistrarUser : Form
     {
-        public frmConsulta()
+        public frmRegistrarUser()
         {
             InitializeComponent();
         }
@@ -24,12 +24,7 @@ namespace pryRecursosHumanos
 
         private void pcbCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
     }
 }
