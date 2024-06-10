@@ -158,8 +158,8 @@
             this.txtSancionesTiempo = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabAgregarEmpleados = new System.Windows.Forms.TabControl();
+            this.tabPaso1 = new System.Windows.Forms.TabPage();
             this.label86 = new System.Windows.Forms.Label();
             this.btnCancelar1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -195,7 +195,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPaso2 = new System.Windows.Forms.TabPage();
             this.label87 = new System.Windows.Forms.Label();
             this.btnSiguiente2 = new System.Windows.Forms.Button();
             this.btnCancelar2 = new System.Windows.Forms.Button();
@@ -218,7 +218,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPaso3 = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -248,9 +248,9 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.cboAlergias = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPaso4 = new System.Windows.Forms.TabPage();
             this.label37 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -301,24 +301,24 @@
             this.groupBox19.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.tabAgregarEmpleados.SuspendLayout();
+            this.tabPaso1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.tabPaso2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
-            this.tabPage7.SuspendLayout();
+            this.tabPaso3.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.tabPage8.SuspendLayout();
+            this.tabPaso4.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -1875,7 +1875,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.tabControl2);
+            this.tabPage1.Controls.Add(this.tabAgregarEmpleados);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage1.Name = "tabPage1";
@@ -1885,37 +1885,37 @@
             this.tabPage1.Text = "Registrar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // tabAgregarEmpleados
             // 
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Controls.Add(this.tabPage8);
-            this.tabControl2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.tabControl2.HotTrack = true;
-            this.tabControl2.Location = new System.Drawing.Point(-8, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(553, 564);
-            this.tabControl2.TabIndex = 0;
+            this.tabAgregarEmpleados.Controls.Add(this.tabPaso1);
+            this.tabAgregarEmpleados.Controls.Add(this.tabPaso2);
+            this.tabAgregarEmpleados.Controls.Add(this.tabPaso3);
+            this.tabAgregarEmpleados.Controls.Add(this.tabPaso4);
+            this.tabAgregarEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabAgregarEmpleados.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.tabAgregarEmpleados.HotTrack = true;
+            this.tabAgregarEmpleados.Location = new System.Drawing.Point(-8, 0);
+            this.tabAgregarEmpleados.Name = "tabAgregarEmpleados";
+            this.tabAgregarEmpleados.SelectedIndex = 0;
+            this.tabAgregarEmpleados.Size = new System.Drawing.Size(553, 564);
+            this.tabAgregarEmpleados.TabIndex = 0;
             // 
-            // tabPage5
+            // tabPaso1
             // 
-            this.tabPage5.Controls.Add(this.label86);
-            this.tabPage5.Controls.Add(this.btnCancelar1);
-            this.tabPage5.Controls.Add(this.groupBox5);
-            this.tabPage5.Controls.Add(this.btnSiguiente1);
-            this.tabPage5.Controls.Add(this.groupBox4);
-            this.tabPage5.Controls.Add(this.groupBox3);
-            this.tabPage5.Controls.Add(this.groupBox1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(545, 536);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Paso 1";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPaso1.Controls.Add(this.label86);
+            this.tabPaso1.Controls.Add(this.btnCancelar1);
+            this.tabPaso1.Controls.Add(this.groupBox5);
+            this.tabPaso1.Controls.Add(this.btnSiguiente1);
+            this.tabPaso1.Controls.Add(this.groupBox4);
+            this.tabPaso1.Controls.Add(this.groupBox3);
+            this.tabPaso1.Controls.Add(this.groupBox1);
+            this.tabPaso1.Location = new System.Drawing.Point(4, 24);
+            this.tabPaso1.Name = "tabPaso1";
+            this.tabPaso1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPaso1.Size = new System.Drawing.Size(545, 536);
+            this.tabPaso1.TabIndex = 0;
+            this.tabPaso1.Text = "Paso 1";
+            this.tabPaso1.UseVisualStyleBackColor = true;
             // 
             // label86
             // 
@@ -2007,6 +2007,7 @@
             this.btnSiguiente1.TabIndex = 0;
             this.btnSiguiente1.Text = "Siguiente";
             this.btnSiguiente1.UseVisualStyleBackColor = false;
+            this.btnSiguiente1.Click += new System.EventHandler(this.btnSiguiente1_Click);
             // 
             // groupBox4
             // 
@@ -2317,23 +2318,23 @@
             this.txtDireccion.Size = new System.Drawing.Size(190, 22);
             this.txtDireccion.TabIndex = 0;
             // 
-            // tabPage6
+            // tabPaso2
             // 
-            this.tabPage6.Controls.Add(this.label87);
-            this.tabPage6.Controls.Add(this.btnSiguiente2);
-            this.tabPage6.Controls.Add(this.btnCancelar2);
-            this.tabPage6.Controls.Add(this.groupBox6);
-            this.tabPage6.Controls.Add(this.groupBox16);
-            this.tabPage6.Controls.Add(this.groupBox2);
-            this.tabPage6.Controls.Add(this.label29);
-            this.tabPage6.Controls.Add(this.pbFotoEmpleado);
-            this.tabPage6.Location = new System.Drawing.Point(4, 24);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(545, 536);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Paso 2";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabPaso2.Controls.Add(this.label87);
+            this.tabPaso2.Controls.Add(this.btnSiguiente2);
+            this.tabPaso2.Controls.Add(this.btnCancelar2);
+            this.tabPaso2.Controls.Add(this.groupBox6);
+            this.tabPaso2.Controls.Add(this.groupBox16);
+            this.tabPaso2.Controls.Add(this.groupBox2);
+            this.tabPaso2.Controls.Add(this.label29);
+            this.tabPaso2.Controls.Add(this.pbFotoEmpleado);
+            this.tabPaso2.Location = new System.Drawing.Point(4, 24);
+            this.tabPaso2.Name = "tabPaso2";
+            this.tabPaso2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPaso2.Size = new System.Drawing.Size(545, 536);
+            this.tabPaso2.TabIndex = 1;
+            this.tabPaso2.Text = "Paso 2";
+            this.tabPaso2.UseVisualStyleBackColor = true;
             // 
             // label87
             // 
@@ -2356,6 +2357,7 @@
             this.btnSiguiente2.TabIndex = 1;
             this.btnSiguiente2.Text = "Siguiente";
             this.btnSiguiente2.UseVisualStyleBackColor = false;
+            this.btnSiguiente2.Click += new System.EventHandler(this.btnSiguiente2_Click);
             // 
             // btnCancelar2
             // 
@@ -2586,23 +2588,24 @@
             this.pbFotoEmpleado.TabIndex = 33;
             this.pbFotoEmpleado.TabStop = false;
             // 
-            // tabPage7
+            // tabPaso3
             // 
-            this.tabPage7.Controls.Add(this.button22);
-            this.tabPage7.Controls.Add(this.button4);
-            this.tabPage7.Controls.Add(this.groupBox11);
-            this.tabPage7.Controls.Add(this.groupBox7);
-            this.tabPage7.Controls.Add(this.label40);
-            this.tabPage7.Controls.Add(this.groupBox9);
-            this.tabPage7.Controls.Add(this.groupBox10);
-            this.tabPage7.Controls.Add(this.groupBox8);
-            this.tabPage7.Location = new System.Drawing.Point(4, 24);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(545, 536);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "Paso 3";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.tabPaso3.Controls.Add(this.button22);
+            this.tabPaso3.Controls.Add(this.button4);
+            this.tabPaso3.Controls.Add(this.groupBox11);
+            this.tabPaso3.Controls.Add(this.groupBox7);
+            this.tabPaso3.Controls.Add(this.label40);
+            this.tabPaso3.Controls.Add(this.groupBox9);
+            this.tabPaso3.Controls.Add(this.groupBox10);
+            this.tabPaso3.Controls.Add(this.groupBox8);
+            this.tabPaso3.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.tabPaso3.Location = new System.Drawing.Point(4, 24);
+            this.tabPaso3.Name = "tabPaso3";
+            this.tabPaso3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPaso3.Size = new System.Drawing.Size(545, 536);
+            this.tabPaso3.TabIndex = 2;
+            this.tabPaso3.Text = "Paso 3";
+            this.tabPaso3.UseVisualStyleBackColor = true;
             // 
             // button22
             // 
@@ -2627,6 +2630,7 @@
             this.button4.TabIndex = 0;
             this.button4.Text = "Siguiente";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox11
             // 
@@ -2942,21 +2946,21 @@
             this.label46.Size = new System.Drawing.Size(0, 16);
             this.label46.TabIndex = 0;
             // 
-            // tabPage8
+            // tabPaso4
             // 
-            this.tabPage8.Controls.Add(this.label37);
-            this.tabPage8.Controls.Add(this.button6);
-            this.tabPage8.Controls.Add(this.button5);
-            this.tabPage8.Controls.Add(this.groupBox15);
-            this.tabPage8.Controls.Add(this.groupBox14);
-            this.tabPage8.Controls.Add(this.groupBox13);
-            this.tabPage8.Location = new System.Drawing.Point(4, 24);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(545, 536);
-            this.tabPage8.TabIndex = 3;
-            this.tabPage8.Text = "Paso 4";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabPaso4.Controls.Add(this.label37);
+            this.tabPaso4.Controls.Add(this.btnRegistrarUsuario);
+            this.tabPaso4.Controls.Add(this.button5);
+            this.tabPaso4.Controls.Add(this.groupBox15);
+            this.tabPaso4.Controls.Add(this.groupBox14);
+            this.tabPaso4.Controls.Add(this.groupBox13);
+            this.tabPaso4.Location = new System.Drawing.Point(4, 24);
+            this.tabPaso4.Name = "tabPaso4";
+            this.tabPaso4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPaso4.Size = new System.Drawing.Size(545, 536);
+            this.tabPaso4.TabIndex = 3;
+            this.tabPaso4.Text = "Paso 4";
+            this.tabPaso4.UseVisualStyleBackColor = true;
             // 
             // label37
             // 
@@ -2968,17 +2972,18 @@
             this.label37.TabIndex = 54;
             this.label37.Text = "ESTADO DEL EMPLEADO";
             // 
-            // button6
+            // btnRegistrarUsuario
             // 
-            this.button6.BackColor = System.Drawing.Color.MistyRose;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button6.Location = new System.Drawing.Point(285, 451);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 42);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Finalizar Registro";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.MistyRose;
+            this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrarUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(285, 451);
+            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
+            this.btnRegistrarUsuario.Size = new System.Drawing.Size(98, 42);
+            this.btnRegistrarUsuario.TabIndex = 1;
+            this.btnRegistrarUsuario.Text = "Finalizar Registro";
+            this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
+            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
             // 
             // button5
             // 
@@ -3287,9 +3292,9 @@
             this.groupBox19.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.tabAgregarEmpleados.ResumeLayout(false);
+            this.tabPaso1.ResumeLayout(false);
+            this.tabPaso1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -3298,16 +3303,16 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.tabPaso2.ResumeLayout(false);
+            this.tabPaso2.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).EndInit();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
+            this.tabPaso3.ResumeLayout(false);
+            this.tabPaso3.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -3318,8 +3323,8 @@
             this.groupBox10.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
+            this.tabPaso4.ResumeLayout(false);
+            this.tabPaso4.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox14.ResumeLayout(false);
@@ -3356,10 +3361,10 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabControl tabAgregarEmpleados;
+        private System.Windows.Forms.TabPage tabPaso1;
+        private System.Windows.Forms.TabPage tabPaso2;
+        private System.Windows.Forms.TabPage tabPaso3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label6;
@@ -3415,7 +3420,7 @@
         private System.Windows.Forms.ComboBox cboMedicamentos;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPaso4;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label54;
@@ -3547,7 +3552,7 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnRegistrarUsuario;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label87;

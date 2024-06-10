@@ -113,5 +113,28 @@ namespace pryRecursosHumanos
                 ciudades.listarCiudades(cboCuidad, idProvincia);
             }
         }
+
+        private void btnSiguiente1_Click(object sender, EventArgs e)
+        {
+            //tabPaso2.Locked = false;
+            tabAgregarEmpleados.SelectedTab = tabPaso2;
+        }
+
+        private void btnSiguiente2_Click(object sender, EventArgs e)
+        {
+            //tabPaso3.Locked = false;
+            tabAgregarEmpleados.SelectedTab = tabPaso3;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //tabPaso4.Locked = false;
+            tabAgregarEmpleados.SelectedTab = tabPaso4;
+        }
+
+        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
