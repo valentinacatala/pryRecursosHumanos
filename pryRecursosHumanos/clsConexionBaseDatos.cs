@@ -48,7 +48,6 @@ namespace pryRecursosHumanos
         #region agregarEmpleado
         public void agregarEmpleado(clsEmpleado nuevoEmpleado)
         {
-            // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
             bool empleadoNoExiste = validarEmpleado(nuevoEmpleado);
             if (empleadoNoExiste)
             {
@@ -59,8 +58,24 @@ namespace pryRecursosHumanos
 
                     comando.Connection = conexion;
                     comando.CommandType = CommandType.Text;
-                    comando.CommandText = $"INSERT INTO Empleados(Nombre, IdArea) VALUES ('{nuevoEmpleado.Cuit}', '{2}')";
-
+                    comando.Parameters.Clear();
+                    comando.CommandText = $@"INSERT INTO Empleados
+                                            (Cuit, nombre, apellido, IdArea, IdFichaMedica, Domicilio, Telefono, DNI, CorreoElectronico, FechaDeNacimiento, Foto, IdPais, IdEstado, IdTitulo, IdTipoDeContacto, Instagram)
+                                            VALUES (@CUIT, '@NOMBRE', '@APELLIDO', @AREA, @FICHA, '@DOMICILIO', @TELEFONO, @DNI, '@EMAIL', @NACIMIENTO, '@FOTO', @PAIS, @ESTADO, @TITULO, '@INSTAGRAM')";
+                    comando.Parameters.AddWithValue("CUIT", nuevoEmpleado.Cuit);
+                    comando.Parameters.AddWithValue("NOMBRE", nuevoEmpleado.Nombre);
+                    comando.Parameters.AddWithValue("APELLIDO", nuevoEmpleado.Apellido);
+                    comando.Parameters.AddWithValue("AREA", nuevoEmpleado.Area.IdArea);
+                    comando.Parameters.AddWithValue("FICHA", nuevoEmpleado.FichaMedica.IdFichaMedica);
+                    comando.Parameters.AddWithValue("DOMICILIO", nuevoEmpleado.Domicilio);
+                    comando.Parameters.AddWithValue("TELEFONO", nuevoEmpleado.Telefono);
+                    comando.Parameters.AddWithValue("DNI", nuevoEmpleado.DNI);
+                    comando.Parameters.AddWithValue("EMAIL", nuevoEmpleado.Email);
+                    comando.Parameters.AddWithValue("NACIMIENTO", nuevoEmpleado.FechaNacimiento);
+                    comando.Parameters.AddWithValue("FOTO", nuevoEmpleado.Foto);
+                    comando.Parameters.AddWithValue("PAIS", nuevoEmpleado.Ciudad.IdCiudad);
+                    comando.Parameters.AddWithValue("ESTADO", nuevoEmpleado.Titulo);
+                    comando.Parameters.AddWithValue("INSTAGRAM", nuevoEmpleado.Instagram);
                     conexion.Open();
                     comando.ExecuteNonQuery();
                 }
