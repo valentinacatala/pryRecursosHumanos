@@ -47,6 +47,30 @@ namespace pryRecursosHumanos
         {
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            clsUsuarios usuario = new clsUsuarios();
+            usuario.Cuit = long.Parse(txtUsuario.Text);
+            usuario.Contrasena = txtContraseña.Text;
+            List<bool> inicio = usuario.Iniciar(usuario);
+            if (inicio[0] == true)
+            {
+                MessageBox.Show("¡Inicio de sesión exitoso!", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (inicio[1])
+                {
+                    frmAdmin frmAdmin = new frmAdmin();
+                    frmAdmin.ShowDialog();
+                }
+                else
+                {
+                    frmConsulta frmConsulta = new frmConsulta();
+                    frmConsulta.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos. Intente nuevamente.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

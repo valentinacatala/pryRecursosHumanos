@@ -39,11 +39,6 @@ namespace pryRecursosHumanos
             Application.Exit();
         }
 
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -53,6 +48,18 @@ namespace pryRecursosHumanos
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        private void frmConsulta_Load(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleados(dgvListar);
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.registrarUsuario(new clsUsuarios());
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleados(dgvListar);
         }
     }
 }
