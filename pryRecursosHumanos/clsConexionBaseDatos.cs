@@ -194,5 +194,31 @@ namespace pryRecursosHumanos
         }
         #endregion
 
+        #region comboBox
+        public void listarCombo(ComboBox combo, string nombreTabla, string nombreId)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM {nombreTabla}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                combo.DisplayMember = "Nombre";
+                combo.ValueMember = $"{nombreId}";
+                combo.DataSource = tablaEmpleados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        #endregion
     }
 }

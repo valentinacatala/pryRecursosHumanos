@@ -114,6 +114,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.pcbMinimizar = new System.Windows.Forms.PictureBox();
+            this.cboAreas = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
@@ -147,6 +148,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cboAreas);
             this.tabPage1.Controls.Add(this.txtRegistrarAclaraciones);
             this.tabPage1.Controls.Add(this.btnCancelarRegistrar);
             this.tabPage1.Controls.Add(this.btnRegistrar);
@@ -1135,6 +1137,15 @@
             this.pcbMinimizar.TabStop = false;
             this.pcbMinimizar.Click += new System.EventHandler(this.pcbMinimizar_Click);
             // 
+            // cboAreas
+            // 
+            this.cboAreas.FormattingEnabled = true;
+            this.cboAreas.Location = new System.Drawing.Point(28, 405);
+            this.cboAreas.Name = "cboAreas";
+            this.cboAreas.Size = new System.Drawing.Size(121, 23);
+            this.cboAreas.TabIndex = 6;
+            this.cboAreas.SelectedIndexChanged += new System.EventHandler(this.cboAreas_SelectedIndexChanged);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1150,6 +1161,7 @@
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmin";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1262,5 +1274,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cboAreas;
     }
 }

@@ -90,5 +90,17 @@ namespace pryRecursosHumanos
                 MessageBox.Show("COMPLETE TODOS LOS CAMPOS");
             }
         }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+            clsArea areas = new clsArea();
+            areas.listarCombo(cboAreas);
+            
+        }
+
+        private void cboAreas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(cboAreas.SelectedValue.ToString()) ;
+        }
     }
 }
