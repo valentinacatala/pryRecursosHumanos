@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
@@ -22,6 +23,12 @@ namespace pryRecursosHumanos
 		{
 			get { return idEstado; }
 			set { idEstado = value; }
+		}
+
+		public static void listarEstados(ComboBox cbEstados)
+		{
+			clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.listarEstados(cbEstados);
 		}
 
 

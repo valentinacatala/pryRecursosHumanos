@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
@@ -28,5 +29,10 @@ namespace pryRecursosHumanos
 			set { tiempo = value; }
 		}
 
+		public static void listarSanciones(ComboBox cbSanciones)
+		{
+			clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.listarSanciones(cbSanciones);
+		}
 	}
 }

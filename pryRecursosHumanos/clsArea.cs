@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
@@ -20,6 +21,12 @@ namespace pryRecursosHumanos
 		{
 			get { return nombre; }
 			set { nombre = value; }
+		}
+
+		public static void listarArea(ComboBox cbAreas)
+		{
+			clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.listarAreas(cbAreas);
 		}
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
@@ -22,5 +23,10 @@ namespace pryRecursosHumanos
 			set { nombre = value; }
 		}
 
+		public static void listarDiscapacidades(ComboBox cbDiscapacidades)
+		{
+			clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.listarDiscapacidades(cbDiscapacidades);
+		}
 	}
 }

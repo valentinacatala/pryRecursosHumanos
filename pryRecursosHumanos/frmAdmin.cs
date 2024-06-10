@@ -73,5 +73,45 @@ namespace pryRecursosHumanos
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
         }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {            
+            clsPaises.listarPaises(cboEmpleadoPais);
+            clsArea.listarArea(cboSeleccionarArea);
+            clsEstado.listarEstados(cboEstadoEmpleado);
+            clsEnfermedadesPatologicas.listarEnfermedades(cboEnfermedades);
+            clsMedicamentos.listarMedicamentos(cboMedicamentos);
+            clsDiscapacidades.listarDiscapacidades(cboDiscapacidades);
+            clsAlergias.listarAlergias(cboAlergias);
+            clsSanciones.listarSanciones(cboTipoSancion);
+            clsLicencia.listarLicencias(cboTipoLicencia);
+            
+        }
+
+        private void cboEmpleadoPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboProvincia.ResetText();
+            cboProvincia.DataSource = null;
+            cboCuidad.ResetText();
+            cboCuidad.DataSource = null;
+            if (cboEmpleadoPais.SelectedValue != null)
+            {
+                clsProvincias provincias = new clsProvincias();
+                int idPais = Convert.ToInt32(cboEmpleadoPais.SelectedValue);
+                provincias.listarProvincias(cboProvincia, idPais);
+            }
+        }
+
+        private void cboProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboCuidad.ResetText();
+            cboCuidad.DataSource = null;
+            if (cboProvincia.SelectedValue != null)
+            {
+                clsCiudades ciudades = new clsCiudades();
+                int idProvincia = Convert.ToInt32(cboProvincia.SelectedValue);
+                ciudades.listarCiudades(cboCuidad, idProvincia);
+            }
+        }
     }
 }

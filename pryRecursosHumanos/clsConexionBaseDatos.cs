@@ -194,5 +194,274 @@ namespace pryRecursosHumanos
         }
         #endregion
 
+        #region llenarCombos
+        public void listarPaises(ComboBox cbPaises)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "SELECT * FROM Paises";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaPaises = new DataTable();
+                adaptador.Fill(tablaPaises);
+                cbPaises.ValueMember = "IdPais";
+                cbPaises.DisplayMember = "Nombre";
+                cbPaises.DataSource = tablaPaises;
+                cbPaises.SelectedIndex = -1;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void listarProvincias(ComboBox cbProvincias, int idPais)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Provincias WHERE IdPais = {idPais}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaProvincias = new DataTable();
+                adaptador.Fill(tablaProvincias);
+                cbProvincias.ValueMember = "IdProvincia";
+                cbProvincias.DisplayMember = "Nombre";
+                cbProvincias.DataSource = tablaProvincias;
+                cbProvincias.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarCiudades(ComboBox cbCiudades, int idProvincia)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Ciudades WHERE IdProvincia = {idProvincia}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaCiudades = new DataTable();
+                adaptador.Fill(tablaCiudades);
+                cbCiudades.ValueMember = "IdCiudad";
+                cbCiudades.DisplayMember = "Nombre";
+                cbCiudades.DataSource = tablaCiudades;
+                cbCiudades.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarAreas(ComboBox cbAreas)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Areas";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaAreas = new DataTable();
+                adaptador.Fill(tablaAreas);
+                cbAreas.ValueMember = "IdAreas";
+                cbAreas.DisplayMember = "Nombre";
+                cbAreas.DataSource = tablaAreas;
+                cbAreas.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarEstados(ComboBox cbEstados)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Estados";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEstados = new DataTable();
+                adaptador.Fill(tablaEstados);
+                cbEstados.ValueMember = "IdEstado";
+                cbEstados.DisplayMember = "Nombre";
+                cbEstados.DataSource = tablaEstados;
+                cbEstados.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarEnfermedades(ComboBox cbEnfermedades)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM EnfermedadesPatologicas";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEnfermedades = new DataTable();
+                adaptador.Fill(tablaEnfermedades);
+                cbEnfermedades.ValueMember = "IdEnfermedadesPatologicas";
+                cbEnfermedades.DisplayMember = "Nombre";
+                cbEnfermedades.DataSource = tablaEnfermedades;
+                cbEnfermedades.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarMedicamentos(ComboBox cbMedicamentos)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.TableDirect;
+                comando.CommandText = $"Medicamentos";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaMedicamentos = new DataTable();
+                adaptador.Fill(tablaMedicamentos);
+                cbMedicamentos.ValueMember = "IdMedicamentos";
+                cbMedicamentos.DisplayMember = "Nombre";
+                cbMedicamentos.DataSource = tablaMedicamentos;
+                cbMedicamentos.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarDiscapacidades(ComboBox cbDiscapacidades)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Discapacidades";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaDiscapacidades = new DataTable();
+                adaptador.Fill(tablaDiscapacidades);
+                cbDiscapacidades.ValueMember = "IdDiscapacidades";
+                cbDiscapacidades.DisplayMember = "Nombre";
+                cbDiscapacidades.DataSource = tablaDiscapacidades;
+                cbDiscapacidades.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarAlergias(ComboBox cbAlergias)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Alergias";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaAlergias = new DataTable();
+                adaptador.Fill(tablaAlergias);
+                cbAlergias.ValueMember = "IdAlergias";
+                cbAlergias.DisplayMember = "Nombre";
+                cbAlergias.DataSource = tablaAlergias;
+                cbAlergias.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarSanciones(ComboBox cbSanciones)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Sanciones";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaSanciones = new DataTable();
+                adaptador.Fill(tablaSanciones);
+                cbSanciones.ValueMember = "IdSancion";
+                cbSanciones.DisplayMember = "Nombre";
+                cbSanciones.DataSource = tablaSanciones;
+                cbSanciones.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void listarLicencias(ComboBox cbLicencias)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Licencias";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaLicencias = new DataTable();
+                adaptador.Fill(tablaLicencias);
+                cbLicencias.ValueMember = "IdLicencia";
+                cbLicencias.DisplayMember = "Nombre";
+                cbLicencias.DataSource = tablaLicencias;
+                cbLicencias.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
     }
 }

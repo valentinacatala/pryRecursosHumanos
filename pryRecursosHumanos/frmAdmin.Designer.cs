@@ -229,14 +229,14 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label41 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cboDiscapacidades = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label44 = new System.Windows.Forms.Label();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.label47 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.cboEnfermedades = new System.Windows.Forms.ComboBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label58 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -244,9 +244,9 @@
             this.label42 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.cboMedicamentos = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cboAlergias = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label37 = new System.Windows.Forms.Label();
@@ -259,16 +259,16 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cboTipoLicencia = new System.Windows.Forms.ComboBox();
             this.label55 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.cboEstadoSancion = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cboTipoSancion = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -2234,6 +2234,7 @@
             // cboCuidad
             // 
             this.cboCuidad.BackColor = System.Drawing.Color.SeaShell;
+            this.cboCuidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCuidad.FormattingEnabled = true;
             this.cboCuidad.Location = new System.Drawing.Point(10, 204);
             this.cboCuidad.Name = "cboCuidad";
@@ -2254,11 +2255,13 @@
             // cboProvincia
             // 
             this.cboProvincia.BackColor = System.Drawing.Color.SeaShell;
+            this.cboProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProvincia.FormattingEnabled = true;
             this.cboProvincia.Location = new System.Drawing.Point(10, 152);
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(190, 23);
             this.cboProvincia.TabIndex = 2;
+            this.cboProvincia.SelectedIndexChanged += new System.EventHandler(this.cboProvincia_SelectedIndexChanged);
             // 
             // label23
             // 
@@ -2274,11 +2277,13 @@
             // cboEmpleadoPais
             // 
             this.cboEmpleadoPais.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEmpleadoPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpleadoPais.FormattingEnabled = true;
             this.cboEmpleadoPais.Location = new System.Drawing.Point(10, 97);
             this.cboEmpleadoPais.Name = "cboEmpleadoPais";
             this.cboEmpleadoPais.Size = new System.Drawing.Size(190, 23);
             this.cboEmpleadoPais.TabIndex = 1;
+            this.cboEmpleadoPais.SelectedIndexChanged += new System.EventHandler(this.cboEmpleadoPais_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -2378,6 +2383,7 @@
             // cboEstadoEmpleado
             // 
             this.cboEstadoEmpleado.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEstadoEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoEmpleado.FormattingEnabled = true;
             this.cboEstadoEmpleado.Location = new System.Drawing.Point(12, 36);
             this.cboEstadoEmpleado.Name = "cboEstadoEmpleado";
@@ -2435,6 +2441,7 @@
             // cboSeleccionarArea
             // 
             this.cboSeleccionarArea.BackColor = System.Drawing.Color.SeaShell;
+            this.cboSeleccionarArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSeleccionarArea.FormattingEnabled = true;
             this.cboSeleccionarArea.Location = new System.Drawing.Point(12, 52);
             this.cboSeleccionarArea.Name = "cboSeleccionarArea";
@@ -2663,7 +2670,7 @@
             this.groupBox7.Controls.Add(this.radioButton1);
             this.groupBox7.Controls.Add(this.radioButton2);
             this.groupBox7.Controls.Add(this.label41);
-            this.groupBox7.Controls.Add(this.comboBox4);
+            this.groupBox7.Controls.Add(this.cboDiscapacidades);
             this.groupBox7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.groupBox7.Location = new System.Drawing.Point(31, 325);
             this.groupBox7.Name = "groupBox7";
@@ -2718,14 +2725,15 @@
             this.label41.TabIndex = 23;
             this.label41.Text = "¿Tiene alguna discapacidad?";
             // 
-            // comboBox4
+            // cboDiscapacidades
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(8, 109);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(194, 23);
-            this.comboBox4.TabIndex = 2;
+            this.cboDiscapacidades.BackColor = System.Drawing.Color.SeaShell;
+            this.cboDiscapacidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiscapacidades.FormattingEnabled = true;
+            this.cboDiscapacidades.Location = new System.Drawing.Point(8, 109);
+            this.cboDiscapacidades.Name = "cboDiscapacidades";
+            this.cboDiscapacidades.Size = new System.Drawing.Size(194, 23);
+            this.cboDiscapacidades.TabIndex = 2;
             // 
             // label40
             // 
@@ -2743,7 +2751,7 @@
             this.groupBox9.Controls.Add(this.radioButton7);
             this.groupBox9.Controls.Add(this.radioButton8);
             this.groupBox9.Controls.Add(this.label47);
-            this.groupBox9.Controls.Add(this.comboBox11);
+            this.groupBox9.Controls.Add(this.cboEnfermedades);
             this.groupBox9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.groupBox9.Location = new System.Drawing.Point(31, 152);
             this.groupBox9.Name = "groupBox9";
@@ -2798,14 +2806,15 @@
             this.label47.TabIndex = 23;
             this.label47.Text = "¿Es contagioso?";
             // 
-            // comboBox11
+            // cboEnfermedades
             // 
-            this.comboBox11.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(9, 51);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(194, 23);
-            this.comboBox11.TabIndex = 0;
+            this.cboEnfermedades.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEnfermedades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEnfermedades.FormattingEnabled = true;
+            this.cboEnfermedades.Location = new System.Drawing.Point(9, 51);
+            this.cboEnfermedades.Name = "cboEnfermedades";
+            this.cboEnfermedades.Size = new System.Drawing.Size(194, 23);
+            this.cboEnfermedades.TabIndex = 0;
             // 
             // groupBox10
             // 
@@ -2815,7 +2824,7 @@
             this.groupBox10.Controls.Add(this.label42);
             this.groupBox10.Controls.Add(this.textBox10);
             this.groupBox10.Controls.Add(this.label48);
-            this.groupBox10.Controls.Add(this.comboBox14);
+            this.groupBox10.Controls.Add(this.cboMedicamentos);
             this.groupBox10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.groupBox10.Location = new System.Drawing.Point(268, 71);
             this.groupBox10.Name = "groupBox10";
@@ -2891,18 +2900,19 @@
             this.label48.TabIndex = 23;
             this.label48.Text = "Dosis";
             // 
-            // comboBox14
+            // cboMedicamentos
             // 
-            this.comboBox14.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(12, 100);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(190, 23);
-            this.comboBox14.TabIndex = 3;
+            this.cboMedicamentos.BackColor = System.Drawing.Color.SeaShell;
+            this.cboMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMedicamentos.FormattingEnabled = true;
+            this.cboMedicamentos.Location = new System.Drawing.Point(12, 100);
+            this.cboMedicamentos.Name = "cboMedicamentos";
+            this.cboMedicamentos.Size = new System.Drawing.Size(190, 23);
+            this.cboMedicamentos.TabIndex = 3;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.comboBox6);
+            this.groupBox8.Controls.Add(this.cboAlergias);
             this.groupBox8.Controls.Add(this.label46);
             this.groupBox8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.groupBox8.Location = new System.Drawing.Point(268, 299);
@@ -2912,14 +2922,15 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Alérgias";
             // 
-            // comboBox6
+            // cboAlergias
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(6, 28);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(202, 23);
-            this.comboBox6.TabIndex = 1;
+            this.cboAlergias.BackColor = System.Drawing.Color.SeaShell;
+            this.cboAlergias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAlergias.FormattingEnabled = true;
+            this.cboAlergias.Location = new System.Drawing.Point(6, 28);
+            this.cboAlergias.Name = "cboAlergias";
+            this.cboAlergias.Size = new System.Drawing.Size(202, 23);
+            this.cboAlergias.TabIndex = 1;
             // 
             // label46
             // 
@@ -2989,7 +3000,7 @@
             this.groupBox15.Controls.Add(this.dateTimePicker1);
             this.groupBox15.Controls.Add(this.textBox13);
             this.groupBox15.Controls.Add(this.label54);
-            this.groupBox15.Controls.Add(this.comboBox7);
+            this.groupBox15.Controls.Add(this.cboTipoLicencia);
             this.groupBox15.Controls.Add(this.label55);
             this.groupBox15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.Location = new System.Drawing.Point(285, 56);
@@ -3064,14 +3075,15 @@
             this.label54.TabIndex = 23;
             this.label54.Text = "Tiempo";
             // 
-            // comboBox7
+            // cboTipoLicencia
             // 
-            this.comboBox7.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(7, 47);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(197, 23);
-            this.comboBox7.TabIndex = 0;
+            this.cboTipoLicencia.BackColor = System.Drawing.Color.SeaShell;
+            this.cboTipoLicencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoLicencia.FormattingEnabled = true;
+            this.cboTipoLicencia.Location = new System.Drawing.Point(7, 47);
+            this.cboTipoLicencia.Name = "cboTipoLicencia";
+            this.cboTipoLicencia.Size = new System.Drawing.Size(197, 23);
+            this.cboTipoLicencia.TabIndex = 0;
             // 
             // label55
             // 
@@ -3086,13 +3098,13 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.comboBox9);
+            this.groupBox14.Controls.Add(this.cboEstadoSancion);
             this.groupBox14.Controls.Add(this.label45);
             this.groupBox14.Controls.Add(this.label51);
             this.groupBox14.Controls.Add(this.dateTimePicker6);
             this.groupBox14.Controls.Add(this.textBox2);
             this.groupBox14.Controls.Add(this.label52);
-            this.groupBox14.Controls.Add(this.comboBox5);
+            this.groupBox14.Controls.Add(this.cboTipoSancion);
             this.groupBox14.Controls.Add(this.label53);
             this.groupBox14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox14.Location = new System.Drawing.Point(28, 155);
@@ -3102,14 +3114,15 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Sanciones";
             // 
-            // comboBox9
+            // cboEstadoSancion
             // 
-            this.comboBox9.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(7, 106);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(204, 23);
-            this.comboBox9.TabIndex = 1;
+            this.cboEstadoSancion.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEstadoSancion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstadoSancion.FormattingEnabled = true;
+            this.cboEstadoSancion.Location = new System.Drawing.Point(7, 106);
+            this.cboEstadoSancion.Name = "cboEstadoSancion";
+            this.cboEstadoSancion.Size = new System.Drawing.Size(204, 23);
+            this.cboEstadoSancion.TabIndex = 1;
             // 
             // label45
             // 
@@ -3165,14 +3178,15 @@
             this.label52.TabIndex = 23;
             this.label52.Text = "Tiempo";
             // 
-            // comboBox5
+            // cboTipoSancion
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.SeaShell;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(7, 47);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(204, 23);
-            this.comboBox5.TabIndex = 0;
+            this.cboTipoSancion.BackColor = System.Drawing.Color.SeaShell;
+            this.cboTipoSancion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoSancion.FormattingEnabled = true;
+            this.cboTipoSancion.Location = new System.Drawing.Point(7, 47);
+            this.cboTipoSancion.Name = "cboTipoSancion";
+            this.cboTipoSancion.Size = new System.Drawing.Size(204, 23);
+            this.cboTipoSancion.TabIndex = 0;
             // 
             // label53
             // 
@@ -3234,6 +3248,7 @@
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmin";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).EndInit();
@@ -3393,18 +3408,18 @@
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cboEnfermedades;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.ComboBox cboMedicamentos;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cboTipoLicencia;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label33;
@@ -3414,7 +3429,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cboTipoSancion;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Button btnCancelar2;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -3434,14 +3449,14 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cboDiscapacidades;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox cboAlergias;
+        private System.Windows.Forms.ComboBox cboEstadoSancion;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label49;

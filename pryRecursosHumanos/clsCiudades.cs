@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
@@ -26,6 +27,12 @@ namespace pryRecursosHumanos
         {
             get { return nombre; }
             set { nombre = value; }
+        }
+
+        public void listarCiudades(ComboBox cbCiudades, int idProvincia)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarCiudades(cbCiudades, idProvincia);
         }
 
     }
