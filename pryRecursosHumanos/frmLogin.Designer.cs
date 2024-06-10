@@ -168,7 +168,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).EndInit();

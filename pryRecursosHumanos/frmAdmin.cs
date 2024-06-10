@@ -29,11 +29,6 @@ namespace pryRecursosHumanos
             panel2.MouseDown += new MouseEventHandler(panel2_MouseDown);
         }
 
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pcbMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -44,84 +39,12 @@ namespace pryRecursosHumanos
             Application.Exit();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label43_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox14_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label64_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
-
-        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox11_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox10_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox8_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox9_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox7_Enter(object sender, EventArgs e)
-        {
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -140,7 +63,7 @@ namespace pryRecursosHumanos
             nuevoEmpleado.DNI = 0;
             nuevoEmpleado.Email = txtCorreo.Text;
             nuevoEmpleado.FechaNacimiento = new DateTime();
-            nuevoEmpleado.Foto = pbxFoto.ImageLocation;
+            nuevoEmpleado.Foto = pbFotoEmpleado.ImageLocation;
             nuevoEmpleado.Ciudad = new clsCiudades();//Combo
             nuevoEmpleado.MediosContacto = new List<clsMedioContactos>();//Nuevo form
             nuevoEmpleado.Estado = new clsEstado();//Combo
@@ -149,37 +72,6 @@ namespace pryRecursosHumanos
             nuevoEmpleado.TiposContacto = new List<clsTipoContactos>();//Nuevo form
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
-        }
-
-        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
-        {
-            clsUsuarios nuevoUsuario = new clsUsuarios();
-            bool admin = false;
-            admin = nuevoUsuario.Admin; // REDUNDANTE
-
-            if (txtUsuario.Text != "" && txtContraseña.Text != "" && txtRepetirContraseña.Text != "")
-            {
-                if (txtContraseña.Text == txtRepetirContraseña.Text)
-                {
-                    nuevoUsuario.Cuit = Convert.ToInt64(txtUsuario.Text);
-                    nuevoUsuario.Contrasena = txtContraseña.Text;
-                    if (rbAdministrador.Checked)
-                    {
-                        admin = true;
-                        nuevoUsuario.Admin = admin;
-                        //nuevoUsuario.Admin = rbAdministrador.Checked;
-                    }
-                    nuevoUsuario.registrar(nuevoUsuario);
-                }
-                else
-                {
-                    MessageBox.Show("LAS CONTRASEÑAS NO COINCIDEN");
-                }
-            }
-            else
-            {
-                MessageBox.Show("COMPLETE TODOS LOS CAMPOS");
-            }
         }
     }
 }

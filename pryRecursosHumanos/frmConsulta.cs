@@ -48,6 +48,7 @@ namespace pryRecursosHumanos
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
         private void frmConsulta_Load(object sender, EventArgs e)
         {
             clsEmpleado empleado = new clsEmpleado();

@@ -42,7 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.pcbMinimizar = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,6 +67,7 @@
             // rbEmpleado
             // 
             this.rbEmpleado.AutoSize = true;
+            this.rbEmpleado.Checked = true;
             this.rbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEmpleado.Location = new System.Drawing.Point(19, 38);
             this.rbEmpleado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -86,7 +87,6 @@
             this.rbAdministrador.Name = "rbAdministrador";
             this.rbAdministrador.Size = new System.Drawing.Size(108, 20);
             this.rbAdministrador.TabIndex = 1;
-            this.rbAdministrador.TabStop = true;
             this.rbAdministrador.Text = "Administrador";
             this.rbAdministrador.UseVisualStyleBackColor = true;
             // 
@@ -207,18 +207,19 @@
             this.pcbMinimizar.TabStop = false;
             this.pcbMinimizar.Click += new System.EventHandler(this.pcbMinimizar_Click);
             // 
-            // button1
+            // btnRegistrar
             // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(113, 450);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 42);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRegistrar.Location = new System.Drawing.Point(113, 450);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(98, 42);
+            this.btnRegistrar.TabIndex = 34;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmRegistrarUser
             // 
@@ -226,7 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(327, 504);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -260,6 +261,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pcbCerrar;
         private System.Windows.Forms.PictureBox pcbMinimizar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }

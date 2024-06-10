@@ -43,5 +43,36 @@ namespace pryRecursosHumanos
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            clsUsuarios nuevoUsuario = new clsUsuarios();
+            bool admin = false;
+            admin = nuevoUsuario.Admin; // REDUNDANTE
+
+            if (txtUsuario.Text != "" && txtContraseña.Text != "" && txtRepetirContraseña.Text != "")
+            {
+                if (txtContraseña.Text == txtRepetirContraseña.Text)
+                {
+                    nuevoUsuario.Cuit = Convert.ToInt64(txtUsuario.Text);
+                    nuevoUsuario.Contrasena = txtContraseña.Text;
+                    if (rbAdministrador.Checked)
+                    {
+                        admin = true;
+                        nuevoUsuario.Admin = admin;
+                        //nuevoUsuario.Admin = rbAdministrador.Checked;
+                    }
+                    nuevoUsuario.registrar(nuevoUsuario);
+                }
+                else
+                {
+                    MessageBox.Show("LAS CONTRASEÑAS NO COINCIDEN");
+                }
+            }
+            else
+            {
+                MessageBox.Show("COMPLETE TODOS LOS CAMPOS");
+            }
+        }
     }
 }

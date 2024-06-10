@@ -38,15 +38,11 @@ namespace pryRecursosHumanos
            Application.Exit();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             clsUsuarios usuario = new clsUsuarios();

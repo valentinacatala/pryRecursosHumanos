@@ -334,7 +334,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(541, 33);
             this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pcbCerrar
@@ -797,7 +796,6 @@
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(188, 22);
             this.lblApellido.TabIndex = 25;
-            this.lblApellido.Click += new System.EventHandler(this.label22_Click);
             // 
             // txtEliminarAclaraciones
             // 
@@ -1264,7 +1262,6 @@
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = " Presentismo";
             this.tabPage10.UseVisualStyleBackColor = true;
-            this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
             // 
             // btnPresentismoModificar
             // 
@@ -1356,7 +1353,6 @@
             this.lblPresentismoNombre.Name = "lblPresentismoNombre";
             this.lblPresentismoNombre.Size = new System.Drawing.Size(190, 22);
             this.lblPresentismoNombre.TabIndex = 62;
-            this.lblPresentismoNombre.Click += new System.EventHandler(this.label64_Click);
             // 
             // lblPresentismoApellido
             // 
@@ -1903,7 +1899,6 @@
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(553, 564);
             this.tabControl2.TabIndex = 0;
-            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             // 
             // tabPage5
             // 
@@ -2235,7 +2230,6 @@
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dirección";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cboCuidad
             // 
@@ -2485,7 +2479,6 @@
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Titulo";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtTituloUniversidad
             // 
@@ -2639,7 +2632,6 @@
             this.groupBox11.TabIndex = 43;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "¿Fue entregada?";
-            this.groupBox11.Enter += new System.EventHandler(this.groupBox11_Enter);
             // 
             // radioButton9
             // 
@@ -2679,7 +2671,6 @@
             this.groupBox7.TabIndex = 39;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Discapacidades";
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // label43
             // 
@@ -2691,7 +2682,6 @@
             this.label43.Size = new System.Drawing.Size(48, 16);
             this.label43.TabIndex = 26;
             this.label43.Text = "¿Cuál?";
-            this.label43.Click += new System.EventHandler(this.label43_Click);
             // 
             // radioButton1
             // 
@@ -2761,7 +2751,6 @@
             this.groupBox9.TabIndex = 41;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Enfermedades Patológicas";
-            this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
             // label44
             // 
@@ -2834,7 +2823,6 @@
             this.groupBox10.TabIndex = 40;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Medicamentos";
-            this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
             // label58
             // 
@@ -2923,7 +2911,6 @@
             this.groupBox8.TabIndex = 38;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Alérgias";
-            this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
             // 
             // comboBox6
             // 
@@ -3114,7 +3101,6 @@
             this.groupBox14.TabIndex = 0;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Sanciones";
-            this.groupBox14.Enter += new System.EventHandler(this.groupBox14_Enter);
             // 
             // comboBox9
             // 
