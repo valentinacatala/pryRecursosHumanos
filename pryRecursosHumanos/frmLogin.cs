@@ -49,13 +49,13 @@ namespace pryRecursosHumanos
             usuario.Cuit = long.Parse(txtUsuario.Text);
             usuario.Contrasena = txtContraseña.Text;
             List<bool> inicio = usuario.Iniciar(usuario);
-            if (inicio[0] == true)
+            if (inicio != null && inicio[0] == true)
             {
                 MessageBox.Show("¡Inicio de sesión exitoso!", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (inicio[1])
                 {
-                    frmAdmin frmAdmin = new frmAdmin();
-                    frmAdmin.ShowDialog();
+                    frmMainAdmin frmMainAdmin = new frmMainAdmin();
+                    frmMainAdmin.ShowDialog();
                 }
                 else
                 {
