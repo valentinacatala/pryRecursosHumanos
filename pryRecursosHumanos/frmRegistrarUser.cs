@@ -24,8 +24,8 @@ namespace pryRecursosHumanos
             private const int HT_CAPTION = 0x2;
         public frmRegistrarUser()
         {
-            panel2.MouseDown += new MouseEventHandler(panel2_MouseDown);
             InitializeComponent();
+            panel2.MouseDown += new MouseEventHandler(panel2_MouseDown);
         }
 
         private void pcbMinimizar_Click(object sender, EventArgs e)
@@ -47,8 +47,6 @@ namespace pryRecursosHumanos
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             clsUsuarios nuevoUsuario = new clsUsuarios();
-            bool admin = false;
-            admin = nuevoUsuario.Admin; // REDUNDANTE
 
             if (txtUsuario.Text != "" && txtContraseña.Text != "" && txtRepetirContraseña.Text != "")
             {
@@ -58,11 +56,16 @@ namespace pryRecursosHumanos
                     nuevoUsuario.Contrasena = txtContraseña.Text;
                     if (rbAdministrador.Checked)
                     {
-                        admin = true;
-                        nuevoUsuario.Admin = admin;
-                        //nuevoUsuario.Admin = rbAdministrador.Checked;
+                        nuevoUsuario.Admin = rbAdministrador.Checked;
                     }
-                    nuevoUsuario.registrar(nuevoUsuario);
+                    if (nuevoUsuario.registrar(nuevoUsuario))
+                    {
+                        DialogResult result = MessageBox.Show("Usuario registrado con exito.\n Desea agregar otro?","Usuario Agregado", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.No)
+                        {
+                            this.Close();
+                        }
+                    }
                 }
                 else
                 {

@@ -45,35 +45,6 @@ namespace pryRecursosHumanos
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            clsEmpleado nuevoEmpleado = new clsEmpleado();
-
-            nuevoEmpleado.Cuit = 0;
-            nuevoEmpleado.Licencia = new clsLicencia();//Combo
-            nuevoEmpleado.Sanciones = new List<clsSanciones>();//Nuevo form
-            nuevoEmpleado.Area = new clsArea();//Combo
-            nuevoEmpleado.FichaMedica = new clsFichaMedica();
-            nuevoEmpleado.Usuarios = new clsUsuarios();//Combo
-            nuevoEmpleado.Nombre = txtNombre.Text;
-            nuevoEmpleado.Apellido = txtApellido.Text;
-            nuevoEmpleado.Domicilio = txtDireccion.Text;
-            nuevoEmpleado.Telefono = 0;
-            nuevoEmpleado.DNI = 0;
-            nuevoEmpleado.Email = txtCorreo.Text;
-            nuevoEmpleado.FechaNacimiento = new DateTime();
-            nuevoEmpleado.Foto = pbFotoEmpleado.ImageLocation;
-            nuevoEmpleado.Ciudad = new clsCiudades();//Combo
-            nuevoEmpleado.MediosContacto = new List<clsMedioContactos>();//Nuevo form
-            nuevoEmpleado.Estado = new clsEstado();//Combo
-            nuevoEmpleado.Titulo = new clsTitulo();//Combo
-            nuevoEmpleado.Instagram = "";
-            nuevoEmpleado.TiposContacto = new List<clsTipoContactos>();//Nuevo form
-
-            nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
-        }
-
         private void frmAdmin_Load(object sender, EventArgs e)
         {            
             clsPaises.listarPaises(cboEmpleadoPais);
@@ -134,7 +105,36 @@ namespace pryRecursosHumanos
 
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
+            clsEmpleado nuevoEmpleado = new clsEmpleado();
 
+            nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
+            nuevoEmpleado.IdLicencia = Convert.ToInt32(cboTipoLicencia.SelectedValue);
+            nuevoEmpleado.Sanciones = new List<int>();
+            nuevoEmpleado.IdArea = Convert.ToInt32(txtCuit);
+            nuevoEmpleado.IdFichaMedica = 0;
+            nuevoEmpleado.IdUsuarios = 0;
+            nuevoEmpleado.Nombre = txtNombre.Text;
+            nuevoEmpleado.Apellido = txtApellido.Text;
+            nuevoEmpleado.Domicilio = txtDireccion.Text;
+            nuevoEmpleado.Telefono = Convert.ToInt32(txtTelefono.Text);
+            nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
+            nuevoEmpleado.Email = txtCorreo.Text;
+            nuevoEmpleado.FechaNacimiento = Convert.ToDateTime(dtpFechaNacimiento);
+            nuevoEmpleado.Foto = pbFotoEmpleado.Image.ToString();
+            nuevoEmpleado.IdPais = Convert.ToInt32(cboEmpleadoPais);
+            nuevoEmpleado.IdProvincia = Convert.ToInt32(cboProvincia);
+            nuevoEmpleado.IdCiudad = Convert.ToInt32(cboCuidad.SelectedValue);
+            nuevoEmpleado.MediosContacto = new List<int>();
+            nuevoEmpleado.IdEstado = Convert.ToInt32(cboEstadoEmpleado.SelectedValue);
+            nuevoEmpleado.IdTitulo = 0;
+            nuevoEmpleado.Instagram = txtInstagram.Text;
+            nuevoEmpleado.TiposContacto = new List<int>();
+            nuevoEmpleado.IdMedicamento= Convert.ToInt32(cboMedicamentos);
+            nuevoEmpleado.IdEnfermedad = Convert.ToInt32(cboEnfermedades);
+            nuevoEmpleado.IdAlergia = Convert.ToInt32(cboAlergias);
+            nuevoEmpleado.IdDiscapacidad = Convert.ToInt32(cboDiscapacidades);
+
+            nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
         }
     }
 }

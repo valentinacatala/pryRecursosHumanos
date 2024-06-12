@@ -10,11 +10,11 @@ namespace pryRecursosHumanos
     public class clsEmpleado
     {
 		private int cuit;
-		private clsLicencia licencia;
-		private List<clsSanciones> sanciones;
-		private clsArea area;
-		private clsFichaMedica fichaMedica;
-		private clsUsuarios usuario;
+		private int idLicencia;
+		private List<int> sanciones;
+		private int idArea;
+		private int idFichaMedica;
+		private int idUsuario;
 		private string nombre;
 		private string apellido;
 		private string domicilio;
@@ -23,42 +23,48 @@ namespace pryRecursosHumanos
 		private string email;
 		private DateTime fechaNacimiento;
 		private string foto;
-		private clsCiudades ciudad;
-		private List<clsMedioContactos> mediosContacto;
-		private clsEstado estado;
-		private clsTitulo titulo;
+		private int idPais;
+		private int idProvincia;
+		private int idCiudad;
+		private List<int> mediosContacto;
+		private int idEstado;
+		private int idTitulo;
 		private string instagram;
-		private List<clsTipoContactos> tiposContacto;
+		private List<int> tiposContacto;
+		private int idMedicamento;
+		private int idEnfermedad;
+		private int idAlergia;
+		private int idDiscapacidad;
 
 		public int Cuit
 		{
 			get { return cuit; }
 			set { cuit = value; }
 		}
-		public clsLicencia Licencia
+		public int IdLicencia
 		{
-			get { return licencia; }
-			set { licencia = value; }
+			get { return idLicencia; }
+			set { idLicencia = value; }
 		}
-		public List<clsSanciones> Sanciones
+		public List<int> Sanciones
         {
 			get { return sanciones; }
 			set { sanciones = value; }
 		}
-		public clsArea Area
+		public int IdArea
         {
-			get { return area; }
-			set { area = value; }
+			get { return idArea; }
+			set { idArea = value; }
 		}
-		public clsFichaMedica FichaMedica
+		public int IdFichaMedica
 		{
-			get { return fichaMedica; }
-			set { fichaMedica = value; }
+			get { return idFichaMedica; }
+			set { idFichaMedica = value; }
 		}
-		public clsUsuarios Usuarios
+		public int IdUsuarios
 		{
-			get { return usuario; }
-			set { usuario = value; }
+			get { return idUsuario; }
+			set { idUsuario = value; }
 		}
 		public string Nombre
 		{
@@ -100,35 +106,65 @@ namespace pryRecursosHumanos
 			get { return foto; }
 			set { foto = value; }
 		}
-		public clsCiudades Ciudad
+		public int IdPais
 		{
-			get { return ciudad; }
-			set { ciudad = value; }
+			get { return idPais; }
+			set { idPais = value; }
 		}
-		public List<clsMedioContactos> MediosContacto
+		public int IdProvincia
+		{
+			get { return idProvincia; }
+			set { idProvincia = value; }
+		}
+		public int IdCiudad
+		{
+			get { return idCiudad; }
+			set { idCiudad = value; }
+		}
+		public List<int> MediosContacto
         {
 			get { return mediosContacto; }
 			set { mediosContacto = value; }
 		}
-		public clsEstado Estado
+		public int IdEstado
         {
-			get { return estado; }
-			set { estado = value; }
+			get { return idEstado; }
+			set { idEstado = value; }
 		}
-		public clsTitulo Titulo
+		public int IdTitulo
 		{
-			get { return titulo; }
-			set { titulo = value; }
+			get { return idTitulo; }
+			set { idTitulo = value; }
 		}
 		public string Instagram
         {
 			get { return instagram; }
 			set { instagram = value; }
 		}
-		public List<clsTipoContactos> TiposContacto
+		public List<int> TiposContacto
         {
 			get { return tiposContacto; }
 			set { tiposContacto = value; }
+		}
+		public int IdMedicamento
+		{
+			get { return idMedicamento; }
+			set { idMedicamento = value; }
+		}
+		public int IdEnfermedad
+		{
+			get { return idEnfermedad; }
+			set { idEnfermedad = value; }
+		}
+		public int IdAlergia
+		{
+			get { return idAlergia; }
+			set { idAlergia = value; }
+		}
+		public int IdDiscapacidad
+		{
+			get { return idDiscapacidad; }
+			set { idDiscapacidad = value; }
 		}
 
 		public void listarEmpleados(DataGridView dgvGrilla)

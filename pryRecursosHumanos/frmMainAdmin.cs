@@ -24,8 +24,8 @@ namespace pryRecursosHumanos
         private const int HT_CAPTION = 0x2;
         public frmMainAdmin()
         {
-            panel2.MouseDown += new MouseEventHandler(panel2_MouseDown);
             InitializeComponent();
+            panel2.MouseDown += new MouseEventHandler(panel2_MouseDown);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

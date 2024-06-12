@@ -65,16 +65,16 @@ namespace pryRecursosHumanos
                     comando.Parameters.AddWithValue("CUIT", nuevoEmpleado.Cuit);
                     comando.Parameters.AddWithValue("NOMBRE", nuevoEmpleado.Nombre);
                     comando.Parameters.AddWithValue("APELLIDO", nuevoEmpleado.Apellido);
-                    comando.Parameters.AddWithValue("AREA", nuevoEmpleado.Area.IdArea);
-                    comando.Parameters.AddWithValue("FICHA", nuevoEmpleado.FichaMedica.IdFichaMedica);
+                    comando.Parameters.AddWithValue("AREA", nuevoEmpleado.IdArea);
+                    comando.Parameters.AddWithValue("FICHA", nuevoEmpleado.IdFichaMedica);
                     comando.Parameters.AddWithValue("DOMICILIO", nuevoEmpleado.Domicilio);
                     comando.Parameters.AddWithValue("TELEFONO", nuevoEmpleado.Telefono);
                     comando.Parameters.AddWithValue("DNI", nuevoEmpleado.DNI);
                     comando.Parameters.AddWithValue("EMAIL", nuevoEmpleado.Email);
                     comando.Parameters.AddWithValue("NACIMIENTO", nuevoEmpleado.FechaNacimiento);
                     comando.Parameters.AddWithValue("FOTO", nuevoEmpleado.Foto);
-                    comando.Parameters.AddWithValue("PAIS", nuevoEmpleado.Ciudad.IdCiudad);
-                    comando.Parameters.AddWithValue("ESTADO", nuevoEmpleado.Titulo);
+                    comando.Parameters.AddWithValue("PAIS", nuevoEmpleado.IdCiudad);
+                    comando.Parameters.AddWithValue("ESTADO", nuevoEmpleado.IdTitulo);
                     comando.Parameters.AddWithValue("INSTAGRAM", nuevoEmpleado.Instagram);
                     conexion.Open();
                     comando.ExecuteNonQuery();
@@ -149,7 +149,7 @@ namespace pryRecursosHumanos
         #endregion
         
         #region registrarUsuario
-        public void registrarUsuario(clsUsuarios nuevoUsuario)
+        public bool registrarUsuario(clsUsuarios nuevoUsuario)
         {
             // REHACER CUANDO EXISTAN LOS DATOS
             bool usuarioNoExiste = validarUsuario(nuevoUsuario);
@@ -167,10 +167,13 @@ namespace pryRecursosHumanos
 
                     conexion.Open();
                     comando.ExecuteNonQuery();
+                    usuarioNoExiste = false;
+                    return true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    return false;
                 }
                 finally
                 {
@@ -180,6 +183,7 @@ namespace pryRecursosHumanos
             else
             {
                 MessageBox.Show("Ya existe un usuario con ese CUIT");
+                return false;
             }
         }
         public bool validarUsuario(clsUsuarios usuario)

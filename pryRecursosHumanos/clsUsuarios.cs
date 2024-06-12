@@ -34,11 +34,11 @@ namespace pryRecursosHumanos
             set { admin = value; }
         }
 
-        public void registrar(clsUsuarios nuevoUsuario)
+        public bool registrar(clsUsuarios nuevoUsuario)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             // LLENER LOS DATOS DEL USUARIO ANTES DE LLAMAR A ESTE METODO
-            BD.registrarUsuario(nuevoUsuario);
+            return BD.registrarUsuario(nuevoUsuario);
         }
         public List<bool> Iniciar(clsUsuarios User)
         {
