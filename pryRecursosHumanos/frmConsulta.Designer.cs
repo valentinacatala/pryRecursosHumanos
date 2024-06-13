@@ -36,18 +36,18 @@
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
             this.label90 = new System.Windows.Forms.Label();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -60,10 +60,10 @@
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.tabPage14.SuspendLayout();
-            this.tabPage15.SuspendLayout();
-            this.tabPage16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,36 +160,6 @@
             this.tabPage14.Text = "Listar por Apellido";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.label1);
-            this.tabPage15.Controls.Add(this.comboBox1);
-            this.tabPage15.Controls.Add(this.button1);
-            this.tabPage15.Controls.Add(this.button2);
-            this.tabPage15.Controls.Add(this.dataGridView2);
-            this.tabPage15.Location = new System.Drawing.Point(4, 24);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(598, 577);
-            this.tabPage15.TabIndex = 2;
-            this.tabPage15.Text = "Listar por Pais";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.Controls.Add(this.label2);
-            this.tabPage16.Controls.Add(this.comboBox2);
-            this.tabPage16.Controls.Add(this.button3);
-            this.tabPage16.Controls.Add(this.button4);
-            this.tabPage16.Controls.Add(this.dataGridView3);
-            this.tabPage16.Location = new System.Drawing.Point(4, 24);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(598, 577);
-            this.tabPage16.TabIndex = 3;
-            this.tabPage16.Text = "Listar por Estado";
-            this.tabPage16.UseVisualStyleBackColor = true;
-            // 
             // label90
             // 
             this.label90.AutoSize = true;
@@ -240,6 +210,7 @@
             this.button16.TabIndex = 18;
             this.button16.Text = "Listar";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // dataGridView1
             // 
@@ -256,6 +227,22 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(566, 507);
             this.dataGridView1.TabIndex = 20;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.label1);
+            this.tabPage15.Controls.Add(this.comboBox1);
+            this.tabPage15.Controls.Add(this.button1);
+            this.tabPage15.Controls.Add(this.button2);
+            this.tabPage15.Controls.Add(this.dataGridView2);
+            this.tabPage15.Location = new System.Drawing.Point(4, 24);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(598, 577);
+            this.tabPage15.TabIndex = 2;
+            this.tabPage15.Text = "Listar por Pais";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            this.tabPage15.Click += new System.EventHandler(this.tabPage15_Click);
             // 
             // label1
             // 
@@ -307,6 +294,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Listar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView2
             // 
@@ -323,6 +311,22 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(566, 507);
             this.dataGridView2.TabIndex = 25;
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.label2);
+            this.tabPage16.Controls.Add(this.comboBox2);
+            this.tabPage16.Controls.Add(this.button3);
+            this.tabPage16.Controls.Add(this.button4);
+            this.tabPage16.Controls.Add(this.dataGridView3);
+            this.tabPage16.Location = new System.Drawing.Point(4, 24);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage16.Size = new System.Drawing.Size(598, 577);
+            this.tabPage16.TabIndex = 3;
+            this.tabPage16.Text = "Listar por Estado";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            this.tabPage16.Click += new System.EventHandler(this.tabPage16_Click);
             // 
             // label2
             // 
@@ -374,6 +378,7 @@
             this.button4.TabIndex = 23;
             this.button4.Text = "Listar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView3
             // 
@@ -406,6 +411,7 @@
             this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsulta";
+            this.Load += new System.EventHandler(this.frmConsulta_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).EndInit();
@@ -414,12 +420,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 

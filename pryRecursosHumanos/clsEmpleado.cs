@@ -132,12 +132,35 @@ namespace pryRecursosHumanos
 		}
 
 		public void listarEmpleados(DataGridView dgvGrilla)
-		{
+        {
+            string comando;
+            comando = "select * from empleados";
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
-			BD.listarEmpleados(dgvGrilla);
+			BD.listarEmpleados(dgvGrilla,comando);
 		}
+        public void listarEmpleadosEstado(DataGridView dgvGrilla)
+        {
+            string comando;
+            comando = "select * from empleados order by IdEstado";
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarEmpleados(dgvGrilla, comando);
+        }
+        public void listarEmpleadosApellido(DataGridView dgvGrilla)
+        {
+            string comando;
+            comando = "select * from empleados order by Apellido";
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarEmpleados(dgvGrilla, comando);
+        }
+        public void listarEmpleadosPais(DataGridView dgvGrilla)
+        {
+            string comando;
+            comando = "select * from empleados order by IdPais";
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarEmpleados(dgvGrilla, comando);
+        }
 
-		public void agregarEmpleado(clsEmpleado nuevoEmpleado)
+        public void agregarEmpleado(clsEmpleado nuevoEmpleado)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
 

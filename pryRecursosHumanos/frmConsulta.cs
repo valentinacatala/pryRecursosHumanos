@@ -62,5 +62,39 @@ namespace pryRecursosHumanos
             clsEmpleado empleado = new clsEmpleado();
             empleado.listarEmpleados(dgvListar);
         }
+
+        private void tabPage15_Click(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleadosPais(dataGridView2);
+        }
+
+        private void tabPage16_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabControl4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleadosPais(dataGridView2);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleadosEstado(dataGridView3);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.listarEmpleadosApellido(dataGridView1);
+        }
     }
 }

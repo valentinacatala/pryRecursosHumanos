@@ -18,10 +18,10 @@ namespace pryRecursosHumanos
         string cadena;
         public clsConexionBaseDatos()
         {
-            cadena = ConfigurationManager.ConnectionStrings["CadenaConexion"].ConnectionString;
+            cadena = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + @"../../" + "/DB/Basededatos-RRHH.accdb";
         }
         #region listarEmpleado
-        public void listarEmpleados(DataGridView dgvGrilla)
+        public void listarEmpleados(DataGridView dgvGrilla, string Comando)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "SELECT * FROM Empleados";
+                comando.CommandText = Comando;
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
