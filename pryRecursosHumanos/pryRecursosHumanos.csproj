@@ -82,6 +82,18 @@
     <Compile Include="frmConsulta.Designer.cs">
       <DependentUpon>frmConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInfoExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoExtra.Designer.cs">
+      <DependentUpon>frmInfoExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLicenciaSancion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLicenciaSancion.Designer.cs">
+      <DependentUpon>frmLicenciaSancion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +120,12 @@
     <EmbeddedResource Include="frmConsulta.resx">
       <DependentUpon>frmConsulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoExtra.resx">
+      <DependentUpon>frmInfoExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLicenciaSancion.resx">
+      <DependentUpon>frmLicenciaSancion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +143,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
