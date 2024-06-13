@@ -531,8 +531,10 @@ namespace pryRecursosHumanos
                 conexion.Close();
             }
         }
+        #endregion
 
-        private int retornarDiasSancion(clsSanciones sancion)
+        #region Licencias
+        public void listarLicenciaPorEmpleado(DataGridView dgvLicencias, long cuitEmpleado)
         {
             try
             {
@@ -541,22 +543,47 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT Tiempo FROM Sanciones WHERE IdSancion = {sancion.IdSancion}";
+                comando.CommandText = $"SELECT L.Nombre, LE.Cuit, LE.Estado, LE.Tiempo FROM LIc-Emp as LE, Licencias as L WHERE LE.Cuit={cuitEmpleado} AND L.IdSancion = LE.IdSancion";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
-                if (tabla.Rows[0] != null) return Convert.ToInt32(tabla.Rows[0]);
-                else return 0;
+                dgvLicencias.DataSource = tabla;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return 0;
+            }
+        }
+
+        public void agregarLicenciaAEmpleado(clsLicencia licencia,clsEmpleado empleado ,clsEstado Estado, int Tiempo)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+
+                //int diasSancion = retornarDiasSancion(sancion);
+                //DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
+                comando.CommandText = $@"INSERT INTO LIc-Emp(IdLicencia, Cuit, Estado, Tiempo) 
+                                VALUES ({licencia.IdLicencia},{empleado.Cuit}, {Estado.IdEstado}, {Tiempo})";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
         #endregion
-
 
 
     }

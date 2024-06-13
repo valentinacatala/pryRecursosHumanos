@@ -77,7 +77,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 60);
+            this.panel1.Size = new System.Drawing.Size(540, 66);
             this.panel1.TabIndex = 7;
             // 
             // btnAgregar
@@ -86,10 +86,12 @@
             this.btnAgregar.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAgregar.Location = new System.Drawing.Point(392, 23);
+            this.btnAgregar.Location = new System.Drawing.Point(265, 26);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(15, 15);
             this.btnAgregar.TabIndex = 9;
@@ -99,7 +101,7 @@
             // 
             this.lblNombreDato.AutoSize = true;
             this.lblNombreDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblNombreDato.Location = new System.Drawing.Point(32, 25);
+            this.lblNombreDato.Location = new System.Drawing.Point(32, 4);
             this.lblNombreDato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreDato.Name = "lblNombreDato";
             this.lblNombreDato.Size = new System.Drawing.Size(19, 16);
@@ -111,7 +113,7 @@
             this.cboDatos.BackColor = System.Drawing.Color.SeaShell;
             this.cboDatos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDatos.FormattingEnabled = true;
-            this.cboDatos.Location = new System.Drawing.Point(162, 20);
+            this.cboDatos.Location = new System.Drawing.Point(35, 23);
             this.cboDatos.Name = "cboDatos";
             this.cboDatos.Size = new System.Drawing.Size(224, 21);
             this.cboDatos.TabIndex = 2;
@@ -122,9 +124,9 @@
             this.panel3.Controls.Add(this.lblTitulo);
             this.panel3.Controls.Add(this.dgvListar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 93);
+            this.panel3.Location = new System.Drawing.Point(0, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(540, 289);
+            this.panel3.Size = new System.Drawing.Size(540, 283);
             this.panel3.TabIndex = 8;
             // 
             // lblTitulo
@@ -145,13 +147,13 @@
             this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvListar.Location = new System.Drawing.Point(0, 41);
+            this.dgvListar.Location = new System.Drawing.Point(0, 40);
             this.dgvListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.ReadOnly = true;
             this.dgvListar.RowHeadersWidth = 51;
             this.dgvListar.RowTemplate.Height = 24;
-            this.dgvListar.Size = new System.Drawing.Size(540, 248);
+            this.dgvListar.Size = new System.Drawing.Size(540, 243);
             this.dgvListar.TabIndex = 16;
             // 
             // frmInfoExtra

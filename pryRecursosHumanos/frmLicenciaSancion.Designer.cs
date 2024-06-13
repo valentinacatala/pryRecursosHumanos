@@ -33,17 +33,15 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblNombreDato = new System.Windows.Forms.Label();
             this.cboDatos = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
-            this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -94,10 +92,8 @@
             this.panel1.BackColor = System.Drawing.Color.MistyRose;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtObservaciones);
-            this.panel1.Controls.Add(this.textBox13);
             this.panel1.Controls.Add(this.dtpFechaInicio);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.lblNombreDato);
             this.panel1.Controls.Add(this.cboDatos);
@@ -107,24 +103,31 @@
             this.panel1.Size = new System.Drawing.Size(597, 131);
             this.panel1.TabIndex = 10;
             // 
-            // textBox13
+            // label3
             // 
-            this.textBox13.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox13.Location = new System.Drawing.Point(273, 30);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(88, 21);
-            this.textBox13.TabIndex = 13;
-            this.textBox13.Text = "23";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label3.Location = new System.Drawing.Point(32, 77);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Observaciones";
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Location = new System.Drawing.Point(138, 76);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(239, 49);
+            this.txtObservaciones.TabIndex = 14;
             // 
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
             this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(390, 30);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(279, 30);
             this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(98, 21);
@@ -134,23 +137,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(387, 11);
+            this.label2.Location = new System.Drawing.Point(276, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Fecha de inicio:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label1.Location = new System.Drawing.Point(270, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Tiempo(Días):";
             // 
             // btnAgregar
             // 
@@ -158,10 +150,12 @@
             this.btnAgregar.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAgregar.Location = new System.Drawing.Point(508, 33);
+            this.btnAgregar.Location = new System.Drawing.Point(392, 78);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(15, 15);
             this.btnAgregar.TabIndex = 9;
@@ -212,25 +206,6 @@
             this.pcbCerrar.TabStop = false;
             this.pcbCerrar.Click += new System.EventHandler(this.pcbCerrar_Click);
             // 
-            // txtObservaciones
-            // 
-            this.txtObservaciones.Location = new System.Drawing.Point(138, 76);
-            this.txtObservaciones.Multiline = true;
-            this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(350, 49);
-            this.txtObservaciones.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label3.Location = new System.Drawing.Point(32, 77);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Observaciones";
-            // 
             // frmLicenciaSancion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,9 +242,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pcbCerrar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtObservaciones;
     }

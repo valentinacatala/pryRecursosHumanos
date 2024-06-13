@@ -35,6 +35,7 @@ namespace pryRecursosHumanos
                 lblNombreDato.Text = "Agregar licencia";
                 lblTitulo.Text = "Licencias";
                 clsLicencia.listarLicencias(cboDatos);
+                clsLicencia.listarLicenciasPorEmpleado(dgvListar, empleado.Cuit);
             }
         }
 
@@ -57,6 +58,22 @@ namespace pryRecursosHumanos
                     };
                     clsEmpleado.agregarSancion(sancion, empleado, txtObservaciones.Text, dtpFechaInicio.Value);
                     clsSanciones.listarSancionesPorEmpleado(dgvListar, empleado.Cuit);
+                }
+            }
+            else
+            {
+                clsEstado estado = new clsEstado();
+                estado.IdEstado = 1; 
+                if (cboDatos.SelectedItem is DataRowView selectedRow)
+                {
+                    clsLicencia licencia = new clsLicencia
+                    {
+                        IdLicencia = (int)selectedRow["IdLicencia"],
+                        Nombre = selectedRow["Nombre"].ToString(),
+                        Tiempo = (int)selectedRow["Tiempo"]
+                    };
+                    clsEmpleado.agregarLicencia(licencia, empleado, estado,20);
+                    clsLicencia.listarLicenciasPorEmpleado(dgvListar, empleado.Cuit);
                 }
             }
         }
