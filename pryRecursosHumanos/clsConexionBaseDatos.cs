@@ -543,7 +543,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT L.Nombre, LE.Cuit, LE.Estado, LE.Tiempo FROM LIc-Emp as LE, Licencias as L WHERE LE.Cuit={cuitEmpleado} AND L.IdSancion = LE.IdSancion";
+                comando.CommandText = $"SELECT L.Nombre, LE.Cuit, LE.Estado, LE.Tiempo FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -568,8 +568,8 @@ namespace pryRecursosHumanos
 
                 //int diasSancion = retornarDiasSancion(sancion);
                 //DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
-                comando.CommandText = $@"INSERT INTO LIc-Emp(IdLicencia, Cuit, Estado, Tiempo) 
-                                VALUES ({licencia.IdLicencia},{empleado.Cuit}, {Estado.IdEstado}, {Tiempo})";
+                comando.CommandText = $@"INSERT INTO Lic_Emp(IdLicencia, Cuit, Estado, Tiempo) 
+                                VALUES ({licencia.IdLicencia},{empleado.Cuit}, {Estado.IdEstado}, {licencia.Tiempo})";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
