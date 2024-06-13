@@ -73,5 +73,28 @@ namespace pryRecursosHumanos
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
         }
+
+        private void btnFinalizarRegistro_Click(object sender, EventArgs e)
+        {
+            clsEmpleado nuevoEmpleado = new clsEmpleado();
+
+            nuevoEmpleado.Cuit = 0;
+            nuevoEmpleado.IdArea = 0;
+            nuevoEmpleado.IdFichaMedica = 0;
+            nuevoEmpleado.Nombre = txtNombre.Text;
+            nuevoEmpleado.Apellido = txtApellido.Text;
+            nuevoEmpleado.Domicilio = txtDireccion.Text;
+            nuevoEmpleado.Telefono = 0;
+            nuevoEmpleado.DNI = 0;
+            nuevoEmpleado.Email = txtCorreo.Text;
+            nuevoEmpleado.FechaNacimiento = new DateTime();
+            nuevoEmpleado.Foto = pbFotoEmpleado.ImageLocation;
+            nuevoEmpleado.IdEstado = 0;
+            nuevoEmpleado.IdTitulo = 0;
+            nuevoEmpleado.Instagram = "";
+            nuevoEmpleado.IdTipoDeContacto = 0;
+
+            nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
+        }
     }
 }

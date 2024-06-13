@@ -29,6 +29,13 @@ namespace pryRecursosHumanos
 		private clsTitulo titulo;
 		private string instagram;
 		private List<clsTipoContactos> tiposContacto;
+		private int idTipoDeContacto;
+		private int idTitulo;
+		private int idEstado;
+		private int idPais;
+		private int idArea;
+		private int idFichaMedica;
+
 
 		public int Cuit
 		{
@@ -131,7 +138,44 @@ namespace pryRecursosHumanos
 			set { tiposContacto = value; }
 		}
 
-		public void listarEmpleados(DataGridView dgvGrilla)
+		public int IdTipoDeContacto
+		{
+			get { return idTipoDeContacto; }
+			set { idTipoDeContacto = value; }
+		}
+
+		public int IdArea
+		{
+			get { return idArea; }
+			set { idArea = value; }
+		}
+
+		public int IdTitulo
+		{
+			get { return idTitulo; }
+			set { idTitulo = value; }
+		}
+
+		public int IdFichaMedica
+		{
+			get { return idFichaMedica; }
+			set { idFichaMedica = value; }
+		}
+
+		public int IdPais
+		{
+			get { return idPais; }
+			set { idPais = value; }
+		}
+
+		public int IdEstado
+		{
+			get { return idEstado; }
+			set { idEstado = value; }
+		}
+
+
+        public void listarEmpleados(DataGridView dgvGrilla)
 		{
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla);

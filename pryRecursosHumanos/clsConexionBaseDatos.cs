@@ -59,7 +59,7 @@ namespace pryRecursosHumanos
 
                     comando.Connection = conexion;
                     comando.CommandType = CommandType.Text;
-                    comando.CommandText = $"INSERT INTO Empleados(Nombre, IdArea) VALUES ('{nuevoEmpleado.Cuit}', '{2}')";
+                    comando.CommandText = $"INSERT INTO Empleados(Cuit, nombre, apellido, IdArea, IdFichaMedica, Domicilio, Telefono, DNI, CorreoElectronico, FechaDeNacimiento, Foto, IdPais, IdEstado, IdTitulo, IdTipoDeContacto, Instagram ) VALUES ('{nuevoEmpleado.Cuit}', '{nuevoEmpleado.Apellido}', '{nuevoEmpleado.Nombre}' ,'{nuevoEmpleado.Instagram}' , '{nuevoEmpleado.DNI}' , '{nuevoEmpleado.Foto}' , '{nuevoEmpleado.Domicilio}' , '{nuevoEmpleado.Telefono}', '{nuevoEmpleado.IdArea}' ,'{nuevoEmpleado.IdFichaMedica}' , '{nuevoEmpleado.IdPais}', '{nuevoEmpleado.IdEstado}', '{nuevoEmpleado.IdTitulo}', '{nuevoEmpleado.IdTipoDeContacto}')";
 
                     conexion.Open();
                     comando.ExecuteNonQuery();
