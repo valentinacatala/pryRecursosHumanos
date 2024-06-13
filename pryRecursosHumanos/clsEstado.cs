@@ -23,7 +23,22 @@ namespace pryRecursosHumanos
 			get { return idEstado; }
 			set { idEstado = value; }
 		}
+        clsConexionBaseDatos conexion = new clsConexionBaseDatos();
 
+        public void agregarEstado(clsEstado nuevoEstado)
+        {
+            conexion.agregarEstado(nuevoEstado.Nombre);
+        }
 
-	}
+        public void eliminarEstado(clsEstado estadoAEliminar)
+        {
+            conexion.eliminarEstado(estadoAEliminar.IdEstado);
+        }
+
+        public void modificarEstado(clsEstado estadoAModificar)
+        {
+            conexion.modificarEstado(estadoAModificar.IdEstado, estadoAModificar.Nombre);
+        }
+
+    }
 }

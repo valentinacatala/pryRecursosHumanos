@@ -22,5 +22,22 @@ namespace pryRecursosHumanos
 			set { nombre = value; }
 		}
 
-	}
+        clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+
+        public void agregarDiscapacidad(clsDiscapacidades nuevaDiscapacidad)
+        {
+            conexion.agregarDiscapacidad(nuevaDiscapacidad.Nombre);
+        }
+
+        public void eliminarDiscapacidad(clsDiscapacidades discapacidadAEliminar)
+        {
+            conexion.eliminarDiscapacidad(discapacidadAEliminar.IdDiscapacidad);
+        }
+
+        public void modificarDiscapacidad(clsDiscapacidades discapacidadAModificar)
+        {
+            conexion.modificarDiscapacidad(discapacidadAModificar.IdDiscapacidad, discapacidadAModificar.Nombre);
+        }
+    }
 }
+

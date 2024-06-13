@@ -27,6 +27,21 @@ namespace pryRecursosHumanos
             get { return nombre; }
             set { nombre = value; }
         }
+        clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+
+        public void agregarProvincia(int idPais, string nuevaProvincia)
+        {
+            conexion.agregarProvincia(idPais, nuevaProvincia);
+        }
+        public void eliminarProvincia(int idProvincia)
+        {
+            conexion.eliminarProvincia(idProvincia);
+        }
+        public void modificarProvincia(int idProvincia, string provinciaNueva)
+        {
+            conexion.modificarProvincia(idProvincia, provinciaNueva);
+        }
+
 
     }
 }

@@ -27,6 +27,22 @@ namespace pryRecursosHumanos
             get { return nombre; }
             set { nombre = value; }
         }
+        clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+
+        public void agregarCiudad(clsCiudades nuevaCiudad)
+        {
+            conexion.agregarCiudad(nuevaCiudad.IdProvincia.IdProvincia, nuevaCiudad.Nombre);
+        }
+
+        public void eliminarCiudad(clsCiudades ciudadAEliminar)
+        {
+            conexion.eliminarCiudad(ciudadAEliminar.IdCiudad);
+        }
+
+        public void modificarCiudad(clsCiudades ciudadAModificar)
+        {
+            conexion.modificarCiudad(ciudadAModificar.IdCiudad, ciudadAModificar.Nombre);
+        }
 
     }
 }

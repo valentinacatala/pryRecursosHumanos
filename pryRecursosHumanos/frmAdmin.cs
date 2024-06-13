@@ -73,5 +73,10 @@ namespace pryRecursosHumanos
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
         }
+
+        private void btnSiguiente1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,5 +28,21 @@ namespace pryRecursosHumanos
             set { tiempo = value; }
         }
 
+        clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+
+        public void agregarLicencia(clsLicencia nuevaLicencia)
+        {
+            conexion.agregarLicencia(nuevaLicencia.Nombre, nuevaLicencia.Tiempo);
+        }
+
+        public void eliminarLicencia(clsLicencia licenciaAEliminar)
+        {
+            conexion.eliminarLicencia(licenciaAEliminar.IdLicencia);
+        }
+
+        public void modificarLicencia(clsLicencia licenciaAModificar)
+        {
+            conexion.modificarLicencia(licenciaAModificar.IdLicencia, licenciaAModificar.Nombre, licenciaAModificar.Tiempo);
+        }
     }
 }

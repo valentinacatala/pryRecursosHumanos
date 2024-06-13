@@ -2007,6 +2007,7 @@
             this.btnSiguiente1.TabIndex = 0;
             this.btnSiguiente1.Text = "Siguiente";
             this.btnSiguiente1.UseVisualStyleBackColor = false;
+            this.btnSiguiente1.Click += new System.EventHandler(this.btnSiguiente1_Click);
             // 
             // groupBox4
             // 

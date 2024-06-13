@@ -23,6 +23,21 @@ namespace pryRecursosHumanos
 		}
 
 
+        clsConexionBaseDatos conexion = new clsConexionBaseDatos();
 
-	}
+        public void agregarAlergia(clsAlergias nuevaAlergia)
+        {
+            conexion.agregarAlergia(nuevaAlergia.Nombre);
+        }
+
+        public void eliminarAlergia(clsAlergias alergiaAEliminar)
+        {
+            conexion.eliminarAlergia(alergiaAEliminar.IdAlergias);
+        }
+
+        public void modificarAlergia(clsAlergias alergiaAModificar)
+        {
+            conexion.modificarAlergia(alergiaAModificar.IdAlergias, alergiaAModificar.Nombre);
+        }
+    }
 }

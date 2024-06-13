@@ -30,7 +30,22 @@ namespace pryRecursosHumanos
 			set { contagiosa = value; }
 		}
 
+        clsConexionBaseDatos conexion = new clsConexionBaseDatos();
 
+        public void agregarEnfermedadPatologica(clsEnfermedadesPatologicas nuevaEnfermedad)
+        {
+            conexion.agregarEnfermedadPatologica(nuevaEnfermedad.Nombre);
+        }
 
-	}
+        public void eliminarEnfermedadPatologica(clsEnfermedadesPatologicas enfermedadAEliminar)
+        {
+            conexion.eliminarEnfermedadPatologica(enfermedadAEliminar.IdEnfermedadPatologica);
+        }
+
+        public void modificarEnfermedadPatologica(clsEnfermedadesPatologicas enfermedadAModificar)
+        {
+            conexion.modificarEnfermedadPatologica(enfermedadAModificar.IdEnfermedadPatologica, enfermedadAModificar.Nombre);
+        }
+
+    }
 }
