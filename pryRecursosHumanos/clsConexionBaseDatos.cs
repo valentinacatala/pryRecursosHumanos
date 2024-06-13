@@ -139,7 +139,7 @@ namespace pryRecursosHumanos
                 if (tablaEmpleados.Rows.Count == 1) { user.Add(true); user.Add(Convert.ToBoolean(tablaEmpleados.Rows[0][1])); return user; }
                 else { user.Add(false); user.Add(Convert.ToBoolean(tablaEmpleados.Rows[0]["Admin"])); return user; }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -480,6 +480,84 @@ namespace pryRecursosHumanos
             }
         }
         #endregion
+
+        #region Sanciones
+        public void listarSancionPorEmpleado(DataGridView dgvSanciones, long cuitEmpleado)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT S.Nombre, SE.Cuit, SE.Fecha, SE.FechaFin, SE.Observaciones FROM San_Emp as SE, Sanciones as S WHERE SE.Cuit={cuitEmpleado} AND S.IdSancion = SE.IdSancion";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                dgvSanciones.DataSource = tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void agregarSancionAEmpleado(clsSanciones sancion, clsEmpleado empleado, string observaciones, DateTime fechaInicio)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+
+                //int diasSancion = retornarDiasSancion(sancion);
+                DateTime fechaFin = fechaInicio.AddDays(sancion.Tiempo);
+                comando.CommandText = $@"INSERT INTO San_Emp(IdSancion, Cuit, Observaciones, Fecha, FechaFin) 
+                                VALUES ({sancion.IdSancion},{empleado.Cuit}, '{observaciones}', '{fechaInicio}', '{fechaFin}')";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        private int retornarDiasSancion(clsSanciones sancion)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT Tiempo FROM Sanciones WHERE IdSancion = {sancion.IdSancion}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                if (tabla.Rows[0] != null) return Convert.ToInt32(tabla.Rows[0]);
+                else return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+        }
+        #endregion
+
+
 
     }
 }

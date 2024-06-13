@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pcbCerrar = new System.Windows.Forms.PictureBox();
+            this.pcbMinimizar = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
@@ -65,6 +67,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtEliminarAclaraciones = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
+            this.pbEliminarFoto = new System.Windows.Forms.PictureBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
@@ -214,6 +217,7 @@
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.label32 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
             this.tabPaso3 = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -221,54 +225,52 @@
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.btnAgregarEnfermedad = new System.Windows.Forms.Button();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.label42 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.tabPaso4 = new System.Windows.Forms.TabPage();
-            this.label37 = new System.Windows.Forms.Label();
-            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.label47 = new System.Windows.Forms.Label();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.btnAgregarEnfermedad = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label58 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pcbCerrar = new System.Windows.Forms.PictureBox();
-            this.pcbMinimizar = new System.Windows.Forms.PictureBox();
-            this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
-            this.pbEliminarFoto = new System.Windows.Forms.PictureBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.label51 = new System.Windows.Forms.Label();
+            this.tabPaso4 = new System.Windows.Forms.TabPage();
+            this.label37 = new System.Windows.Forms.Label();
+            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnLicencias = new System.Windows.Forms.Button();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.label50 = new System.Windows.Forms.Label();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.btnSanciones = new System.Windows.Forms.Button();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.label51 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage13.SuspendLayout();
@@ -281,6 +283,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage9.SuspendLayout();
@@ -303,6 +306,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
             this.tabPaso3.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -313,10 +317,6 @@
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -330,6 +330,31 @@
             this.panel2.Size = new System.Drawing.Size(541, 33);
             this.panel2.TabIndex = 5;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // pcbCerrar
+            // 
+            this.pcbCerrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pcbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pcbCerrar.Image")));
+            this.pcbCerrar.Location = new System.Drawing.Point(499, 8);
+            this.pcbCerrar.Name = "pcbCerrar";
+            this.pcbCerrar.Size = new System.Drawing.Size(22, 18);
+            this.pcbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbCerrar.TabIndex = 12;
+            this.pcbCerrar.TabStop = false;
+            this.pcbCerrar.Click += new System.EventHandler(this.pcbCerrar_Click);
+            // 
+            // pcbMinimizar
+            // 
+            this.pcbMinimizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pcbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pcbMinimizar.Image")));
+            this.pcbMinimizar.Location = new System.Drawing.Point(471, 8);
+            this.pcbMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbMinimizar.Name = "pcbMinimizar";
+            this.pcbMinimizar.Size = new System.Drawing.Size(22, 18);
+            this.pcbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbMinimizar.TabIndex = 11;
+            this.pcbMinimizar.TabStop = false;
+            this.pcbMinimizar.Click += new System.EventHandler(this.pcbMinimizar_Click);
             // 
             // tabPage4
             // 
@@ -785,6 +810,17 @@
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(188, 22);
             this.lblCorreo.TabIndex = 26;
+            // 
+            // pbEliminarFoto
+            // 
+            this.pbEliminarFoto.BackColor = System.Drawing.Color.MistyRose;
+            this.pbEliminarFoto.InitialImage = null;
+            this.pbEliminarFoto.Location = new System.Drawing.Point(239, 59);
+            this.pbEliminarFoto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbEliminarFoto.Name = "pbEliminarFoto";
+            this.pbEliminarFoto.Size = new System.Drawing.Size(219, 192);
+            this.pbEliminarFoto.TabIndex = 42;
+            this.pbEliminarFoto.TabStop = false;
             // 
             // lblDireccion
             // 
@@ -2536,6 +2572,17 @@
             this.label29.TabIndex = 32;
             this.label29.Text = "Foto";
             // 
+            // pbFotoEmpleado
+            // 
+            this.pbFotoEmpleado.BackColor = System.Drawing.Color.MistyRose;
+            this.pbFotoEmpleado.InitialImage = null;
+            this.pbFotoEmpleado.Location = new System.Drawing.Point(39, 61);
+            this.pbFotoEmpleado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbFotoEmpleado.Name = "pbFotoEmpleado";
+            this.pbFotoEmpleado.Size = new System.Drawing.Size(220, 205);
+            this.pbFotoEmpleado.TabIndex = 33;
+            this.pbFotoEmpleado.TabStop = false;
+            // 
             // tabPaso3
             // 
             this.tabPaso3.Controls.Add(this.button22);
@@ -2631,6 +2678,29 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Discapacidades";
             // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label43.Location = new System.Drawing.Point(9, 86);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(67, 16);
+            this.label43.TabIndex = 32;
+            this.label43.Text = "¿Cuál/es?";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MistyRose;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.button3.Location = new System.Drawing.Point(12, 105);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(83, 27);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "Agregar";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -2691,6 +2761,64 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Enfermedades Patológicas";
             // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label44.Location = new System.Drawing.Point(9, 85);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(67, 16);
+            this.label44.TabIndex = 25;
+            this.label44.Text = "¿Cuál/es?";
+            // 
+            // btnAgregarEnfermedad
+            // 
+            this.btnAgregarEnfermedad.BackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarEnfermedad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarEnfermedad.Location = new System.Drawing.Point(12, 104);
+            this.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad";
+            this.btnAgregarEnfermedad.Size = new System.Drawing.Size(83, 27);
+            this.btnAgregarEnfermedad.TabIndex = 24;
+            this.btnAgregarEnfermedad.Text = "Agregar";
+            this.btnAgregarEnfermedad.UseVisualStyleBackColor = false;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.radioButton7.Location = new System.Drawing.Point(73, 48);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(43, 20);
+            this.radioButton7.TabIndex = 2;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "No";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.radioButton8.Location = new System.Drawing.Point(12, 48);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(37, 20);
+            this.radioButton8.TabIndex = 1;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Si";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label47.Location = new System.Drawing.Point(9, 26);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(195, 16);
+            this.label47.TabIndex = 23;
+            this.label47.Text = "¿Presenta alguna enfermedad?";
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.label48);
@@ -2705,6 +2833,29 @@
             this.groupBox10.TabIndex = 40;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Medicamentos";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label48.Location = new System.Drawing.Point(12, 88);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(67, 16);
+            this.label48.TabIndex = 27;
+            this.label48.Text = "¿Cuál/es?";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MistyRose;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.button1.Location = new System.Drawing.Point(15, 107);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 27);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // radioButton5
             // 
@@ -2755,202 +2906,6 @@
             this.groupBox8.TabIndex = 38;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Alérgias";
-            // 
-            // tabPaso4
-            // 
-            this.tabPaso4.Controls.Add(this.label37);
-            this.tabPaso4.Controls.Add(this.btnRegistrarUsuario);
-            this.tabPaso4.Controls.Add(this.button5);
-            this.tabPaso4.Controls.Add(this.groupBox15);
-            this.tabPaso4.Controls.Add(this.groupBox14);
-            this.tabPaso4.Controls.Add(this.groupBox13);
-            this.tabPaso4.Location = new System.Drawing.Point(4, 24);
-            this.tabPaso4.Name = "tabPaso4";
-            this.tabPaso4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPaso4.Size = new System.Drawing.Size(532, 536);
-            this.tabPaso4.TabIndex = 3;
-            this.tabPaso4.Text = "Paso 4";
-            this.tabPaso4.UseVisualStyleBackColor = true;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(129, 20);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(272, 24);
-            this.label37.TabIndex = 54;
-            this.label37.Text = "ESTADO DEL EMPLEADO";
-            // 
-            // btnRegistrarUsuario
-            // 
-            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.MistyRose;
-            this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistrarUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(285, 451);
-            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            this.btnRegistrarUsuario.Size = new System.Drawing.Size(98, 42);
-            this.btnRegistrarUsuario.TabIndex = 1;
-            this.btnRegistrarUsuario.Text = "Finalizar Registro";
-            this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
-            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button5.Location = new System.Drawing.Point(157, 451);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 42);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.label49);
-            this.groupBox15.Controls.Add(this.button7);
-            this.groupBox15.Controls.Add(this.radioButton13);
-            this.groupBox15.Controls.Add(this.radioButton14);
-            this.groupBox15.Controls.Add(this.label50);
-            this.groupBox15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(285, 56);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(229, 151);
-            this.groupBox15.TabIndex = 42;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Licencias";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.label45);
-            this.groupBox14.Controls.Add(this.button6);
-            this.groupBox14.Controls.Add(this.radioButton11);
-            this.groupBox14.Controls.Add(this.radioButton12);
-            this.groupBox14.Controls.Add(this.label51);
-            this.groupBox14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(28, 214);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(227, 158);
-            this.groupBox14.TabIndex = 0;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Sanciones";
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.label33);
-            this.groupBox13.Controls.Add(this.dateTimePicker5);
-            this.groupBox13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(28, 56);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(227, 79);
-            this.groupBox13.TabIndex = 40;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Presentismo";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label33.Location = new System.Drawing.Point(7, 25);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(45, 16);
-            this.label33.TabIndex = 27;
-            this.label33.Text = "Fecha";
-            // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker5.Location = new System.Drawing.Point(7, 46);
-            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(201, 21);
-            this.dateTimePicker5.TabIndex = 0;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label47.Location = new System.Drawing.Point(9, 26);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(195, 16);
-            this.label47.TabIndex = 23;
-            this.label47.Text = "¿Presenta alguna enfermedad?";
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton8.Location = new System.Drawing.Point(12, 48);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(37, 20);
-            this.radioButton8.TabIndex = 1;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Si";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton7.Location = new System.Drawing.Point(73, 48);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(43, 20);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "No";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarEnfermedad
-            // 
-            this.btnAgregarEnfermedad.BackColor = System.Drawing.Color.MistyRose;
-            this.btnAgregarEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarEnfermedad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarEnfermedad.Location = new System.Drawing.Point(12, 104);
-            this.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad";
-            this.btnAgregarEnfermedad.Size = new System.Drawing.Size(83, 27);
-            this.btnAgregarEnfermedad.TabIndex = 24;
-            this.btnAgregarEnfermedad.Text = "Agregar";
-            this.btnAgregarEnfermedad.UseVisualStyleBackColor = false;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label44.Location = new System.Drawing.Point(9, 85);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(67, 16);
-            this.label44.TabIndex = 25;
-            this.label44.Text = "¿Cuál/es?";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label48.Location = new System.Drawing.Point(12, 88);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(67, 16);
-            this.label48.TabIndex = 27;
-            this.label48.Text = "¿Cuál/es?";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button1.Location = new System.Drawing.Point(15, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 27);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label46
             // 
@@ -3010,133 +2965,71 @@
             this.label58.TabIndex = 28;
             this.label58.Text = "¿Presenta alguna alergia?";
             // 
-            // label43
+            // tabPaso4
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label43.Location = new System.Drawing.Point(9, 86);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(67, 16);
-            this.label43.TabIndex = 32;
-            this.label43.Text = "¿Cuál/es?";
+            this.tabPaso4.Controls.Add(this.label37);
+            this.tabPaso4.Controls.Add(this.btnRegistrarUsuario);
+            this.tabPaso4.Controls.Add(this.button5);
+            this.tabPaso4.Controls.Add(this.groupBox15);
+            this.tabPaso4.Controls.Add(this.groupBox14);
+            this.tabPaso4.Controls.Add(this.groupBox13);
+            this.tabPaso4.Location = new System.Drawing.Point(4, 24);
+            this.tabPaso4.Name = "tabPaso4";
+            this.tabPaso4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPaso4.Size = new System.Drawing.Size(532, 536);
+            this.tabPaso4.TabIndex = 3;
+            this.tabPaso4.Text = "Paso 4";
+            this.tabPaso4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // label37
             // 
-            this.button3.BackColor = System.Drawing.Color.MistyRose;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button3.Location = new System.Drawing.Point(12, 105);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 27);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(129, 20);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(272, 24);
+            this.label37.TabIndex = 54;
+            this.label37.Text = "ESTADO DEL EMPLEADO";
             // 
-            // pcbCerrar
+            // btnRegistrarUsuario
             // 
-            this.pcbCerrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pcbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pcbCerrar.Image")));
-            this.pcbCerrar.Location = new System.Drawing.Point(499, 8);
-            this.pcbCerrar.Name = "pcbCerrar";
-            this.pcbCerrar.Size = new System.Drawing.Size(22, 18);
-            this.pcbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbCerrar.TabIndex = 12;
-            this.pcbCerrar.TabStop = false;
-            this.pcbCerrar.Click += new System.EventHandler(this.pcbCerrar_Click);
+            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.MistyRose;
+            this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrarUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(285, 451);
+            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
+            this.btnRegistrarUsuario.Size = new System.Drawing.Size(98, 42);
+            this.btnRegistrarUsuario.TabIndex = 1;
+            this.btnRegistrarUsuario.Text = "Finalizar Registro";
+            this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
+            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
             // 
-            // pcbMinimizar
+            // button5
             // 
-            this.pcbMinimizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pcbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pcbMinimizar.Image")));
-            this.pcbMinimizar.Location = new System.Drawing.Point(471, 8);
-            this.pcbMinimizar.Margin = new System.Windows.Forms.Padding(4);
-            this.pcbMinimizar.Name = "pcbMinimizar";
-            this.pcbMinimizar.Size = new System.Drawing.Size(22, 18);
-            this.pcbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbMinimizar.TabIndex = 11;
-            this.pcbMinimizar.TabStop = false;
-            this.pcbMinimizar.Click += new System.EventHandler(this.pcbMinimizar_Click);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.button5.Location = new System.Drawing.Point(157, 451);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(98, 42);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Cancelar";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // pbFotoEmpleado
+            // groupBox15
             // 
-            this.pbFotoEmpleado.BackColor = System.Drawing.Color.MistyRose;
-            this.pbFotoEmpleado.InitialImage = null;
-            this.pbFotoEmpleado.Location = new System.Drawing.Point(39, 61);
-            this.pbFotoEmpleado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pbFotoEmpleado.Name = "pbFotoEmpleado";
-            this.pbFotoEmpleado.Size = new System.Drawing.Size(220, 205);
-            this.pbFotoEmpleado.TabIndex = 33;
-            this.pbFotoEmpleado.TabStop = false;
-            // 
-            // pbEliminarFoto
-            // 
-            this.pbEliminarFoto.BackColor = System.Drawing.Color.MistyRose;
-            this.pbEliminarFoto.InitialImage = null;
-            this.pbEliminarFoto.Location = new System.Drawing.Point(239, 59);
-            this.pbEliminarFoto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pbEliminarFoto.Name = "pbEliminarFoto";
-            this.pbEliminarFoto.Size = new System.Drawing.Size(219, 192);
-            this.pbEliminarFoto.TabIndex = 42;
-            this.pbEliminarFoto.TabStop = false;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label45.Location = new System.Drawing.Point(7, 87);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(67, 16);
-            this.label45.TabIndex = 35;
-            this.label45.Text = "¿Cuál/es?";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.MistyRose;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button6.Location = new System.Drawing.Point(10, 107);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 27);
-            this.button6.TabIndex = 34;
-            this.button6.Text = "Agregar";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton11.Location = new System.Drawing.Point(71, 49);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(43, 20);
-            this.radioButton11.TabIndex = 32;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "No";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton12.Location = new System.Drawing.Point(10, 49);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(37, 20);
-            this.radioButton12.TabIndex = 31;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Si";
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label51.Location = new System.Drawing.Point(7, 30);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(120, 16);
-            this.label51.TabIndex = 33;
-            this.label51.Text = "¿Agregar sancion?";
+            this.groupBox15.Controls.Add(this.label49);
+            this.groupBox15.Controls.Add(this.btnLicencias);
+            this.groupBox15.Controls.Add(this.radioButton13);
+            this.groupBox15.Controls.Add(this.radioButton14);
+            this.groupBox15.Controls.Add(this.label50);
+            this.groupBox15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(285, 56);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(229, 151);
+            this.groupBox15.TabIndex = 42;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Licencias";
             // 
             // label49
             // 
@@ -3149,17 +3042,18 @@
             this.label49.TabIndex = 40;
             this.label49.Text = "¿Cuál/es?";
             // 
-            // button7
+            // btnLicencias
             // 
-            this.button7.BackColor = System.Drawing.Color.MistyRose;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button7.Location = new System.Drawing.Point(10, 102);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 27);
-            this.button7.TabIndex = 39;
-            this.button7.Text = "Agregar";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnLicencias.BackColor = System.Drawing.Color.MistyRose;
+            this.btnLicencias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLicencias.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnLicencias.Location = new System.Drawing.Point(10, 102);
+            this.btnLicencias.Name = "btnLicencias";
+            this.btnLicencias.Size = new System.Drawing.Size(83, 27);
+            this.btnLicencias.TabIndex = 39;
+            this.btnLicencias.Text = "Agregar";
+            this.btnLicencias.UseVisualStyleBackColor = false;
+            this.btnLicencias.Click += new System.EventHandler(this.btnLicencias_Click);
             // 
             // radioButton13
             // 
@@ -3196,6 +3090,114 @@
             this.label50.TabIndex = 38;
             this.label50.Text = "¿Agregar licencia?";
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.label45);
+            this.groupBox14.Controls.Add(this.btnSanciones);
+            this.groupBox14.Controls.Add(this.radioButton11);
+            this.groupBox14.Controls.Add(this.radioButton12);
+            this.groupBox14.Controls.Add(this.label51);
+            this.groupBox14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(28, 214);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(227, 158);
+            this.groupBox14.TabIndex = 0;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Sanciones";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label45.Location = new System.Drawing.Point(7, 87);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(67, 16);
+            this.label45.TabIndex = 35;
+            this.label45.Text = "¿Cuál/es?";
+            // 
+            // btnSanciones
+            // 
+            this.btnSanciones.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSanciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSanciones.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnSanciones.Location = new System.Drawing.Point(10, 107);
+            this.btnSanciones.Name = "btnSanciones";
+            this.btnSanciones.Size = new System.Drawing.Size(83, 27);
+            this.btnSanciones.TabIndex = 34;
+            this.btnSanciones.Text = "Agregar";
+            this.btnSanciones.UseVisualStyleBackColor = false;
+            this.btnSanciones.Click += new System.EventHandler(this.btnSanciones_Click);
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.radioButton11.Location = new System.Drawing.Point(71, 49);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(43, 20);
+            this.radioButton11.TabIndex = 32;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "No";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.radioButton12.Location = new System.Drawing.Point(10, 49);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(37, 20);
+            this.radioButton12.TabIndex = 31;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.Text = "Si";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label51.Location = new System.Drawing.Point(7, 30);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(120, 16);
+            this.label51.TabIndex = 33;
+            this.label51.Text = "¿Agregar sancion?";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.label33);
+            this.groupBox13.Controls.Add(this.dateTimePicker5);
+            this.groupBox13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Location = new System.Drawing.Point(28, 56);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(227, 79);
+            this.groupBox13.TabIndex = 40;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Presentismo";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label33.Location = new System.Drawing.Point(7, 25);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(45, 16);
+            this.label33.TabIndex = 27;
+            this.label33.Text = "Fecha";
+            // 
+            // dateTimePicker5
+            // 
+            this.dateTimePicker5.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dateTimePicker5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker5.Location = new System.Drawing.Point(7, 46);
+            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateTimePicker5.Name = "dateTimePicker5";
+            this.dateTimePicker5.Size = new System.Drawing.Size(201, 21);
+            this.dateTimePicker5.TabIndex = 0;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3213,6 +3215,8 @@
             this.Text = "frmAdmin";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
@@ -3229,6 +3233,7 @@
             this.tabPage3.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
@@ -3265,6 +3270,7 @@
             this.groupBox16.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).EndInit();
             this.tabPaso3.ResumeLayout(false);
             this.tabPaso3.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -3285,10 +3291,6 @@
             this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3524,12 +3526,12 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnLicencias;
         private System.Windows.Forms.RadioButton radioButton13;
         private System.Windows.Forms.RadioButton radioButton14;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSanciones;
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.Label label51;

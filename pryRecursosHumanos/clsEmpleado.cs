@@ -179,5 +179,12 @@ namespace pryRecursosHumanos
 
             BD.agregarEmpleado(nuevoEmpleado);
         }
+
+		public static void agregarSancion(clsSanciones sancion, clsEmpleado empleado, string observaciones, DateTime fechaInicio)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+
+			BD.agregarSancionAEmpleado(sancion, empleado, observaciones, fechaInicio);
+        }
 	}
 }

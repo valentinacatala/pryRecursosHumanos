@@ -36,7 +36,7 @@ namespace pryRecursosHumanos
 
         private void pcbCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
 
@@ -50,12 +50,6 @@ namespace pryRecursosHumanos
             clsPaises.listarPaises(cboEmpleadoPais);
             clsArea.listarArea(cboSeleccionarArea);
             clsEstado.listarEstados(cboEstadoEmpleado);
-            clsEnfermedadesPatologicas.listarEnfermedades(cboEnfermedades);
-            clsMedicamentos.listarMedicamentos(cboMedicamentos);
-            clsDiscapacidades.listarDiscapacidades(cboDiscapacidades);
-            clsAlergias.listarAlergias(cboAlergias);
-            clsSanciones.listarSanciones(cboTipoSancion);
-            clsLicencia.listarLicencias(cboTipoLicencia);
             
         }
 
@@ -108,7 +102,6 @@ namespace pryRecursosHumanos
             clsEmpleado nuevoEmpleado = new clsEmpleado();
 
             nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
-            nuevoEmpleado.IdLicencia = Convert.ToInt32(cboTipoLicencia.SelectedValue);
             nuevoEmpleado.Sanciones = new List<int>();
             nuevoEmpleado.IdArea = Convert.ToInt32(txtCuit);
             nuevoEmpleado.IdFichaMedica = 0;
@@ -129,12 +122,24 @@ namespace pryRecursosHumanos
             nuevoEmpleado.IdTitulo = 0;
             nuevoEmpleado.Instagram = txtInstagram.Text;
             nuevoEmpleado.TiposContacto = new List<int>();
-            nuevoEmpleado.IdMedicamento= Convert.ToInt32(cboMedicamentos);
-            nuevoEmpleado.IdEnfermedad = Convert.ToInt32(cboEnfermedades);
-            nuevoEmpleado.IdAlergia = Convert.ToInt32(cboAlergias);
-            nuevoEmpleado.IdDiscapacidad = Convert.ToInt32(cboDiscapacidades);
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
+        }
+
+        private void btnSanciones_Click(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.Cuit = 146;
+            frmLicenciaSancion frm = new frmLicenciaSancion("sanciones", empleado);
+            frm.ShowDialog();
+        }
+
+        private void btnLicencias_Click(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            empleado.Cuit = 146;
+            frmLicenciaSancion frm = new frmLicenciaSancion("licencias", empleado);
+            frm.ShowDialog();
         }
     }
 }
