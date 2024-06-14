@@ -78,21 +78,22 @@ namespace pryRecursosHumanos
         {
             clsEmpleado nuevoEmpleado = new clsEmpleado();
 
-            nuevoEmpleado.Cuit = 0;
-            nuevoEmpleado.IdArea = 0;
+            nuevoEmpleado.Cuit = Convert.ToInt64(txtCuit.Text);
+            nuevoEmpleado.IdArea = Convert.ToInt32(cboSeleccionarArea.SelectedValue.ToString());
             nuevoEmpleado.IdFichaMedica = 0;
             nuevoEmpleado.Nombre = txtNombre.Text;
             nuevoEmpleado.Apellido = txtApellido.Text;
             nuevoEmpleado.Domicilio = txtDireccion.Text;
-            nuevoEmpleado.Telefono = 0;
-            nuevoEmpleado.DNI = 0;
+            nuevoEmpleado.Telefono = Convert.ToInt32(txtTelefono.Text);
+            nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
             nuevoEmpleado.Email = txtCorreo.Text;
-            nuevoEmpleado.FechaNacimiento = new DateTime();
+            nuevoEmpleado.FechaNacimiento = dtpFechaNacimiento.Value;
             nuevoEmpleado.Foto = pbFotoEmpleado.ImageLocation;
-            nuevoEmpleado.IdEstado = 0;
+            nuevoEmpleado.IdEstado = Convert.ToInt32(cboEstadoEmpleado.SelectedValue.ToString());
             nuevoEmpleado.IdTitulo = 0;
-            nuevoEmpleado.Instagram = "";
+            nuevoEmpleado.Instagram = txtInstagram.Text;
             nuevoEmpleado.IdTipoDeContacto = 0;
+            nuevoEmpleado.Ciudad = null;
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
         }

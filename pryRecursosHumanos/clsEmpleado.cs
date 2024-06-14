@@ -9,7 +9,7 @@ namespace pryRecursosHumanos
 {
     public class clsEmpleado
     {
-		private int cuit;
+		private long cuit;
 		private clsLicencia licencia;
 		private List<clsSanciones> sanciones;
 		private clsArea area;
@@ -37,7 +37,7 @@ namespace pryRecursosHumanos
 		private int idFichaMedica;
 
 
-		public int Cuit
+		public long Cuit
 		{
 			get { return cuit; }
 			set { cuit = value; }
