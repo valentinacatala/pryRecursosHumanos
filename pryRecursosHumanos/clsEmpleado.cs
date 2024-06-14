@@ -134,30 +134,84 @@ namespace pryRecursosHumanos
 		public void listarEmpleados(DataGridView dgvGrilla)
         {
             string comando;
-			comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, areas.nombre as Areas, fichasmedicas.IdFichaMedica, empleados.domicilio" +
-                ", empleados.telefono, empleados.dni, empleados.correoelectronico, empleados.fechadenacimiento, Paises.nombre as Pais, estados.nombre as Estado, titulos.nombre as titulo, tipodecontactos.nombre, empleados.instagram " +
-				"from empleados, areas, paises, fichasmedicas, estados, tipodecontactos, titulos";
+			comando = "select empleados.Cuit," +
+				"empleados.Nombre," +
+				"empleados.Apellido," +
+				"areas.nombre as Areas," +
+				"fichasmedicas.IdFichaMedica as FichaMedica," +
+				"empleados.Domicilio," +
+				"empleados.Telefono," +
+				"empleados.DNI," +
+                "empleados.CorreoElectronico," +
+				"Paises.nombre as Pais," +
+				"estados.nombre as Estado," +
+				"titulos.nombre as Titulo," +
+				"tipodecontactos.nombre as Contacto," +
+				"empleados.Instagram " +
+                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos";
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla,comando);
 		}
         public void listarEmpleadosEstado(DataGridView dgvGrilla)
         {
             string comando;
-            comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, empleados.domicilio, areas.nombre as Areas, Paises.nombre as Pais from empleados, areas, paises order by IdEstado";
+            comando = "select empleados.Cuit," +
+                "empleados.Nombre," +
+                "empleados.Apellido," +
+                "areas.nombre as Areas," +
+                "fichasmedicas.IdFichaMedica as FichaMedica," +
+                "empleados.Domicilio," +
+                "empleados.Telefono," +
+                "empleados.DNI," +
+                "empleados.CorreoElectronico," +
+                "Paises.nombre as Pais," +
+                "estados.nombre as Estado," +
+                "titulos.nombre as Titulo," +
+                "tipodecontactos.nombre as Contacto," +
+                "empleados.Instagram " +
+                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by Estados.nombre";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
         public void listarEmpleadosApellido(DataGridView dgvGrilla)
         {
             string comando;
-            comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, empleados.domicilio, areas.nombre as Areas, Paises.nombre as Pais from empleados, areas, paises order by empleados.apellido";
+            comando = "select empleados.Cuit," +
+                "empleados.Nombre," +
+                "empleados.Apellido," +
+                "areas.nombre as Areas," +
+                "fichasmedicas.IdFichaMedica as FichaMedica," +
+                "empleados.Domicilio," +
+                "empleados.Telefono," +
+                "empleados.DNI," +
+                "empleados.CorreoElectronico," +
+                "Paises.nombre as Pais," +
+                "estados.nombre as Estado," +
+                "titulos.nombre as Titulo," +
+                "tipodecontactos.nombre as Contacto," +
+                "empleados.Instagram " +
+                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by empleados.apellido";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
         public void listarEmpleadosPais(DataGridView dgvGrilla)
         {
             string comando;
-            comando = "select * from empleados order by IdPais";
+            comando = "select empleados.Cuit," +
+                "empleados.Nombre," +
+                "empleados.Apellido," +
+                "areas.nombre as Areas," +
+                "fichasmedicas.IdFichaMedica as FichaMedica," +
+                "empleados.Domicilio," +
+                "empleados.Telefono," +
+                "empleados.DNI," +
+                "empleados.CorreoElectronico," +
+                "Paises.nombre as Pais," +
+                "estados.nombre as Estado," +
+                "titulos.nombre as Titulo," +
+                "tipodecontactos.nombre as Contacto," +
+                "empleados.Instagram " +
+                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by paises.nombre";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
