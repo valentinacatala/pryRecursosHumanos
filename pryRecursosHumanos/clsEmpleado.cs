@@ -138,7 +138,6 @@ namespace pryRecursosHumanos
                 "empleados.Nombre," +
                 "empleados.Apellido," +
                 "areas.nombre as Areas," +
-                "fichasmedicas.IdFichaMedica as FichaMedica," +
                 "empleados.Domicilio," +
                 "empleados.Telefono," +
                 "empleados.DNI," +
@@ -149,7 +148,7 @@ namespace pryRecursosHumanos
                 "titulos.nombre as Titulo," +
                 "tipodecontactos.nombre as Contacto," +
                 "empleados.Instagram " +
-                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos";
+                "from empleados, areas, paises, estados, titulos, tipodecontactos";
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla,comando);
 		}
@@ -160,19 +159,17 @@ namespace pryRecursosHumanos
                 "empleados.Nombre," +
                 "empleados.Apellido," +
                 "areas.nombre as Areas," +
-                "fichasmedicas.IdFichaMedica as FichaMedica," +
                 "empleados.Domicilio," +
                 "empleados.Telefono," +
                 "empleados.DNI," +
                 "empleados.CorreoElectronico," +
-				"empleados.Foto," +
-				"empleados.fechadenacimineto AS FechaDeNacimiento," +
+                "empleados.FechaDeNacimineto," +
                 "Paises.nombre as Pais," +
                 "estados.nombre as Estado," +
                 "titulos.nombre as Titulo," +
                 "tipodecontactos.nombre as Contacto," +
                 "empleados.Instagram " +
-                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by estados.nombre";
+                "from empleados, areas, paises, estados, titulos, tipodecontactos order by estados.nombre";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
@@ -183,17 +180,17 @@ namespace pryRecursosHumanos
                 "empleados.Nombre," +
                 "empleados.Apellido," +
                 "areas.nombre as Areas," +
-                "fichasmedicas.IdFichaMedica as FichaMedica," +
                 "empleados.Domicilio," +
                 "empleados.Telefono," +
                 "empleados.DNI," +
                 "empleados.CorreoElectronico," +
+                "empleados.FechaDeNacimineto," +
                 "Paises.nombre as Pais," +
                 "estados.nombre as Estado," +
                 "titulos.nombre as Titulo," +
                 "tipodecontactos.nombre as Contacto," +
                 "empleados.Instagram " +
-                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by empleados.apellido";
+                "from empleados, areas, paises, estados, titulos, tipodecontactos order by empleados.apellido";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
@@ -204,17 +201,17 @@ namespace pryRecursosHumanos
                 "empleados.Nombre," +
                 "empleados.Apellido," +
                 "areas.nombre as Areas," +
-                "fichasmedicas.IdFichaMedica as FichaMedica," +
                 "empleados.Domicilio," +
                 "empleados.Telefono," +
                 "empleados.DNI," +
                 "empleados.CorreoElectronico," +
+                "empleados.FechaDeNacimineto," +
                 "Paises.nombre as Pais," +
                 "estados.nombre as Estado," +
                 "titulos.nombre as Titulo," +
                 "tipodecontactos.nombre as Contacto," +
                 "empleados.Instagram " +
-                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by paises.nombre";
+                "from empleados, areas, paises, estados, titulos, tipodecontactos order by paises.nombre";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
