@@ -134,7 +134,8 @@ namespace pryRecursosHumanos
 		public void listarEmpleados(DataGridView dgvGrilla)
         {
             string comando;
-            comando = "select * from empleados";
+			comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, empleados.domicilio" +
+				", areas.nombre as Areas, Paises.nombre as Pais from empleados, areas, paises";
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla,comando);
 		}
