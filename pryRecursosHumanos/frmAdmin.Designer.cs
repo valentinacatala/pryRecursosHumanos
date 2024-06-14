@@ -268,6 +268,7 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.btnFinRegistro = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -2315,6 +2316,7 @@
             // 
             // tabPaso2
             // 
+            this.tabPaso2.Controls.Add(this.btnFinRegistro);
             this.tabPaso2.Controls.Add(this.label87);
             this.tabPaso2.Controls.Add(this.btnSiguiente2);
             this.tabPaso2.Controls.Add(this.btnCancelar2);
@@ -2582,6 +2584,7 @@
             this.pbFotoEmpleado.Size = new System.Drawing.Size(220, 205);
             this.pbFotoEmpleado.TabIndex = 33;
             this.pbFotoEmpleado.TabStop = false;
+            this.pbFotoEmpleado.Click += new System.EventHandler(this.pbFotoEmpleado_Click);
             // 
             // tabPaso3
             // 
@@ -3198,6 +3201,19 @@
             this.dateTimePicker5.Size = new System.Drawing.Size(201, 21);
             this.dateTimePicker5.TabIndex = 0;
             // 
+            // btnFinRegistro
+            // 
+            this.btnFinRegistro.BackColor = System.Drawing.Color.MistyRose;
+            this.btnFinRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFinRegistro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnFinRegistro.Location = new System.Drawing.Point(330, 469);
+            this.btnFinRegistro.Name = "btnFinRegistro";
+            this.btnFinRegistro.Size = new System.Drawing.Size(98, 42);
+            this.btnFinRegistro.TabIndex = 47;
+            this.btnFinRegistro.Text = "Finalizar\r\nRegistro";
+            this.btnFinRegistro.UseVisualStyleBackColor = false;
+            this.btnFinRegistro.Click += new System.EventHandler(this.btnFinRegistro_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3535,5 +3551,6 @@
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button btnFinRegistro;
     }
 }

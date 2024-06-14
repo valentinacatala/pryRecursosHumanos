@@ -60,21 +60,23 @@ namespace pryRecursosHumanos
                     comando.CommandType = CommandType.Text;
                     comando.Parameters.Clear();
                     comando.CommandText = $@"INSERT INTO Empleados
-                                            (Cuit, nombre, apellido, IdArea, IdFichaMedica, Domicilio, Telefono, DNI, CorreoElectronico, FechaDeNacimiento, Foto, IdPais, IdEstado, IdTitulo, IdTipoDeContacto, Instagram)
-                                            VALUES (@CUIT, '@NOMBRE', '@APELLIDO', @AREA, @FICHA, '@DOMICILIO', @TELEFONO, @DNI, '@EMAIL', @NACIMIENTO, '@FOTO', @PAIS, @ESTADO, @TITULO, '@INSTAGRAM')";
+                                            (Cuit, nombre, apellido, IdArea, IdFichaMedica, Domicilio, Telefono, DNI, CorreoElectronico, FechaDeNacimineto, Foto, IdCiudad, IdEstado, IdTitulo, IdTipoDeContacto, Instagram)
+                                            VALUES (@CUIT, @NOMBRE, @APELLIDO, @AREA, @FICHA, @DOMICILIO, @TELEFONO, @DNI, @EMAIL, @NACIMIENTO, @FOTO, @CIUDAD, @ESTADO, @TITULO, @CONTACTO, @INSTAGRAM)";
                     comando.Parameters.AddWithValue("CUIT", nuevoEmpleado.Cuit);
                     comando.Parameters.AddWithValue("NOMBRE", nuevoEmpleado.Nombre);
                     comando.Parameters.AddWithValue("APELLIDO", nuevoEmpleado.Apellido);
                     comando.Parameters.AddWithValue("AREA", nuevoEmpleado.IdArea);
-                    comando.Parameters.AddWithValue("FICHA", nuevoEmpleado.IdFichaMedica);
+                    comando.Parameters.AddWithValue("FICHA", 1);
                     comando.Parameters.AddWithValue("DOMICILIO", nuevoEmpleado.Domicilio);
                     comando.Parameters.AddWithValue("TELEFONO", nuevoEmpleado.Telefono);
                     comando.Parameters.AddWithValue("DNI", nuevoEmpleado.DNI);
                     comando.Parameters.AddWithValue("EMAIL", nuevoEmpleado.Email);
-                    comando.Parameters.AddWithValue("NACIMIENTO", nuevoEmpleado.FechaNacimiento);
+                    comando.Parameters.AddWithValue("NACIMIENTO", nuevoEmpleado.FechaNacimiento.ToShortDateString());
                     comando.Parameters.AddWithValue("FOTO", nuevoEmpleado.Foto);
-                    comando.Parameters.AddWithValue("PAIS", nuevoEmpleado.IdCiudad);
-                    comando.Parameters.AddWithValue("ESTADO", nuevoEmpleado.IdTitulo);
+                    comando.Parameters.AddWithValue("CIUDAD", nuevoEmpleado.IdCiudad);
+                    comando.Parameters.AddWithValue("ESTADO", nuevoEmpleado.IdEstado);
+                    comando.Parameters.AddWithValue("TITULO", nuevoEmpleado.IdTitulo);
+                    comando.Parameters.AddWithValue("CONTACTO", 1);
                     comando.Parameters.AddWithValue("INSTAGRAM", nuevoEmpleado.Instagram);
                     conexion.Open();
                     comando.ExecuteNonQuery();

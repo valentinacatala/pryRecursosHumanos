@@ -141,5 +141,40 @@ namespace pryRecursosHumanos
             frmLicenciaSancion frm = new frmLicenciaSancion("licencias", empleado);
             frm.ShowDialog();
         }
+
+        private void btnFinRegistro_Click(object sender, EventArgs e)
+        {
+            clsEmpleado nuevoEmpleado = new clsEmpleado();
+
+            nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
+            nuevoEmpleado.IdArea = Convert.ToInt32(cboSeleccionarArea.SelectedValue);
+            //nuevoEmpleado.IdFichaMedica = 0;
+            //nuevoEmpleado.IdUsuarios = 0;
+            nuevoEmpleado.Nombre = txtNombre.Text;
+            nuevoEmpleado.Apellido = txtApellido.Text;
+            nuevoEmpleado.Domicilio = txtDireccion.Text;
+            nuevoEmpleado.Telefono = Convert.ToInt32(txtTelefono.Text);
+            nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
+            nuevoEmpleado.Email = txtCorreo.Text;
+            nuevoEmpleado.FechaNacimiento = dtpFechaNacimiento.Value;
+            nuevoEmpleado.Foto = pbFotoEmpleado.Image.ToString();
+            nuevoEmpleado.IdCiudad = Convert.ToInt32(cboCuidad.SelectedValue);
+            nuevoEmpleado.IdEstado = Convert.ToInt32(cboEstadoEmpleado.SelectedValue);
+            nuevoEmpleado.IdTitulo = 1;
+            nuevoEmpleado.Instagram = txtInstagram.Text;
+
+            nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
+        }
+
+        private void pbFotoEmpleado_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Archivos de imagen|*.png;*.jpg;*.jpeg|Todos los archivos|*.*";
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string rutaImagen = openFileDialog.FileName;
+                pbFotoEmpleado.ImageLocation = rutaImagen;
+            }
+        }
     }
 }
