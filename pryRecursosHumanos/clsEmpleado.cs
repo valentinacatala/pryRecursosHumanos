@@ -135,19 +135,20 @@ namespace pryRecursosHumanos
         {
             string comando;
 			comando = "select empleados.Cuit," +
-				"empleados.Nombre," +
-				"empleados.Apellido," +
-				"areas.nombre as Areas," +
-				"fichasmedicas.IdFichaMedica as FichaMedica," +
-				"empleados.Domicilio," +
-				"empleados.Telefono," +
-				"empleados.DNI," +
+                "empleados.Nombre," +
+                "empleados.Apellido," +
+                "areas.nombre as Areas," +
+                "fichasmedicas.IdFichaMedica as FichaMedica," +
+                "empleados.Domicilio," +
+                "empleados.Telefono," +
+                "empleados.DNI," +
                 "empleados.CorreoElectronico," +
-				"Paises.nombre as Pais," +
-				"estados.nombre as Estado," +
-				"titulos.nombre as Titulo," +
-				"tipodecontactos.nombre as Contacto," +
-				"empleados.Instagram " +
+                "empleados.FechaDeNacimineto," +
+                "Paises.nombre as Pais," +
+                "estados.nombre as Estado," +
+                "titulos.nombre as Titulo," +
+                "tipodecontactos.nombre as Contacto," +
+                "empleados.Instagram " +
                 "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos";
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla,comando);
@@ -164,12 +165,14 @@ namespace pryRecursosHumanos
                 "empleados.Telefono," +
                 "empleados.DNI," +
                 "empleados.CorreoElectronico," +
+				"empleados.Foto," +
+				"empleados.fechadenacimineto AS FechaDeNacimiento," +
                 "Paises.nombre as Pais," +
                 "estados.nombre as Estado," +
                 "titulos.nombre as Titulo," +
                 "tipodecontactos.nombre as Contacto," +
                 "empleados.Instagram " +
-                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by Estados.nombre";
+                "from empleados, areas, fichasmedicas, paises, estados, titulos, tipodecontactos order by estados.nombre";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
