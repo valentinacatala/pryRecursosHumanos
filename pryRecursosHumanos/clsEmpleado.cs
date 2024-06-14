@@ -134,22 +134,23 @@ namespace pryRecursosHumanos
 		public void listarEmpleados(DataGridView dgvGrilla)
         {
             string comando;
-			comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, empleados.domicilio" +
-				", areas.nombre as Areas, Paises.nombre as Pais from empleados, areas, paises";
+			comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, areas.nombre as Areas, fichasmedicas.IdFichaMedica, empleados.domicilio" +
+                ", empleados.telefono, empleados.dni, empleados.correoelectronico, empleados.fechadenacimiento, Paises.nombre as Pais, estados.nombre as Estado, titulos.nombre as titulo, tipodecontactos.nombre, empleados.instagram " +
+				"from empleados, areas, paises, fichasmedicas, estados, tipodecontactos, titulos";
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla,comando);
 		}
         public void listarEmpleadosEstado(DataGridView dgvGrilla)
         {
             string comando;
-            comando = "select * from empleados order by IdEstado";
+            comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, empleados.domicilio, areas.nombre as Areas, Paises.nombre as Pais from empleados, areas, paises order by IdEstado";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
         public void listarEmpleadosApellido(DataGridView dgvGrilla)
         {
             string comando;
-            comando = "select * from empleados order by Apellido ";
+            comando = "select empleados.cuit, empleados.nombre as Nombre, empleados.apellido, empleados.domicilio, areas.nombre as Areas, Paises.nombre as Pais from empleados, areas, paises order by empleados.apellido";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
