@@ -28,6 +28,11 @@ namespace pryRecursosHumanos
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarAlergias(cbAlergias);
 		}
-
-	}
+		public static void agregarAlergia(DataGridView dgvGrilla, string nuevaAlergia)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.agregarAlergia(nuevaAlergia);
+			BD.listarAlergia(dgvGrilla,nuevaAlergia);
+        }
+    }
 }

@@ -28,5 +28,11 @@ namespace pryRecursosHumanos
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarDiscapacidades(cbDiscapacidades);
 		}
-	}
+		public static void agregarDiscapacidad(DataGridView dgvGrilla, string nuevaDiscapacidad)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.agregarDiscapacidad(nuevaDiscapacidad);
+			BD.listarDiscapacidad(dgvGrilla,nuevaDiscapacidad);
+        }
+    }
 }

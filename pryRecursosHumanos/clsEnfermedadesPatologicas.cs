@@ -36,6 +36,11 @@ namespace pryRecursosHumanos
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEnfermedades(cbEnfermedades);
 		}
-
+		public static void agregarEnfermedad(DataGridView dgvGrilla,string nuevaEnfermedad)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.agregarEnfermedadPatologica(nuevaEnfermedad);
+			BD.listarEnfermedadPatologica(dgvGrilla,nuevaEnfermedad);
+		}
 	}
 }

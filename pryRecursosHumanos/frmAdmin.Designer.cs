@@ -269,6 +269,53 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEliminarPais = new System.Windows.Forms.Button();
+            this.btnModificarPais = new System.Windows.Forms.Button();
+            this.btnAgregarPais = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEliminarProvincia = new System.Windows.Forms.Button();
+            this.btnModificarProvincia = new System.Windows.Forms.Button();
+            this.btnAgregarProvincias = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnEliminarCiudad = new System.Windows.Forms.Button();
+            this.btnModificarCiudad = new System.Windows.Forms.Button();
+            this.btnAgregarCiudad = new System.Windows.Forms.Button();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnEliminarArea = new System.Windows.Forms.Button();
+            this.btnModificarArea = new System.Windows.Forms.Button();
+            this.btnAgregarArea = new System.Windows.Forms.Button();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnEliminarDiscapacidad = new System.Windows.Forms.Button();
+            this.btnModificarDiscapacidad = new System.Windows.Forms.Button();
+            this.btnAgregarDiscapacidad = new System.Windows.Forms.Button();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnEliminarAlergia = new System.Windows.Forms.Button();
+            this.btnModificarAlergia = new System.Windows.Forms.Button();
+            this.btnAgregarAlergia = new System.Windows.Forms.Button();
+            this.tabPage20 = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnEliminarMedicamentos = new System.Windows.Forms.Button();
+            this.btnModificarMedicamentos = new System.Windows.Forms.Button();
+            this.btnAgregarMedicamentos = new System.Windows.Forms.Button();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnEliminarEnfermedades = new System.Windows.Forms.Button();
+            this.btnModificarEnfermedades = new System.Windows.Forms.Button();
+            this.btnAgregarEnfermedades = new System.Windows.Forms.Button();
+            this.tabPage22 = new System.Windows.Forms.TabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnEliminarEstado = new System.Windows.Forms.Button();
+            this.btnModificarEstado = new System.Windows.Forms.Button();
+            this.btnAgregarEstado = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -318,6 +365,26 @@
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tabPage17.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.tabPage18.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.tabPage19.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.tabPage20.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.tabPage21.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tabPage22.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -1864,6 +1931,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline);
             this.tabControl1.Location = new System.Drawing.Point(-1, 32);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1896,7 +1964,7 @@
             this.tabAgregarEmpleados.Location = new System.Drawing.Point(-8, 0);
             this.tabAgregarEmpleados.Name = "tabAgregarEmpleados";
             this.tabAgregarEmpleados.SelectedIndex = 0;
-            this.tabAgregarEmpleados.Size = new System.Drawing.Size(540, 564);
+            this.tabAgregarEmpleados.Size = new System.Drawing.Size(541, 559);
             this.tabAgregarEmpleados.TabIndex = 0;
             // 
             // tabPaso1
@@ -2331,7 +2399,7 @@
             this.tabPaso2.Location = new System.Drawing.Point(4, 24);
             this.tabPaso2.Name = "tabPaso2";
             this.tabPaso2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPaso2.Size = new System.Drawing.Size(532, 536);
+            this.tabPaso2.Size = new System.Drawing.Size(533, 531);
             this.tabPaso2.TabIndex = 1;
             this.tabPaso2.Text = "Paso 2";
             this.tabPaso2.UseVisualStyleBackColor = true;
@@ -3217,6 +3285,468 @@
             this.dateTimePicker5.Size = new System.Drawing.Size(201, 21);
             this.dateTimePicker5.TabIndex = 0;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.tabControl2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(535, 559);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "ABMinfoExtra";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Controls.Add(this.tabPage7);
+            this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.Controls.Add(this.tabPage17);
+            this.tabControl2.Controls.Add(this.tabPage18);
+            this.tabControl2.Controls.Add(this.tabPage19);
+            this.tabControl2.Controls.Add(this.tabPage20);
+            this.tabControl2.Controls.Add(this.tabPage21);
+            this.tabControl2.Controls.Add(this.tabPage22);
+            this.tabControl2.Location = new System.Drawing.Point(9, 31);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(504, 451);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.panel1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(496, 422);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Paises";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnEliminarPais);
+            this.panel1.Controls.Add(this.btnModificarPais);
+            this.panel1.Controls.Add(this.btnAgregarPais);
+            this.panel1.Location = new System.Drawing.Point(133, 82);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 159);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnEliminarPais
+            // 
+            this.btnEliminarPais.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarPais.Name = "btnEliminarPais";
+            this.btnEliminarPais.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarPais.TabIndex = 2;
+            this.btnEliminarPais.Text = "Eliminar";
+            this.btnEliminarPais.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarPais
+            // 
+            this.btnModificarPais.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarPais.Name = "btnModificarPais";
+            this.btnModificarPais.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarPais.TabIndex = 1;
+            this.btnModificarPais.Text = "Modificar";
+            this.btnModificarPais.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarPais
+            // 
+            this.btnAgregarPais.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarPais.Name = "btnAgregarPais";
+            this.btnAgregarPais.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarPais.TabIndex = 0;
+            this.btnAgregarPais.Text = "Agregar";
+            this.btnAgregarPais.UseVisualStyleBackColor = true;
+            this.btnAgregarPais.Click += new System.EventHandler(this.btnAgregarPais_Click);
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.panel3);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(496, 422);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "Provincias";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnEliminarProvincia);
+            this.panel3.Controls.Add(this.btnModificarProvincia);
+            this.panel3.Controls.Add(this.btnAgregarProvincias);
+            this.panel3.Location = new System.Drawing.Point(148, 132);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 159);
+            this.panel3.TabIndex = 1;
+            // 
+            // btnEliminarProvincia
+            // 
+            this.btnEliminarProvincia.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarProvincia.Name = "btnEliminarProvincia";
+            this.btnEliminarProvincia.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarProvincia.TabIndex = 2;
+            this.btnEliminarProvincia.Text = "Eliminar";
+            this.btnEliminarProvincia.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarProvincia
+            // 
+            this.btnModificarProvincia.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarProvincia.Name = "btnModificarProvincia";
+            this.btnModificarProvincia.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarProvincia.TabIndex = 1;
+            this.btnModificarProvincia.Text = "Modificar";
+            this.btnModificarProvincia.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarProvincias
+            // 
+            this.btnAgregarProvincias.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarProvincias.Name = "btnAgregarProvincias";
+            this.btnAgregarProvincias.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarProvincias.TabIndex = 0;
+            this.btnAgregarProvincias.Text = "Agregar";
+            this.btnAgregarProvincias.UseVisualStyleBackColor = true;
+            this.btnAgregarProvincias.Click += new System.EventHandler(this.btnAgregarProvincias_Click);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.panel4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(496, 422);
+            this.tabPage8.TabIndex = 2;
+            this.tabPage8.Text = "Ciudades";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnEliminarCiudad);
+            this.panel4.Controls.Add(this.btnModificarCiudad);
+            this.panel4.Controls.Add(this.btnAgregarCiudad);
+            this.panel4.Location = new System.Drawing.Point(148, 132);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 159);
+            this.panel4.TabIndex = 1;
+            // 
+            // btnEliminarCiudad
+            // 
+            this.btnEliminarCiudad.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarCiudad.Name = "btnEliminarCiudad";
+            this.btnEliminarCiudad.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarCiudad.TabIndex = 2;
+            this.btnEliminarCiudad.Text = "Eliminar";
+            this.btnEliminarCiudad.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarCiudad
+            // 
+            this.btnModificarCiudad.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarCiudad.Name = "btnModificarCiudad";
+            this.btnModificarCiudad.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarCiudad.TabIndex = 1;
+            this.btnModificarCiudad.Text = "Modificar";
+            this.btnModificarCiudad.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarCiudad
+            // 
+            this.btnAgregarCiudad.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarCiudad.Name = "btnAgregarCiudad";
+            this.btnAgregarCiudad.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarCiudad.TabIndex = 0;
+            this.btnAgregarCiudad.Text = "Agregar";
+            this.btnAgregarCiudad.UseVisualStyleBackColor = true;
+            this.btnAgregarCiudad.Click += new System.EventHandler(this.btnAgregarCiudad_Click);
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.panel5);
+            this.tabPage17.Location = new System.Drawing.Point(4, 25);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Size = new System.Drawing.Size(496, 422);
+            this.tabPage17.TabIndex = 3;
+            this.tabPage17.Text = "Area";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnEliminarArea);
+            this.panel5.Controls.Add(this.btnModificarArea);
+            this.panel5.Controls.Add(this.btnAgregarArea);
+            this.panel5.Location = new System.Drawing.Point(148, 132);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 159);
+            this.panel5.TabIndex = 1;
+            // 
+            // btnEliminarArea
+            // 
+            this.btnEliminarArea.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarArea.Name = "btnEliminarArea";
+            this.btnEliminarArea.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarArea.TabIndex = 2;
+            this.btnEliminarArea.Text = "Eliminar";
+            this.btnEliminarArea.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarArea
+            // 
+            this.btnModificarArea.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarArea.Name = "btnModificarArea";
+            this.btnModificarArea.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarArea.TabIndex = 1;
+            this.btnModificarArea.Text = "Modificar";
+            this.btnModificarArea.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarArea
+            // 
+            this.btnAgregarArea.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarArea.Name = "btnAgregarArea";
+            this.btnAgregarArea.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarArea.TabIndex = 0;
+            this.btnAgregarArea.Text = "Agregar";
+            this.btnAgregarArea.UseVisualStyleBackColor = true;
+            this.btnAgregarArea.Click += new System.EventHandler(this.btnAgregarArea_Click);
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.Controls.Add(this.panel6);
+            this.tabPage18.Location = new System.Drawing.Point(4, 25);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Size = new System.Drawing.Size(496, 422);
+            this.tabPage18.TabIndex = 4;
+            this.tabPage18.Text = "Discapacidades";
+            this.tabPage18.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnEliminarDiscapacidad);
+            this.panel6.Controls.Add(this.btnModificarDiscapacidad);
+            this.panel6.Controls.Add(this.btnAgregarDiscapacidad);
+            this.panel6.Location = new System.Drawing.Point(148, 132);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 159);
+            this.panel6.TabIndex = 1;
+            // 
+            // btnEliminarDiscapacidad
+            // 
+            this.btnEliminarDiscapacidad.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarDiscapacidad.Name = "btnEliminarDiscapacidad";
+            this.btnEliminarDiscapacidad.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarDiscapacidad.TabIndex = 2;
+            this.btnEliminarDiscapacidad.Text = "Eliminar";
+            this.btnEliminarDiscapacidad.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarDiscapacidad
+            // 
+            this.btnModificarDiscapacidad.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarDiscapacidad.Name = "btnModificarDiscapacidad";
+            this.btnModificarDiscapacidad.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarDiscapacidad.TabIndex = 1;
+            this.btnModificarDiscapacidad.Text = "Modificar";
+            this.btnModificarDiscapacidad.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarDiscapacidad
+            // 
+            this.btnAgregarDiscapacidad.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarDiscapacidad.Name = "btnAgregarDiscapacidad";
+            this.btnAgregarDiscapacidad.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarDiscapacidad.TabIndex = 0;
+            this.btnAgregarDiscapacidad.Text = "Agregar";
+            this.btnAgregarDiscapacidad.UseVisualStyleBackColor = true;
+            this.btnAgregarDiscapacidad.Click += new System.EventHandler(this.btnAgregarDiscapacidad_Click);
+            // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.panel7);
+            this.tabPage19.Location = new System.Drawing.Point(4, 25);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Size = new System.Drawing.Size(496, 422);
+            this.tabPage19.TabIndex = 5;
+            this.tabPage19.Text = "Alergias";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btnEliminarAlergia);
+            this.panel7.Controls.Add(this.btnModificarAlergia);
+            this.panel7.Controls.Add(this.btnAgregarAlergia);
+            this.panel7.Location = new System.Drawing.Point(148, 132);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 159);
+            this.panel7.TabIndex = 1;
+            // 
+            // btnEliminarAlergia
+            // 
+            this.btnEliminarAlergia.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarAlergia.Name = "btnEliminarAlergia";
+            this.btnEliminarAlergia.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarAlergia.TabIndex = 2;
+            this.btnEliminarAlergia.Text = "Eliminar";
+            this.btnEliminarAlergia.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarAlergia
+            // 
+            this.btnModificarAlergia.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarAlergia.Name = "btnModificarAlergia";
+            this.btnModificarAlergia.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarAlergia.TabIndex = 1;
+            this.btnModificarAlergia.Text = "Modificar";
+            this.btnModificarAlergia.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarAlergia
+            // 
+            this.btnAgregarAlergia.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarAlergia.Name = "btnAgregarAlergia";
+            this.btnAgregarAlergia.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarAlergia.TabIndex = 0;
+            this.btnAgregarAlergia.Text = "Agregar";
+            this.btnAgregarAlergia.UseVisualStyleBackColor = true;
+            this.btnAgregarAlergia.Click += new System.EventHandler(this.btnAgregarAlergia_Click);
+            // 
+            // tabPage20
+            // 
+            this.tabPage20.Controls.Add(this.panel8);
+            this.tabPage20.Location = new System.Drawing.Point(4, 25);
+            this.tabPage20.Name = "tabPage20";
+            this.tabPage20.Size = new System.Drawing.Size(496, 422);
+            this.tabPage20.TabIndex = 6;
+            this.tabPage20.Text = "Medicamentos";
+            this.tabPage20.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnEliminarMedicamentos);
+            this.panel8.Controls.Add(this.btnModificarMedicamentos);
+            this.panel8.Controls.Add(this.btnAgregarMedicamentos);
+            this.panel8.Location = new System.Drawing.Point(148, 132);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(200, 159);
+            this.panel8.TabIndex = 1;
+            // 
+            // btnEliminarMedicamentos
+            // 
+            this.btnEliminarMedicamentos.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarMedicamentos.Name = "btnEliminarMedicamentos";
+            this.btnEliminarMedicamentos.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarMedicamentos.TabIndex = 2;
+            this.btnEliminarMedicamentos.Text = "Eliminar";
+            this.btnEliminarMedicamentos.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarMedicamentos
+            // 
+            this.btnModificarMedicamentos.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarMedicamentos.Name = "btnModificarMedicamentos";
+            this.btnModificarMedicamentos.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarMedicamentos.TabIndex = 1;
+            this.btnModificarMedicamentos.Text = "Modificar";
+            this.btnModificarMedicamentos.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarMedicamentos
+            // 
+            this.btnAgregarMedicamentos.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarMedicamentos.Name = "btnAgregarMedicamentos";
+            this.btnAgregarMedicamentos.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarMedicamentos.TabIndex = 0;
+            this.btnAgregarMedicamentos.Text = "Agregar";
+            this.btnAgregarMedicamentos.UseVisualStyleBackColor = true;
+            this.btnAgregarMedicamentos.Click += new System.EventHandler(this.btnAgregarMedicamentos_Click);
+            // 
+            // tabPage21
+            // 
+            this.tabPage21.Controls.Add(this.panel9);
+            this.tabPage21.Location = new System.Drawing.Point(4, 25);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Size = new System.Drawing.Size(496, 422);
+            this.tabPage21.TabIndex = 7;
+            this.tabPage21.Text = "Enfermedades";
+            this.tabPage21.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btnEliminarEnfermedades);
+            this.panel9.Controls.Add(this.btnModificarEnfermedades);
+            this.panel9.Controls.Add(this.btnAgregarEnfermedades);
+            this.panel9.Location = new System.Drawing.Point(148, 132);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(200, 159);
+            this.panel9.TabIndex = 1;
+            // 
+            // btnEliminarEnfermedades
+            // 
+            this.btnEliminarEnfermedades.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarEnfermedades.Name = "btnEliminarEnfermedades";
+            this.btnEliminarEnfermedades.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarEnfermedades.TabIndex = 2;
+            this.btnEliminarEnfermedades.Text = "Eliminar";
+            this.btnEliminarEnfermedades.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarEnfermedades
+            // 
+            this.btnModificarEnfermedades.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarEnfermedades.Name = "btnModificarEnfermedades";
+            this.btnModificarEnfermedades.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarEnfermedades.TabIndex = 1;
+            this.btnModificarEnfermedades.Text = "Modificar";
+            this.btnModificarEnfermedades.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarEnfermedades
+            // 
+            this.btnAgregarEnfermedades.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarEnfermedades.Name = "btnAgregarEnfermedades";
+            this.btnAgregarEnfermedades.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarEnfermedades.TabIndex = 0;
+            this.btnAgregarEnfermedades.Text = "Agregar";
+            this.btnAgregarEnfermedades.UseVisualStyleBackColor = true;
+            this.btnAgregarEnfermedades.Click += new System.EventHandler(this.btnAgregarEnfermedades_Click);
+            // 
+            // tabPage22
+            // 
+            this.tabPage22.Controls.Add(this.panel10);
+            this.tabPage22.Location = new System.Drawing.Point(4, 25);
+            this.tabPage22.Name = "tabPage22";
+            this.tabPage22.Size = new System.Drawing.Size(496, 422);
+            this.tabPage22.TabIndex = 8;
+            this.tabPage22.Text = "Estado";
+            this.tabPage22.UseVisualStyleBackColor = true;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btnEliminarEstado);
+            this.panel10.Controls.Add(this.btnModificarEstado);
+            this.panel10.Controls.Add(this.btnAgregarEstado);
+            this.panel10.Location = new System.Drawing.Point(148, 132);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(200, 159);
+            this.panel10.TabIndex = 1;
+            // 
+            // btnEliminarEstado
+            // 
+            this.btnEliminarEstado.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarEstado.Name = "btnEliminarEstado";
+            this.btnEliminarEstado.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarEstado.TabIndex = 2;
+            this.btnEliminarEstado.Text = "Eliminar";
+            this.btnEliminarEstado.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarEstado
+            // 
+            this.btnModificarEstado.Location = new System.Drawing.Point(45, 72);
+            this.btnModificarEstado.Name = "btnModificarEstado";
+            this.btnModificarEstado.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarEstado.TabIndex = 1;
+            this.btnModificarEstado.Text = "Modificar";
+            this.btnModificarEstado.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarEstado
+            // 
+            this.btnAgregarEstado.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarEstado.Name = "btnAgregarEstado";
+            this.btnAgregarEstado.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarEstado.TabIndex = 0;
+            this.btnAgregarEstado.Text = "Agregar";
+            this.btnAgregarEstado.UseVisualStyleBackColor = true;
+            this.btnAgregarEstado.Click += new System.EventHandler(this.btnAgregarEstado_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3310,6 +3840,26 @@
             this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.tabPage17.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.tabPage18.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.tabPage19.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.tabPage20.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.tabPage21.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.tabPage22.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3555,5 +4105,52 @@
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Button btnFinRegistro;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnEliminarPais;
+        private System.Windows.Forms.Button btnModificarPais;
+        private System.Windows.Forms.Button btnAgregarPais;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnEliminarProvincia;
+        private System.Windows.Forms.Button btnModificarProvincia;
+        private System.Windows.Forms.Button btnAgregarProvincias;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnEliminarCiudad;
+        private System.Windows.Forms.Button btnModificarCiudad;
+        private System.Windows.Forms.Button btnAgregarCiudad;
+        private System.Windows.Forms.TabPage tabPage17;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnEliminarArea;
+        private System.Windows.Forms.Button btnModificarArea;
+        private System.Windows.Forms.Button btnAgregarArea;
+        private System.Windows.Forms.TabPage tabPage18;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnEliminarDiscapacidad;
+        private System.Windows.Forms.Button btnModificarDiscapacidad;
+        private System.Windows.Forms.Button btnAgregarDiscapacidad;
+        private System.Windows.Forms.TabPage tabPage19;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnEliminarAlergia;
+        private System.Windows.Forms.Button btnModificarAlergia;
+        private System.Windows.Forms.Button btnAgregarAlergia;
+        private System.Windows.Forms.TabPage tabPage20;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnEliminarMedicamentos;
+        private System.Windows.Forms.Button btnModificarMedicamentos;
+        private System.Windows.Forms.Button btnAgregarMedicamentos;
+        private System.Windows.Forms.TabPage tabPage21;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnEliminarEnfermedades;
+        private System.Windows.Forms.Button btnModificarEnfermedades;
+        private System.Windows.Forms.Button btnAgregarEnfermedades;
+        private System.Windows.Forms.TabPage tabPage22;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button btnEliminarEstado;
+        private System.Windows.Forms.Button btnModificarEstado;
+        private System.Windows.Forms.Button btnAgregarEstado;
     }
 }

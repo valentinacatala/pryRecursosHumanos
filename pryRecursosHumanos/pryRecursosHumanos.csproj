@@ -70,11 +70,29 @@
     <Compile Include="clsTipoContactos.cs" />
     <Compile Include="clsTitulo.cs" />
     <Compile Include="clsUsuarios.cs" />
+    <Compile Include="frmABMCbos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABMCbos.Designer.cs">
+      <DependentUpon>frmABMCbos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArea.Designer.cs">
+      <DependentUpon>frmArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCiudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCiudad.Designer.cs">
+      <DependentUpon>frmCiudad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsulta.cs">
       <SubType>Form</SubType>
@@ -106,6 +124,12 @@
     <Compile Include="frmMainAdmin.Designer.cs">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProvinicia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvinicia.Designer.cs">
+      <DependentUpon>frmProvinicia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,8 +138,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmABMCbos.resx">
+      <DependentUpon>frmABMCbos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCiudad.resx">
+      <DependentUpon>frmCiudad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsulta.resx">
       <DependentUpon>frmConsulta.cs</DependentUpon>

@@ -28,5 +28,11 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarPaises(cbPaises);
         }
+        public static void agregarPais(DataGridView dgvGrilla,string nuevoPais)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.agregarPais(nuevoPais);
+            BD.listarPaises(dgvGrilla,nuevoPais);
+        }
     }
 }

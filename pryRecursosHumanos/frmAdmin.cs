@@ -203,5 +203,55 @@ namespace pryRecursosHumanos
 
         }
 
+        private void btnAgregarPais_Click(object sender, EventArgs e)
+        {
+            frmABMCbos frmABMCbos = new frmABMCbos("Pais");
+            frmABMCbos.ShowDialog();
+        }
+
+        private void btnAgregarProvincias_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAgregarCiudad_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAgregarArea_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAgregarDiscapacidad_Click(object sender, EventArgs e)
+        {
+            frmABMCbos frmABMCbos = new frmABMCbos("Discapacidad");
+            frmABMCbos.ShowDialog();
+        }
+
+        private void btnAgregarAlergia_Click(object sender, EventArgs e)
+        {
+            frmABMCbos frmABMCbos = new frmABMCbos("Alergia");
+            frmABMCbos.ShowDialog();
+        }
+
+        private void btnAgregarMedicamentos_Click(object sender, EventArgs e)
+        {
+            frmABMCbos frmABMCbos = new frmABMCbos("Medicamento");
+            frmABMCbos.ShowDialog();
+        }
+
+        private void btnAgregarEnfermedades_Click(object sender, EventArgs e)
+        {
+            frmABMCbos frmABMCbos = new frmABMCbos("Enfermedad");
+            frmABMCbos.ShowDialog();
+        }
+
+        private void btnAgregarEstado_Click(object sender, EventArgs e)
+        {
+            frmABMCbos frmABMCbos = new frmABMCbos("Estado");
+            frmABMCbos.ShowDialog();
+        }
     }
 }
