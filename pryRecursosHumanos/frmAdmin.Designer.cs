@@ -59,7 +59,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtEliminarDni = new System.Windows.Forms.TextBox();
+            this.txtEliminarCuit = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -196,6 +196,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.tabPaso2 = new System.Windows.Forms.TabPage();
+            this.btnFinRegistro = new System.Windows.Forms.Button();
             this.label87 = new System.Windows.Forms.Label();
             this.btnSiguiente2 = new System.Windows.Forms.Button();
             this.btnCancelar2 = new System.Windows.Forms.Button();
@@ -268,7 +269,6 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.btnFinRegistro = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -675,7 +675,7 @@
             this.groupBox20.Controls.Add(this.label16);
             this.groupBox20.Controls.Add(this.label21);
             this.groupBox20.Controls.Add(this.label19);
-            this.groupBox20.Controls.Add(this.txtEliminarDni);
+            this.groupBox20.Controls.Add(this.txtEliminarCuit);
             this.groupBox20.Controls.Add(this.label18);
             this.groupBox20.Controls.Add(this.lblNombre);
             this.groupBox20.Controls.Add(this.label17);
@@ -705,9 +705,9 @@
             this.label16.Location = new System.Drawing.Point(7, 40);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 15);
+            this.label16.Size = new System.Drawing.Size(97, 15);
             this.label16.TabIndex = 37;
-            this.label16.Text = "Ingresar DNI";
+            this.label16.Text = "Ingresar CUIT";
             // 
             // label21
             // 
@@ -731,16 +731,17 @@
             this.label19.TabIndex = 22;
             this.label19.Text = "Dirección";
             // 
-            // txtEliminarDni
+            // txtEliminarCuit
             // 
-            this.txtEliminarDni.BackColor = System.Drawing.Color.MistyRose;
-            this.txtEliminarDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtEliminarDni.Location = new System.Drawing.Point(11, 60);
-            this.txtEliminarDni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtEliminarDni.Multiline = true;
-            this.txtEliminarDni.Name = "txtEliminarDni";
-            this.txtEliminarDni.Size = new System.Drawing.Size(190, 22);
-            this.txtEliminarDni.TabIndex = 71;
+            this.txtEliminarCuit.BackColor = System.Drawing.Color.MistyRose;
+            this.txtEliminarCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtEliminarCuit.Location = new System.Drawing.Point(11, 60);
+            this.txtEliminarCuit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtEliminarCuit.Multiline = true;
+            this.txtEliminarCuit.Name = "txtEliminarCuit";
+            this.txtEliminarCuit.Size = new System.Drawing.Size(190, 22);
+            this.txtEliminarCuit.TabIndex = 71;
+            this.txtEliminarCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEliminarCuit_KeyPress);
             // 
             // label18
             // 
@@ -895,6 +896,7 @@
             this.btnEliminar.TabIndex = 73;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelarEliminar
             // 
@@ -908,6 +910,7 @@
             this.btnCancelarEliminar.TabIndex = 72;
             this.btnCancelarEliminar.Text = "Cancelar";
             this.btnCancelarEliminar.UseVisualStyleBackColor = false;
+            this.btnCancelarEliminar.Click += new System.EventHandler(this.btnCancelarEliminar_Click);
             // 
             // tabPage2
             // 
@@ -2333,6 +2336,19 @@
             this.tabPaso2.Text = "Paso 2";
             this.tabPaso2.UseVisualStyleBackColor = true;
             // 
+            // btnFinRegistro
+            // 
+            this.btnFinRegistro.BackColor = System.Drawing.Color.MistyRose;
+            this.btnFinRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFinRegistro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnFinRegistro.Location = new System.Drawing.Point(330, 469);
+            this.btnFinRegistro.Name = "btnFinRegistro";
+            this.btnFinRegistro.Size = new System.Drawing.Size(98, 42);
+            this.btnFinRegistro.TabIndex = 47;
+            this.btnFinRegistro.Text = "Finalizar\r\nRegistro";
+            this.btnFinRegistro.UseVisualStyleBackColor = false;
+            this.btnFinRegistro.Click += new System.EventHandler(this.btnFinRegistro_Click);
+            // 
             // label87
             // 
             this.label87.AutoSize = true;
@@ -3201,19 +3217,6 @@
             this.dateTimePicker5.Size = new System.Drawing.Size(201, 21);
             this.dateTimePicker5.TabIndex = 0;
             // 
-            // btnFinRegistro
-            // 
-            this.btnFinRegistro.BackColor = System.Drawing.Color.MistyRose;
-            this.btnFinRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFinRegistro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnFinRegistro.Location = new System.Drawing.Point(330, 469);
-            this.btnFinRegistro.Name = "btnFinRegistro";
-            this.btnFinRegistro.Size = new System.Drawing.Size(98, 42);
-            this.btnFinRegistro.TabIndex = 47;
-            this.btnFinRegistro.Text = "Finalizar\r\nRegistro";
-            this.btnFinRegistro.UseVisualStyleBackColor = false;
-            this.btnFinRegistro.Click += new System.EventHandler(this.btnFinRegistro_Click);
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3483,7 +3486,7 @@
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.TextBox txtSancionesDni;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.TextBox txtEliminarDni;
+        private System.Windows.Forms.TextBox txtEliminarCuit;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.DataGridView dgvListar;

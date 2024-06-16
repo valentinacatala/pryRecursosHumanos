@@ -587,6 +587,88 @@ namespace pryRecursosHumanos
         }
         #endregion
 
+        #region buscaEliminarEmpleado
+        public bool eliminarEmpleado(int cuit)
+        {
+            bool existeEmpleado = buscarEmpleado(cuit);
+            if (existeEmpleado)
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
 
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"UPDATE Empleados SET IdEstado = 4 WHERE Cuit = {cuit}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private bool buscarEmpleado(int cuit)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {cuit}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        public void llenarDatosEmpleado(int cuit,Label lblNombre, Label lblApellido, Label lblEmail, Label lblDomicilio, Label lblTelefono, Label lblFechaIngreso, PictureBox PbFoto)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {cuit}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1)
+                {
+                    lblApellido.Text = tablaEmpleados.Rows[0]["apellido"].ToString();
+                    lblNombre.Text = tablaEmpleados.Rows[0]["nombre"].ToString();
+                    lblEmail.Text = tablaEmpleados.Rows[0]["CorreoElectronico"].ToString();
+                    lblDomicilio.Text = tablaEmpleados.Rows[0]["Domicilio"].ToString();
+                    lblTelefono.Text = tablaEmpleados.Rows[0]["Telefono"].ToString();
+                }
+                else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+
+        #region modificarEmpleado
+        public bool modificarEmpleado(int cuit)
+        {
+            return true;
+        }
+        #endregion
     }
 }

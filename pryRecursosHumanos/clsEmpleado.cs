@@ -36,7 +36,8 @@ namespace pryRecursosHumanos
 		private int idAlergia;
 		private int idDiscapacidad;
 
-		public int Cuit
+        #region propiedades
+        public int Cuit
 		{
 			get { return cuit; }
 			set { cuit = value; }
@@ -166,8 +167,10 @@ namespace pryRecursosHumanos
 			get { return idDiscapacidad; }
 			set { idDiscapacidad = value; }
 		}
+        #endregion
 
-		public void listarEmpleados(DataGridView dgvGrilla)
+        #region listarAgregarEmpleado
+        public void listarEmpleados(DataGridView dgvGrilla)
 		{
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarEmpleados(dgvGrilla);
@@ -179,8 +182,10 @@ namespace pryRecursosHumanos
 
             BD.agregarEmpleado(nuevoEmpleado);
         }
+        #endregion
 
-		public static void agregarSancion(clsSanciones sancion, clsEmpleado empleado, string observaciones, DateTime fechaInicio)
+        #region sancionLicencia
+        public static void agregarSancion(clsSanciones sancion, clsEmpleado empleado, string observaciones, DateTime fechaInicio)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
 
@@ -193,5 +198,21 @@ namespace pryRecursosHumanos
 
             BD.agregarLicenciaAEmpleado(licencia,empleado,Estado,Tiempo);
         }
-	}
+        #endregion
+
+        #region buscarEliminarEmpleado
+		public void buscarEmpleado(int cuit, Label lblNombre, Label lblApellido, Label lblEmail, Label lblDomicilio, Label lblTelefono, Label lblFechaIngreso, PictureBox PbFoto)
+		{
+			clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+			conexion.llenarDatosEmpleado(cuit,lblNombre,lblApellido,lblEmail,lblDomicilio,lblTelefono,lblFechaIngreso,PbFoto);
+		}
+		public bool eliminarEmpleado(int cuit)
+		{
+            clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+			return conexion.eliminarEmpleado(cuit);
+        }
+
+        #endregion
+
+    }
 }

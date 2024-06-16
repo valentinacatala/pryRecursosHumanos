@@ -176,5 +176,32 @@ namespace pryRecursosHumanos
                 pbFotoEmpleado.ImageLocation = rutaImagen;
             }
         }
+        private void txtEliminarCuit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                clsEmpleado empleado = new clsEmpleado();
+                int cuit = Convert.ToInt32(txtEliminarCuit.Text);
+                empleado.buscarEmpleado(cuit,lblNombre,lblApellido,lblCorreo,lblDireccion,lblTelefono,lblFechaIngreso,pbEliminarFoto);
+                e.Handled = true;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            clsEmpleado empleado = new clsEmpleado();
+            bool eliminado = empleado.eliminarEmpleado(Convert.ToInt32(txtEliminarCuit.Text));
+            if (eliminado)
+            {
+                MessageBox.Show($"Empleado con CUIT {txtCuit.Text} eliminado correctamente","Eliminado",MessageBoxButtons.OK);
+            }
+            else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
+        }
+
+        private void btnCancelarEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
