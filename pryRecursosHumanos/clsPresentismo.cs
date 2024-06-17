@@ -25,5 +25,11 @@ namespace pryRecursosHumanos
 			set { idPresentismo = value; }
 		}
 
+		public static void agregarFalta(int cuit, string fecha)
+		{
+			clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.agregarFaltas(cuit, fecha);
+		}
+
 	}
 }

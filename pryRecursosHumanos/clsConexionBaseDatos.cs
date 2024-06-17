@@ -59,6 +59,8 @@ namespace pryRecursosHumanos
                     comando.Connection = conexion;
                     comando.CommandType = CommandType.Text;
                     comando.Parameters.Clear();
+                    crearFichaMedica(nuevoEmpleado.Cuit);
+                    int idFichaMedica = asignarFichaMedica(nuevoEmpleado.Cuit);
                     comando.CommandText = $@"INSERT INTO Empleados
                                             (Cuit, nombre, apellido, IdArea, IdFichaMedica, Domicilio, Telefono, DNI, CorreoElectronico, FechaDeNacimineto, Foto, IdCiudad, IdEstado, IdTitulo, IdTipoDeContacto, Instagram)
                                             VALUES (@CUIT, @NOMBRE, @APELLIDO, @AREA, @FICHA, @DOMICILIO, @TELEFONO, @DNI, @EMAIL, @NACIMIENTO, @FOTO, @CIUDAD, @ESTADO, @TITULO, @CONTACTO, @INSTAGRAM)";
@@ -66,7 +68,7 @@ namespace pryRecursosHumanos
                     comando.Parameters.AddWithValue("NOMBRE", nuevoEmpleado.Nombre);
                     comando.Parameters.AddWithValue("APELLIDO", nuevoEmpleado.Apellido);
                     comando.Parameters.AddWithValue("AREA", nuevoEmpleado.IdArea);
-                    comando.Parameters.AddWithValue("FICHA", 1);
+                    comando.Parameters.AddWithValue("FICHA", idFichaMedica);
                     comando.Parameters.AddWithValue("DOMICILIO", nuevoEmpleado.Domicilio);
                     comando.Parameters.AddWithValue("TELEFONO", nuevoEmpleado.Telefono);
                     comando.Parameters.AddWithValue("DNI", nuevoEmpleado.DNI);
@@ -80,7 +82,7 @@ namespace pryRecursosHumanos
                     comando.Parameters.AddWithValue("INSTAGRAM", nuevoEmpleado.Instagram);
                     conexion.Open();
                     comando.ExecuteNonQuery();
-                    crearFichaMedica(nuevoEmpleado.Cuit);
+                    
                     MessageBox.Show("Empleado agregado exitosamente!");
                 }
                 catch (Exception ex)
@@ -142,6 +144,35 @@ namespace pryRecursosHumanos
             finally
             {
                 conexion.Close();
+            }
+        }
+
+        public int asignarFichaMedica(int cuitEmpleado)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT IdFichaMedica FROM FichasMedicas WHERE Cuit = {cuitEmpleado}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                if (tabla.Rows.Count == 0) return 0;
+                else
+                {
+                    return Convert.ToInt32(tabla.Rows[0][0]);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
             }
         }
         #endregion
@@ -1609,6 +1640,391 @@ namespace pryRecursosHumanos
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+        #region faltas
+        public void agregarFaltas(int cuit, string fecha)
+        {
+            if(validarFaltas(cuit, fecha))
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Presentismo (Cuit, Fecha) VALUES ({cuit}, '{fecha}')";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Falta agregada");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se pueden cargar 2 faltas en una misma fecha");
+            }
+        }
+
+        public bool validarFaltas(int cuit, string fecha)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Presentismo WHERE Cuit = {cuit} AND Fecha = '{fecha}'";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                if (tabla.Rows.Count == 0) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        #endregion
+
+        #region FichaMedica
+        public void agregarEnfermedadAFicha(int idFichaMedica, int idEnfermedad)
+        {
+            if(validarEnfermedad(idFichaMedica, idEnfermedad))
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Enf_FM (IdFichaMedica, IdEnfermedad) VALUES ({idFichaMedica}, {idEnfermedad})";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede cargar 2 veces la misma enfermedad");
+            }
+            
+        }
+
+        public void listarEnfermedadesPorFicha(DataGridView dgvEnfermedades, int idFichaMedica)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT E.Nombre, E.Contagiosa FROM Enf_FM as EF, EnfermedadesPatologicas as E WHERE EF.IdFichaMedica = {idFichaMedica} AND E.IdEnfermedadesPatologicas = EF.IdEnfermedad";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                dgvEnfermedades.DataSource = tabla;
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public bool validarEnfermedad(int idFichaMedica, int idEnfermedad)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Enf_FM WHERE IdFichaMedica = {idFichaMedica} AND IdEnfermedad = {idEnfermedad}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                if (tabla.Rows.Count == 0) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public void agregarMedicamentoAFicha(int idFichaMedica, int idMedicamento, double dosis)
+        {
+            if (validarMedicamento(idFichaMedica, idMedicamento))
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Med_FM (IdFichaMedica, IdMedicamento, Dosis) VALUES ({idFichaMedica}, {idMedicamento}, {dosis})";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede cargar 2 veces el mismo medicamento");
+            }
+
+        }
+
+        public void listarMedicamentosPorFicha(DataGridView dgvMedicamentos, int idFichaMedica)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT M.Nombre, MF.Dosis FROM Med_FM as MF, Medicamentos as M WHERE MF.IdFichaMedica = {idFichaMedica} AND M.IdMedicamentos = MF.IdMedicamento";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                dgvMedicamentos.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public bool validarMedicamento(int idFichaMedica, int idMedicamento)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Med_FM WHERE IdFichaMedica = {idFichaMedica} AND IdMedicamento = {idMedicamento}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                if (tabla.Rows.Count == 0) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public void agregarDiscapacidadAFicha(int idFichaMedica, int idDiscapacidad)
+        {
+            if (validarDiscapacidad(idFichaMedica, idDiscapacidad))
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Disc_FM (IdFichaMedica, IdDiscapacidad) VALUES ({idFichaMedica}, {idDiscapacidad})";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede cargar 2 veces la misma discapacidad");
+            }
+
+        }
+
+        public void listarDiscapacidadesPorFicha(DataGridView dgvDiscapacidades, int idFichaMedica)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT D.Nombre FROM Disc_FM as DF, Discapacidades as D WHERE DF.IdFichaMedica = {idFichaMedica} AND D.IdDiscapacidades = DF.IdDiscapacidad";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                dgvDiscapacidades.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public bool validarDiscapacidad(int idFichaMedica, int idDiscapacidad)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Disc_FM WHERE IdFichaMedica = {idFichaMedica} AND IdDiscapacidad = {idDiscapacidad}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                if (tabla.Rows.Count == 0) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public void agregarAlergiaAFicha(int idFichaMedica, int idAlergia)
+        {
+            if (validarAlergia(idFichaMedica, idAlergia))
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Ale_FM (IdFichaMedica, IdAlergia) VALUES ({idFichaMedica}, {idAlergia})";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede cargar 2 veces la misma alergia");
+            }
+
+        }
+
+        public void listarAlergiasPorFicha(DataGridView dgvAlergias, int idFichaMedica)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT A.Nombre FROM Ale_FM as AF, Alergias as A WHERE AF.IdFichaMedica = {idFichaMedica} AND A.IdAlergias = AF.IdAlergia";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                dgvAlergias.DataSource = tabla;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public bool validarAlergia(int idFichaMedica, int idAlergia)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Ale_FM WHERE IdFichaMedica = {idFichaMedica} AND IdAlergia = {idAlergia}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                if (tabla.Rows.Count == 0) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
             }
         }
         #endregion

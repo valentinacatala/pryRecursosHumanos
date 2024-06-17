@@ -198,7 +198,6 @@
             this.tabPaso2 = new System.Windows.Forms.TabPage();
             this.btnFinRegistro = new System.Windows.Forms.Button();
             this.label87 = new System.Windows.Forms.Label();
-            this.btnSiguiente2 = new System.Windows.Forms.Button();
             this.btnCancelar2 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.cboEstadoEmpleado = new System.Windows.Forms.ComboBox();
@@ -210,6 +209,8 @@
             this.label57 = new System.Windows.Forms.Label();
             this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboTitulo = new System.Windows.Forms.ComboBox();
+            this.cboUniversidad = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
@@ -219,38 +220,15 @@
             this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
             this.tabPaso3 = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.btnGuardarFicha = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.btnAgregarEnfermedad = new System.Windows.Forms.Button();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.label42 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label58 = new System.Windows.Forms.Label();
             this.tabPaso4 = new System.Windows.Forms.TabPage();
             this.label37 = new System.Windows.Forms.Label();
-            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
+            this.btnGuardarSanciones = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.label49 = new System.Windows.Forms.Label();
@@ -266,7 +244,7 @@
             this.label51 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.dtpAusencia = new System.Windows.Forms.DateTimePicker();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -314,8 +292,25 @@
             this.btnEliminarEstado = new System.Windows.Forms.Button();
             this.btnModificarEstado = new System.Windows.Forms.Button();
             this.btnAgregarEstado = new System.Windows.Forms.Button();
-            this.cboUniversidad = new System.Windows.Forms.ComboBox();
-            this.cboTitulo = new System.Windows.Forms.ComboBox();
+            this.btnAgregarFalta = new System.Windows.Forms.Button();
+            this.cboEnfermedades = new System.Windows.Forms.ComboBox();
+            this.cboMedicamentos = new System.Windows.Forms.ComboBox();
+            this.cboDiscapacidades = new System.Windows.Forms.ComboBox();
+            this.cboAlergias = new System.Windows.Forms.ComboBox();
+            this.btnAgregarEnfermedad = new System.Windows.Forms.Button();
+            this.btnAgregarMedicamento = new System.Windows.Forms.Button();
+            this.btnAgregarAlergiaFM = new System.Windows.Forms.Button();
+            this.btnAgregarDiscapacidadFM = new System.Windows.Forms.Button();
+            this.dgvEnfermedades = new System.Windows.Forms.DataGridView();
+            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
+            this.dgvDiscapacidades = new System.Windows.Forms.DataGridView();
+            this.dgvAlergias = new System.Windows.Forms.DataGridView();
+            this.txtDosis = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtBuscarCuit = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.btnBuscarCuit = new System.Windows.Forms.Button();
+            this.lblFichaMedica = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -356,7 +351,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
             this.tabPaso3.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -385,6 +379,10 @@
             this.panel9.SuspendLayout();
             this.tabPage22.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermedades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscapacidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlergias)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -476,6 +474,7 @@
             this.dgvListar.RowTemplate.Height = 24;
             this.dgvListar.Size = new System.Drawing.Size(526, 518);
             this.dgvListar.TabIndex = 15;
+            this.dgvListar.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage14
             // 
@@ -558,6 +557,7 @@
             this.dgvListarApellido.RowTemplate.Height = 24;
             this.dgvListarApellido.Size = new System.Drawing.Size(508, 458);
             this.dgvListarApellido.TabIndex = 15;
+            this.dgvListarApellido.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage15
             // 
@@ -640,6 +640,7 @@
             this.dgvListarPais.RowTemplate.Height = 24;
             this.dgvListarPais.Size = new System.Drawing.Size(508, 458);
             this.dgvListarPais.TabIndex = 20;
+            this.dgvListarPais.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage16
             // 
@@ -722,6 +723,7 @@
             this.dgvListarEstado.RowTemplate.Height = 24;
             this.dgvListarEstado.Size = new System.Drawing.Size(508, 458);
             this.dgvListarEstado.TabIndex = 20;
+            this.dgvListarEstado.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage3
             // 
@@ -2389,7 +2391,6 @@
             // 
             this.tabPaso2.Controls.Add(this.btnFinRegistro);
             this.tabPaso2.Controls.Add(this.label87);
-            this.tabPaso2.Controls.Add(this.btnSiguiente2);
             this.tabPaso2.Controls.Add(this.btnCancelar2);
             this.tabPaso2.Controls.Add(this.groupBox6);
             this.tabPaso2.Controls.Add(this.groupBox16);
@@ -2409,11 +2410,11 @@
             this.btnFinRegistro.BackColor = System.Drawing.Color.MistyRose;
             this.btnFinRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFinRegistro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnFinRegistro.Location = new System.Drawing.Point(330, 469);
+            this.btnFinRegistro.Location = new System.Drawing.Point(391, 409);
             this.btnFinRegistro.Name = "btnFinRegistro";
             this.btnFinRegistro.Size = new System.Drawing.Size(98, 42);
             this.btnFinRegistro.TabIndex = 47;
-            this.btnFinRegistro.Text = "Finalizar\r\nRegistro";
+            this.btnFinRegistro.Text = "Guardar Empleado";
             this.btnFinRegistro.UseVisualStyleBackColor = false;
             this.btnFinRegistro.Click += new System.EventHandler(this.btnFinRegistro_Click);
             // 
@@ -2426,19 +2427,6 @@
             this.label87.Size = new System.Drawing.Size(130, 24);
             this.label87.TabIndex = 46;
             this.label87.Text = "EMPLEADO";
-            // 
-            // btnSiguiente2
-            // 
-            this.btnSiguiente2.BackColor = System.Drawing.Color.MistyRose;
-            this.btnSiguiente2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSiguiente2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnSiguiente2.Location = new System.Drawing.Point(391, 409);
-            this.btnSiguiente2.Name = "btnSiguiente2";
-            this.btnSiguiente2.Size = new System.Drawing.Size(98, 42);
-            this.btnSiguiente2.TabIndex = 1;
-            this.btnSiguiente2.Text = "Siguiente";
-            this.btnSiguiente2.UseVisualStyleBackColor = false;
-            this.btnSiguiente2.Click += new System.EventHandler(this.btnSiguiente2_Click);
             // 
             // btnCancelar2
             // 
@@ -2570,6 +2558,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Titulo";
             // 
+            // cboTitulo
+            // 
+            this.cboTitulo.BackColor = System.Drawing.Color.SeaShell;
+            this.cboTitulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTitulo.Enabled = false;
+            this.cboTitulo.FormattingEnabled = true;
+            this.cboTitulo.Location = new System.Drawing.Point(14, 171);
+            this.cboTitulo.Name = "cboTitulo";
+            this.cboTitulo.Size = new System.Drawing.Size(191, 23);
+            this.cboTitulo.TabIndex = 29;
+            this.cboTitulo.SelectedIndexChanged += new System.EventHandler(this.cboTitulo_SelectedIndexChanged);
+            // 
+            // cboUniversidad
+            // 
+            this.cboUniversidad.BackColor = System.Drawing.Color.SeaShell;
+            this.cboUniversidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUniversidad.Enabled = false;
+            this.cboUniversidad.FormattingEnabled = true;
+            this.cboUniversidad.Location = new System.Drawing.Point(14, 119);
+            this.cboUniversidad.Name = "cboUniversidad";
+            this.cboUniversidad.Size = new System.Drawing.Size(191, 23);
+            this.cboUniversidad.TabIndex = 1;
+            this.cboUniversidad.SelectedIndexChanged += new System.EventHandler(this.cboUniversidad_SelectedIndexChanged);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -2655,9 +2667,12 @@
             // 
             // tabPaso3
             // 
+            this.tabPaso3.Controls.Add(this.lblFichaMedica);
+            this.tabPaso3.Controls.Add(this.btnBuscarCuit);
+            this.tabPaso3.Controls.Add(this.label42);
+            this.tabPaso3.Controls.Add(this.txtBuscarCuit);
             this.tabPaso3.Controls.Add(this.button22);
-            this.tabPaso3.Controls.Add(this.button4);
-            this.tabPaso3.Controls.Add(this.groupBox11);
+            this.tabPaso3.Controls.Add(this.btnGuardarFicha);
             this.tabPaso3.Controls.Add(this.groupBox7);
             this.tabPaso3.Controls.Add(this.label40);
             this.tabPaso3.Controls.Add(this.groupBox9);
@@ -2669,7 +2684,7 @@
             this.tabPaso3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPaso3.Size = new System.Drawing.Size(533, 531);
             this.tabPaso3.TabIndex = 2;
-            this.tabPaso3.Text = "Paso 3";
+            this.tabPaso3.Text = "Ficha Medica";
             this.tabPaso3.UseVisualStyleBackColor = true;
             // 
             // button22
@@ -2677,134 +2692,38 @@
             this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button22.Location = new System.Drawing.Point(268, 415);
+            this.button22.Location = new System.Drawing.Point(295, 479);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(98, 42);
             this.button22.TabIndex = 1;
             this.button22.Text = "Cancelar";
             this.button22.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnGuardarFicha
             // 
-            this.button4.BackColor = System.Drawing.Color.MistyRose;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button4.Location = new System.Drawing.Point(399, 415);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 42);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Siguiente";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.radioButton9);
-            this.groupBox11.Controls.Add(this.radioButton10);
-            this.groupBox11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.groupBox11.Location = new System.Drawing.Point(31, 71);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(217, 69);
-            this.groupBox11.TabIndex = 43;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "¿Fue entregada?";
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton9.Location = new System.Drawing.Point(110, 30);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(43, 20);
-            this.radioButton9.TabIndex = 1;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "No";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton10.Location = new System.Drawing.Point(43, 30);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(37, 20);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Si";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.btnGuardarFicha.BackColor = System.Drawing.Color.MistyRose;
+            this.btnGuardarFicha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarFicha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnGuardarFicha.Location = new System.Drawing.Point(399, 479);
+            this.btnGuardarFicha.Name = "btnGuardarFicha";
+            this.btnGuardarFicha.Size = new System.Drawing.Size(118, 42);
+            this.btnGuardarFicha.TabIndex = 0;
+            this.btnGuardarFicha.Text = "Guardar Ficha Medica";
+            this.btnGuardarFicha.UseVisualStyleBackColor = false;
+            this.btnGuardarFicha.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.label43);
-            this.groupBox7.Controls.Add(this.button3);
-            this.groupBox7.Controls.Add(this.radioButton1);
-            this.groupBox7.Controls.Add(this.radioButton2);
-            this.groupBox7.Controls.Add(this.label41);
+            this.groupBox7.Controls.Add(this.dgvDiscapacidades);
+            this.groupBox7.Controls.Add(this.btnAgregarDiscapacidadFM);
+            this.groupBox7.Controls.Add(this.cboDiscapacidades);
             this.groupBox7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.groupBox7.Location = new System.Drawing.Point(31, 325);
+            this.groupBox7.Location = new System.Drawing.Point(19, 281);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(217, 151);
+            this.groupBox7.Size = new System.Drawing.Size(249, 186);
             this.groupBox7.TabIndex = 39;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Discapacidades";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label43.Location = new System.Drawing.Point(9, 86);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(67, 16);
-            this.label43.TabIndex = 32;
-            this.label43.Text = "¿Cuál/es?";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.MistyRose;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button3.Location = new System.Drawing.Point(12, 105);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 27);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton1.Location = new System.Drawing.Point(111, 53);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 20);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "No";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton2.Location = new System.Drawing.Point(43, 53);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(37, 20);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Si";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label41.Location = new System.Drawing.Point(9, 27);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(186, 16);
-            this.label41.TabIndex = 23;
-            this.label41.Text = "¿Tiene alguna discapacidad?";
             // 
             // label40
             // 
@@ -2818,227 +2737,49 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.label44);
+            this.groupBox9.Controls.Add(this.dgvEnfermedades);
             this.groupBox9.Controls.Add(this.btnAgregarEnfermedad);
-            this.groupBox9.Controls.Add(this.radioButton7);
-            this.groupBox9.Controls.Add(this.radioButton8);
-            this.groupBox9.Controls.Add(this.label47);
+            this.groupBox9.Controls.Add(this.cboEnfermedades);
             this.groupBox9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.groupBox9.Location = new System.Drawing.Point(31, 152);
+            this.groupBox9.Location = new System.Drawing.Point(19, 89);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(218, 157);
+            this.groupBox9.Size = new System.Drawing.Size(249, 186);
             this.groupBox9.TabIndex = 41;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Enfermedades Patológicas";
             // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label44.Location = new System.Drawing.Point(9, 85);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(67, 16);
-            this.label44.TabIndex = 25;
-            this.label44.Text = "¿Cuál/es?";
-            // 
-            // btnAgregarEnfermedad
-            // 
-            this.btnAgregarEnfermedad.BackColor = System.Drawing.Color.MistyRose;
-            this.btnAgregarEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarEnfermedad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarEnfermedad.Location = new System.Drawing.Point(12, 104);
-            this.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad";
-            this.btnAgregarEnfermedad.Size = new System.Drawing.Size(83, 27);
-            this.btnAgregarEnfermedad.TabIndex = 24;
-            this.btnAgregarEnfermedad.Text = "Agregar";
-            this.btnAgregarEnfermedad.UseVisualStyleBackColor = false;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton7.Location = new System.Drawing.Point(73, 48);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(43, 20);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "No";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton8.Location = new System.Drawing.Point(12, 48);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(37, 20);
-            this.radioButton8.TabIndex = 1;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Si";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label47.Location = new System.Drawing.Point(9, 26);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(195, 16);
-            this.label47.TabIndex = 23;
-            this.label47.Text = "¿Presenta alguna enfermedad?";
-            // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.label48);
-            this.groupBox10.Controls.Add(this.button1);
-            this.groupBox10.Controls.Add(this.radioButton5);
-            this.groupBox10.Controls.Add(this.radioButton6);
-            this.groupBox10.Controls.Add(this.label42);
+            this.groupBox10.Controls.Add(this.label41);
+            this.groupBox10.Controls.Add(this.txtDosis);
+            this.groupBox10.Controls.Add(this.dgvMedicamentos);
+            this.groupBox10.Controls.Add(this.btnAgregarMedicamento);
+            this.groupBox10.Controls.Add(this.cboMedicamentos);
             this.groupBox10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.groupBox10.Location = new System.Drawing.Point(268, 71);
+            this.groupBox10.Location = new System.Drawing.Point(274, 89);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(235, 161);
+            this.groupBox10.Size = new System.Drawing.Size(249, 186);
             this.groupBox10.TabIndex = 40;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Medicamentos";
             // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label48.Location = new System.Drawing.Point(12, 88);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(67, 16);
-            this.label48.TabIndex = 27;
-            this.label48.Text = "¿Cuál/es?";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button1.Location = new System.Drawing.Point(15, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 27);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton5.Location = new System.Drawing.Point(111, 49);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(43, 20);
-            this.radioButton5.TabIndex = 2;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "No";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton6.Location = new System.Drawing.Point(43, 49);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(37, 20);
-            this.radioButton6.TabIndex = 1;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Si";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label42.Location = new System.Drawing.Point(12, 25);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(178, 16);
-            this.label42.TabIndex = 0;
-            this.label42.Text = "¿Toma algún medicamento?";
-            // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.label46);
-            this.groupBox8.Controls.Add(this.button2);
-            this.groupBox8.Controls.Add(this.radioButton3);
-            this.groupBox8.Controls.Add(this.radioButton4);
-            this.groupBox8.Controls.Add(this.label58);
+            this.groupBox8.Controls.Add(this.dgvAlergias);
+            this.groupBox8.Controls.Add(this.btnAgregarAlergiaFM);
+            this.groupBox8.Controls.Add(this.cboAlergias);
             this.groupBox8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.groupBox8.Location = new System.Drawing.Point(268, 247);
+            this.groupBox8.Location = new System.Drawing.Point(274, 281);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(229, 142);
+            this.groupBox8.Size = new System.Drawing.Size(249, 186);
             this.groupBox8.TabIndex = 38;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Alérgias";
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label46.Location = new System.Drawing.Point(12, 78);
-            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(67, 16);
-            this.label46.TabIndex = 30;
-            this.label46.Text = "¿Cuál/es?";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.MistyRose;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.button2.Location = new System.Drawing.Point(15, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 27);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Agregar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton3.Location = new System.Drawing.Point(76, 50);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(43, 20);
-            this.radioButton3.TabIndex = 27;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "No";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton4.Location = new System.Drawing.Point(15, 50);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(37, 20);
-            this.radioButton4.TabIndex = 26;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Si";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label58.Location = new System.Drawing.Point(12, 28);
-            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(164, 16);
-            this.label58.TabIndex = 28;
-            this.label58.Text = "¿Presenta alguna alergia?";
-            // 
             // tabPaso4
             // 
             this.tabPaso4.Controls.Add(this.label37);
-            this.tabPaso4.Controls.Add(this.btnRegistrarUsuario);
+            this.tabPaso4.Controls.Add(this.btnGuardarSanciones);
             this.tabPaso4.Controls.Add(this.button5);
             this.tabPaso4.Controls.Add(this.groupBox15);
             this.tabPaso4.Controls.Add(this.groupBox14);
@@ -3048,7 +2789,7 @@
             this.tabPaso4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPaso4.Size = new System.Drawing.Size(533, 531);
             this.tabPaso4.TabIndex = 3;
-            this.tabPaso4.Text = "Paso 4";
+            this.tabPaso4.Text = "Sanciones - Licencias";
             this.tabPaso4.UseVisualStyleBackColor = true;
             // 
             // label37
@@ -3061,18 +2802,17 @@
             this.label37.TabIndex = 54;
             this.label37.Text = "ESTADO DEL EMPLEADO";
             // 
-            // btnRegistrarUsuario
+            // btnGuardarSanciones
             // 
-            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.MistyRose;
-            this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistrarUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(285, 451);
-            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            this.btnRegistrarUsuario.Size = new System.Drawing.Size(98, 42);
-            this.btnRegistrarUsuario.TabIndex = 1;
-            this.btnRegistrarUsuario.Text = "Finalizar Registro";
-            this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
-            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
+            this.btnGuardarSanciones.BackColor = System.Drawing.Color.MistyRose;
+            this.btnGuardarSanciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarSanciones.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnGuardarSanciones.Location = new System.Drawing.Point(285, 451);
+            this.btnGuardarSanciones.Name = "btnGuardarSanciones";
+            this.btnGuardarSanciones.Size = new System.Drawing.Size(98, 42);
+            this.btnGuardarSanciones.TabIndex = 1;
+            this.btnGuardarSanciones.Text = "Guardar";
+            this.btnGuardarSanciones.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -3094,9 +2834,9 @@
             this.groupBox15.Controls.Add(this.radioButton14);
             this.groupBox15.Controls.Add(this.label50);
             this.groupBox15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(285, 56);
+            this.groupBox15.Location = new System.Drawing.Point(261, 56);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(229, 151);
+            this.groupBox15.Size = new System.Drawing.Size(253, 158);
             this.groupBox15.TabIndex = 42;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Licencias";
@@ -3168,9 +2908,9 @@
             this.groupBox14.Controls.Add(this.radioButton12);
             this.groupBox14.Controls.Add(this.label51);
             this.groupBox14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(28, 214);
+            this.groupBox14.Location = new System.Drawing.Point(13, 56);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(227, 158);
+            this.groupBox14.Size = new System.Drawing.Size(242, 158);
             this.groupBox14.TabIndex = 0;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Sanciones";
@@ -3236,12 +2976,13 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.btnAgregarFalta);
             this.groupBox13.Controls.Add(this.label33);
-            this.groupBox13.Controls.Add(this.dateTimePicker5);
+            this.groupBox13.Controls.Add(this.dtpAusencia);
             this.groupBox13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(28, 56);
+            this.groupBox13.Location = new System.Drawing.Point(13, 233);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(227, 79);
+            this.groupBox13.Size = new System.Drawing.Size(227, 109);
             this.groupBox13.TabIndex = 40;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Presentismo";
@@ -3257,16 +2998,16 @@
             this.label33.TabIndex = 27;
             this.label33.Text = "Fecha";
             // 
-            // dateTimePicker5
+            // dtpAusencia
             // 
-            this.dateTimePicker5.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker5.Location = new System.Drawing.Point(7, 46);
-            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(201, 21);
-            this.dateTimePicker5.TabIndex = 0;
+            this.dtpAusencia.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpAusencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpAusencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpAusencia.Location = new System.Drawing.Point(7, 46);
+            this.dtpAusencia.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpAusencia.Name = "dtpAusencia";
+            this.dtpAusencia.Size = new System.Drawing.Size(201, 21);
+            this.dtpAusencia.TabIndex = 0;
             // 
             // tabPage5
             // 
@@ -3730,29 +3471,234 @@
             this.btnAgregarEstado.UseVisualStyleBackColor = true;
             this.btnAgregarEstado.Click += new System.EventHandler(this.btnAgregarEstado_Click);
             // 
-            // cboUniversidad
+            // btnAgregarFalta
             // 
-            this.cboUniversidad.BackColor = System.Drawing.Color.SeaShell;
-            this.cboUniversidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboUniversidad.Enabled = false;
-            this.cboUniversidad.FormattingEnabled = true;
-            this.cboUniversidad.Location = new System.Drawing.Point(14, 119);
-            this.cboUniversidad.Name = "cboUniversidad";
-            this.cboUniversidad.Size = new System.Drawing.Size(191, 23);
-            this.cboUniversidad.TabIndex = 1;
-            this.cboUniversidad.SelectedIndexChanged += new System.EventHandler(this.cboUniversidad_SelectedIndexChanged);
+            this.btnAgregarFalta.BackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarFalta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarFalta.Location = new System.Drawing.Point(7, 73);
+            this.btnAgregarFalta.Name = "btnAgregarFalta";
+            this.btnAgregarFalta.Size = new System.Drawing.Size(83, 27);
+            this.btnAgregarFalta.TabIndex = 36;
+            this.btnAgregarFalta.Text = "Agregar";
+            this.btnAgregarFalta.UseVisualStyleBackColor = false;
+            this.btnAgregarFalta.Click += new System.EventHandler(this.btnAgregarFalta_Click);
             // 
-            // cboTitulo
+            // cboEnfermedades
             // 
-            this.cboTitulo.BackColor = System.Drawing.Color.SeaShell;
-            this.cboTitulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTitulo.Enabled = false;
-            this.cboTitulo.FormattingEnabled = true;
-            this.cboTitulo.Location = new System.Drawing.Point(14, 171);
-            this.cboTitulo.Name = "cboTitulo";
-            this.cboTitulo.Size = new System.Drawing.Size(191, 23);
-            this.cboTitulo.TabIndex = 29;
-            this.cboTitulo.SelectedIndexChanged += new System.EventHandler(this.cboTitulo_SelectedIndexChanged);
+            this.cboEnfermedades.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEnfermedades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEnfermedades.FormattingEnabled = true;
+            this.cboEnfermedades.Location = new System.Drawing.Point(6, 22);
+            this.cboEnfermedades.Name = "cboEnfermedades";
+            this.cboEnfermedades.Size = new System.Drawing.Size(187, 23);
+            this.cboEnfermedades.TabIndex = 1;
+            // 
+            // cboMedicamentos
+            // 
+            this.cboMedicamentos.BackColor = System.Drawing.Color.SeaShell;
+            this.cboMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMedicamentos.FormattingEnabled = true;
+            this.cboMedicamentos.Location = new System.Drawing.Point(6, 22);
+            this.cboMedicamentos.Name = "cboMedicamentos";
+            this.cboMedicamentos.Size = new System.Drawing.Size(187, 23);
+            this.cboMedicamentos.TabIndex = 2;
+            // 
+            // cboDiscapacidades
+            // 
+            this.cboDiscapacidades.BackColor = System.Drawing.Color.SeaShell;
+            this.cboDiscapacidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiscapacidades.FormattingEnabled = true;
+            this.cboDiscapacidades.Location = new System.Drawing.Point(6, 22);
+            this.cboDiscapacidades.Name = "cboDiscapacidades";
+            this.cboDiscapacidades.Size = new System.Drawing.Size(187, 23);
+            this.cboDiscapacidades.TabIndex = 3;
+            // 
+            // cboAlergias
+            // 
+            this.cboAlergias.BackColor = System.Drawing.Color.SeaShell;
+            this.cboAlergias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAlergias.FormattingEnabled = true;
+            this.cboAlergias.Location = new System.Drawing.Point(6, 22);
+            this.cboAlergias.Name = "cboAlergias";
+            this.cboAlergias.Size = new System.Drawing.Size(187, 23);
+            this.cboAlergias.TabIndex = 4;
+            // 
+            // btnAgregarEnfermedad
+            // 
+            this.btnAgregarEnfermedad.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarEnfermedad.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarEnfermedad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarEnfermedad.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEnfermedad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarEnfermedad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEnfermedad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarEnfermedad.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarEnfermedad.Location = new System.Drawing.Point(201, 22);
+            this.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad";
+            this.btnAgregarEnfermedad.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarEnfermedad.TabIndex = 10;
+            this.btnAgregarEnfermedad.UseVisualStyleBackColor = false;
+            this.btnAgregarEnfermedad.Click += new System.EventHandler(this.btnAgregarEnfermedad_Click);
+            // 
+            // btnAgregarMedicamento
+            // 
+            this.btnAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarMedicamento.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarMedicamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarMedicamento.FlatAppearance.BorderSize = 0;
+            this.btnAgregarMedicamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarMedicamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMedicamento.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarMedicamento.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarMedicamento.Location = new System.Drawing.Point(199, 51);
+            this.btnAgregarMedicamento.Name = "btnAgregarMedicamento";
+            this.btnAgregarMedicamento.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarMedicamento.TabIndex = 11;
+            this.btnAgregarMedicamento.UseVisualStyleBackColor = false;
+            this.btnAgregarMedicamento.Click += new System.EventHandler(this.btnAgregarMedicamento_Click);
+            // 
+            // btnAgregarAlergiaFM
+            // 
+            this.btnAgregarAlergiaFM.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarAlergiaFM.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarAlergiaFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarAlergiaFM.FlatAppearance.BorderSize = 0;
+            this.btnAgregarAlergiaFM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarAlergiaFM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarAlergiaFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAlergiaFM.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarAlergiaFM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarAlergiaFM.Location = new System.Drawing.Point(199, 21);
+            this.btnAgregarAlergiaFM.Name = "btnAgregarAlergiaFM";
+            this.btnAgregarAlergiaFM.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarAlergiaFM.TabIndex = 11;
+            this.btnAgregarAlergiaFM.UseVisualStyleBackColor = false;
+            this.btnAgregarAlergiaFM.Click += new System.EventHandler(this.btnAgregarAlergiaFM_Click);
+            // 
+            // btnAgregarDiscapacidadFM
+            // 
+            this.btnAgregarDiscapacidadFM.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarDiscapacidadFM.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarDiscapacidadFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarDiscapacidadFM.FlatAppearance.BorderSize = 0;
+            this.btnAgregarDiscapacidadFM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarDiscapacidadFM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarDiscapacidadFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarDiscapacidadFM.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarDiscapacidadFM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarDiscapacidadFM.Location = new System.Drawing.Point(201, 22);
+            this.btnAgregarDiscapacidadFM.Name = "btnAgregarDiscapacidadFM";
+            this.btnAgregarDiscapacidadFM.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarDiscapacidadFM.TabIndex = 12;
+            this.btnAgregarDiscapacidadFM.UseVisualStyleBackColor = false;
+            this.btnAgregarDiscapacidadFM.Click += new System.EventHandler(this.btnAgregarDiscapacidadFM_Click);
+            // 
+            // dgvEnfermedades
+            // 
+            this.dgvEnfermedades.AllowUserToAddRows = false;
+            this.dgvEnfermedades.AllowUserToDeleteRows = false;
+            this.dgvEnfermedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEnfermedades.Location = new System.Drawing.Point(6, 51);
+            this.dgvEnfermedades.Name = "dgvEnfermedades";
+            this.dgvEnfermedades.ReadOnly = true;
+            this.dgvEnfermedades.Size = new System.Drawing.Size(237, 123);
+            this.dgvEnfermedades.TabIndex = 12;
+            // 
+            // dgvMedicamentos
+            // 
+            this.dgvMedicamentos.AllowUserToAddRows = false;
+            this.dgvMedicamentos.AllowUserToDeleteRows = false;
+            this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 82);
+            this.dgvMedicamentos.Name = "dgvMedicamentos";
+            this.dgvMedicamentos.ReadOnly = true;
+            this.dgvMedicamentos.Size = new System.Drawing.Size(237, 92);
+            this.dgvMedicamentos.TabIndex = 13;
+            // 
+            // dgvDiscapacidades
+            // 
+            this.dgvDiscapacidades.AllowUserToAddRows = false;
+            this.dgvDiscapacidades.AllowUserToDeleteRows = false;
+            this.dgvDiscapacidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiscapacidades.Location = new System.Drawing.Point(6, 51);
+            this.dgvDiscapacidades.Name = "dgvDiscapacidades";
+            this.dgvDiscapacidades.ReadOnly = true;
+            this.dgvDiscapacidades.Size = new System.Drawing.Size(237, 129);
+            this.dgvDiscapacidades.TabIndex = 14;
+            // 
+            // dgvAlergias
+            // 
+            this.dgvAlergias.AllowUserToAddRows = false;
+            this.dgvAlergias.AllowUserToDeleteRows = false;
+            this.dgvAlergias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlergias.Location = new System.Drawing.Point(6, 51);
+            this.dgvAlergias.Name = "dgvAlergias";
+            this.dgvAlergias.ReadOnly = true;
+            this.dgvAlergias.Size = new System.Drawing.Size(237, 129);
+            this.dgvAlergias.TabIndex = 15;
+            // 
+            // txtDosis
+            // 
+            this.txtDosis.Location = new System.Drawing.Point(90, 51);
+            this.txtDosis.Name = "txtDosis";
+            this.txtDosis.Size = new System.Drawing.Size(103, 23);
+            this.txtDosis.TabIndex = 14;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(7, 55);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(76, 15);
+            this.label41.TabIndex = 33;
+            this.label41.Text = "Dosis (mg)";
+            // 
+            // txtBuscarCuit
+            // 
+            this.txtBuscarCuit.Location = new System.Drawing.Point(68, 57);
+            this.txtBuscarCuit.Name = "txtBuscarCuit";
+            this.txtBuscarCuit.Size = new System.Drawing.Size(144, 23);
+            this.txtBuscarCuit.TabIndex = 34;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(22, 60);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(39, 15);
+            this.label42.TabIndex = 34;
+            this.label42.Text = "CUIT";
+            // 
+            // btnBuscarCuit
+            // 
+            this.btnBuscarCuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBuscarCuit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarCuit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnBuscarCuit.Location = new System.Drawing.Point(220, 53);
+            this.btnBuscarCuit.Name = "btnBuscarCuit";
+            this.btnBuscarCuit.Size = new System.Drawing.Size(87, 30);
+            this.btnBuscarCuit.TabIndex = 43;
+            this.btnBuscarCuit.Text = "Buscar";
+            this.btnBuscarCuit.UseVisualStyleBackColor = false;
+            this.btnBuscarCuit.Click += new System.EventHandler(this.btnBuscarCuit_Click);
+            // 
+            // lblFichaMedica
+            // 
+            this.lblFichaMedica.AutoSize = true;
+            this.lblFichaMedica.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFichaMedica.Location = new System.Drawing.Point(318, 62);
+            this.lblFichaMedica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFichaMedica.Name = "lblFichaMedica";
+            this.lblFichaMedica.Size = new System.Drawing.Size(115, 15);
+            this.lblFichaMedica.TabIndex = 44;
+            this.lblFichaMedica.Text = "Ficha Medica N°:";
             // 
             // frmAdmin
             // 
@@ -3829,16 +3775,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).EndInit();
             this.tabPaso3.ResumeLayout(false);
             this.tabPaso3.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
             this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.tabPaso4.ResumeLayout(false);
             this.tabPaso4.PerformLayout();
             this.groupBox15.ResumeLayout(false);
@@ -3867,6 +3808,10 @@
             this.panel9.ResumeLayout(false);
             this.tabPage22.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermedades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscapacidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlergias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3949,7 +3894,7 @@
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.DateTimePicker dtpAusencia;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Button btnCancelar2;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -3961,17 +3906,8 @@
         private System.Windows.Forms.ComboBox cboSeleccionarArea;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.TextBox txtDniModificar;
@@ -4052,11 +3988,10 @@
         private System.Windows.Forms.DataGridView dgvListarApellido;
         private System.Windows.Forms.TabPage tabPage15;
         private System.Windows.Forms.TabPage tabPage16;
-        private System.Windows.Forms.Button btnSiguiente2;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGuardarFicha;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button btnRegistrarUsuario;
+        private System.Windows.Forms.Button btnGuardarSanciones;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label87;
@@ -4085,20 +4020,6 @@
         private System.Windows.Forms.Button btnListarEstado;
         private System.Windows.Forms.DataGridView dgvListarEstado;
         private System.Windows.Forms.PictureBox pcbMinimizar;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Button btnAgregarEnfermedad;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button btnLicencias;
         private System.Windows.Forms.RadioButton radioButton13;
@@ -4159,5 +4080,24 @@
         private System.Windows.Forms.Button btnAgregarEstado;
         private System.Windows.Forms.ComboBox cboTitulo;
         private System.Windows.Forms.ComboBox cboUniversidad;
+        private System.Windows.Forms.Button btnAgregarFalta;
+        private System.Windows.Forms.ComboBox cboDiscapacidades;
+        private System.Windows.Forms.ComboBox cboEnfermedades;
+        private System.Windows.Forms.ComboBox cboMedicamentos;
+        private System.Windows.Forms.ComboBox cboAlergias;
+        private System.Windows.Forms.Button btnAgregarDiscapacidadFM;
+        private System.Windows.Forms.Button btnAgregarEnfermedad;
+        private System.Windows.Forms.Button btnAgregarMedicamento;
+        private System.Windows.Forms.Button btnAgregarAlergiaFM;
+        private System.Windows.Forms.DataGridView dgvDiscapacidades;
+        private System.Windows.Forms.DataGridView dgvEnfermedades;
+        private System.Windows.Forms.DataGridView dgvMedicamentos;
+        private System.Windows.Forms.DataGridView dgvAlergias;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox txtDosis;
+        private System.Windows.Forms.Label lblFichaMedica;
+        private System.Windows.Forms.Button btnBuscarCuit;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox txtBuscarCuit;
     }
 }

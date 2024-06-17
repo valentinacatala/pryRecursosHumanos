@@ -41,6 +41,6 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.agregarEnfermedadPatologica(nuevaEnfermedad);
 			BD.listarEnfermedadPatologica(dgvGrilla,nuevaEnfermedad);
-		}
+		}		
 	}
 }

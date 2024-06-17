@@ -18,7 +18,7 @@ namespace pryRecursosHumanos
 		private string nombre;
 		private string apellido;
 		private string domicilio;
-		private int telefono;
+		private string telefono;
 		private int dni;
 		private string email;
 		private DateTime fechaNacimiento;
@@ -82,7 +82,7 @@ namespace pryRecursosHumanos
 			get { return domicilio; }
 			set { domicilio = value; }
 		}
-		public int Telefono
+		public string Telefono
         {
 			get { return telefono; }
 			set { telefono = value; }
@@ -213,6 +213,18 @@ namespace pryRecursosHumanos
         }
 
         #endregion
+
+		public void asignarFichaMedica()
+		{
+			clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			this.IdFichaMedica = BD.asignarFichaMedica(this.cuit);
+		}
+
+		public static int buscarFichaMedica(int cuitEmpleado)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            return BD.asignarFichaMedica(cuitEmpleado);
+        }
 
     }
 }

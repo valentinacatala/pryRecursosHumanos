@@ -13,7 +13,8 @@ namespace pryRecursosHumanos
 {
     public partial class frmAdmin : Form
     {
-        private int idTitulo = 0;
+        private int idTitulo = 1;
+        private clsEmpleado empleadoSeleccionado = new clsEmpleado();
         // Importar las funciones de la API de Windows
         [DllImport("user32.dll")]
         private static extern bool ReleaseCapture();
@@ -52,6 +53,10 @@ namespace pryRecursosHumanos
             clsArea.listarArea(cboSeleccionarArea);
             clsEstado.listarEstados(cboEstadoEmpleado);
             clsUniversidades.listarUniversidades(cboUniversidad);
+            clsEnfermedadesPatologicas.listarEnfermedades(cboEnfermedades);
+            clsMedicamentos.listarMedicamentos(cboMedicamentos);
+            clsAlergias.listarAlergias(cboAlergias);
+            clsDiscapacidades.listarDiscapacidades(cboDiscapacidades);
         }
 
         private void cboEmpleadoPais_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,48 +103,15 @@ namespace pryRecursosHumanos
             tabAgregarEmpleados.SelectedTab = tabPaso4;
         }
 
-        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
-        {
-            clsEmpleado nuevoEmpleado = new clsEmpleado();
-
-            nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
-            nuevoEmpleado.Sanciones = new List<int>();
-            nuevoEmpleado.IdArea = Convert.ToInt32(txtCuit);
-            nuevoEmpleado.IdFichaMedica = 0;
-            nuevoEmpleado.IdUsuarios = 0;
-            nuevoEmpleado.Nombre = txtNombre.Text;
-            nuevoEmpleado.Apellido = txtApellido.Text;
-            nuevoEmpleado.Domicilio = txtDireccion.Text;
-            nuevoEmpleado.Telefono = Convert.ToInt32(txtTelefono.Text);
-            nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
-            nuevoEmpleado.Email = txtCorreo.Text;
-            nuevoEmpleado.FechaNacimiento = Convert.ToDateTime(dtpFechaNacimiento);
-            nuevoEmpleado.Foto = pbFotoEmpleado.Image.ToString();
-            nuevoEmpleado.IdPais = Convert.ToInt32(cboEmpleadoPais);
-            nuevoEmpleado.IdProvincia = Convert.ToInt32(cboProvincia);
-            nuevoEmpleado.IdCiudad = Convert.ToInt32(cboCuidad.SelectedValue);
-            nuevoEmpleado.MediosContacto = new List<int>();
-            nuevoEmpleado.IdEstado = Convert.ToInt32(cboEstadoEmpleado.SelectedValue);
-            nuevoEmpleado.IdTitulo = 0;
-            nuevoEmpleado.Instagram = txtInstagram.Text;
-            nuevoEmpleado.TiposContacto = new List<int>();
-
-            nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
-        }
-
         private void btnSanciones_Click(object sender, EventArgs e)
         {
-            clsEmpleado empleado = new clsEmpleado();
-            empleado.Cuit = 146;
-            frmLicenciaSancion frm = new frmLicenciaSancion("sanciones", empleado);
+            frmLicenciaSancion frm = new frmLicenciaSancion("sanciones", empleadoSeleccionado);
             frm.ShowDialog();
         }
 
         private void btnLicencias_Click(object sender, EventArgs e)
         {
-            clsEmpleado empleado = new clsEmpleado();
-            empleado.Cuit = 146;
-            frmLicenciaSancion frm = new frmLicenciaSancion("licencias", empleado);
+            frmLicenciaSancion frm = new frmLicenciaSancion("licencias", empleadoSeleccionado);
             frm.ShowDialog();
         }
 
@@ -147,16 +119,13 @@ namespace pryRecursosHumanos
         {
             clsEmpleado nuevoEmpleado = new clsEmpleado();
 
-            idTitulo = Convert.ToInt32(cboTitulo.SelectedValue);
-
+            if(rbSi.Checked) idTitulo = Convert.ToInt32(cboTitulo.SelectedValue);
             nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
             nuevoEmpleado.IdArea = Convert.ToInt32(cboSeleccionarArea.SelectedValue);
-            //nuevoEmpleado.IdFichaMedica = 0;
-            //nuevoEmpleado.IdUsuarios = 0;
             nuevoEmpleado.Nombre = txtNombre.Text;
             nuevoEmpleado.Apellido = txtApellido.Text;
             nuevoEmpleado.Domicilio = txtDireccion.Text;
-            nuevoEmpleado.Telefono = Convert.ToInt32(txtTelefono.Text);
+            nuevoEmpleado.Telefono = txtTelefono.Text;
             nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
             nuevoEmpleado.Email = txtCorreo.Text;
             nuevoEmpleado.FechaNacimiento = dtpFechaNacimiento.Value;
@@ -167,6 +136,15 @@ namespace pryRecursosHumanos
             nuevoEmpleado.Instagram = txtInstagram.Text;
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
+            nuevoEmpleado.asignarFichaMedica();
+            empleadoSeleccionado = nuevoEmpleado;
+            txtBuscarCuit.Text = empleadoSeleccionado.Cuit.ToString();
+            lblFichaMedica.Text = $"Ficha Medica N°: {empleadoSeleccionado.IdFichaMedica}";
+            dgvEnfermedades.DataSource = null;
+            dgvMedicamentos.DataSource = null;
+            dgvDiscapacidades.DataSource = null;
+            dgvAlergias.DataSource = null;
+            idTitulo = 1;
         }
 
         private void pbFotoEmpleado_Click(object sender, EventArgs e)
@@ -287,6 +265,68 @@ namespace pryRecursosHumanos
             {
                 idTitulo = Convert.ToInt32(cboTitulo.SelectedValue.ToString());
             }
+        }
+
+        private void btnAgregarFalta_Click(object sender, EventArgs e)
+        {
+            clsPresentismo.agregarFalta(empleadoSeleccionado.Cuit, dtpAusencia.Value.ToString("dd/MM/yyyy"));
+        }
+
+        private void btnAgregarEnfermedad_Click(object sender, EventArgs e)
+        {
+            if(cboEnfermedades.SelectedValue != null)
+            {
+                int idEnfermedad = Convert.ToInt32(cboEnfermedades.SelectedValue.ToString());
+                clsFichaMedica.agregarEnfermedad(empleadoSeleccionado.IdFichaMedica, idEnfermedad);
+                clsFichaMedica.listarEnfermedades(dgvEnfermedades, empleadoSeleccionado.IdFichaMedica);
+            }
+        }
+
+        private void btnAgregarMedicamento_Click(object sender, EventArgs e)
+        {
+            if (cboMedicamentos.SelectedValue != null)
+            {
+                int idMedicamento = Convert.ToInt32(cboMedicamentos.SelectedValue.ToString());
+                double dosis = Convert.ToDouble(txtDosis.Text);
+                clsFichaMedica.agregarMedicamento(empleadoSeleccionado.IdFichaMedica, idMedicamento, dosis);
+                clsFichaMedica.listarMedicamentos(dgvMedicamentos, empleadoSeleccionado.IdFichaMedica);
+            }
+        }
+
+        private void btnAgregarDiscapacidadFM_Click(object sender, EventArgs e)
+        {
+            if (cboDiscapacidades.SelectedValue != null)
+            {
+                int idDiscapacidad = Convert.ToInt32(cboDiscapacidades.SelectedValue.ToString());
+                clsFichaMedica.agregarDiscapacidad(empleadoSeleccionado.IdFichaMedica, idDiscapacidad);
+                clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, empleadoSeleccionado.IdFichaMedica);
+            }
+        }
+
+        private void btnAgregarAlergiaFM_Click(object sender, EventArgs e)
+        {
+            if (cboAlergias.SelectedValue != null)
+            {
+                int idAlergia = Convert.ToInt32(cboAlergias.SelectedValue.ToString());
+                clsFichaMedica.agregarAlergia(empleadoSeleccionado.IdFichaMedica, idAlergia);
+                clsFichaMedica.listarAlergias(dgvAlergias, empleadoSeleccionado.IdFichaMedica);
+            }
+        }
+
+        private void dgvListar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void btnBuscarCuit_Click(object sender, EventArgs e)
+        {
+            int cuit = Convert.ToInt32(txtBuscarCuit.Text);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            lblFichaMedica.Text = $"Ficha Medica N°: {idFichaMedica}";
+            clsFichaMedica.listarEnfermedades(dgvEnfermedades, idFichaMedica);
+            clsFichaMedica.listarMedicamentos(dgvMedicamentos, idFichaMedica);
+            clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, idFichaMedica);
+            clsFichaMedica.listarAlergias(dgvAlergias, idFichaMedica);
         }
     }
 }
