@@ -69,6 +69,7 @@
     <Compile Include="clsSueldos.cs" />
     <Compile Include="clsTipoContactos.cs" />
     <Compile Include="clsTitulo.cs" />
+    <Compile Include="clsUniversidades.cs" />
     <Compile Include="clsUsuarios.cs" />
     <Compile Include="frmABMCbos.cs">
       <SubType>Form</SubType>

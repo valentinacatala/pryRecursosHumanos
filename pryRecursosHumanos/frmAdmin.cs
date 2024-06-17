@@ -13,6 +13,7 @@ namespace pryRecursosHumanos
 {
     public partial class frmAdmin : Form
     {
+        private int idTitulo = 0;
         // Importar las funciones de la API de Windows
         [DllImport("user32.dll")]
         private static extern bool ReleaseCapture();
@@ -50,7 +51,7 @@ namespace pryRecursosHumanos
             clsPaises.listarPaises(cboEmpleadoPais);
             clsArea.listarArea(cboSeleccionarArea);
             clsEstado.listarEstados(cboEstadoEmpleado);
-            
+            clsUniversidades.listarUniversidades(cboUniversidad);
         }
 
         private void cboEmpleadoPais_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,6 +147,8 @@ namespace pryRecursosHumanos
         {
             clsEmpleado nuevoEmpleado = new clsEmpleado();
 
+            idTitulo = Convert.ToInt32(cboTitulo.SelectedValue);
+
             nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
             nuevoEmpleado.IdArea = Convert.ToInt32(cboSeleccionarArea.SelectedValue);
             //nuevoEmpleado.IdFichaMedica = 0;
@@ -157,10 +160,10 @@ namespace pryRecursosHumanos
             nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
             nuevoEmpleado.Email = txtCorreo.Text;
             nuevoEmpleado.FechaNacimiento = dtpFechaNacimiento.Value;
-            nuevoEmpleado.Foto = pbFotoEmpleado.Image.ToString();
+            nuevoEmpleado.Foto = pbFotoEmpleado.ImageLocation.ToString();
             nuevoEmpleado.IdCiudad = Convert.ToInt32(cboCuidad.SelectedValue);
             nuevoEmpleado.IdEstado = Convert.ToInt32(cboEstadoEmpleado.SelectedValue);
-            nuevoEmpleado.IdTitulo = 1;
+            nuevoEmpleado.IdTitulo = idTitulo;
             nuevoEmpleado.Instagram = txtInstagram.Text;
 
             nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
@@ -252,6 +255,38 @@ namespace pryRecursosHumanos
         {
             frmABMCbos frmABMCbos = new frmABMCbos("Estado");
             frmABMCbos.ShowDialog();
+        }
+
+        private void rbNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbNo.Checked)
+            {
+                cboUniversidad.Enabled = false;
+                cboTitulo.Enabled = false;
+                idTitulo = 0;
+            }
+            else
+            {
+                cboUniversidad.Enabled = true;
+                cboTitulo.Enabled = true;
+            }
+        }
+
+        private void cboUniversidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboUniversidad.SelectedValue != null)
+            {
+                int idUniversidad = Convert.ToInt32(cboUniversidad.SelectedValue.ToString());
+                clsTitulo.listarTitulos(cboTitulo, idUniversidad);
+            }
+        }
+
+        private void cboTitulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboTitulo.SelectedValue != null)
+            {
+                idTitulo = Convert.ToInt32(cboTitulo.SelectedValue.ToString());
+            }
         }
     }
 }

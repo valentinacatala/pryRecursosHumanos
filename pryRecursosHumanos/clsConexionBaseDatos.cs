@@ -80,6 +80,8 @@ namespace pryRecursosHumanos
                     comando.Parameters.AddWithValue("INSTAGRAM", nuevoEmpleado.Instagram);
                     conexion.Open();
                     comando.ExecuteNonQuery();
+                    crearFichaMedica(nuevoEmpleado.Cuit);
+                    MessageBox.Show("Empleado agregado exitosamente!");
                 }
                 catch (Exception ex)
                 {
@@ -117,6 +119,29 @@ namespace pryRecursosHumanos
             {
                 MessageBox.Show(ex.Message);
                 return false;
+            }
+        }
+
+        private void crearFichaMedica(int cuitEmpleado)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $@"INSERT INTO FichasMedicas (Cuit) VALUES ({cuitEmpleado})";
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
         #endregion
@@ -475,6 +500,56 @@ namespace pryRecursosHumanos
                 cbLicencias.DisplayMember = "Nombre";
                 cbLicencias.DataSource = tablaLicencias;
                 cbLicencias.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void listarUniversidades(ComboBox cbUniversidades)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Universidades";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaUniversidades = new DataTable();
+                adaptador.Fill(tablaUniversidades);
+                cbUniversidades.ValueMember = "IdUniversidad";
+                cbUniversidades.DisplayMember = "Nombre";
+                cbUniversidades.DataSource = tablaUniversidades;
+                cbUniversidades.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void listarTitulos(ComboBox cbTitulos, int idUniversidad)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Titulos WHERE IdUniversidad = {idUniversidad}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaTitulos = new DataTable();
+                adaptador.Fill(tablaTitulos);
+                cbTitulos.ValueMember = "IdTitulo";
+                cbTitulos.DisplayMember = "Nombre";
+                cbTitulos.DataSource = tablaTitulos;
+                cbTitulos.SelectedIndex = -1;
             }
             catch (Exception ex)
             {

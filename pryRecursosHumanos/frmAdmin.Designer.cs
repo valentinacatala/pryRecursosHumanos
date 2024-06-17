@@ -210,9 +210,7 @@
             this.label57 = new System.Windows.Forms.Label();
             this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtTituloUniversidad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtTituloNombre = new System.Windows.Forms.TextBox();
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
             this.rbSi = new System.Windows.Forms.RadioButton();
@@ -316,6 +314,8 @@
             this.btnEliminarEstado = new System.Windows.Forms.Button();
             this.btnModificarEstado = new System.Windows.Forms.Button();
             this.btnAgregarEstado = new System.Windows.Forms.Button();
+            this.cboUniversidad = new System.Windows.Forms.ComboBox();
+            this.cboTitulo = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -1979,7 +1979,7 @@
             this.tabPaso1.Location = new System.Drawing.Point(4, 24);
             this.tabPaso1.Name = "tabPaso1";
             this.tabPaso1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPaso1.Size = new System.Drawing.Size(532, 536);
+            this.tabPaso1.Size = new System.Drawing.Size(533, 531);
             this.tabPaso1.TabIndex = 0;
             this.tabPaso1.Text = "Paso 1";
             this.tabPaso1.UseVisualStyleBackColor = true;
@@ -2555,9 +2555,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtTituloUniversidad);
+            this.groupBox2.Controls.Add(this.cboTitulo);
+            this.groupBox2.Controls.Add(this.cboUniversidad);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtTituloNombre);
             this.groupBox2.Controls.Add(this.rbNo);
             this.groupBox2.Controls.Add(this.label31);
             this.groupBox2.Controls.Add(this.rbSi);
@@ -2570,40 +2570,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Titulo";
             // 
-            // txtTituloUniversidad
-            // 
-            this.txtTituloUniversidad.BackColor = System.Drawing.Color.SeaShell;
-            this.txtTituloUniversidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtTituloUniversidad.Location = new System.Drawing.Point(11, 170);
-            this.txtTituloUniversidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtTituloUniversidad.Name = "txtTituloUniversidad";
-            this.txtTituloUniversidad.Size = new System.Drawing.Size(188, 22);
-            this.txtTituloUniversidad.TabIndex = 3;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label8.Location = new System.Drawing.Point(11, 152);
+            this.label8.Location = new System.Drawing.Point(11, 100);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 16);
             this.label8.TabIndex = 28;
             this.label8.Text = "Universidad";
             // 
-            // txtTituloNombre
-            // 
-            this.txtTituloNombre.BackColor = System.Drawing.Color.SeaShell;
-            this.txtTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtTituloNombre.Location = new System.Drawing.Point(11, 112);
-            this.txtTituloNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtTituloNombre.Name = "txtTituloNombre";
-            this.txtTituloNombre.Size = new System.Drawing.Size(188, 22);
-            this.txtTituloNombre.TabIndex = 2;
-            // 
             // rbNo
             // 
             this.rbNo.AutoSize = true;
+            this.rbNo.Checked = true;
             this.rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.rbNo.Location = new System.Drawing.Point(112, 61);
             this.rbNo.Name = "rbNo";
@@ -2612,12 +2593,13 @@
             this.rbNo.TabStop = true;
             this.rbNo.Text = "No";
             this.rbNo.UseVisualStyleBackColor = true;
+            this.rbNo.CheckedChanged += new System.EventHandler(this.rbNo_CheckedChanged);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label31.Location = new System.Drawing.Point(11, 94);
+            this.label31.Location = new System.Drawing.Point(11, 152);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(56, 16);
@@ -2666,6 +2648,7 @@
             this.pbFotoEmpleado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbFotoEmpleado.Name = "pbFotoEmpleado";
             this.pbFotoEmpleado.Size = new System.Drawing.Size(220, 205);
+            this.pbFotoEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFotoEmpleado.TabIndex = 33;
             this.pbFotoEmpleado.TabStop = false;
             this.pbFotoEmpleado.Click += new System.EventHandler(this.pbFotoEmpleado_Click);
@@ -2684,7 +2667,7 @@
             this.tabPaso3.Location = new System.Drawing.Point(4, 24);
             this.tabPaso3.Name = "tabPaso3";
             this.tabPaso3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPaso3.Size = new System.Drawing.Size(532, 536);
+            this.tabPaso3.Size = new System.Drawing.Size(533, 531);
             this.tabPaso3.TabIndex = 2;
             this.tabPaso3.Text = "Paso 3";
             this.tabPaso3.UseVisualStyleBackColor = true;
@@ -3063,7 +3046,7 @@
             this.tabPaso4.Location = new System.Drawing.Point(4, 24);
             this.tabPaso4.Name = "tabPaso4";
             this.tabPaso4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPaso4.Size = new System.Drawing.Size(532, 536);
+            this.tabPaso4.Size = new System.Drawing.Size(533, 531);
             this.tabPaso4.TabIndex = 3;
             this.tabPaso4.Text = "Paso 4";
             this.tabPaso4.UseVisualStyleBackColor = true;
@@ -3747,6 +3730,30 @@
             this.btnAgregarEstado.UseVisualStyleBackColor = true;
             this.btnAgregarEstado.Click += new System.EventHandler(this.btnAgregarEstado_Click);
             // 
+            // cboUniversidad
+            // 
+            this.cboUniversidad.BackColor = System.Drawing.Color.SeaShell;
+            this.cboUniversidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUniversidad.Enabled = false;
+            this.cboUniversidad.FormattingEnabled = true;
+            this.cboUniversidad.Location = new System.Drawing.Point(14, 119);
+            this.cboUniversidad.Name = "cboUniversidad";
+            this.cboUniversidad.Size = new System.Drawing.Size(191, 23);
+            this.cboUniversidad.TabIndex = 1;
+            this.cboUniversidad.SelectedIndexChanged += new System.EventHandler(this.cboUniversidad_SelectedIndexChanged);
+            // 
+            // cboTitulo
+            // 
+            this.cboTitulo.BackColor = System.Drawing.Color.SeaShell;
+            this.cboTitulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTitulo.Enabled = false;
+            this.cboTitulo.FormattingEnabled = true;
+            this.cboTitulo.Location = new System.Drawing.Point(14, 171);
+            this.cboTitulo.Name = "cboTitulo";
+            this.cboTitulo.Size = new System.Drawing.Size(191, 23);
+            this.cboTitulo.TabIndex = 29;
+            this.cboTitulo.SelectedIndexChanged += new System.EventHandler(this.cboTitulo_SelectedIndexChanged);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3930,9 +3937,7 @@
         private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtTituloUniversidad;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTituloNombre;
         private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.RadioButton rbSi;
@@ -4152,5 +4157,7 @@
         private System.Windows.Forms.Button btnEliminarEstado;
         private System.Windows.Forms.Button btnModificarEstado;
         private System.Windows.Forms.Button btnAgregarEstado;
+        private System.Windows.Forms.ComboBox cboTitulo;
+        private System.Windows.Forms.ComboBox cboUniversidad;
     }
 }
