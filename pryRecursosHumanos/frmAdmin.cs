@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace pryRecursosHumanos
 {
@@ -159,7 +160,9 @@ namespace pryRecursosHumanos
         private void pbFotoEmpleado_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Application.StartupPath + "\\img";
             openFileDialog.Filter = "Archivos de imagen|*.png;*.jpg;*.jpeg|Todos los archivos|*.*";
+            openFileDialog.RestoreDirectory = false;
             if(openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string rutaImagen = openFileDialog.FileName;

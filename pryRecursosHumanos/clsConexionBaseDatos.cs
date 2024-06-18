@@ -808,6 +808,8 @@ namespace pryRecursosHumanos
                     lblEmail.Text = tablaEmpleados.Rows[0]["CorreoElectronico"].ToString();
                     lblDomicilio.Text = tablaEmpleados.Rows[0]["Domicilio"].ToString();
                     lblTelefono.Text = tablaEmpleados.Rows[0]["Telefono"].ToString();
+                    PbFoto.ImageLocation = tablaEmpleados.Rows[0]["Foto"].ToString();
+                    lblFechaIngreso.Text = Convert.ToDateTime(tablaEmpleados.Rows[0]["FechaDeNacimineto"]).ToString("dd/MM/yyyy");
                 }
                 else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
             }
