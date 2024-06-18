@@ -92,6 +92,28 @@ namespace pryRecursosHumanos
             }
             
         }
+        public void listarEmpleados(DataGridView dgvGrilla,string sqlQuery)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = sqlQuery;
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
         #endregion
 
         #region agregarEmpleado
@@ -737,9 +759,58 @@ namespace pryRecursosHumanos
         #endregion
 
         #region modificarEmpleado
-        public bool modificarEmpleado(int cuit)
+        public bool modificarEmpleado(int cuit, string nombre, string apellido, int dni, DateTime fechaNacimiento, string domicilio,string email,long telefono,string instagram,int idArea)
         {
-            return true;
+            bool existeEmpleado = buscarEmpleado(cuit);
+            if (existeEmpleado == true)
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $@"UPDATE Empleados SET nombre = '{nombre}', apellido = '{apellido}', DNI = {dni}, FechaDeNacimineto =                                                '{fechaNacimiento.ToShortDateString()}',Domicilio = '{domicilio}',
+                                      CorreoElectronico = '{email}', Telefono = {telefono}, Instagram =    
+                                      '{instagram}', IdArea = {idArea} 
+                                      WHERE Cuit = {cuit}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            else return false;
+        }
+        public void llenarDatosEmpleado(int cuit,TextBox txtNombre, TextBox txtApellido, TextBox txtDni, TextBox txtEmail, TextBox txtDomicilio, TextBox txtTelefono, DateTimePicker dtpFechaDeNacimiento, TextBox txtInstagram)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {cuit}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1)
+                {
+                    txtApellido.Text = tablaEmpleados.Rows[0]["apellido"].ToString();
+                    txtNombre.Text = tablaEmpleados.Rows[0]["nombre"].ToString();
+                    txtEmail.Text = tablaEmpleados.Rows[0]["CorreoElectronico"].ToString();
+                    txtDomicilio.Text = tablaEmpleados.Rows[0]["Domicilio"].ToString();
+                    txtTelefono.Text = tablaEmpleados.Rows[0]["Telefono"].ToString();
+                    txtDni.Text = tablaEmpleados.Rows[0]["DNI"].ToString(); ;
+                    txtInstagram.Text = tablaEmpleados.Rows[0]["Instagram"].ToString(); ;
+                    dtpFechaDeNacimiento.Value = Convert.ToDateTime(tablaEmpleados.Rows[0]["FechaDeNacimineto"].ToString()); 
+                }
+                else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         #endregion
 

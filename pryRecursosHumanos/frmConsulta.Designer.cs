@@ -39,19 +39,19 @@
             this.label90 = new System.Windows.Forms.Label();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.btnListarApellido = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnListarPais = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnListarEstado = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
@@ -115,7 +115,7 @@
             this.tabControl4.Location = new System.Drawing.Point(-5, 35);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(606, 605);
+            this.tabControl4.Size = new System.Drawing.Size(595, 605);
             this.tabControl4.TabIndex = 6;
             // 
             // tabPage13
@@ -150,7 +150,7 @@
             this.tabPage14.Controls.Add(this.label90);
             this.tabPage14.Controls.Add(this.comboBox16);
             this.tabPage14.Controls.Add(this.button15);
-            this.tabPage14.Controls.Add(this.button16);
+            this.tabPage14.Controls.Add(this.btnListarApellido);
             this.tabPage14.Controls.Add(this.dataGridView1);
             this.tabPage14.Location = new System.Drawing.Point(4, 24);
             this.tabPage14.Name = "tabPage14";
@@ -198,18 +198,19 @@
             this.button15.Text = "Borrar";
             this.button15.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // btnListarApellido
             // 
-            this.button16.BackColor = System.Drawing.Color.MistyRose;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(432, 14);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(66, 25);
-            this.button16.TabIndex = 18;
-            this.button16.Text = "Listar";
-            this.button16.UseVisualStyleBackColor = false;
+            this.btnListarApellido.BackColor = System.Drawing.Color.MistyRose;
+            this.btnListarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarApellido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarApellido.Location = new System.Drawing.Point(432, 14);
+            this.btnListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarApellido.Name = "btnListarApellido";
+            this.btnListarApellido.Size = new System.Drawing.Size(66, 25);
+            this.btnListarApellido.TabIndex = 18;
+            this.btnListarApellido.Text = "Listar";
+            this.btnListarApellido.UseVisualStyleBackColor = false;
+            this.btnListarApellido.Click += new System.EventHandler(this.btnListarApellido_Click);
             // 
             // dataGridView1
             // 
@@ -232,12 +233,12 @@
             this.tabPage15.Controls.Add(this.label1);
             this.tabPage15.Controls.Add(this.comboBox1);
             this.tabPage15.Controls.Add(this.button1);
-            this.tabPage15.Controls.Add(this.button2);
+            this.tabPage15.Controls.Add(this.btnListarPais);
             this.tabPage15.Controls.Add(this.dataGridView2);
             this.tabPage15.Location = new System.Drawing.Point(4, 24);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(598, 577);
+            this.tabPage15.Size = new System.Drawing.Size(587, 577);
             this.tabPage15.TabIndex = 2;
             this.tabPage15.Text = "Listar por Pais";
             this.tabPage15.UseVisualStyleBackColor = true;
@@ -280,18 +281,19 @@
             this.button1.Text = "Borrar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnListarPais
             // 
-            this.button2.BackColor = System.Drawing.Color.MistyRose;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(432, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 25);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Listar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnListarPais.BackColor = System.Drawing.Color.MistyRose;
+            this.btnListarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarPais.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarPais.Location = new System.Drawing.Point(432, 15);
+            this.btnListarPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarPais.Name = "btnListarPais";
+            this.btnListarPais.Size = new System.Drawing.Size(66, 25);
+            this.btnListarPais.TabIndex = 23;
+            this.btnListarPais.Text = "Listar";
+            this.btnListarPais.UseVisualStyleBackColor = false;
+            this.btnListarPais.Click += new System.EventHandler(this.btnListarPais_Click);
             // 
             // dataGridView2
             // 
@@ -314,7 +316,7 @@
             this.tabPage16.Controls.Add(this.label2);
             this.tabPage16.Controls.Add(this.comboBox2);
             this.tabPage16.Controls.Add(this.button3);
-            this.tabPage16.Controls.Add(this.button4);
+            this.tabPage16.Controls.Add(this.btnListarEstado);
             this.tabPage16.Controls.Add(this.dataGridView3);
             this.tabPage16.Location = new System.Drawing.Point(4, 24);
             this.tabPage16.Name = "tabPage16";
@@ -362,18 +364,19 @@
             this.button3.Text = "Borrar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnListarEstado
             // 
-            this.button4.BackColor = System.Drawing.Color.MistyRose;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(432, 16);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 25);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Listar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnListarEstado.BackColor = System.Drawing.Color.MistyRose;
+            this.btnListarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarEstado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarEstado.Location = new System.Drawing.Point(432, 16);
+            this.btnListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarEstado.Name = "btnListarEstado";
+            this.btnListarEstado.Size = new System.Drawing.Size(66, 25);
+            this.btnListarEstado.TabIndex = 23;
+            this.btnListarEstado.Text = "Listar";
+            this.btnListarEstado.UseVisualStyleBackColor = false;
+            this.btnListarEstado.Click += new System.EventHandler(this.btnListarEstado_Click);
             // 
             // dataGridView3
             // 
@@ -439,17 +442,17 @@
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.ComboBox comboBox16;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btnListarApellido;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnListarPais;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnListarEstado;
         private System.Windows.Forms.DataGridView dataGridView3;
     }
 }

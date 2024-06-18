@@ -49,8 +49,9 @@ namespace pryRecursosHumanos
         {            
             clsPaises.listarPaises(cboEmpleadoPais);
             clsArea.listarArea(cboSeleccionarArea);
+            clsArea.listarArea(cboAreaMod);
             clsEstado.listarEstados(cboEstadoEmpleado);
-            
+            clsEmpleado.listarEmpleados(dgvListar);
         }
 
         private void cboEmpleadoPais_SelectedIndexChanged(object sender, EventArgs e)
@@ -178,9 +179,8 @@ namespace pryRecursosHumanos
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                clsEmpleado empleado = new clsEmpleado();
                 int cuit = Convert.ToInt32(txtEliminarCuit.Text);
-                empleado.buscarEmpleado(cuit,lblNombre,lblApellido,lblCorreo,lblDireccion,lblTelefono,lblFechaIngreso,pbEliminarFoto);
+                clsEmpleado.buscarEmpleado(cuit,lblNombre,lblApellido,lblCorreo,lblDireccion,lblTelefono,lblFechaIngreso,pbEliminarFoto);
                 e.Handled = true;
             }
         }
@@ -410,6 +410,32 @@ namespace pryRecursosHumanos
             frmListar.ShowDialog();
         }
         #endregion
+
         #endregion
+
+        private void btnListarApellido_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.listarEmpleadosApellido(dgvListar);
+        }
+
+        private void btnListarPais_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.listarEmpleadosPais(dgvListar);
+        }
+
+        private void btnListarEstado_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.listarEmpleadosEstado(dgvListar);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.buscarEmpleado(Convert.ToInt32(txtCuitModificar.Text),txtModificarNombre,txtApellidoMod,txtDniMod,txtModificarCorreo,txtModificarDomicilio,txtModificarTelefono,dtpModificarFecha,txtModificarInstagram);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.modificarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre.Text, txtApellidoMod.Text, Convert.ToInt32(txtDniMod.Text), dtpModificarFecha.Value, txtModificarDomicilio.Text, txtModificarCorreo.Text, Convert.ToInt32(txtModificarTelefono.Text),  txtModificarInstagram.Text,Convert.ToInt32(cboAreaMod.SelectedValue));
+        }
     }
 }

@@ -49,24 +49,26 @@ namespace pryRecursosHumanos
         {
 
         }
-        private void frmConsulta_Load(object sender, EventArgs e)
-        {
-            clsEmpleado empleado = new clsEmpleado();
-            empleado.listarEmpleados(dgvListar);
-        }
-
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            clsConexionBaseDatos BD = new clsConexionBaseDatos();
-            BD.registrarUsuario(new clsUsuarios());
-            clsEmpleado empleado = new clsEmpleado();
-            empleado.listarEmpleados(dgvListar);
-        }
+     
 
         private void frmConsulta_Load_1(object sender, EventArgs e)
         {
-            clsEmpleado empleado = new clsEmpleado();
-            empleado.listarEmpleados(dgvListar);
+            clsEmpleado.listarEmpleados(dgvListar);
+        }
+
+        private void btnListarApellido_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.listarEmpleadosApellido(dgvListar);
+        }
+
+        private void btnListarPais_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.listarEmpleadosPais(dgvListar);
+        }
+
+        private void btnListarEstado_Click(object sender, EventArgs e)
+        {
+            clsEmpleado.listarEmpleadosEstado(dgvListar);
         }
     }
 }
