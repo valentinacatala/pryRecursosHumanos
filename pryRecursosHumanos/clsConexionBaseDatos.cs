@@ -20,6 +20,55 @@ namespace pryRecursosHumanos
         {
             cadena = ConfigurationManager.ConnectionStrings["CadenaConexion"].ConnectionString;
         }
+        #region verificarElemento
+        private bool verificarElemento(string nombreTabla,string nombreElemento)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM {nombreTabla} WHERE Nombre = '{nombreElemento}'";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        private bool verificarElemento(string nombreTabla, int id, string nombreId)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM {nombreTabla} WHERE {nombreId} = {id}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        #endregion
+
         #region listarEmpleado
         public void listarEmpleados(DataGridView dgvGrilla)
         {
@@ -211,6 +260,28 @@ namespace pryRecursosHumanos
                 return false;
             }
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
+        }
+        public string nombreUsuario(long cuit)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT Nombre FROM Empleados WHERE Cuit = {cuit}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                return tablaEmpleados.Rows[0][0].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return "";
+            }
         }
         #endregion
 
@@ -519,7 +590,7 @@ namespace pryRecursosHumanos
                 //int diasSancion = retornarDiasSancion(sancion);
                 DateTime fechaFin = fechaInicio.AddDays(sancion.Tiempo);
                 comando.CommandText = $@"INSERT INTO San_Emp(IdSancion, Cuit, Observaciones, Fecha, FechaFin) 
-                                VALUES ({sancion.IdSancion},{empleado.Cuit}, '{observaciones}', '{fechaInicio}', '{fechaFin}')";
+                          VALUES ({sancion.IdSancion},{empleado.Cuit}, '{observaciones}', '{fechaInicio.ToShortDateString()}', '{fechaFin.ToShortDateString()}')";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -545,7 +616,9 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT L.Nombre, LE.Cuit, LE.Estado, LE.Tiempo FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia";
+                comando.CommandText = $@"SELECT L.Nombre, LE.Cuit,  LE.Fecha, LE.FechaFin, E.Nombre
+                                    FROM Lic_Emp as LE, Licencias as L, Estados as E 
+                                    WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia AND LE.Estado = E.IdEstado";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -558,7 +631,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public void agregarLicenciaAEmpleado(clsLicencia licencia,clsEmpleado empleado ,clsEstado Estado, int Tiempo)
+        public void agregarLicenciaAEmpleado(clsLicencia licencia,clsEmpleado empleado ,clsEstado Estado, DateTime fechaInicio)
         {
             try
             {
@@ -569,9 +642,9 @@ namespace pryRecursosHumanos
                 comando.CommandType = CommandType.Text;
 
                 //int diasSancion = retornarDiasSancion(sancion);
-                //DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
-                comando.CommandText = $@"INSERT INTO Lic_Emp(IdLicencia, Cuit, Estado, Tiempo) 
-                                VALUES ({licencia.IdLicencia},{empleado.Cuit}, {Estado.IdEstado}, {licencia.Tiempo})";
+                DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
+                comando.CommandText = $@"INSERT INTO Lic_Emp(IdLicencia, Cuit, Estado, Fecha, FechaFin) 
+                          VALUES ({licencia.IdLicencia},{empleado.Cuit}, {Estado.IdEstado}, '{fechaInicio.ToShortDateString()}', '{fechaFin.ToShortDateString()}')";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -673,50 +746,60 @@ namespace pryRecursosHumanos
         #region paises
         public void agregarPais(string nuevoPais)
         {
-            try
+            bool existe = verificarElemento("Paises",nuevoPais);
+            if (existe == false)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Paises (Nombre) VALUES ('{nuevoPais}')";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Paises (Nombre) VALUES ('{nuevoPais}')";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Pais agregado correctamente");
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Pais agregado correctamente");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("Pais existente");
         }
-        public void eliminarPais(string paisAEliminar)
+        public void eliminarPais(string paisAEliminar,int idPais)
         {
-            try
+            bool existe = verificarElemento("Paises",idPais,"IdPais");
+            if (existe == true)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"DELETE FROM Paises WHERE Nombre = '{paisAEliminar}'";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Paises WHERE IdPais = {idPais}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("El pais no existe");
         }
         public void modificarPais(int IdPais, string paisNuevo)
         {
@@ -750,7 +833,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Paises WHERE Nombre = '{nombrePais}'";
+                comando.CommandText = $"SELECT Nombre FROM Paises";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -765,7 +848,7 @@ namespace pryRecursosHumanos
         #endregion
 
         #region provincias
-        public void agregarProvincia(int idPais, string nuevaProvincia)
+        private bool verificarProvincia(int idPais, string nombreProvincia)
         {
             try
             {
@@ -774,19 +857,48 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Provincias (IdPais, IdProvincia, Nombre) VALUES ({idPais}, (SELECT MAX(IdProvincia) + 1 FROM Provincias), '{nuevaProvincia}')";
+                comando.CommandText = $"SELECT * FROM Provincias WHERE Nombre = '{nombreProvincia}' AND IdPais = {idPais}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1) return true;
+                else return false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
             }
-            finally
+        }
+        public void agregarProvincia(int idPais, string nuevaProvincia)
+        {
+            if (verificarProvincia(idPais, nuevaProvincia) == false)
             {
-                conexion.Close();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Provincias (IdPais, Nombre) VALUES ({idPais}, '{nuevaProvincia}')";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Provincia agregada");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
+            else MessageBox.Show("Provincia existente");
         }
         public void eliminarProvincia(int idProvincia)
         {
@@ -834,10 +946,7 @@ namespace pryRecursosHumanos
                 conexion.Close();
             }
         }
-        #endregion
-
-        #region ciudad
-        public void agregarCiudad(int idProvincia, string nuevaCiudad)
+        public void listarProvincias(DataGridView dgvGrilla,int idPais)
         {
             try
             {
@@ -846,19 +955,95 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Ciudades (IdProvincia, IdCiudad, Nombre) VALUES ({idProvincia}, (SELECT MAX(IdCiudad) + 1 FROM Ciudades), '{nuevaCiudad}')";
+                comando.CommandText = $"SELECT PR.Nombre as Provincia, PA.Nombre as Pais FROM Provincias as PR, Paises as PA WHERE PR.IdPais = PA.IdPais AND PR.IdPais = {idPais}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
+        }
+        public void listarProvincias(DataGridView dgvGrilla)
+        {
+            try
             {
-                conexion.Close();
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $@"SELECT PR.Nombre as Provincia, PA.Nombre as Pais 
+                                        FROM Provincias as PR, Paises as PA 
+                                        WHERE PR.IdPais = PA.IdPais";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        #endregion
+
+        #region ciudad
+        private bool verificarCiudad(int idProvincia, string nombreCiudad)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Ciudades WHERE Nombre = '{nombreCiudad}' AND IdProvincia = {idProvincia}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        public void agregarCiudad(int idProvincia, string nuevaCiudad)
+        {
+            if (verificarCiudad(idProvincia, nuevaCiudad) == false)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Ciudades (IdProvincia, Nombre) VALUES ({idProvincia},'{nuevaCiudad}')";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Ciudad agregada");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Ciudad existente");
         }
         public void eliminarCiudad(int idCiudad)
         {
@@ -906,10 +1091,7 @@ namespace pryRecursosHumanos
                 conexion.Close();
             }
         }
-        #endregion
-
-        #region area
-        public void agregarArea(string nuevaArea, int idSueldo)
+        public void listarCiudades(DataGridView dgvGrilla,int idPais)
         {
             try
             {
@@ -918,19 +1100,78 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Areas (Nombre, IdSueldo) VALUES ('{nuevaArea}', {idSueldo})";
+                comando.CommandText = $@"SELECT C.Nombre as Ciudad, P.Nombre as Provincia, PA.Nombre as Pais 
+                                    FROM Ciudades as C, Provincias as P, Paises as PA
+                                    WHERE C.IdProvincia = P.IdProvincia AND P.IdPais = PA.IdPais AND P.IdPais = {idPais}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
+        }
+        public void listarCiudades(DataGridView dgvGrilla)
+        {
+            try
             {
-                conexion.Close();
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $@"SELECT C.Nombre as Ciudad, P.Nombre as Provincia, PA.Nombre as Pais 
+                                    FROM Ciudades as C, Provincias as P, Paises as PA
+                                    WHERE C.IdProvincia = P.IdProvincia AND P.IdPais = PA.IdPais";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+        #region area
+        public void agregarArea(string nuevaArea, int sueldo)
+        {
+            bool existe = verificarElemento("Areas", nuevaArea);
+            if (existe == false)
+            {
+                try
+                {
+                    int idSueldo = agregarSueldo(sueldo);
+                    if (idSueldo != -1)
+                    {
+                        conexion = new OleDbConnection(cadena);
+                        comando = new OleDbCommand();
+
+                        comando.Connection = conexion;
+                        comando.CommandType = CommandType.Text;
+                        comando.CommandText = $"INSERT INTO Areas (Nombre, IdSueldo) VALUES ('{nuevaArea}', {idSueldo})";
+
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        MessageBox.Show("Area agregada");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Area existente");
         }
         public void eliminarArea(int idArea)
         {
@@ -955,19 +1196,23 @@ namespace pryRecursosHumanos
                 conexion.Close();
             }
         }
-        public void modificarArea(int idArea, string nuevaArea, int idSueldo)
+        public void modificarArea(int idArea,int sueldo)
         {
             try
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                int idSueldo = agregarSueldo(sueldo);
+                if (idSueldo != -1)
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"UPDATE Areas SET Nombre = '{nuevaArea}', IdSueldo = {idSueldo} WHERE IdAreas = {idArea}";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"UPDATE Areas SET IdSueldo = {idSueldo} WHERE IdAreas = {idArea}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();   
+                }
             }
             catch (Exception ex)
             {
@@ -977,55 +1222,88 @@ namespace pryRecursosHumanos
             {
                 conexion.Close();
             }
+
         }
+        public void listarAreas(DataGridView dgvGrilla, string nombreArea)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT A.Nombre, S.Cantidad FROM Areas as A, Sueldos as S WHERE A.IdSueldo = S.IdSueldo";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         #endregion
 
         #region estado
-       public void agregarEstado(string nuevoEstado)
+        public void agregarEstado(string nuevoEstado)
+       {
+            bool existe = verificarElemento("Estados", nuevoEstado);
+            if (existe == false)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Estados (Nombre) VALUES ('{nuevoEstado}')";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Estado existente");
+       }
+        public void eliminarEstado(int idEstado,string nombreEstado)
         {
-            try
+            bool existe = verificarElemento("Estados",idEstado,"IdEstado");
+            if (existe == true)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Estados (Nombre) VALUES ('{nuevoEstado}')";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Estados WHERE IdEstado = {idEstado}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
-        }
-        public void eliminarEstado(int idEstado)
-        {
-            try
-            {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
-
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"DELETE FROM Estados WHERE IdEstado = {idEstado}";
-
-                conexion.Open();
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("No existe el estado");
         }
         public void modificarEstado(int idEstado, string nuevoNombre)
         {
@@ -1059,7 +1337,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Estados WHERE Nombre = '{nombreEstado}'";
+                comando.CommandText = $"SELECT Nombre FROM Estados";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -1076,49 +1354,59 @@ namespace pryRecursosHumanos
         #region enfermedad
         public void agregarEnfermedadPatologica(string nuevaEnfermedad)
         {
-            try
+            bool existe = verificarElemento("EnfermedadesPatologicas", nuevaEnfermedad);
+            if (existe == false)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO EnfermedadesPatologicas (Nombre) VALUES ('{nuevaEnfermedad}')";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO EnfermedadesPatologicas (Nombre) VALUES ('{nuevaEnfermedad}')";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("Enfermedad existente");
         }
-        public void eliminarEnfermedadPatologica(int idEnfermedad)
+        public void eliminarEnfermedadPatologica(int idEnfermedad,string nombreEnfermedad)
         {
-            try
+            bool existe = verificarElemento("EnfermedadesPatologicas", idEnfermedad, "IdEnfermedadesPatologicas");
+            if (existe == true)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"DELETE FROM EnfermedadesPatologicas WHERE IdEnfermedadesPatologicas = {idEnfermedad}";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM EnfermedadesPatologicas WHERE IdEnfermedadesPatologicas = {idEnfermedad}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("La enfermedad no existe");
         }
         public void modificarEnfermedadPatologica(int idEnfermedad, string nuevoNombre)
         {
@@ -1152,7 +1440,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM EnfermedadesPatologicas WHERE Nombre = '{nombreEnfermedad}'";
+                comando.CommandText = $"SELECT Nombre FROM EnfermedadesPatologicas";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -1169,49 +1457,59 @@ namespace pryRecursosHumanos
         #region medicamento
         public void agregarMedicamento(string nuevoMedicamento)
         {
-            try
+            bool existe = verificarElemento("Medicamentos", nuevoMedicamento);
+            if (existe == false)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Medicamentos (Nombre) VALUES ('{nuevoMedicamento}')";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Medicamentos (Nombre) VALUES ('{nuevoMedicamento}')";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("Medicamento existe");
         }
-        public void eliminarMedicamento(int idMedicamento)
+        public void eliminarMedicamento(int idMedicamento,string nombreMedicamento)
         {
-            try
+            bool existe = verificarElemento("Medicamentos", idMedicamento,"IdMedicamentos");
+            if (existe == true)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"DELETE FROM Medicamentos WHERE IdMedicamentos = {idMedicamento}";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Medicamentos WHERE IdMedicamentos = {idMedicamento}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("El medicamento no existe");
         }
         public void modificarMedicamento(int idMedicamento, string nuevoNombre)
         {
@@ -1245,7 +1543,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Medicamentos WHERE Nombre = '{nombreMedicamento}'";
+                comando.CommandText = $"SELECT Nombre FROM Medicamentos";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -1262,49 +1560,58 @@ namespace pryRecursosHumanos
         #region alergia
         public void agregarAlergia(string nuevaAlergia)
         {
-            try
+            bool existe = verificarElemento("Alergias", nuevaAlergia);
+            if(existe == false)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Alergias (Nombre) VALUES ('{nuevaAlergia}')";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Alergias (Nombre) VALUES ('{nuevaAlergia}')";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
         }
-        public void eliminarAlergia(int idAlergia)
+        public void eliminarAlergia(int idAlergia,string nombreAlergia)
         {
-            try
+            bool existe = verificarElemento("Alergias", idAlergia,"IdAlergias");
+            if (existe == true)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"DELETE FROM Alergias WHERE IdAlergias = {idAlergia}";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Alergias WHERE IdAlergias = {idAlergia}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("No existe la alergia");
         }
         public void modificarAlergia(int idAlergia, string nuevoNombre)
         {
@@ -1338,7 +1645,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Alergias WHERE Nombre = '{nombreAlergia}'";
+                comando.CommandText = $"SELECT Nombre FROM Alergias";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -1355,49 +1662,59 @@ namespace pryRecursosHumanos
         #region discapacidad
         public void agregarDiscapacidad(string nuevaDiscapacidad)
         {
-            try
+            bool existe = verificarElemento("Discapacidades", nuevaDiscapacidad);
+            if (existe == false)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Discapacidades (Nombre) VALUES ('{nuevaDiscapacidad}')";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Discapacidades (Nombre) VALUES ('{nuevaDiscapacidad}')";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("Discapacidad existente");
         }
-        public void eliminarDiscapacidad(int idDiscapacidad)
+        public void eliminarDiscapacidad(int idDiscapacidad, string nombreDiscapacidad)
         {
-            try
+            bool existe = verificarElemento("Discapacidades", idDiscapacidad,"IdDiscapacidades");
+            if (existe == true)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"DELETE FROM Discapacidades WHERE IdDiscapacidades = {idDiscapacidad}";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Discapacidades WHERE IdDiscapacidades = {idDiscapacidad}";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("No existe la discapacidad");
         }
         public void modificarDiscapacidad(int idDiscapacidad, string nuevoNombre)
         {
@@ -1431,7 +1748,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Discapacidades WHERE Nombre = '{nombreDiscapacidad}'";
+                comando.CommandText = $"SELECT Nombre FROM Discapacidades";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -1448,29 +1765,61 @@ namespace pryRecursosHumanos
         #region licencia
         public void agregarLicencia(string nombre, int tiempo)
         {
-            try
+            if (verificarElemento("Licencias", nombre) == false)
             {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
 
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"INSERT INTO Licencias (Nombre, Tiempo) VALUES ('{nombre}', {tiempo})";
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Licencias (Nombre, Tiempo) VALUES ('{nombre}', {tiempo})";
 
-                conexion.Open();
-                comando.ExecuteNonQuery();
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            else MessageBox.Show("Licencia existente");
         }
         public void eliminarLicencia(int idLicencia)
         {
+            if (verificarElemento("Licencias", idLicencia,"IdLicencia") == true)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Licencias WHERE IdLicencia = {idLicencia}";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Licencia inexistente");
+
+        }
+        public void modificarLicencia(int idLicencia, int nuevoTiempo)
+        {
             try
             {
                 conexion = new OleDbConnection(cadena);
@@ -1478,7 +1827,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"DELETE FROM Licencias WHERE IdLicencia = {idLicencia}";
+                comando.CommandText = $"UPDATE Licencias SET Tiempo = {nuevoTiempo} WHERE IdLicencia = {idLicencia}";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -1492,7 +1841,7 @@ namespace pryRecursosHumanos
                 conexion.Close();
             }
         }
-        public void modificarLicencia(int idLicencia, string nuevoNombre, int nuevoTiempo)
+        public void listarLicencia(DataGridView dgvGrilla)
         {
             try
             {
@@ -1501,31 +1850,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"UPDATE Licencias SET Nombre = '{nuevoNombre}', Tiempo = {nuevoTiempo} WHERE IdLicencia = {idLicencia}";
-
-                conexion.Open();
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.Close();
-            }
-        }
-        public void listarLicencia(DataGridView dgvGrilla, string nombreEnfermedad)
-        {
-            try
-            {
-                conexion = new OleDbConnection(cadena);
-                comando = new OleDbCommand();
-
-                comando.Connection = conexion;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Licencias WHERE Nombre = '{nombreEnfermedad}'";
-
+                comando.CommandText = $"SELECT Nombre,Tiempo FROM Licencias";
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
                 adaptador.Fill(tablaEmpleados);
@@ -1536,6 +1861,163 @@ namespace pryRecursosHumanos
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+        
+        #region sancion
+        public void agregarSancion(string nombre, int tiempo)
+        {
+            if (verificarElemento("Sanciones", nombre) == false)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Sanciones (Nombre, Tiempo) VALUES ('{nombre}', {tiempo})";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Sancion existente");
+        }
+        public void eliminarSancion(int idSancion)
+        {
+            if (verificarElemento("Sanciones", idSancion, "IdSancion") == true)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Sanciones WHERE IdSancion = {idSancion}";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Sancion inexistente");
+
+        }
+        public void modificarSancion(int idSancion, int nuevoTiempo)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"UPDATE Sanciones SET Tiempo = {nuevoTiempo} WHERE IdSancion = {idSancion}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+        public void listarSancion(DataGridView dgvGrilla)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT Nombre,Tiempo FROM Sanciones";
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+        
+        #region sueldo
+        private int agregarSueldo(int sueldo)
+        {
+            try
+            {
+                int idSueldo = buscarSueldo(sueldo);
+                if (idSueldo == -1)
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Sueldos (Cantidad) VALUES ({sueldo})";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    return buscarSueldo(sueldo);
+                }
+                else return idSueldo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+        private int buscarSueldo(int sueldo)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Sueldos WHERE Cantidad = {sueldo}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                if (tablaEmpleados.Rows.Count == 1) return Convert.ToInt32(tablaEmpleados.Rows[0][0]);
+                else return -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+        } 
         #endregion
     }
 }

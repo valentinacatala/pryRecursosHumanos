@@ -22,10 +22,12 @@ namespace pryRecursosHumanos
         // Constantes 
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
-        public frmMainAdmin()
+        public frmMainAdmin(string nombre)
         {
             InitializeComponent();
             panel2.MouseDown += new MouseEventHandler(panel2_MouseDown);
+            btnMenu.Text = nombre[0].ToString();
+            lblNombre.Text = nombre + "!!";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -55,6 +57,30 @@ namespace pryRecursosHumanos
         {
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if(panelMenu.Visible == false) panelMenu.Visible = true;
+            else panelMenu.Visible = false;
+
+        }
+
+        private void clsBotonRedondo1_Click(object sender, EventArgs e)
+        {
+            panelMenu.Visible = false;
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            this.Hide();
+            login.ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

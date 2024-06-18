@@ -49,6 +49,9 @@
   <ItemGroup>
     <Compile Include="clsAlergias.cs" />
     <Compile Include="clsArea.cs" />
+    <Compile Include="clsBotonRedondo.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="clsCiudades.cs" />
     <Compile Include="clsConexionBaseDatos.cs" />
     <Compile Include="clsDiscapacidades.cs" />
@@ -82,6 +85,12 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarLicSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarLicSan.Designer.cs">
+      <DependentUpon>frmAgregarLicSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +109,24 @@
     <Compile Include="frmConsulta.Designer.cs">
       <DependentUpon>frmConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminar.Designer.cs">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarCiudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarCiudad.Designer.cs">
+      <DependentUpon>frmEliminarCiudad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarProvincia.Designer.cs">
+      <DependentUpon>frmEliminarProvincia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInfoExtra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +139,12 @@
     <Compile Include="frmLicenciaSancion.Designer.cs">
       <DependentUpon>frmLicenciaSancion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListar.Designer.cs">
+      <DependentUpon>frmListar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +156,18 @@
     </Compile>
     <Compile Include="frmMainAdmin.Designer.cs">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModArea.Designer.cs">
+      <DependentUpon>frmModArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModLicSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModLicSan.Designer.cs">
+      <DependentUpon>frmModLicSan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProvinicia.cs">
       <SubType>Form</SubType>
@@ -144,11 +189,26 @@
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarLicSan.resx">
+      <DependentUpon>frmAgregarLicSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArea.resx">
+      <DependentUpon>frmArea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCiudad.resx">
       <DependentUpon>frmCiudad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsulta.resx">
       <DependentUpon>frmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminar.resx">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarCiudad.resx">
+      <DependentUpon>frmEliminarCiudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarProvincia.resx">
+      <DependentUpon>frmEliminarProvincia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInfoExtra.resx">
       <DependentUpon>frmInfoExtra.cs</DependentUpon>
@@ -156,11 +216,23 @@
     <EmbeddedResource Include="frmLicenciaSancion.resx">
       <DependentUpon>frmLicenciaSancion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListar.resx">
+      <DependentUpon>frmListar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainAdmin.resx">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModArea.resx">
+      <DependentUpon>frmModArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModLicSan.resx">
+      <DependentUpon>frmModLicSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvinicia.resx">
+      <DependentUpon>frmProvinicia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarUser.resx">
       <DependentUpon>frmRegistrarUser.cs</DependentUpon>
@@ -190,6 +262,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CerrarIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoLogOut.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

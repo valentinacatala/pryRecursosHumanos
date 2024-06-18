@@ -1,6 +1,6 @@
 ﻿namespace pryRecursosHumanos
 {
-    partial class frmArea
+    partial class frmAgregarLicSan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArea));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarLicSan));
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSueldo = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTiempo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dgvListar = new System.Windows.Forms.DataGridView();
+            this.lblModo = new System.Windows.Forms.Label();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             this.SuspendLayout();
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.pcbCerrar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(523, 33);
+            this.panel2.TabIndex = 48;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MistyRose;
+            this.panel3.Controls.Add(this.lblModo);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txtSueldo);
+            this.panel3.Controls.Add(this.txtTiempo);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.btnAgregar);
             this.panel3.Controls.Add(this.lblTitulo);
@@ -59,8 +72,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(519, 360);
-            this.panel3.TabIndex = 13;
+            this.panel3.Size = new System.Drawing.Size(523, 358);
+            this.panel3.TabIndex = 14;
             // 
             // label2
             // 
@@ -68,9 +81,9 @@
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.label2.Location = new System.Drawing.Point(162, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 14);
+            this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 51;
-            this.label2.Text = "Sueldo";
+            this.label2.Text = "Tiempo";
             // 
             // label1
             // 
@@ -82,23 +95,12 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Nombre";
             // 
-            // txtSueldo
+            // txtTiempo
             // 
-            this.txtSueldo.Location = new System.Drawing.Point(165, 81);
-            this.txtSueldo.Name = "txtSueldo";
-            this.txtSueldo.Size = new System.Drawing.Size(77, 20);
-            this.txtSueldo.TabIndex = 49;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.pcbCerrar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(519, 33);
-            this.panel2.TabIndex = 48;
+            this.txtTiempo.Location = new System.Drawing.Point(165, 81);
+            this.txtTiempo.Name = "txtTiempo";
+            this.txtTiempo.Size = new System.Drawing.Size(77, 20);
+            this.txtTiempo.TabIndex = 49;
             // 
             // lblTitulo
             // 
@@ -106,9 +108,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
             this.lblTitulo.Location = new System.Drawing.Point(12, 37);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(129, 21);
+            this.lblTitulo.Size = new System.Drawing.Size(83, 21);
             this.lblTitulo.TabIndex = 45;
-            this.lblTitulo.Text = "Agregar area";
+            this.lblTitulo.Text = "Agregar";
             // 
             // txtNombre
             // 
@@ -125,14 +127,24 @@
             this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvListar.Location = new System.Drawing.Point(0, 120);
+            this.dgvListar.Location = new System.Drawing.Point(0, 118);
             this.dgvListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.ReadOnly = true;
             this.dgvListar.RowHeadersWidth = 51;
             this.dgvListar.RowTemplate.Height = 24;
-            this.dgvListar.Size = new System.Drawing.Size(519, 240);
+            this.dgvListar.Size = new System.Drawing.Size(523, 240);
             this.dgvListar.TabIndex = 16;
+            // 
+            // lblModo
+            // 
+            this.lblModo.AutoSize = true;
+            this.lblModo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
+            this.lblModo.Location = new System.Drawing.Point(101, 37);
+            this.lblModo.Name = "lblModo";
+            this.lblModo.Size = new System.Drawing.Size(28, 21);
+            this.lblModo.TabIndex = 52;
+            this.lblModo.Text = "---";
             // 
             // pcbCerrar
             // 
@@ -164,18 +176,18 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // frmArea
+            // frmAgregarLicSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 360);
+            this.ClientSize = new System.Drawing.Size(523, 358);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmArea";
-            this.Text = "frmArea";
+            this.Name = "frmAgregarLicSan";
+            this.Text = "frmAgregarLicSan";
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
             this.ResumeLayout(false);
@@ -184,15 +196,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pcbCerrar;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTiempo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dgvListar;
-        private System.Windows.Forms.TextBox txtSueldo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblModo;
     }
 }

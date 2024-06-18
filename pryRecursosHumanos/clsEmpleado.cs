@@ -188,15 +188,13 @@ namespace pryRecursosHumanos
         public static void agregarSancion(clsSanciones sancion, clsEmpleado empleado, string observaciones, DateTime fechaInicio)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
-
 			BD.agregarSancionAEmpleado(sancion, empleado, observaciones, fechaInicio);
         }
 
-		public static void agregarLicencia(clsLicencia licencia, clsEmpleado empleado, clsEstado Estado, int Tiempo)
+		public static void agregarLicencia(clsLicencia licencia, clsEmpleado empleado, clsEstado Estado, DateTime fechaInicio)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
-
-            BD.agregarLicenciaAEmpleado(licencia,empleado,Estado,Tiempo);
+            BD.agregarLicenciaAEmpleado(licencia,empleado,Estado,fechaInicio);
         }
         #endregion
 

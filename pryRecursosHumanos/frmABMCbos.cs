@@ -24,33 +24,27 @@ namespace pryRecursosHumanos
         {
             if(modoG == "Pais")
             {
-                clsPaises clsPaises = new clsPaises();
-                clsPaises.agregarPais(dgvListar,txtAgregar.Text);
+                clsPaises.agregarPais(dgvListar,txtAgregar.Text.ToUpper());
             }
             else if (modoG == "Discapacidad")
             {
-                clsDiscapacidades clsDiscapacidades = new clsDiscapacidades();
-                clsDiscapacidades.agregarDiscapacidad(dgvListar, txtAgregar.Text);
+                clsDiscapacidades.agregarDiscapacidad(dgvListar, txtAgregar.Text.ToUpper());
             }
             else if (modoG == "Alergia")
             {
-                clsAlergias clsAlergias = new clsAlergias();
-                clsAlergias.agregarAlergia(dgvListar, txtAgregar.Text);
+                clsAlergias.agregarAlergia(dgvListar, txtAgregar.Text.ToUpper());
             }
             else if (modoG == "Medicamento")
             {
-                clsMedicamentos clsMedicamentos = new clsMedicamentos();
-                clsMedicamentos.agregarMedicamento(dgvListar, txtAgregar.Text);
+                clsMedicamentos.agregarMedicamento(dgvListar, txtAgregar.Text.ToUpper());
             }
             else if (modoG == "Enfermedad")
             {
-                clsEnfermedadesPatologicas clsEnfermedadesPatologicas = new clsEnfermedadesPatologicas();
-                clsEnfermedadesPatologicas.agregarEnfermedad(dgvListar, txtAgregar.Text);
+                clsEnfermedadesPatologicas.agregarEnfermedad(dgvListar, txtAgregar.Text.ToUpper());
             }
             else if (modoG == "Estado")
             {
-                clsEstado clsEstado = new clsEstado();
-                clsEstado.agregarEstado(dgvListar, txtAgregar.Text);
+                clsEstado.agregarEstado(dgvListar, txtAgregar.Text.ToUpper());
             }
             txtAgregar.Text = "";
         }

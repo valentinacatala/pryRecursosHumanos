@@ -31,15 +31,36 @@ namespace pryRecursosHumanos
 
         public static void listarSanciones(ComboBox cbSanciones)
 		{
-			
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarSanciones(cbSanciones);
 		}
-
-		public static void listarSancionesPorEmpleado(DataGridView dgvSanciones, long cuitEmpleado)
+        public static void listarSanciones(DataGridView dgvGrilla)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarSancion(dgvGrilla);
+        }
+        public static void listarSancionesPorEmpleado(DataGridView dgvSanciones, long cuitEmpleado)
 		{
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarSancionPorEmpleado(dgvSanciones, cuitEmpleado);
 		}
-	}
+        public static void agregarSancion(string nombre, int tiempo, DataGridView dgvGrilla)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.agregarSancion(nombre, tiempo);
+            BD.listarSancion(dgvGrilla);
+        }
+		public static void eliminarSancion(int idSancion,DataGridView dgvGrilla)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.eliminarSancion(idSancion);
+            BD.listarSancion(dgvGrilla);
+        }
+		public static void modificarSancion(DataGridView dgvGrilla,int idSancion,int nuevoTiempo)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.modificarSancion(idSancion,nuevoTiempo);
+            BD.listarSancion(dgvGrilla);
+        }
+    }
 }

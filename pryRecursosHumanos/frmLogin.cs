@@ -54,11 +54,14 @@ namespace pryRecursosHumanos
                 MessageBox.Show("¡Inicio de sesión exitoso!", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (inicio[1])
                 {
-                    frmMainAdmin frmMainAdmin = new frmMainAdmin();
+                    string nombreUsuario = clsUsuarios.buscarNombre(usuario.Cuit);
+                    frmMainAdmin frmMainAdmin = new frmMainAdmin(nombreUsuario);
+                    this.Hide();
                     frmMainAdmin.ShowDialog();
                 }
                 else
                 {
+                    this.Hide();
                     frmConsulta frmConsulta = new frmConsulta();
                     frmConsulta.ShowDialog();
                 }

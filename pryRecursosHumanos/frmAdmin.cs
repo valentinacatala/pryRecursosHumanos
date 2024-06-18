@@ -61,9 +61,8 @@ namespace pryRecursosHumanos
             cboCuidad.DataSource = null;
             if (cboEmpleadoPais.SelectedValue != null)
             {
-                clsProvincias provincias = new clsProvincias();
                 int idPais = Convert.ToInt32(cboEmpleadoPais.SelectedValue);
-                provincias.listarProvincias(cboProvincia, idPais);
+                clsProvincias.listarProvincias(cboProvincia, idPais);
             }
         }
 
@@ -73,9 +72,8 @@ namespace pryRecursosHumanos
             cboCuidad.DataSource = null;
             if (cboProvincia.SelectedValue != null)
             {
-                clsCiudades ciudades = new clsCiudades();
                 int idProvincia = Convert.ToInt32(cboProvincia.SelectedValue);
-                ciudades.listarCiudades(cboCuidad, idProvincia);
+                clsCiudades.listarCiudades(cboCuidad, idProvincia);
             }
         }
 
@@ -186,7 +184,6 @@ namespace pryRecursosHumanos
                 e.Handled = true;
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             clsEmpleado empleado = new clsEmpleado();
@@ -202,56 +199,217 @@ namespace pryRecursosHumanos
         {
 
         }
-
+        #region ABM
+        #region agregar
         private void btnAgregarPais_Click(object sender, EventArgs e)
         {
             frmABMCbos frmABMCbos = new frmABMCbos("Pais");
             frmABMCbos.ShowDialog();
         }
-
         private void btnAgregarProvincias_Click(object sender, EventArgs e)
         {
-            
+            frmProvinicia frmProvinicia = new frmProvinicia();
+            frmProvinicia.ShowDialog();
         }
-
         private void btnAgregarCiudad_Click(object sender, EventArgs e)
         {
-            
+            frmCiudad frmCiudad = new frmCiudad();
+            frmCiudad.ShowDialog();
         }
-
         private void btnAgregarArea_Click(object sender, EventArgs e)
         {
-            
+            frmArea frmArea = new frmArea();
+            frmArea.ShowDialog();
         }
-
         private void btnAgregarDiscapacidad_Click(object sender, EventArgs e)
         {
             frmABMCbos frmABMCbos = new frmABMCbos("Discapacidad");
             frmABMCbos.ShowDialog();
         }
-
         private void btnAgregarAlergia_Click(object sender, EventArgs e)
         {
             frmABMCbos frmABMCbos = new frmABMCbos("Alergia");
             frmABMCbos.ShowDialog();
         }
-
         private void btnAgregarMedicamentos_Click(object sender, EventArgs e)
         {
             frmABMCbos frmABMCbos = new frmABMCbos("Medicamento");
             frmABMCbos.ShowDialog();
         }
-
         private void btnAgregarEnfermedades_Click(object sender, EventArgs e)
         {
             frmABMCbos frmABMCbos = new frmABMCbos("Enfermedad");
             frmABMCbos.ShowDialog();
         }
-
         private void btnAgregarEstado_Click(object sender, EventArgs e)
         {
             frmABMCbos frmABMCbos = new frmABMCbos("Estado");
             frmABMCbos.ShowDialog();
         }
+        private void btnAgregarSancion_Click(object sender, EventArgs e)
+        {
+            frmAgregarLicSan frmAgregarLicSan = new frmAgregarLicSan("Sancion");
+            frmAgregarLicSan.ShowDialog();
+        }
+
+        private void btnAgregarLicencia_Click(object sender, EventArgs e)
+        {
+            frmAgregarLicSan frmAgregarLicSan = new frmAgregarLicSan("Licencia");
+            frmAgregarLicSan.ShowDialog();
+        }
+        
+        #endregion
+        #region modificar
+        private void btnModificarArea_Click(object sender, EventArgs e)
+        {
+            frmModArea frmModArea = new frmModArea();
+            frmModArea.ShowDialog();
+        }
+        private void btnModificarLicencia_Click(object sender, EventArgs e)
+        {
+            frmModLicSan frmModLicSan = new frmModLicSan("Licencia");
+            frmModLicSan.ShowDialog();
+        }
+
+        private void btnModificarSancion_Click(object sender, EventArgs e)
+        {
+            frmModLicSan frmModLicSan = new frmModLicSan("Sancion");
+            frmModLicSan.ShowDialog();
+        }
+        #endregion
+        #region eliminar
+        private void btnEliminarEstado_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Estado");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnEliminarEnfermedades_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Enfermedad");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnEliminarMedicamentos_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Medicamento");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnEliminarAlergia_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Alergia");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnEliminarDiscapacidad_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Discapacidad");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnEliminarArea_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Discapacidad");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnEliminarCiudad_Click(object sender, EventArgs e)
+        {
+            frmEliminarCiudad eliminarCiudad = new frmEliminarCiudad();
+            eliminarCiudad.ShowDialog();
+        }
+
+        private void btnEliminarProvincia_Click(object sender, EventArgs e)
+        {
+            frmEliminarProvincia eliminarProvincia = new frmEliminarProvincia();
+            eliminarProvincia.ShowDialog();
+        }
+
+        private void btnEliminarPais_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Pais");
+            frmEliminar.ShowDialog();
+        }
+        private void btnEliminarSancion_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Sancion");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnEliminarLicencia_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Licencia");
+            frmEliminar.ShowDialog();
+        }
+        #endregion
+        #region listar
+        private void btnListarPaises_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Pais");
+            frmListar.ShowDialog();
+        }
+       
+        private void btnListarSanciones_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Sancion");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarLicencias_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Licencia");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarEstados_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Estado");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarEnfermedades_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Enfermedad");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarMedicamentos_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Medicamento");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarAlergias_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Alergia");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarDiscapacidades_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Discapacidad");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarAreas_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Area");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarCiudades_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Ciudad");
+            frmListar.ShowDialog();
+        }
+
+        private void btnListarProvincias_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Provincia");
+            frmListar.ShowDialog();
+        }
+        #endregion
+        #endregion
     }
 }
