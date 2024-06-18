@@ -117,7 +117,7 @@
             this.tabControl4.Controls.Add(this.tabPage13);
             this.tabControl4.Controls.Add(this.tabPage14);
             this.tabControl4.Controls.Add(this.tabPage16);
-            this.tabControl4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl4.Location = new System.Drawing.Point(-5, 39);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
@@ -128,10 +128,10 @@
             // 
             this.tabPage13.Controls.Add(this.btnListarTodo);
             this.tabPage13.Controls.Add(this.dgvListar);
-            this.tabPage13.Location = new System.Drawing.Point(4, 24);
+            this.tabPage13.Location = new System.Drawing.Point(4, 29);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(587, 566);
+            this.tabPage13.Size = new System.Drawing.Size(587, 561);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Todos los empleados";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             // 
             this.btnListarTodo.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListarTodo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarTodo.Location = new System.Drawing.Point(513, 10);
             this.btnListarTodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListarTodo.Name = "btnListarTodo";
@@ -173,10 +173,10 @@
             this.tabPage14.Controls.Add(this.btnBorrar);
             this.tabPage14.Controls.Add(this.btnListarApellido);
             this.tabPage14.Controls.Add(this.dgvListarApellido);
-            this.tabPage14.Location = new System.Drawing.Point(4, 24);
+            this.tabPage14.Location = new System.Drawing.Point(4, 29);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(587, 564);
+            this.tabPage14.Size = new System.Drawing.Size(587, 561);
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "Listar por Apellido";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -195,10 +195,10 @@
             // label90
             // 
             this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label90.Location = new System.Drawing.Point(13, 15);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(96, 17);
+            this.label90.Size = new System.Drawing.Size(110, 24);
             this.label90.TabIndex = 21;
             this.label90.Text = "Seleccionar";
             // 
@@ -206,7 +206,7 @@
             // 
             this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBorrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.Location = new System.Drawing.Point(513, 14);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBorrar.Name = "btnBorrar";
@@ -220,7 +220,7 @@
             // 
             this.btnListarApellido.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListarApellido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarApellido.Location = new System.Drawing.Point(432, 14);
             this.btnListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListarApellido.Name = "btnListarApellido";
@@ -253,10 +253,10 @@
             this.tabPage16.Controls.Add(this.btnBorrarEstado);
             this.tabPage16.Controls.Add(this.btnListarEstado);
             this.tabPage16.Controls.Add(this.dgvListarEstado);
-            this.tabPage16.Location = new System.Drawing.Point(4, 24);
+            this.tabPage16.Location = new System.Drawing.Point(4, 29);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(587, 564);
+            this.tabPage16.Size = new System.Drawing.Size(587, 561);
             this.tabPage16.TabIndex = 3;
             this.tabPage16.Text = "Listar por Estado";
             this.tabPage16.UseVisualStyleBackColor = true;
@@ -264,10 +264,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(110, 24);
             this.label2.TabIndex = 26;
             this.label2.Text = "Seleccionar";
             // 
@@ -283,14 +283,14 @@
             "Hola xd"});
             this.cboEstados.Location = new System.Drawing.Point(126, 16);
             this.cboEstados.Name = "cboEstados";
-            this.cboEstados.Size = new System.Drawing.Size(282, 23);
+            this.cboEstados.Size = new System.Drawing.Size(282, 28);
             this.cboEstados.TabIndex = 22;
             // 
             // btnBorrarEstado
             // 
             this.btnBorrarEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnBorrarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBorrarEstado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarEstado.Location = new System.Drawing.Point(513, 16);
             this.btnBorrarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBorrarEstado.Name = "btnBorrarEstado";
@@ -304,7 +304,7 @@
             // 
             this.btnListarEstado.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListarEstado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarEstado.Location = new System.Drawing.Point(432, 16);
             this.btnListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListarEstado.Name = "btnListarEstado";
@@ -332,7 +332,7 @@
             // 
             // frmConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(590, 633);
