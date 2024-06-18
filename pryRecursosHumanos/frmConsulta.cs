@@ -93,5 +93,12 @@ namespace pryRecursosHumanos
             cboEstados.SelectedIndex = -1;
             dgvListarEstado.DataSource = null;
         }
+
+        private void pbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            this.Hide();
+            login.ShowDialog();
+        }
     }
 }

@@ -35,12 +35,16 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.dgvListar = new System.Windows.Forms.DataGridView();
             this.btnListarTodo = new System.Windows.Forms.Button();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.dgvListarApellido = new System.Windows.Forms.DataGridView();
+            this.txtListarApellido = new System.Windows.Forms.TextBox();
             this.label90 = new System.Windows.Forms.Label();
             this.btnListarApellidoBorrar = new System.Windows.Forms.Button();
             this.btnListarApellido = new System.Windows.Forms.Button();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.dgvListarEstado = new System.Windows.Forms.DataGridView();
             this.label92 = new System.Windows.Forms.Label();
             this.cboListarEstados = new System.Windows.Forms.ComboBox();
             this.btnListarEstadoBorrar = new System.Windows.Forms.Button();
@@ -250,18 +254,27 @@
             this.btnEliminarSancion = new System.Windows.Forms.Button();
             this.btnModificarSancion = new System.Windows.Forms.Button();
             this.btnAgregarSancion = new System.Windows.Forms.Button();
-            this.txtListarApellido = new System.Windows.Forms.TextBox();
-            this.dgvListarApellido = new System.Windows.Forms.DataGridView();
-            this.dgvListarEstado = new System.Windows.Forms.DataGridView();
-            this.dgvListar = new System.Windows.Forms.DataGridView();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnListarUni = new System.Windows.Forms.Button();
+            this.btnEliminarUni = new System.Windows.Forms.Button();
+            this.btnAgregarUni = new System.Windows.Forms.Button();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnListarTitulo = new System.Windows.Forms.Button();
+            this.btnEliminarTitulo = new System.Windows.Forms.Button();
+            this.btnAgregarTitulo = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.tabPage14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).BeginInit();
             this.tabPage16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).BeginInit();
@@ -320,9 +333,10 @@
             this.panel12.SuspendLayout();
             this.tabPage24.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
+            this.tabPage10.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.tabPage11.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -399,6 +413,22 @@
             this.tabPage13.Text = "Todos los empleados";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
+            // dgvListar
+            // 
+            this.dgvListar.AllowUserToAddRows = false;
+            this.dgvListar.AllowUserToDeleteRows = false;
+            this.dgvListar.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListar.Location = new System.Drawing.Point(4, 39);
+            this.dgvListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListar.Name = "dgvListar";
+            this.dgvListar.ReadOnly = true;
+            this.dgvListar.RowHeadersWidth = 51;
+            this.dgvListar.RowTemplate.Height = 24;
+            this.dgvListar.Size = new System.Drawing.Size(525, 473);
+            this.dgvListar.TabIndex = 20;
+            // 
             // btnListarTodo
             // 
             this.btnListarTodo.BackColor = System.Drawing.Color.MistyRose;
@@ -427,6 +457,33 @@
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "Listar por Apellido";
             this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // dgvListarApellido
+            // 
+            this.dgvListarApellido.AllowUserToAddRows = false;
+            this.dgvListarApellido.AllowUserToDeleteRows = false;
+            this.dgvListarApellido.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListarApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListarApellido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarApellido.Location = new System.Drawing.Point(12, 49);
+            this.dgvListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListarApellido.Name = "dgvListarApellido";
+            this.dgvListarApellido.ReadOnly = true;
+            this.dgvListarApellido.RowHeadersWidth = 51;
+            this.dgvListarApellido.RowTemplate.Height = 24;
+            this.dgvListarApellido.Size = new System.Drawing.Size(513, 467);
+            this.dgvListarApellido.TabIndex = 73;
+            // 
+            // txtListarApellido
+            // 
+            this.txtListarApellido.BackColor = System.Drawing.Color.MistyRose;
+            this.txtListarApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtListarApellido.Location = new System.Drawing.Point(120, 21);
+            this.txtListarApellido.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtListarApellido.Multiline = true;
+            this.txtListarApellido.Name = "txtListarApellido";
+            this.txtListarApellido.Size = new System.Drawing.Size(256, 22);
+            this.txtListarApellido.TabIndex = 72;
             // 
             // label90
             // 
@@ -480,6 +537,22 @@
             this.tabPage16.TabIndex = 3;
             this.tabPage16.Text = "Listar por Estado";
             this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // dgvListarEstado
+            // 
+            this.dgvListarEstado.AllowUserToAddRows = false;
+            this.dgvListarEstado.AllowUserToDeleteRows = false;
+            this.dgvListarEstado.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListarEstado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListarEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarEstado.Location = new System.Drawing.Point(9, 56);
+            this.dgvListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListarEstado.Name = "dgvListarEstado";
+            this.dgvListarEstado.ReadOnly = true;
+            this.dgvListarEstado.RowHeadersWidth = 51;
+            this.dgvListarEstado.RowTemplate.Height = 24;
+            this.dgvListarEstado.Size = new System.Drawing.Size(516, 456);
+            this.dgvListarEstado.TabIndex = 26;
             // 
             // label92
             // 
@@ -764,7 +837,7 @@
             this.btnCancelarEliminar.Name = "btnCancelarEliminar";
             this.btnCancelarEliminar.Size = new System.Drawing.Size(98, 41);
             this.btnCancelarEliminar.TabIndex = 72;
-            this.btnCancelarEliminar.Text = "Cancelar";
+            this.btnCancelarEliminar.Text = "Borrar";
             this.btnCancelarEliminar.UseVisualStyleBackColor = false;
             this.btnCancelarEliminar.Click += new System.EventHandler(this.btnCancelarEliminar_Click);
             // 
@@ -813,7 +886,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(258, 78);
+            this.btnBuscar.Location = new System.Drawing.Point(273, 75);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(71, 26);
@@ -1080,8 +1153,9 @@
             this.btnCancelarModificar.Name = "btnCancelarModificar";
             this.btnCancelarModificar.Size = new System.Drawing.Size(98, 41);
             this.btnCancelarModificar.TabIndex = 36;
-            this.btnCancelarModificar.Text = "Cancelar";
+            this.btnCancelarModificar.Text = "Borrar";
             this.btnCancelarModificar.UseVisualStyleBackColor = false;
+            this.btnCancelarModificar.Click += new System.EventHandler(this.btnCancelarModificar_Click);
             // 
             // btnModificar
             // 
@@ -2308,7 +2382,9 @@
             this.tabControl2.Controls.Add(this.tabPage22);
             this.tabControl2.Controls.Add(this.tabPage23);
             this.tabControl2.Controls.Add(this.tabPage24);
-            this.tabControl2.Location = new System.Drawing.Point(15, 40);
+            this.tabControl2.Controls.Add(this.tabPage10);
+            this.tabControl2.Controls.Add(this.tabPage11);
+            this.tabControl2.Location = new System.Drawing.Point(15, 38);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(504, 451);
@@ -2330,7 +2406,7 @@
             this.panel1.Controls.Add(this.btnListarPaises);
             this.panel1.Controls.Add(this.btnEliminarPais);
             this.panel1.Controls.Add(this.btnAgregarPais);
-            this.panel1.Location = new System.Drawing.Point(133, 82);
+            this.panel1.Location = new System.Drawing.Point(117, 68);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 159);
             this.panel1.TabIndex = 0;
@@ -2901,64 +2977,107 @@
             this.btnAgregarSancion.UseVisualStyleBackColor = true;
             this.btnAgregarSancion.Click += new System.EventHandler(this.btnAgregarSancion_Click);
             // 
-            // txtListarApellido
+            // tabPage10
             // 
-            this.txtListarApellido.BackColor = System.Drawing.Color.MistyRose;
-            this.txtListarApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtListarApellido.Location = new System.Drawing.Point(120, 21);
-            this.txtListarApellido.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtListarApellido.Multiline = true;
-            this.txtListarApellido.Name = "txtListarApellido";
-            this.txtListarApellido.Size = new System.Drawing.Size(256, 22);
-            this.txtListarApellido.TabIndex = 72;
+            this.tabPage10.Controls.Add(this.panel13);
+            this.tabPage10.Location = new System.Drawing.Point(4, 25);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(496, 422);
+            this.tabPage10.TabIndex = 11;
+            this.tabPage10.Text = "Universidades";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // dgvListarApellido
+            // panel13
             // 
-            this.dgvListarApellido.AllowUserToAddRows = false;
-            this.dgvListarApellido.AllowUserToDeleteRows = false;
-            this.dgvListarApellido.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dgvListarApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvListarApellido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarApellido.Location = new System.Drawing.Point(12, 49);
-            this.dgvListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListarApellido.Name = "dgvListarApellido";
-            this.dgvListarApellido.ReadOnly = true;
-            this.dgvListarApellido.RowHeadersWidth = 51;
-            this.dgvListarApellido.RowTemplate.Height = 24;
-            this.dgvListarApellido.Size = new System.Drawing.Size(513, 467);
-            this.dgvListarApellido.TabIndex = 73;
+            this.panel13.Controls.Add(this.btnListarUni);
+            this.panel13.Controls.Add(this.btnEliminarUni);
+            this.panel13.Controls.Add(this.btnAgregarUni);
+            this.panel13.Location = new System.Drawing.Point(148, 132);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 159);
+            this.panel13.TabIndex = 1;
             // 
-            // dgvListarEstado
+            // btnListarUni
             // 
-            this.dgvListarEstado.AllowUserToAddRows = false;
-            this.dgvListarEstado.AllowUserToDeleteRows = false;
-            this.dgvListarEstado.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dgvListarEstado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvListarEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarEstado.Location = new System.Drawing.Point(9, 56);
-            this.dgvListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListarEstado.Name = "dgvListarEstado";
-            this.dgvListarEstado.ReadOnly = true;
-            this.dgvListarEstado.RowHeadersWidth = 51;
-            this.dgvListarEstado.RowTemplate.Height = 24;
-            this.dgvListarEstado.Size = new System.Drawing.Size(516, 456);
-            this.dgvListarEstado.TabIndex = 26;
+            this.btnListarUni.Location = new System.Drawing.Point(45, 72);
+            this.btnListarUni.Name = "btnListarUni";
+            this.btnListarUni.Size = new System.Drawing.Size(75, 23);
+            this.btnListarUni.TabIndex = 3;
+            this.btnListarUni.Text = "Listar";
+            this.btnListarUni.UseVisualStyleBackColor = true;
+            this.btnListarUni.Click += new System.EventHandler(this.btnListarUni_Click);
             // 
-            // dgvListar
+            // btnEliminarUni
             // 
-            this.dgvListar.AllowUserToAddRows = false;
-            this.dgvListar.AllowUserToDeleteRows = false;
-            this.dgvListar.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListar.Location = new System.Drawing.Point(4, 39);
-            this.dgvListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListar.Name = "dgvListar";
-            this.dgvListar.ReadOnly = true;
-            this.dgvListar.RowHeadersWidth = 51;
-            this.dgvListar.RowTemplate.Height = 24;
-            this.dgvListar.Size = new System.Drawing.Size(525, 473);
-            this.dgvListar.TabIndex = 20;
+            this.btnEliminarUni.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarUni.Name = "btnEliminarUni";
+            this.btnEliminarUni.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarUni.TabIndex = 2;
+            this.btnEliminarUni.Text = "Eliminar";
+            this.btnEliminarUni.UseVisualStyleBackColor = true;
+            this.btnEliminarUni.Click += new System.EventHandler(this.btnEliminarUni_Click);
+            // 
+            // btnAgregarUni
+            // 
+            this.btnAgregarUni.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarUni.Name = "btnAgregarUni";
+            this.btnAgregarUni.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarUni.TabIndex = 0;
+            this.btnAgregarUni.Text = "Agregar";
+            this.btnAgregarUni.UseVisualStyleBackColor = true;
+            this.btnAgregarUni.Click += new System.EventHandler(this.btnAgregarUni_Click);
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.panel14);
+            this.tabPage11.Location = new System.Drawing.Point(4, 25);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(496, 422);
+            this.tabPage11.TabIndex = 12;
+            this.tabPage11.Text = "Titulos";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btnListarTitulo);
+            this.panel14.Controls.Add(this.btnEliminarTitulo);
+            this.panel14.Controls.Add(this.btnAgregarTitulo);
+            this.panel14.Location = new System.Drawing.Point(128, 122);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(200, 159);
+            this.panel14.TabIndex = 1;
+            // 
+            // btnListarTitulo
+            // 
+            this.btnListarTitulo.Location = new System.Drawing.Point(45, 72);
+            this.btnListarTitulo.Name = "btnListarTitulo";
+            this.btnListarTitulo.Size = new System.Drawing.Size(75, 23);
+            this.btnListarTitulo.TabIndex = 3;
+            this.btnListarTitulo.Text = "Listar";
+            this.btnListarTitulo.UseVisualStyleBackColor = true;
+            this.btnListarTitulo.Click += new System.EventHandler(this.btnListarTitulo_Click);
+            // 
+            // btnEliminarTitulo
+            // 
+            this.btnEliminarTitulo.Location = new System.Drawing.Point(45, 101);
+            this.btnEliminarTitulo.Name = "btnEliminarTitulo";
+            this.btnEliminarTitulo.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarTitulo.TabIndex = 2;
+            this.btnEliminarTitulo.Text = "Eliminar";
+            this.btnEliminarTitulo.UseVisualStyleBackColor = true;
+            this.btnEliminarTitulo.Click += new System.EventHandler(this.btnEliminarTitulo_Click);
+            // 
+            // btnAgregarTitulo
+            // 
+            this.btnAgregarTitulo.Location = new System.Drawing.Point(45, 43);
+            this.btnAgregarTitulo.Name = "btnAgregarTitulo";
+            this.btnAgregarTitulo.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarTitulo.TabIndex = 0;
+            this.btnAgregarTitulo.Text = "Agregar";
+            this.btnAgregarTitulo.UseVisualStyleBackColor = true;
+            this.btnAgregarTitulo.Click += new System.EventHandler(this.btnAgregarTitulo_Click);
             // 
             // frmAdmin
             // 
@@ -2982,10 +3101,13 @@
             this.tabPage4.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
@@ -3059,9 +3181,10 @@
             this.panel12.ResumeLayout(false);
             this.tabPage24.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
+            this.tabPage10.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3292,5 +3415,15 @@
         private System.Windows.Forms.DataGridView dgvListarApellido;
         private System.Windows.Forms.DataGridView dgvListarEstado;
         private System.Windows.Forms.DataGridView dgvListar;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabPage11;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button btnListarUni;
+        private System.Windows.Forms.Button btnEliminarUni;
+        private System.Windows.Forms.Button btnAgregarUni;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button btnListarTitulo;
+        private System.Windows.Forms.Button btnEliminarTitulo;
+        private System.Windows.Forms.Button btnAgregarTitulo;
     }
 }

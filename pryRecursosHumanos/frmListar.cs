@@ -72,6 +72,14 @@ namespace pryRecursosHumanos
             {
                 clsLicencia.listarLicencias(dgvListar);
             }
+            else if (modoG == "Universidad")
+            {
+                clsUniversidades.listarUniversidad(dgvListar);
+            }
+            else if (modoG == "Titulo")
+            {
+                clsTitulo.listarTitulo(dgvListar);
+            }
         }
     }
 }

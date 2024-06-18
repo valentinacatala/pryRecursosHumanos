@@ -32,11 +32,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
+            this.lblModo = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.dgvListar = new System.Windows.Forms.DataGridView();
-            this.lblModo = new System.Windows.Forms.Label();
             this.txtAgregar = new System.Windows.Forms.TextBox();
+            this.dgvListar = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
@@ -81,6 +81,16 @@
             this.pcbCerrar.TabStop = false;
             this.pcbCerrar.Click += new System.EventHandler(this.pcbCerrar_Click);
             // 
+            // lblModo
+            // 
+            this.lblModo.AutoSize = true;
+            this.lblModo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
+            this.lblModo.Location = new System.Drawing.Point(94, 47);
+            this.lblModo.Name = "lblModo";
+            this.lblModo.Size = new System.Drawing.Size(22, 21);
+            this.lblModo.TabIndex = 47;
+            this.lblModo.Text = "--";
+            // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
@@ -109,6 +119,13 @@
             this.lblTitulo.TabIndex = 45;
             this.lblTitulo.Text = "Agregar";
             // 
+            // txtAgregar
+            // 
+            this.txtAgregar.Location = new System.Drawing.Point(16, 74);
+            this.txtAgregar.Name = "txtAgregar";
+            this.txtAgregar.Size = new System.Drawing.Size(131, 20);
+            this.txtAgregar.TabIndex = 13;
+            // 
             // dgvListar
             // 
             this.dgvListar.AllowUserToAddRows = false;
@@ -126,23 +143,6 @@
             this.dgvListar.Size = new System.Drawing.Size(428, 232);
             this.dgvListar.TabIndex = 16;
             // 
-            // lblModo
-            // 
-            this.lblModo.AutoSize = true;
-            this.lblModo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
-            this.lblModo.Location = new System.Drawing.Point(94, 47);
-            this.lblModo.Name = "lblModo";
-            this.lblModo.Size = new System.Drawing.Size(22, 21);
-            this.lblModo.TabIndex = 47;
-            this.lblModo.Text = "--";
-            // 
-            // txtAgregar
-            // 
-            this.txtAgregar.Location = new System.Drawing.Point(16, 74);
-            this.txtAgregar.Name = "txtAgregar";
-            this.txtAgregar.Size = new System.Drawing.Size(131, 20);
-            this.txtAgregar.TabIndex = 13;
-            // 
             // frmABMCbos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +151,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmABMCbos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmABMCbos";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

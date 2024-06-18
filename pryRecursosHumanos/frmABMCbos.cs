@@ -46,6 +46,10 @@ namespace pryRecursosHumanos
             {
                 clsEstado.agregarEstado(dgvListar, txtAgregar.Text.ToUpper());
             }
+            else if (modoG == "Universidad")
+            {
+                clsUniversidades.agregarUniversidad(txtAgregar.Text.ToUpper(), dgvListar);
+            }
             txtAgregar.Text = "";
         }
 

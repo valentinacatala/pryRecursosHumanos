@@ -45,30 +45,37 @@ namespace pryRecursosHumanos
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            clsUsuarios usuario = new clsUsuarios();
-            usuario.Cuit = long.Parse(txtUsuario.Text);
-            usuario.Contrasena = txtContraseña.Text;
-            List<bool> inicio = usuario.Iniciar(usuario);
-            if (inicio != null && inicio[0] == true)
+            try
             {
-                MessageBox.Show("¡Inicio de sesión exitoso!", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (inicio[1])
+                clsUsuarios usuario = new clsUsuarios();
+                usuario.Cuit = long.Parse(txtUsuario.Text);
+                usuario.Contrasena = txtContraseña.Text;
+                List<bool> inicio = usuario.Iniciar(usuario);
+                if (inicio != null && inicio[0] == true)
                 {
-                    string nombreUsuario = clsUsuarios.buscarNombre(usuario.Cuit);
-                    frmMainAdmin frmMainAdmin = new frmMainAdmin(nombreUsuario);
-                    this.Hide();
-                    frmMainAdmin.ShowDialog();
+                    MessageBox.Show("¡Inicio de sesión exitoso!", "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (inicio[1])
+                    {
+                        string nombreUsuario = clsUsuarios.buscarNombre(usuario.Cuit);
+                        frmMainAdmin frmMainAdmin = new frmMainAdmin(nombreUsuario);
+                        this.Hide();
+                        frmMainAdmin.ShowDialog();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        frmConsulta frmConsulta = new frmConsulta();
+                        frmConsulta.ShowDialog();
+                    }
                 }
                 else
                 {
-                    this.Hide();
-                    frmConsulta frmConsulta = new frmConsulta();
-                    frmConsulta.ShowDialog();
+                    MessageBox.Show("Usuario o contraseña incorrectos. Intente nuevamente.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Usuario o contraseña incorrectos. Intente nuevamente.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Llene todos los campos");
             }
         }
     }

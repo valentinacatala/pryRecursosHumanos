@@ -34,20 +34,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboPais = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtProvincia = new System.Windows.Forms.TextBox();
             this.dgvListar = new System.Windows.Forms.DataGridView();
-            this.pcbCerrar = new System.Windows.Forms.PictureBox();
+            this.lblModo = new System.Windows.Forms.Label();
+            this.lblCombo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MistyRose;
+            this.panel3.Controls.Add(this.lblNombre);
+            this.panel3.Controls.Add(this.lblCombo);
+            this.panel3.Controls.Add(this.lblModo);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.cboPais);
@@ -68,9 +74,9 @@
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.label1.Location = new System.Drawing.Point(191, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 14);
+            this.label1.Size = new System.Drawing.Size(54, 14);
             this.label1.TabIndex = 52;
-            this.label1.Text = "Nombre Provincia";
+            this.label1.Text = "Nombre";
             // 
             // label2
             // 
@@ -78,9 +84,9 @@
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.label2.Location = new System.Drawing.Point(12, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 14);
+            this.label2.Size = new System.Drawing.Size(75, 14);
             this.label2.TabIndex = 51;
-            this.label2.Text = "Seleccionar pais";
+            this.label2.Text = "Seleccionar";
             // 
             // cboPais
             // 
@@ -102,6 +108,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(427, 33);
             this.panel2.TabIndex = 48;
+            // 
+            // pcbCerrar
+            // 
+            this.pcbCerrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pcbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pcbCerrar.Image")));
+            this.pcbCerrar.Location = new System.Drawing.Point(383, 9);
+            this.pcbCerrar.Name = "pcbCerrar";
+            this.pcbCerrar.Size = new System.Drawing.Size(22, 18);
+            this.pcbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbCerrar.TabIndex = 13;
+            this.pcbCerrar.TabStop = false;
+            this.pcbCerrar.Click += new System.EventHandler(this.pcbCerrar_Click_1);
             // 
             // btnAgregar
             // 
@@ -127,9 +145,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
             this.lblTitulo.Location = new System.Drawing.Point(12, 37);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(171, 21);
+            this.lblTitulo.Size = new System.Drawing.Size(83, 21);
             this.lblTitulo.TabIndex = 45;
-            this.lblTitulo.Text = "Agregar provincia";
+            this.lblTitulo.Text = "Agregar";
             // 
             // txtProvincia
             // 
@@ -155,17 +173,35 @@
             this.dgvListar.Size = new System.Drawing.Size(427, 218);
             this.dgvListar.TabIndex = 16;
             // 
-            // pcbCerrar
+            // lblModo
             // 
-            this.pcbCerrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pcbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pcbCerrar.Image")));
-            this.pcbCerrar.Location = new System.Drawing.Point(383, 9);
-            this.pcbCerrar.Name = "pcbCerrar";
-            this.pcbCerrar.Size = new System.Drawing.Size(22, 18);
-            this.pcbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbCerrar.TabIndex = 13;
-            this.pcbCerrar.TabStop = false;
-            this.pcbCerrar.Click += new System.EventHandler(this.pcbCerrar_Click_1);
+            this.lblModo.AutoSize = true;
+            this.lblModo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
+            this.lblModo.Location = new System.Drawing.Point(101, 37);
+            this.lblModo.Name = "lblModo";
+            this.lblModo.Size = new System.Drawing.Size(28, 21);
+            this.lblModo.TabIndex = 53;
+            this.lblModo.Text = "---";
+            // 
+            // lblCombo
+            // 
+            this.lblCombo.AutoSize = true;
+            this.lblCombo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblCombo.Location = new System.Drawing.Point(93, 73);
+            this.lblCombo.Name = "lblCombo";
+            this.lblCombo.Size = new System.Drawing.Size(15, 14);
+            this.lblCombo.TabIndex = 54;
+            this.lblCombo.Text = "--";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblNombre.Location = new System.Drawing.Point(251, 74);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(15, 14);
+            this.lblNombre.TabIndex = 55;
+            this.lblNombre.Text = "--";
             // 
             // frmProvinicia
             // 
@@ -175,13 +211,14 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProvinicia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProvinicia";
             this.Load += new System.EventHandler(this.frmProvinicia_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,5 +235,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pcbCerrar;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCombo;
+        private System.Windows.Forms.Label lblModo;
     }
 }

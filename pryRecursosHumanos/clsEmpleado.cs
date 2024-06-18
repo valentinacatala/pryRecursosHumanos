@@ -9,7 +9,7 @@ namespace pryRecursosHumanos
 {
     public class clsEmpleado
     {
-		private int cuit;
+		private string cuit;
 		private int idLicencia;
 		private List<int> sanciones;
 		private int idArea;
@@ -37,7 +37,7 @@ namespace pryRecursosHumanos
 		private int idDiscapacidad;
 
         #region propiedades
-        public int Cuit
+        public string Cuit
 		{
 			get { return cuit; }
 			set { cuit = value; }
@@ -197,7 +197,7 @@ namespace pryRecursosHumanos
 			BD.agregarSancionAEmpleado(sancion, empleado, observaciones, fechaInicio);
         }
 
-		public static void eliminarSancion(int cuit, int idSancion)
+		public static void eliminarSancion(string cuit, int idSancion)
 		{
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.eliminarSancion(cuit, idSancion);
@@ -210,13 +210,13 @@ namespace pryRecursosHumanos
             BD.agregarLicenciaAEmpleado(licencia,empleado, fechaInicio, observaciones);
         }
 
-        public static void eliminarLicencia(int cuit, int idLicencia)
+        public static void eliminarLicencia(string cuit, int idLicencia)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.eliminarLicencia(cuit, idLicencia);
         }
 
-		public static void actualizarEstadoEmpleado(int cuit, int id)
+		public static void actualizarEstadoEmpleado(string cuit, int id)
 		{
 
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
@@ -230,10 +230,10 @@ namespace pryRecursosHumanos
 			clsConexionBaseDatos conexion = new clsConexionBaseDatos();
 			conexion.llenarDatosEmpleado(cuit,lblNombre,lblApellido,lblEmail,lblDomicilio,lblTelefono,lblFechaIngreso,PbFoto);
 		}
-        public static void buscarEmpleado(int cuit,TextBox txtNombre, TextBox txtApellido, TextBox txtDni, TextBox txtEmail, TextBox txtDomicilio, TextBox txtTelefono,  DateTimePicker dtpFechaDeNacimiento, TextBox txtInstagram)
+        public static void buscarEmpleado(int cuit,TextBox txtNombre, TextBox txtApellido, TextBox txtDni, TextBox txtEmail, TextBox txtDomicilio, TextBox txtTelefono,  DateTimePicker dtpFechaDeNacimiento, TextBox txtInstagram,ComboBox cboArea)
         {
             clsConexionBaseDatos conexion = new clsConexionBaseDatos();
-            conexion.llenarDatosEmpleado(cuit,txtNombre,txtApellido,txtDni,txtEmail,txtDomicilio,txtTelefono,dtpFechaDeNacimiento,txtInstagram);
+            conexion.llenarDatosEmpleado(cuit,txtNombre,txtApellido,txtDni,txtEmail,txtDomicilio,txtTelefono,dtpFechaDeNacimiento,txtInstagram,cboArea);
         }
         public bool eliminarEmpleado(int cuit)
 		{
@@ -254,7 +254,7 @@ namespace pryRecursosHumanos
 			this.IdFichaMedica = BD.asignarFichaMedica(this.cuit);
 		}
 
-		public static int buscarFichaMedica(int cuitEmpleado)
+		public static int buscarFichaMedica(string cuitEmpleado)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             return BD.asignarFichaMedica(cuitEmpleado);

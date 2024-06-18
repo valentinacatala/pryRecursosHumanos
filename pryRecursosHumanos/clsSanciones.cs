@@ -39,7 +39,7 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarSancion(dgvGrilla);
         }
-        public static void listarSancionesPorEmpleado(DataGridView dgvSanciones, long cuitEmpleado)
+        public static void listarSancionesPorEmpleado(DataGridView dgvSanciones, string cuitEmpleado)
 		{
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarSancionPorEmpleado(dgvSanciones, cuitEmpleado);

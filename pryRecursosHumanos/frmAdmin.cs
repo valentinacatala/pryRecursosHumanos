@@ -122,7 +122,7 @@ namespace pryRecursosHumanos
             try
             {
                 if (rbSi.Checked) idTitulo = Convert.ToInt32(cboTitulo.SelectedValue);
-                nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
+                nuevoEmpleado.Cuit = txtCuit.Text;
                 nuevoEmpleado.IdArea = Convert.ToInt32(cboSeleccionarArea.SelectedValue);
                 nuevoEmpleado.Nombre = txtNombre.Text;
                 nuevoEmpleado.Apellido = txtApellido.Text;
@@ -145,7 +145,8 @@ namespace pryRecursosHumanos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                MessageBox.Show("Complete todos los campos");
             }
             finally
             {
@@ -173,25 +174,48 @@ namespace pryRecursosHumanos
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                int cuit = Convert.ToInt32(txtEliminarCuit.Text);
-                clsEmpleado.buscarEmpleado(cuit, lblNombre, lblApellido, lblCorreo, lblDireccion, lblTelefono, lblFechaIngreso, pbEliminarFoto);
-                e.Handled = true;
+                int cuit;
+                try
+                {
+                    cuit = Convert.ToInt32(txtEliminarCuit.Text);
+                    clsEmpleado.buscarEmpleado(cuit, lblNombre, lblApellido, lblCorreo, lblDireccion, lblTelefono, lblFechaIngreso, pbEliminarFoto);
+                    e.Handled = true;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ingrse un numero en CUIT");
+                }
             }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            clsEmpleado empleado = new clsEmpleado();
-            bool eliminado = empleado.eliminarEmpleado(Convert.ToInt32(txtEliminarCuit.Text));
-            if (eliminado)
+            try
             {
-                MessageBox.Show($"Empleado con CUIT {txtCuit.Text} eliminado correctamente", "Eliminado", MessageBoxButtons.OK);
+                int cuit = Convert.ToInt32(txtEliminarCuit.Text);
+                clsEmpleado empleado = new clsEmpleado();
+                bool eliminado = empleado.eliminarEmpleado(cuit);
+                if (eliminado)
+                {
+                    MessageBox.Show($"Empleado con CUIT {txtCuit.Text} eliminado correctamente", "Eliminado", MessageBoxButtons.OK);
+                }
+                else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
             }
-            else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un CUIT");
+            }
         }
 
         private void btnCancelarEliminar_Click(object sender, EventArgs e)
         {
-
+            txtEliminarCuit.Text = "";
+            lblNombre.Text = "";
+            lblApellido.Text = "";
+            lblCorreo.Text = "";
+            lblDireccion.Text = "";
+            lblTelefono.Text = "";
+            lblFechaIngreso.Text = "";
+            pbEliminarFoto.Image = null;
         }
         #region ABM
         #region agregar
@@ -202,7 +226,7 @@ namespace pryRecursosHumanos
         }
         private void btnAgregarProvincias_Click(object sender, EventArgs e)
         {
-            frmProvinicia frmProvinicia = new frmProvinicia();
+            frmProvinicia frmProvinicia = new frmProvinicia("Provincia");
             frmProvinicia.ShowDialog();
         }
         private void btnAgregarCiudad_Click(object sender, EventArgs e)
@@ -329,34 +353,41 @@ namespace pryRecursosHumanos
         {
             if (txtBuscarCuit.Text != String.Empty)
             {
-                int cuit = Convert.ToInt32(txtBuscarCuit.Text);
-                empleadoSeleccionado.Cuit = cuit;
-                if (clsEmpleado.validarEmpleado(empleadoSeleccionado) == true)
+                try
                 {
-                    empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
-                    lblFichaMedica.Text = "Usuario válido";
-                    lblFichaMedica.ForeColor = Color.Green;
-                    clsFichaMedica.listarEnfermedades(dgvEnfermedades, empleadoSeleccionado.IdFichaMedica);
-                    clsFichaMedica.listarMedicamentos(dgvMedicamentos, empleadoSeleccionado.IdFichaMedica);
-                    clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, empleadoSeleccionado.IdFichaMedica);
-                    clsFichaMedica.listarAlergias(dgvAlergias, empleadoSeleccionado.IdFichaMedica);
-                    btnAgregarEnfermedad.Enabled = true;
-                    btnAgregarMedicamento.Enabled = true;
-                    btnAgregarDiscapacidadFM.Enabled = true;
-                    btnAgregarAlergiaFM.Enabled = true;
+                    int cuit = Convert.ToInt32(txtBuscarCuit.Text);
+                    empleadoSeleccionado.Cuit = cuit.ToString();
+                    if (clsEmpleado.validarEmpleado(empleadoSeleccionado) == true)
+                    {
+                        empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(cuit.ToString());
+                        lblFichaMedica.Text = "Usuario válido";
+                        lblFichaMedica.ForeColor = Color.Green;
+                        clsFichaMedica.listarEnfermedades(dgvEnfermedades, empleadoSeleccionado.IdFichaMedica);
+                        clsFichaMedica.listarMedicamentos(dgvMedicamentos, empleadoSeleccionado.IdFichaMedica);
+                        clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, empleadoSeleccionado.IdFichaMedica);
+                        clsFichaMedica.listarAlergias(dgvAlergias, empleadoSeleccionado.IdFichaMedica);
+                        btnAgregarEnfermedad.Enabled = true;
+                        btnAgregarMedicamento.Enabled = true;
+                        btnAgregarDiscapacidadFM.Enabled = true;
+                        btnAgregarAlergiaFM.Enabled = true;
+                    }
+                    else
+                    {
+                        lblFichaMedica.Text = "Usuario inválido";
+                        lblFichaMedica.ForeColor = Color.Red;
+                        btnAgregarEnfermedad.Enabled = false;
+                        btnAgregarMedicamento.Enabled = false;
+                        btnAgregarDiscapacidadFM.Enabled = false;
+                        btnAgregarAlergiaFM.Enabled = false;
+                        dgvEnfermedades.DataSource = null;
+                        dgvMedicamentos.DataSource = null;
+                        dgvDiscapacidades.DataSource = null;
+                        dgvAlergias.DataSource = null;
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    lblFichaMedica.Text = "Usuario inválido";
-                    lblFichaMedica.ForeColor = Color.Red;
-                    btnAgregarEnfermedad.Enabled = false;
-                    btnAgregarMedicamento.Enabled = false;
-                    btnAgregarDiscapacidadFM.Enabled = false;
-                    btnAgregarAlergiaFM.Enabled = false;
-                    dgvEnfermedades.DataSource = null;
-                    dgvMedicamentos.DataSource = null;
-                    dgvDiscapacidades.DataSource = null;
-                    dgvAlergias.DataSource = null;
+                    MessageBox.Show("Ingrese un numero");
                 }
             }
         }
@@ -365,25 +396,32 @@ namespace pryRecursosHumanos
         {
             if (txtBuscarCuitSL.Text != string.Empty)
             {
-                int cuit = Convert.ToInt32(txtBuscarCuitSL.Text);
-                empleadoSeleccionado.Cuit = cuit;
-                if (clsEmpleado.validarEmpleado(empleadoSeleccionado) == true)
+                try
                 {
-                    lblEmpleadoExiste.ForeColor = Color.Green;
-                    lblEmpleadoExiste.Text = "Usuario válido";
-                    clsPresentismo.listarFaltas(dgvFaltas, empleadoSeleccionado.Cuit);
-                    btnSanciones.Enabled = true;
-                    btnLicencias.Enabled = true;
-                    btnAgregarFalta.Enabled = true;
+                    int cuit = Convert.ToInt32(txtBuscarCuitSL.Text);
+                    empleadoSeleccionado.Cuit = cuit.ToString();
+                    if (clsEmpleado.validarEmpleado(empleadoSeleccionado) == true)
+                    {
+                        lblEmpleadoExiste.ForeColor = Color.Green;
+                        lblEmpleadoExiste.Text = "Usuario válido";
+                        clsPresentismo.listarFaltas(dgvFaltas, empleadoSeleccionado.Cuit);
+                        btnSanciones.Enabled = true;
+                        btnLicencias.Enabled = true;
+                        btnAgregarFalta.Enabled = true;
+                    }
+                    else
+                    {
+                        lblEmpleadoExiste.ForeColor = Color.Red;
+                        lblEmpleadoExiste.Text = "Usuario inválido";
+                        btnSanciones.Enabled = false;
+                        btnLicencias.Enabled = false;
+                        btnAgregarFalta.Enabled = false;
+                        dgvFaltas.DataSource = null;
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    lblEmpleadoExiste.ForeColor = Color.Red;
-                    lblEmpleadoExiste.Text = "Usuario inválido";
-                    btnSanciones.Enabled = false;
-                    btnLicencias.Enabled = false;
-                    btnAgregarFalta.Enabled = false;
-                    dgvFaltas.DataSource = null;
+                    MessageBox.Show("Ingrese un numero");
                 }
             }
         }
@@ -391,7 +429,7 @@ namespace pryRecursosHumanos
         private void dgvEnfermedades_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int cuit = Convert.ToInt32(txtBuscarCuit.Text);
-            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit.ToString());
             int idEnfermedad = Convert.ToInt32(dgvEnfermedades.SelectedRows[0].Cells["IdEnfermedad"].Value);
             DialogResult result = MessageBox.Show("¿Eliminar enfermedad?", "Aviso", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -404,7 +442,7 @@ namespace pryRecursosHumanos
         private void dgvMedicamentos_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int cuit = Convert.ToInt32(txtBuscarCuit.Text);
-            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit.ToString());
             int idMedicamento = Convert.ToInt32(dgvMedicamentos.SelectedRows[0].Cells["IdMedicamentos"].Value);
             DialogResult result = MessageBox.Show("¿Eliminar medicamento?", "Aviso", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -417,7 +455,7 @@ namespace pryRecursosHumanos
         private void dgvDiscapacidades_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int cuit = Convert.ToInt32(txtBuscarCuit.Text);
-            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit.ToString());
             int idDiscapacidad = Convert.ToInt32(dgvDiscapacidades.SelectedRows[0].Cells["IdDiscapacidades"].Value);
             DialogResult result = MessageBox.Show("¿Eliminar discapacidad?", "Aviso", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -430,7 +468,7 @@ namespace pryRecursosHumanos
         private void dgvAlergias_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int cuit = Convert.ToInt32(txtBuscarCuit.Text);
-            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit.ToString());
             int idAlergia = Convert.ToInt32(dgvAlergias.SelectedRows[0].Cells["IdAlergias"].Value);
             DialogResult result = MessageBox.Show("¿Eliminar alergia?", "Aviso", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -526,7 +564,7 @@ namespace pryRecursosHumanos
 
             private void btnEliminarProvincia_Click(object sender, EventArgs e)
             {
-                frmEliminarProvincia eliminarProvincia = new frmEliminarProvincia();
+                frmEliminarProvincia eliminarProvincia = new frmEliminarProvincia("Provincia");
                 eliminarProvincia.ShowDialog();
             }
 
@@ -637,12 +675,27 @@ namespace pryRecursosHumanos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            clsEmpleado.buscarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre, txtApellidoMod, txtDniMod, txtModificarCorreo, txtModificarDomicilio, txtModificarTelefono, dtpModificarFecha, txtModificarInstagram);
+            try
+            {
+                clsEmpleado.buscarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre, txtApellidoMod, txtDniMod, txtModificarCorreo, txtModificarDomicilio, txtModificarTelefono, dtpModificarFecha, txtModificarInstagram,cboAreaMod);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un CUIT");
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            clsEmpleado.modificarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre.Text, txtApellidoMod.Text, Convert.ToInt32(txtDniMod.Text), dtpModificarFecha.Value, txtModificarDomicilio.Text, txtModificarCorreo.Text, Convert.ToInt32(txtModificarTelefono.Text), txtModificarInstagram.Text, Convert.ToInt32(cboAreaMod.SelectedValue));
+            try
+            {
+                clsEmpleado.modificarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre.Text, txtApellidoMod.Text, Convert.ToInt32(txtDniMod.Text), dtpModificarFecha.Value, txtModificarDomicilio.Text, txtModificarCorreo.Text, Convert.ToInt32(txtModificarTelefono.Text), txtModificarInstagram.Text, Convert.ToInt32(cboAreaMod.SelectedValue));   
+                MessageBox.Show("Empleado modificado correctamente");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un numero en CUIT");
+            }
         }
 
         private void btnListarTodo_Click(object sender, EventArgs e)
@@ -662,6 +715,56 @@ namespace pryRecursosHumanos
         {
             txtListarApellido.Text = "";
             dgvListarApellido.DataSource = null;
+        }
+
+        private void btnCancelarModificar_Click(object sender, EventArgs e)
+        {
+            txtCuitModificar.Text = "";
+            txtModificarNombre.Text = "";
+            txtApellidoMod.Text = "";
+            txtDniMod.Text = "";
+            txtModificarCorreo.Text = "";
+            txtModificarDomicilio.Text = "";
+            txtModificarTelefono.Text = "";
+            dtpModificarFecha.Value = DateTime.Now;
+            txtModificarInstagram.Text = "";
+            cboAreaMod.SelectedIndex = -1;
+        }
+
+        private void btnListarTitulo_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Titulo");
+            frmListar.ShowDialog();
+        }
+
+        private void btnEliminarTitulo_Click(object sender, EventArgs e)
+        {
+            frmEliminarProvincia eliminarProvincia = new frmEliminarProvincia("Titulo");
+            eliminarProvincia.ShowDialog();
+        }
+
+        private void btnAgregarTitulo_Click(object sender, EventArgs e)
+        {
+            frmProvinicia frmProvinicia = new frmProvinicia("Titulo");
+            frmProvinicia.ShowDialog();
+        }
+
+        private void btnListarUni_Click(object sender, EventArgs e)
+        {
+            frmListar frmListar = new frmListar("Universidad");
+            frmListar.ShowDialog();
+        }
+
+        private void btnEliminarUni_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar("Universidad");
+            frmEliminar.ShowDialog();
+        }
+
+        private void btnAgregarUni_Click(object sender, EventArgs e)
+        {
+            frmABMCbos frmABMCbos = new frmABMCbos("Universidad");
+            frmABMCbos.ShowDialog();
         }
     }
 }

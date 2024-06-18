@@ -110,6 +110,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListar";
             this.Load += new System.EventHandler(this.frmListar_Load);
             this.panel2.ResumeLayout(false);

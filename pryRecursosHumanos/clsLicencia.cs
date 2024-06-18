@@ -39,7 +39,7 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarLicencia(dgvGrilla);
         }
-        public static void listarLicenciasPorEmpleado(DataGridView grilla, long cuitEmpleado)
+        public static void listarLicenciasPorEmpleado(DataGridView grilla, string cuitEmpleado)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarLicenciaPorEmpleado(grilla,cuitEmpleado);

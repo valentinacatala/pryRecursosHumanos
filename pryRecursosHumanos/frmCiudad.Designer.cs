@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cboPais = new System.Windows.Forms.ComboBox();
             this.cboProvincia = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCiudad = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvListar = new System.Windows.Forms.DataGridView();
-            this.cboPais = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             this.panel3.SuspendLayout();
@@ -88,6 +88,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(545, 344);
             this.panel3.TabIndex = 14;
+            // 
+            // cboPais
+            // 
+            this.cboPais.BackColor = System.Drawing.Color.SeaShell;
+            this.cboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPais.FormattingEnabled = true;
+            this.cboPais.Location = new System.Drawing.Point(15, 90);
+            this.cboPais.Name = "cboPais";
+            this.cboPais.Size = new System.Drawing.Size(155, 21);
+            this.cboPais.TabIndex = 56;
+            this.cboPais.SelectedIndexChanged += new System.EventHandler(this.cboPais_SelectedIndexChanged);
             // 
             // cboProvincia
             // 
@@ -181,17 +192,6 @@
             this.dgvListar.Size = new System.Drawing.Size(545, 218);
             this.dgvListar.TabIndex = 16;
             // 
-            // cboPais
-            // 
-            this.cboPais.BackColor = System.Drawing.Color.SeaShell;
-            this.cboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPais.FormattingEnabled = true;
-            this.cboPais.Location = new System.Drawing.Point(15, 90);
-            this.cboPais.Name = "cboPais";
-            this.cboPais.Size = new System.Drawing.Size(155, 21);
-            this.cboPais.TabIndex = 56;
-            this.cboPais.SelectedIndexChanged += new System.EventHandler(this.cboPais_SelectedIndexChanged);
-            // 
             // frmCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +200,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCiudad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCiudad";
             this.Load += new System.EventHandler(this.frmCiudad_Load);
             this.panel2.ResumeLayout(false);

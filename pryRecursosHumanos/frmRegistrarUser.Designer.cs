@@ -126,6 +126,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(201, 23);
             this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtRepetirContraseña
             // 
@@ -136,6 +137,7 @@
             this.txtRepetirContraseña.Name = "txtRepetirContraseña";
             this.txtRepetirContraseña.Size = new System.Drawing.Size(201, 23);
             this.txtRepetirContraseña.TabIndex = 2;
+            this.txtRepetirContraseña.UseSystemPasswordChar = true;
             // 
             // label32
             // 
@@ -144,9 +146,9 @@
             this.label32.Location = new System.Drawing.Point(22, 43);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 16);
+            this.label32.Size = new System.Drawing.Size(38, 16);
             this.label32.TabIndex = 21;
-            this.label32.Text = "Usuario";
+            this.label32.Text = "CUIT";
             // 
             // label30
             // 

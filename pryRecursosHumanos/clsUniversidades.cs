@@ -29,5 +29,22 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarUniversidades(cbTitulos);
         }
+        public static void agregarUniversidad(string nombre,DataGridView dgvGrilla)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.agregarUniversidad(nombre); 
+            BD.listarUniversidad(dgvGrilla);
+        }
+        public static void eliminarUniversidad(int idUniversidad, DataGridView dgvGrilla)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.eliminarUniversidad(idUniversidad);
+            BD.listarUniversidad(dgvGrilla);
+        }
+        public static void listarUniversidad(DataGridView dgvGrilla)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarUniversidad(dgvGrilla);
+        }
     }
 }

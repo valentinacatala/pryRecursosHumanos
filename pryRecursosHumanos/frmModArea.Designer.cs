@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModArea));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cboArea = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSueldo = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvListar = new System.Windows.Forms.DataGridView();
-            this.cboArea = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
@@ -61,6 +61,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(522, 351);
             this.panel3.TabIndex = 14;
+            // 
+            // cboArea
+            // 
+            this.cboArea.BackColor = System.Drawing.Color.SeaShell;
+            this.cboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboArea.FormattingEnabled = true;
+            this.cboArea.Location = new System.Drawing.Point(16, 81);
+            this.cboArea.Name = "cboArea";
+            this.cboArea.Size = new System.Drawing.Size(132, 21);
+            this.cboArea.TabIndex = 52;
             // 
             // label2
             // 
@@ -157,16 +167,6 @@
             this.dgvListar.Size = new System.Drawing.Size(522, 240);
             this.dgvListar.TabIndex = 16;
             // 
-            // cboArea
-            // 
-            this.cboArea.BackColor = System.Drawing.Color.SeaShell;
-            this.cboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboArea.FormattingEnabled = true;
-            this.cboArea.Location = new System.Drawing.Point(16, 81);
-            this.cboArea.Name = "cboArea";
-            this.cboArea.Size = new System.Drawing.Size(132, 21);
-            this.cboArea.TabIndex = 52;
-            // 
             // frmModArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +175,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmModArea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmModArea";
             this.Load += new System.EventHandler(this.frmModArea_Load);
             this.panel3.ResumeLayout(false);

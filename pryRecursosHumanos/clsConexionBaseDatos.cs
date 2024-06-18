@@ -180,7 +180,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {empleado.Cuit}";
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = '{empleado.Cuit}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -196,7 +196,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        private void crearFichaMedica(int cuitEmpleado)
+        private void crearFichaMedica(string cuitEmpleado)
         {
             try
             {
@@ -205,7 +205,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $@"INSERT INTO FichasMedicas (Cuit) VALUES ({cuitEmpleado})";
+                comando.CommandText = $@"INSERT INTO FichasMedicas (Cuit) VALUES ('{cuitEmpleado}')";
                 conexion.Open();
                 comando.ExecuteNonQuery();
             }
@@ -219,7 +219,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public int asignarFichaMedica(int cuitEmpleado)
+        public int asignarFichaMedica(string cuitEmpleado)
         {
             try
             {
@@ -228,7 +228,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT IdFichaMedica FROM FichasMedicas WHERE Cuit = {cuitEmpleado}";
+                comando.CommandText = $"SELECT IdFichaMedica FROM FichasMedicas WHERE Cuit = '{cuitEmpleado}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -260,7 +260,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT Cuit, Admin FROM Usuarios WHERE Cuit = {usuario.Cuit} AND Contraseña = '{usuario.Contrasena}'";
+                comando.CommandText = $"SELECT Cuit, Admin FROM Usuarios WHERE Cuit = '{usuario.Cuit}' AND Contraseña = '{usuario.Contrasena}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -281,39 +281,44 @@ namespace pryRecursosHumanos
         public bool registrarUsuario(clsUsuarios nuevoUsuario)
         {
             // REHACER CUANDO EXISTAN LOS DATOS
-            bool usuarioNoExiste = validarUsuario(nuevoUsuario);
-            if (usuarioNoExiste)
+            bool existeEmpleado = validarEmpleado(nuevoUsuario.Cuit);
+            if (existeEmpleado == true)
             {
-                try
+                bool usuarioNoExiste = validarUsuario(nuevoUsuario);
+                if (usuarioNoExiste)
                 {
-                    conexion = new OleDbConnection(cadena);
-                    comando = new OleDbCommand();
+                    try
+                    {
+                        conexion = new OleDbConnection(cadena);
+                        comando = new OleDbCommand();
 
-                    comando.Connection = conexion;
-                    comando.CommandType = CommandType.Text;
-                    comando.CommandText = $@"INSERT INTO Usuarios(Cuit, Contraseña, Admin) 
-                                VALUES ({nuevoUsuario.Cuit}, '{nuevoUsuario.Contrasena}', {nuevoUsuario.Admin})";
+                        comando.Connection = conexion;
+                        comando.CommandType = CommandType.Text;
+                        comando.CommandText = $@"INSERT INTO Usuarios(Cuit, Contraseña, Admin) 
+                                    VALUES ('{nuevoUsuario.Cuit}', '{nuevoUsuario.Contrasena}', {nuevoUsuario.Admin})";
 
-                    conexion.Open();
-                    comando.ExecuteNonQuery();
-                    usuarioNoExiste = false;
-                    return true;
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        usuarioNoExiste = false;
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        return false;
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Ya existe un usuario con ese CUIT");
                     return false;
                 }
-                finally
-                {
-                    conexion.Close();
-                }
             }
-            else
-            {
-                MessageBox.Show("Ya existe un usuario con ese CUIT");
-                return false;
-            }
+            else { MessageBox.Show("El cuit ingresado no corresponde a ningun empleado"); return false; }
         }
         public bool validarUsuario(clsUsuarios usuario)
         {
@@ -324,7 +329,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Usuarios WHERE Cuit = {usuario.Cuit}";
+                comando.CommandText = $"SELECT * FROM Usuarios WHERE Cuit = '{usuario.Cuit}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -340,7 +345,30 @@ namespace pryRecursosHumanos
             }
             // ESTE METODO TIENEN QUE LLAMAR EN LA RESPECTIVA CLASE; NO PROGRAMEN ACA
         }
+        public bool validarEmpleado(long cuit)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
 
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = '{cuit}'";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+
+                if (tablaEmpleados.Rows.Count == 1) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
         public string nombreUsuario(long cuit)
         {
             try
@@ -350,7 +378,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT Nombre FROM Empleados WHERE Cuit = {cuit}";
+                comando.CommandText = $"SELECT Nombre FROM Empleados WHERE Cuit = '{cuit}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -685,7 +713,7 @@ namespace pryRecursosHumanos
         #endregion
 
         #region Sanciones
-        public void listarSancionPorEmpleado(DataGridView dgvSanciones, long cuitEmpleado)
+        public void listarSancionPorEmpleado(DataGridView dgvSanciones, string cuitEmpleado)
         {
             try
             {
@@ -694,7 +722,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT S.IdSancion, S.Nombre, SE.Cuit, SE.Fecha, SE.FechaFin, SE.Observaciones FROM San_Emp as SE, Sanciones as S WHERE SE.Cuit={cuitEmpleado} AND S.IdSancion = SE.IdSancion";
+                comando.CommandText = $"SELECT S.IdSancion, S.Nombre, SE.Cuit, SE.Fecha, SE.FechaFin, SE.Observaciones FROM San_Emp as SE, Sanciones as S WHERE SE.Cuit= '{cuitEmpleado}' AND S.IdSancion = SE.IdSancion";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -721,7 +749,7 @@ namespace pryRecursosHumanos
                 //int diasSancion = retornarDiasSancion(sancion);
                 DateTime fechaFin = fechaInicio.AddDays(sancion.Tiempo);
                 comando.CommandText = $@"INSERT INTO San_Emp(IdSancion, Cuit, Observaciones, Fecha, FechaFin) 
-                                VALUES ({sancion.IdSancion},{empleado.Cuit}, '{observaciones}', '{fechaInicio}', '{fechaFin}')";
+                                VALUES ({sancion.IdSancion},'{empleado.Cuit}', '{observaciones}', '{fechaInicio}', '{fechaFin}')";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -736,7 +764,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public void eliminarSancion(int cuit, int idSancion)
+        public void eliminarSancion(string cuit, int idSancion)
         {
             try
             {
@@ -745,7 +773,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $@"DELETE FROM San_Emp WHERE IdSancion = {idSancion} AND Cuit = {cuit}";
+                comando.CommandText = $@"DELETE FROM San_Emp WHERE IdSancion = {idSancion} AND Cuit = '{cuit}'";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -760,7 +788,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public void actualizarEstadoEmpleado(int cuit, int id)
+        public void actualizarEstadoEmpleado(string cuit, int id)
         {
             try
             {
@@ -769,7 +797,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $@"UPDATE Empleados SET IdEstado = {id} WHERE Cuit = {cuit}";
+                comando.CommandText = $@"UPDATE Empleados SET IdEstado = {id} WHERE Cuit = '{cuit}'";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -786,7 +814,7 @@ namespace pryRecursosHumanos
         #endregion
 
         #region Licencias
-        public void listarLicenciaPorEmpleado(DataGridView dgvLicencias, long cuitEmpleado)
+        public void listarLicenciaPorEmpleado(DataGridView dgvLicencias, string cuitEmpleado)
         {
             try
             {
@@ -795,7 +823,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT L.IdLicencia, L.Nombre, LE.Cuit, LE.Fecha, LE.FechaFin, LE.Observaciones FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia";
+                comando.CommandText = $"SELECT L.IdLicencia, L.Nombre, LE.Cuit, LE.Fecha, LE.FechaFin, LE.Observaciones FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = '{cuitEmpleado}' AND L.IdLicencia = LE.IdLicencia";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -821,7 +849,7 @@ namespace pryRecursosHumanos
 
                 DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
                 comando.CommandText = $@"INSERT INTO Lic_Emp(IdLicencia, Cuit, Fecha, FechaFin, Observaciones) 
-                                VALUES ({licencia.IdLicencia},{empleado.Cuit}, '{fechaInicio}', '{fechaFin}', '{observaciones}')";
+                                VALUES ({licencia.IdLicencia},'{empleado.Cuit}', '{fechaInicio}', '{fechaFin}', '{observaciones}')";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -836,7 +864,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public void eliminarLicencia(int cuit, int idLicencia)
+        public void eliminarLicencia(string cuit, int idLicencia)
         {
             try
             {
@@ -845,7 +873,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $@"DELETE FROM Lic_Emp WHERE IdLicencia = {idLicencia} AND Cuit = {cuit}";
+                comando.CommandText = $@"DELETE FROM Lic_Emp WHERE IdLicencia = {idLicencia} AND Cuit = '{cuit}'";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -872,7 +900,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"UPDATE Empleados SET IdEstado = 4 WHERE Cuit = {cuit}";
+                comando.CommandText = $"UPDATE Empleados SET IdEstado = 4 WHERE Cuit = '{cuit}'";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -892,7 +920,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {cuit}";
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = '{cuit}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -915,7 +943,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {cuit}";
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = '{cuit}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -953,7 +981,7 @@ namespace pryRecursosHumanos
                 comando.CommandText = $@"UPDATE Empleados SET nombre = '{nombre}', apellido = '{apellido}', DNI = {dni}, FechaDeNacimineto =                                                '{fechaNacimiento.ToShortDateString()}',Domicilio = '{domicilio}',
                                       CorreoElectronico = '{email}', Telefono = {telefono}, Instagram =    
                                       '{instagram}', IdArea = {idArea} 
-                                      WHERE Cuit = {cuit}";
+                                      WHERE Cuit = '{cuit}'";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -961,7 +989,7 @@ namespace pryRecursosHumanos
             }
             else return false;
         }
-        public void llenarDatosEmpleado(int cuit, TextBox txtNombre, TextBox txtApellido, TextBox txtDni, TextBox txtEmail, TextBox txtDomicilio, TextBox txtTelefono, DateTimePicker dtpFechaDeNacimiento, TextBox txtInstagram)
+        public void llenarDatosEmpleado(int cuit, TextBox txtNombre, TextBox txtApellido, TextBox txtDni, TextBox txtEmail, TextBox txtDomicilio, TextBox txtTelefono, DateTimePicker dtpFechaDeNacimiento, TextBox txtInstagram,ComboBox cboArea)
         {
             try
             {
@@ -970,7 +998,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {cuit}";
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = '{cuit}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -985,6 +1013,8 @@ namespace pryRecursosHumanos
                     txtDni.Text = tablaEmpleados.Rows[0]["DNI"].ToString(); ;
                     txtInstagram.Text = tablaEmpleados.Rows[0]["Instagram"].ToString(); ;
                     dtpFechaDeNacimiento.Value = Convert.ToDateTime(tablaEmpleados.Rows[0]["FechaDeNacimineto"].ToString());
+                    cboArea.SelectedValue = Convert.ToInt32(tablaEmpleados.Rows[0]["IdArea"]);
+
                 }
                 else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
             }
@@ -2215,6 +2245,162 @@ namespace pryRecursosHumanos
             }
         }
         #endregion
+        #region titulos
+        public void agregarTitulo(string nombre, int idUniversidad)
+        {
+            if (verificarElemento("Titulos", nombre) == false)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Titulos (Nombre, IdUniversidad) VALUES ('{nombre}', {idUniversidad})";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Sancion existente");
+        }
+        public void eliminarTitulo(int idTitulo)
+        {
+            if (verificarElemento("Titulos", idTitulo, "IdTitulo") == true)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Titulos WHERE IdTitulo= {idTitulo}";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Sancion inexistente");
+
+        }
+        public void listarTitulo(DataGridView dgvGrilla)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT T.Nombre as Titulo, U.Nombre as Universidad FROM Titulos as T, Universidades as U WHERE T.IdUniversidad = U.IdUniversidad";
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        #endregion
+
+        #region universidades
+        public void agregarUniversidad(string nombre)
+        {
+            if (verificarElemento("Universidades", nombre) == false)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"INSERT INTO Universidades (Nombre) VALUES ('{nombre}')";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Sancion existente");
+        }
+        public void eliminarUniversidad(int idUniversidad)
+        {
+            if (verificarElemento("Universidades", idUniversidad, "IdUniversidad") == true)
+            {
+                try
+                {
+                    conexion = new OleDbConnection(cadena);
+                    comando = new OleDbCommand();
+
+                    comando.Connection = conexion;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = $"DELETE FROM Universidades WHERE idUniversidad = {idUniversidad}";
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            else MessageBox.Show("Sancion inexistente");
+
+        }
+        public void listarUniversidad(DataGridView dgvGrilla)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT Nombre FROM Universidades";
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tablaEmpleados = new DataTable();
+                adaptador.Fill(tablaEmpleados);
+                dgvGrilla.DataSource = tablaEmpleados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
 
         #region sueldo
         private int agregarSueldo(int sueldo)
@@ -2273,7 +2459,7 @@ namespace pryRecursosHumanos
         #endregion
 
         #region faltas
-        public void agregarFaltas(int cuit, string fecha)
+        public void agregarFaltas(string cuit, string fecha)
         {
             if (validarFaltas(cuit, fecha))
             {
@@ -2284,7 +2470,7 @@ namespace pryRecursosHumanos
 
                     comando.Connection = conexion;
                     comando.CommandType = CommandType.Text;
-                    comando.CommandText = $"INSERT INTO Presentismo (Cuit, Fecha) VALUES ({cuit}, '{fecha}')";
+                    comando.CommandText = $"INSERT INTO Presentismo (Cuit, Fecha) VALUES ('{cuit}', '{fecha}')";
 
                     conexion.Open();
                     comando.ExecuteNonQuery();
@@ -2305,7 +2491,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public bool validarFaltas(int cuit, string fecha)
+        public bool validarFaltas(string cuit, string fecha)
         {
             try
             {
@@ -2314,7 +2500,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Presentismo WHERE Cuit = {cuit} AND Fecha = '{fecha}'";
+                comando.CommandText = $"SELECT * FROM Presentismo WHERE Cuit = '{cuit}' AND Fecha = '{fecha}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -2330,7 +2516,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public void listarFaltas(DataGridView dgvFaltas, int cuit)
+        public void listarFaltas(DataGridView dgvFaltas, string cuit)
         {
             try
             {
@@ -2339,7 +2525,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Presentismo WHERE Cuit = {cuit}";
+                comando.CommandText = $"SELECT * FROM Presentismo WHERE Cuit = '{cuit}'";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();

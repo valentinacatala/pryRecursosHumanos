@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsulta));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbCerrarSesion = new System.Windows.Forms.PictureBox();
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.pcbMinimizar = new System.Windows.Forms.PictureBox();
             this.tabControl4 = new System.Windows.Forms.TabControl();
@@ -49,6 +50,7 @@
             this.btnListarEstado = new System.Windows.Forms.Button();
             this.dgvListarEstado = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
             this.tabControl4.SuspendLayout();
@@ -63,6 +65,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.pbCerrarSesion);
             this.panel2.Controls.Add(this.pcbCerrar);
             this.panel2.Controls.Add(this.pcbMinimizar);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -72,6 +75,17 @@
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // pbCerrarSesion
+            // 
+            this.pbCerrarSesion.Image = global::pryRecursosHumanos.Properties.Resources.iconoLogOut;
+            this.pbCerrarSesion.Location = new System.Drawing.Point(12, 0);
+            this.pbCerrarSesion.Name = "pbCerrarSesion";
+            this.pbCerrarSesion.Size = new System.Drawing.Size(24, 33);
+            this.pbCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCerrarSesion.TabIndex = 17;
+            this.pbCerrarSesion.TabStop = false;
+            this.pbCerrarSesion.Click += new System.EventHandler(this.pbCerrarSesion_Click);
             // 
             // pcbCerrar
             // 
@@ -104,10 +118,10 @@
             this.tabControl4.Controls.Add(this.tabPage14);
             this.tabControl4.Controls.Add(this.tabPage16);
             this.tabControl4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl4.Location = new System.Drawing.Point(-5, 35);
+            this.tabControl4.Location = new System.Drawing.Point(-5, 39);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(595, 605);
+            this.tabControl4.Size = new System.Drawing.Size(595, 594);
             this.tabControl4.TabIndex = 6;
             // 
             // tabPage13
@@ -117,7 +131,7 @@
             this.tabPage13.Location = new System.Drawing.Point(4, 24);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(587, 577);
+            this.tabPage13.Size = new System.Drawing.Size(587, 566);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Todos los empleados";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -162,7 +176,7 @@
             this.tabPage14.Location = new System.Drawing.Point(4, 24);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(587, 577);
+            this.tabPage14.Size = new System.Drawing.Size(587, 564);
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "Listar por Apellido";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -242,7 +256,7 @@
             this.tabPage16.Location = new System.Drawing.Point(4, 24);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(587, 577);
+            this.tabPage16.Size = new System.Drawing.Size(587, 564);
             this.tabPage16.TabIndex = 3;
             this.tabPage16.Text = "Listar por Estado";
             this.tabPage16.UseVisualStyleBackColor = true;
@@ -321,7 +335,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(590, 629);
+            this.ClientSize = new System.Drawing.Size(590, 633);
             this.Controls.Add(this.tabControl4);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -333,6 +347,7 @@
             this.Text = "frmConsulta";
             this.Load += new System.EventHandler(this.frmConsulta_Load_1);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).EndInit();
             this.tabControl4.ResumeLayout(false);
@@ -368,5 +383,6 @@
         private System.Windows.Forms.DataGridView dgvListarEstado;
         private System.Windows.Forms.TextBox txtListarApellido;
         private System.Windows.Forms.Button btnListarTodo;
+        private System.Windows.Forms.PictureBox pbCerrarSesion;
     }
 }

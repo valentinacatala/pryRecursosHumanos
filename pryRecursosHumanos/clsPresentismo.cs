@@ -26,7 +26,7 @@ namespace pryRecursosHumanos
 			set { idPresentismo = value; }
 		}
 
-		public static void agregarFalta(int cuit, string fecha)
+		public static void agregarFalta(string cuit, string fecha)
 		{
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.agregarFaltas(cuit, fecha);
@@ -38,7 +38,7 @@ namespace pryRecursosHumanos
 			BD.eliminarFaltas(id);
         }
 
-		public static void listarFaltas(DataGridView dgvFaltas, int cuit)
+		public static void listarFaltas(DataGridView dgvFaltas, string cuit)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarFaltas(dgvFaltas, cuit);

@@ -55,6 +55,11 @@ namespace pryRecursosHumanos
             {
                 clsLicencia.listarLicencias(cboEliminar);
             }
+            else if (modoG == "Universidad")
+            {
+                clsUniversidades.listarUniversidades(cboEliminar);
+            }
+
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -92,6 +97,10 @@ namespace pryRecursosHumanos
                 else if (modoG == "Licencia")
                 {
                     clsLicencia.eliminarLicencia(id,dgvListar);
+                }
+                else if (modoG == "Universidad")
+                {
+                    clsUniversidades.eliminarUniversidad(id,dgvListar);
                 }
             }
             catch (Exception)

@@ -33,12 +33,15 @@
             this.pcbCerrar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cboProvincia = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.cboPais = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvListar = new System.Windows.Forms.DataGridView();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCombo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblModo = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             this.panel3.SuspendLayout();
@@ -71,9 +74,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MistyRose;
-            this.panel3.Controls.Add(this.cboProvincia);
+            this.panel3.Controls.Add(this.lblModo);
+            this.panel3.Controls.Add(this.lblNombre);
+            this.panel3.Controls.Add(this.lblCombo);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.cboProvincia);
             this.panel3.Controls.Add(this.cboPais);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.btnEliminar);
@@ -94,26 +100,6 @@
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(127, 21);
             this.cboProvincia.TabIndex = 53;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label1.Location = new System.Drawing.Point(191, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 14);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Nombre Provincia";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.label2.Location = new System.Drawing.Point(12, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 14);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Seleccionar pais";
             // 
             // cboPais
             // 
@@ -150,9 +136,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
             this.lblTitulo.Location = new System.Drawing.Point(12, 37);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(171, 21);
+            this.lblTitulo.Size = new System.Drawing.Size(83, 21);
             this.lblTitulo.TabIndex = 45;
-            this.lblTitulo.Text = "Eliminar provincia";
+            this.lblTitulo.Text = "Eliminar";
             // 
             // dgvListar
             // 
@@ -171,6 +157,56 @@
             this.dgvListar.Size = new System.Drawing.Size(424, 218);
             this.dgvListar.TabIndex = 16;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblNombre.Location = new System.Drawing.Point(252, 74);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(15, 14);
+            this.lblNombre.TabIndex = 59;
+            this.lblNombre.Text = "--";
+            // 
+            // lblCombo
+            // 
+            this.lblCombo.AutoSize = true;
+            this.lblCombo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.lblCombo.Location = new System.Drawing.Point(94, 73);
+            this.lblCombo.Name = "lblCombo";
+            this.lblCombo.Size = new System.Drawing.Size(15, 14);
+            this.lblCombo.TabIndex = 58;
+            this.lblCombo.Text = "--";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.label1.Location = new System.Drawing.Point(192, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 14);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Nombre";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.label2.Location = new System.Drawing.Point(13, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 14);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Seleccionar";
+            // 
+            // lblModo
+            // 
+            this.lblModo.AutoSize = true;
+            this.lblModo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F);
+            this.lblModo.Location = new System.Drawing.Point(101, 37);
+            this.lblModo.Name = "lblModo";
+            this.lblModo.Size = new System.Drawing.Size(28, 21);
+            this.lblModo.TabIndex = 60;
+            this.lblModo.Text = "---";
+            // 
             // frmEliminarProvincia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +215,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEliminarProvincia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEliminarProvincia";
             this.Load += new System.EventHandler(this.frmEliminarProvincia_Load);
             this.panel2.ResumeLayout(false);
@@ -195,12 +232,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pcbCerrar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboPais;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.ComboBox cboProvincia;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCombo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblModo;
     }
 }

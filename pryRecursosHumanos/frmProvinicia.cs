@@ -12,19 +12,39 @@ namespace pryRecursosHumanos
 {
     public partial class frmProvinicia : Form
     {
-        public frmProvinicia()
+        string modoG;
+        public frmProvinicia(string modo)
         {
             InitializeComponent();
+            modoG = modo;
+            lblModo.Text = modo;
         }
 
         private void frmProvinicia_Load(object sender, EventArgs e)
         {
-            clsPaises.listarPaises(cboPais);
+            if(modoG == "Provincia")
+            {
+                clsPaises.listarPaises(cboPais);
+            }
+            else if(modoG == "Titulo")
+            {
+                clsUniversidades.listarUniversidades(cboPais);
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsProvincias.agregarProvincia(Convert.ToInt32(cboPais.SelectedValue),txtProvincia.Text.ToUpper(),dgvListar);
+            if(txtProvincia.Text != null && cboPais.SelectedIndex != -1)
+            {
+                if(modoG == "Provincia")
+                {
+                    clsProvincias.agregarProvincia(Convert.ToInt32(cboPais.SelectedValue), txtProvincia.Text.ToUpper(), dgvListar);
+                }
+                else if (modoG == "Titulo")
+                {
+                    clsTitulo.agregarTitulo(txtProvincia.Text.ToUpper(), Convert.ToInt32(cboPais.SelectedValue), dgvListar);
+                }
+            }
         }
 
         private void pcbCerrar_Click_1(object sender, EventArgs e)
