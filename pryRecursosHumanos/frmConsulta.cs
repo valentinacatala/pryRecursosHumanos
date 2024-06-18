@@ -36,7 +36,7 @@ namespace pryRecursosHumanos
 
         private void pcbCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -54,21 +54,44 @@ namespace pryRecursosHumanos
         private void frmConsulta_Load_1(object sender, EventArgs e)
         {
             clsEmpleado.listarEmpleados(dgvListar);
+            clsEstado.listarEstados(cboEstados);
         }
 
         private void btnListarApellido_Click(object sender, EventArgs e)
         {
-            clsEmpleado.listarEmpleadosApellido(dgvListar);
-        }
-
-        private void btnListarPais_Click(object sender, EventArgs e)
-        {
-            clsEmpleado.listarEmpleadosPais(dgvListar);
+            dgvListar.DataSource = null;
+            dgvListarEstado.DataSource = null;
+            if (txtListarApellido.Text != string.Empty) clsEmpleado.listarEmpleadosApellido(dgvListarApellido, txtListarApellido.Text);
         }
 
         private void btnListarEstado_Click(object sender, EventArgs e)
         {
-            clsEmpleado.listarEmpleadosEstado(dgvListar);
+            dgvListar.DataSource = null;
+            dgvListarApellido.DataSource = null;
+            if(cboEstados.SelectedIndex != -1)
+            {
+                int idEstado = Convert.ToInt32(cboEstados.SelectedValue.ToString());  
+                if(idEstado != -1) clsEmpleado.listarEmpleadosEstado(dgvListarEstado, idEstado);
+            }
+        }
+
+        private void btnListarTodo_Click(object sender, EventArgs e)
+        {
+            dgvListarEstado.DataSource = null;
+            dgvListarApellido.DataSource = null;
+            clsEmpleado.listarEmpleados(dgvListar);
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            txtListarApellido.Text = "";
+            dgvListarApellido.DataSource = null;
+        }
+
+        private void btnBorrarEstado_Click(object sender, EventArgs e)
+        {
+            cboEstados.SelectedIndex = -1;
+            dgvListarEstado.DataSource = null;
         }
     }
 }

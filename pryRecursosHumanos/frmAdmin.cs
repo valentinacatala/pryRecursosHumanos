@@ -59,7 +59,7 @@ namespace pryRecursosHumanos
             clsMedicamentos.listarMedicamentos(cboMedicamentos);
             clsAlergias.listarAlergias(cboAlergias);
             clsDiscapacidades.listarDiscapacidades(cboDiscapacidades);
-            clsEmpleado.listarEmpleados(dgvListar);
+            clsEstado.listarEstados(cboListarEstados);
         }
 
         private void cboEmpleadoPais_SelectedIndexChanged(object sender, EventArgs e)
@@ -619,17 +619,20 @@ namespace pryRecursosHumanos
 
         private void btnListarApellido_Click(object sender, EventArgs e)
         {
-            clsEmpleado.listarEmpleadosApellido(dgvListar);
-        }
-
-        private void btnListarPais_Click(object sender, EventArgs e)
-        {
-            clsEmpleado.listarEmpleadosPais(dgvListar);
+            dgvListar.DataSource = null;
+            dgvListarEstado.DataSource = null;
+            if (txtListarApellido.Text != string.Empty) clsEmpleado.listarEmpleadosApellido(dgvListarApellido, txtListarApellido.Text);
         }
 
         private void btnListarEstado_Click(object sender, EventArgs e)
         {
-            clsEmpleado.listarEmpleadosEstado(dgvListar);
+            dgvListar.DataSource = null;
+            dgvListarApellido.DataSource = null;
+            if (cboListarEstados.SelectedIndex != -1)
+            {
+                int idEstado = Convert.ToInt32(cboListarEstados.SelectedValue.ToString());
+                if (idEstado != -1) clsEmpleado.listarEmpleadosEstado(dgvListarEstado, idEstado);
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -640,6 +643,25 @@ namespace pryRecursosHumanos
         private void btnModificar_Click(object sender, EventArgs e)
         {
             clsEmpleado.modificarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre.Text, txtApellidoMod.Text, Convert.ToInt32(txtDniMod.Text), dtpModificarFecha.Value, txtModificarDomicilio.Text, txtModificarCorreo.Text, Convert.ToInt32(txtModificarTelefono.Text), txtModificarInstagram.Text, Convert.ToInt32(cboAreaMod.SelectedValue));
+        }
+
+        private void btnListarTodo_Click(object sender, EventArgs e)
+        {
+            dgvListarEstado.DataSource = null;
+            dgvListarApellido.DataSource = null;
+            clsEmpleado.listarEmpleados(dgvListar);
+        }
+
+        private void btnListarEstadoBorrar_Click(object sender, EventArgs e)
+        {
+            cboListarEstados.SelectedIndex = -1;
+            dgvListarEstado.DataSource = null;
+        }
+
+        private void btnListarApellidoBorrar_Click(object sender, EventArgs e)
+        {
+            txtListarApellido.Text = "";
+            dgvListarApellido.DataSource = null;
         }
     }
 }

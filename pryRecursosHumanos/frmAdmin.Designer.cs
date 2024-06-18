@@ -35,25 +35,16 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.dgvListar = new System.Windows.Forms.DataGridView();
+            this.btnListarTodo = new System.Windows.Forms.Button();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.label90 = new System.Windows.Forms.Label();
-            this.cboListarApellido = new System.Windows.Forms.ComboBox();
-            this.btnBorrarApellido = new System.Windows.Forms.Button();
+            this.btnListarApellidoBorrar = new System.Windows.Forms.Button();
             this.btnListarApellido = new System.Windows.Forms.Button();
-            this.dgvListarApellido = new System.Windows.Forms.DataGridView();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.label91 = new System.Windows.Forms.Label();
-            this.cboListarPais = new System.Windows.Forms.ComboBox();
-            this.btnBorrarPais = new System.Windows.Forms.Button();
-            this.btnListarPais = new System.Windows.Forms.Button();
-            this.dgvListarPais = new System.Windows.Forms.DataGridView();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.label92 = new System.Windows.Forms.Label();
-            this.cboListarEstado = new System.Windows.Forms.ComboBox();
-            this.btnListarBorrar = new System.Windows.Forms.Button();
+            this.cboListarEstados = new System.Windows.Forms.ComboBox();
+            this.btnListarEstadoBorrar = new System.Windows.Forms.Button();
             this.btnListarEstado = new System.Windows.Forms.Button();
-            this.dgvListarEstado = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,6 +68,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.label88 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -86,6 +78,8 @@
             this.txtModificarTelefono = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cboAreaMod = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtModificarDomicilio = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -256,22 +250,18 @@
             this.btnEliminarSancion = new System.Windows.Forms.Button();
             this.btnModificarSancion = new System.Windows.Forms.Button();
             this.btnAgregarSancion = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.cboAreaMod = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtListarApellido = new System.Windows.Forms.TextBox();
+            this.dgvListarApellido = new System.Windows.Forms.DataGridView();
+            this.dgvListarEstado = new System.Windows.Forms.DataGridView();
+            this.dgvListar = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.tabPage14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).BeginInit();
-            this.tabPage15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarPais)).BeginInit();
             this.tabPage16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarFoto)).BeginInit();
@@ -330,6 +320,9 @@
             this.panel12.SuspendLayout();
             this.tabPage24.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -386,7 +379,6 @@
             this.tabControl4.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl4.Controls.Add(this.tabPage13);
             this.tabControl4.Controls.Add(this.tabPage14);
-            this.tabControl4.Controls.Add(this.tabPage15);
             this.tabControl4.Controls.Add(this.tabPage16);
             this.tabControl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.tabControl4.Location = new System.Drawing.Point(-8, 6);
@@ -398,6 +390,7 @@
             // tabPage13
             // 
             this.tabPage13.Controls.Add(this.dgvListar);
+            this.tabPage13.Controls.Add(this.btnListarTodo);
             this.tabPage13.Location = new System.Drawing.Point(4, 28);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
@@ -406,29 +399,27 @@
             this.tabPage13.Text = "Todos los empleados";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
-            // dgvListar
+            // btnListarTodo
             // 
-            this.dgvListar.AllowUserToAddRows = false;
-            this.dgvListar.AllowUserToDeleteRows = false;
-            this.dgvListar.BackgroundColor = System.Drawing.Color.MistyRose;
-            this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListar.Location = new System.Drawing.Point(6, 5);
-            this.dgvListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListar.Name = "dgvListar";
-            this.dgvListar.ReadOnly = true;
-            this.dgvListar.RowHeadersWidth = 51;
-            this.dgvListar.RowTemplate.Height = 24;
-            this.dgvListar.Size = new System.Drawing.Size(526, 518);
-            this.dgvListar.TabIndex = 15;
+            this.btnListarTodo.BackColor = System.Drawing.Color.MistyRose;
+            this.btnListarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarTodo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarTodo.Location = new System.Drawing.Point(462, 10);
+            this.btnListarTodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarTodo.Name = "btnListarTodo";
+            this.btnListarTodo.Size = new System.Drawing.Size(67, 25);
+            this.btnListarTodo.TabIndex = 19;
+            this.btnListarTodo.Text = "Listar";
+            this.btnListarTodo.UseVisualStyleBackColor = false;
+            this.btnListarTodo.Click += new System.EventHandler(this.btnListarTodo_Click);
             // 
             // tabPage14
             // 
-            this.tabPage14.Controls.Add(this.label90);
-            this.tabPage14.Controls.Add(this.cboListarApellido);
-            this.tabPage14.Controls.Add(this.btnBorrarApellido);
-            this.tabPage14.Controls.Add(this.btnListarApellido);
             this.tabPage14.Controls.Add(this.dgvListarApellido);
+            this.tabPage14.Controls.Add(this.txtListarApellido);
+            this.tabPage14.Controls.Add(this.label90);
+            this.tabPage14.Controls.Add(this.btnListarApellidoBorrar);
+            this.tabPage14.Controls.Add(this.btnListarApellido);
             this.tabPage14.Location = new System.Drawing.Point(4, 28);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
@@ -447,33 +438,19 @@
             this.label90.TabIndex = 16;
             this.label90.Text = "Seleccionar";
             // 
-            // cboListarApellido
+            // btnListarApellidoBorrar
             // 
-            this.cboListarApellido.BackColor = System.Drawing.Color.MistyRose;
-            this.cboListarApellido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboListarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboListarApellido.FormattingEnabled = true;
-            this.cboListarApellido.Items.AddRange(new object[] {
-            "Poner Que filtar",
-            "Prueba",
-            "Hola xd"});
-            this.cboListarApellido.Location = new System.Drawing.Point(119, 20);
-            this.cboListarApellido.Name = "cboListarApellido";
-            this.cboListarApellido.Size = new System.Drawing.Size(245, 24);
-            this.cboListarApellido.TabIndex = 12;
-            // 
-            // btnBorrarApellido
-            // 
-            this.btnBorrarApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnBorrarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBorrarApellido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarApellido.Location = new System.Drawing.Point(456, 20);
-            this.btnBorrarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBorrarApellido.Name = "btnBorrarApellido";
-            this.btnBorrarApellido.Size = new System.Drawing.Size(67, 25);
-            this.btnBorrarApellido.TabIndex = 14;
-            this.btnBorrarApellido.Text = "Borrar";
-            this.btnBorrarApellido.UseVisualStyleBackColor = false;
+            this.btnListarApellidoBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnListarApellidoBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarApellidoBorrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarApellidoBorrar.Location = new System.Drawing.Point(456, 20);
+            this.btnListarApellidoBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarApellidoBorrar.Name = "btnListarApellidoBorrar";
+            this.btnListarApellidoBorrar.Size = new System.Drawing.Size(67, 25);
+            this.btnListarApellidoBorrar.TabIndex = 14;
+            this.btnListarApellidoBorrar.Text = "Borrar";
+            this.btnListarApellidoBorrar.UseVisualStyleBackColor = false;
+            this.btnListarApellidoBorrar.Click += new System.EventHandler(this.btnListarApellidoBorrar_Click);
             // 
             // btnListarApellido
             // 
@@ -489,112 +466,13 @@
             this.btnListarApellido.UseVisualStyleBackColor = false;
             this.btnListarApellido.Click += new System.EventHandler(this.btnListarApellido_Click);
             // 
-            // dgvListarApellido
-            // 
-            this.dgvListarApellido.AllowUserToAddRows = false;
-            this.dgvListarApellido.AllowUserToDeleteRows = false;
-            this.dgvListarApellido.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dgvListarApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvListarApellido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarApellido.Location = new System.Drawing.Point(15, 54);
-            this.dgvListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListarApellido.Name = "dgvListarApellido";
-            this.dgvListarApellido.ReadOnly = true;
-            this.dgvListarApellido.RowHeadersWidth = 51;
-            this.dgvListarApellido.RowTemplate.Height = 24;
-            this.dgvListarApellido.Size = new System.Drawing.Size(508, 458);
-            this.dgvListarApellido.TabIndex = 15;
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.label91);
-            this.tabPage15.Controls.Add(this.cboListarPais);
-            this.tabPage15.Controls.Add(this.btnBorrarPais);
-            this.tabPage15.Controls.Add(this.btnListarPais);
-            this.tabPage15.Controls.Add(this.dgvListarPais);
-            this.tabPage15.Location = new System.Drawing.Point(4, 28);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(539, 525);
-            this.tabPage15.TabIndex = 2;
-            this.tabPage15.Text = "Listar por Pais";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(17, 19);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(96, 17);
-            this.label91.TabIndex = 21;
-            this.label91.Text = "Seleccionar";
-            // 
-            // cboListarPais
-            // 
-            this.cboListarPais.BackColor = System.Drawing.Color.MistyRose;
-            this.cboListarPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboListarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboListarPais.FormattingEnabled = true;
-            this.cboListarPais.Items.AddRange(new object[] {
-            "Poner Que filtar",
-            "Prueba",
-            "Hola xd"});
-            this.cboListarPais.Location = new System.Drawing.Point(119, 16);
-            this.cboListarPais.Name = "cboListarPais";
-            this.cboListarPais.Size = new System.Drawing.Size(245, 24);
-            this.cboListarPais.TabIndex = 17;
-            // 
-            // btnBorrarPais
-            // 
-            this.btnBorrarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnBorrarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBorrarPais.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarPais.Location = new System.Drawing.Point(456, 16);
-            this.btnBorrarPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBorrarPais.Name = "btnBorrarPais";
-            this.btnBorrarPais.Size = new System.Drawing.Size(67, 25);
-            this.btnBorrarPais.TabIndex = 19;
-            this.btnBorrarPais.Text = "Borrar";
-            this.btnBorrarPais.UseVisualStyleBackColor = false;
-            // 
-            // btnListarPais
-            // 
-            this.btnListarPais.BackColor = System.Drawing.Color.MistyRose;
-            this.btnListarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListarPais.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarPais.Location = new System.Drawing.Point(383, 16);
-            this.btnListarPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnListarPais.Name = "btnListarPais";
-            this.btnListarPais.Size = new System.Drawing.Size(67, 25);
-            this.btnListarPais.TabIndex = 18;
-            this.btnListarPais.Text = "Listar";
-            this.btnListarPais.UseVisualStyleBackColor = false;
-            this.btnListarPais.Click += new System.EventHandler(this.btnListarPais_Click);
-            // 
-            // dgvListarPais
-            // 
-            this.dgvListarPais.AllowUserToAddRows = false;
-            this.dgvListarPais.AllowUserToDeleteRows = false;
-            this.dgvListarPais.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dgvListarPais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvListarPais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarPais.Location = new System.Drawing.Point(15, 50);
-            this.dgvListarPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListarPais.Name = "dgvListarPais";
-            this.dgvListarPais.ReadOnly = true;
-            this.dgvListarPais.RowHeadersWidth = 51;
-            this.dgvListarPais.RowTemplate.Height = 24;
-            this.dgvListarPais.Size = new System.Drawing.Size(508, 458);
-            this.dgvListarPais.TabIndex = 20;
-            // 
             // tabPage16
             // 
-            this.tabPage16.Controls.Add(this.label92);
-            this.tabPage16.Controls.Add(this.cboListarEstado);
-            this.tabPage16.Controls.Add(this.btnListarBorrar);
-            this.tabPage16.Controls.Add(this.btnListarEstado);
             this.tabPage16.Controls.Add(this.dgvListarEstado);
+            this.tabPage16.Controls.Add(this.label92);
+            this.tabPage16.Controls.Add(this.cboListarEstados);
+            this.tabPage16.Controls.Add(this.btnListarEstadoBorrar);
+            this.tabPage16.Controls.Add(this.btnListarEstado);
             this.tabPage16.Location = new System.Drawing.Point(4, 28);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
@@ -613,33 +491,34 @@
             this.label92.TabIndex = 21;
             this.label92.Text = "Seleccionar";
             // 
-            // cboListarEstado
+            // cboListarEstados
             // 
-            this.cboListarEstado.BackColor = System.Drawing.Color.MistyRose;
-            this.cboListarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboListarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboListarEstado.FormattingEnabled = true;
-            this.cboListarEstado.Items.AddRange(new object[] {
+            this.cboListarEstados.BackColor = System.Drawing.Color.MistyRose;
+            this.cboListarEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboListarEstados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboListarEstados.FormattingEnabled = true;
+            this.cboListarEstados.Items.AddRange(new object[] {
             "Poner Que filtar",
             "Prueba",
             "Hola xd"});
-            this.cboListarEstado.Location = new System.Drawing.Point(119, 16);
-            this.cboListarEstado.Name = "cboListarEstado";
-            this.cboListarEstado.Size = new System.Drawing.Size(245, 24);
-            this.cboListarEstado.TabIndex = 17;
+            this.cboListarEstados.Location = new System.Drawing.Point(119, 16);
+            this.cboListarEstados.Name = "cboListarEstados";
+            this.cboListarEstados.Size = new System.Drawing.Size(245, 24);
+            this.cboListarEstados.TabIndex = 17;
             // 
-            // btnListarBorrar
+            // btnListarEstadoBorrar
             // 
-            this.btnListarBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnListarBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListarBorrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarBorrar.Location = new System.Drawing.Point(456, 16);
-            this.btnListarBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnListarBorrar.Name = "btnListarBorrar";
-            this.btnListarBorrar.Size = new System.Drawing.Size(67, 25);
-            this.btnListarBorrar.TabIndex = 19;
-            this.btnListarBorrar.Text = "Borrar";
-            this.btnListarBorrar.UseVisualStyleBackColor = false;
+            this.btnListarEstadoBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnListarEstadoBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListarEstadoBorrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarEstadoBorrar.Location = new System.Drawing.Point(456, 16);
+            this.btnListarEstadoBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListarEstadoBorrar.Name = "btnListarEstadoBorrar";
+            this.btnListarEstadoBorrar.Size = new System.Drawing.Size(67, 25);
+            this.btnListarEstadoBorrar.TabIndex = 19;
+            this.btnListarEstadoBorrar.Text = "Borrar";
+            this.btnListarEstadoBorrar.UseVisualStyleBackColor = false;
+            this.btnListarEstadoBorrar.Click += new System.EventHandler(this.btnListarEstadoBorrar_Click);
             // 
             // btnListarEstado
             // 
@@ -654,22 +533,6 @@
             this.btnListarEstado.Text = "Listar";
             this.btnListarEstado.UseVisualStyleBackColor = false;
             this.btnListarEstado.Click += new System.EventHandler(this.btnListarEstado_Click);
-            // 
-            // dgvListarEstado
-            // 
-            this.dgvListarEstado.AllowUserToAddRows = false;
-            this.dgvListarEstado.AllowUserToDeleteRows = false;
-            this.dgvListarEstado.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dgvListarEstado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvListarEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarEstado.Location = new System.Drawing.Point(15, 50);
-            this.dgvListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvListarEstado.Name = "dgvListarEstado";
-            this.dgvListarEstado.ReadOnly = true;
-            this.dgvListarEstado.RowHeadersWidth = 51;
-            this.dgvListarEstado.RowTemplate.Height = 24;
-            this.dgvListarEstado.Size = new System.Drawing.Size(508, 458);
-            this.dgvListarEstado.TabIndex = 20;
             // 
             // tabPage3
             // 
@@ -945,6 +808,20 @@
             this.tabPage9.Text = "Datos Personales";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(258, 78);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(71, 26);
+            this.btnBuscar.TabIndex = 65;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // label88
             // 
             this.label88.AutoSize = true;
@@ -1055,6 +932,27 @@
             this.groupBox12.TabIndex = 62;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Datos del Empleado";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label10.Location = new System.Drawing.Point(10, 274);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 16);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Area";
+            // 
+            // cboAreaMod
+            // 
+            this.cboAreaMod.BackColor = System.Drawing.Color.SeaShell;
+            this.cboAreaMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAreaMod.FormattingEnabled = true;
+            this.cboAreaMod.Location = new System.Drawing.Point(10, 293);
+            this.cboAreaMod.Name = "cboAreaMod";
+            this.cboAreaMod.Size = new System.Drawing.Size(190, 23);
+            this.cboAreaMod.TabIndex = 30;
             // 
             // label9
             // 
@@ -1730,9 +1628,9 @@
             this.groupBox2.Controls.Add(this.rbSi);
             this.groupBox2.Controls.Add(this.label32);
             this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(272, 237);
+            this.groupBox2.Location = new System.Drawing.Point(39, 272);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(214, 205);
+            this.groupBox2.Size = new System.Drawing.Size(450, 179);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Titulo";
@@ -1743,9 +1641,9 @@
             this.cboTitulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTitulo.Enabled = false;
             this.cboTitulo.FormattingEnabled = true;
-            this.cboTitulo.Location = new System.Drawing.Point(14, 171);
+            this.cboTitulo.Location = new System.Drawing.Point(79, 144);
             this.cboTitulo.Name = "cboTitulo";
-            this.cboTitulo.Size = new System.Drawing.Size(191, 23);
+            this.cboTitulo.Size = new System.Drawing.Size(296, 23);
             this.cboTitulo.TabIndex = 29;
             this.cboTitulo.SelectedIndexChanged += new System.EventHandler(this.cboTitulo_SelectedIndexChanged);
             // 
@@ -1755,9 +1653,9 @@
             this.cboUniversidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUniversidad.Enabled = false;
             this.cboUniversidad.FormattingEnabled = true;
-            this.cboUniversidad.Location = new System.Drawing.Point(14, 119);
+            this.cboUniversidad.Location = new System.Drawing.Point(79, 92);
             this.cboUniversidad.Name = "cboUniversidad";
-            this.cboUniversidad.Size = new System.Drawing.Size(191, 23);
+            this.cboUniversidad.Size = new System.Drawing.Size(296, 23);
             this.cboUniversidad.TabIndex = 1;
             this.cboUniversidad.SelectedIndexChanged += new System.EventHandler(this.cboUniversidad_SelectedIndexChanged);
             // 
@@ -1765,7 +1663,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label8.Location = new System.Drawing.Point(11, 100);
+            this.label8.Location = new System.Drawing.Point(76, 73);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 16);
@@ -1777,7 +1675,7 @@
             this.rbNo.AutoSize = true;
             this.rbNo.Checked = true;
             this.rbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rbNo.Location = new System.Drawing.Point(112, 61);
+            this.rbNo.Location = new System.Drawing.Point(179, 48);
             this.rbNo.Name = "rbNo";
             this.rbNo.Size = new System.Drawing.Size(43, 20);
             this.rbNo.TabIndex = 1;
@@ -1790,7 +1688,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label31.Location = new System.Drawing.Point(11, 152);
+            this.label31.Location = new System.Drawing.Point(76, 125);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(56, 16);
@@ -1801,7 +1699,7 @@
             // 
             this.rbSi.AutoSize = true;
             this.rbSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rbSi.Location = new System.Drawing.Point(39, 61);
+            this.rbSi.Location = new System.Drawing.Point(106, 48);
             this.rbSi.Name = "rbSi";
             this.rbSi.Size = new System.Drawing.Size(37, 20);
             this.rbSi.TabIndex = 0;
@@ -1813,7 +1711,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label32.Location = new System.Drawing.Point(11, 32);
+            this.label32.Location = new System.Drawing.Point(78, 19);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(178, 16);
@@ -3003,40 +2901,64 @@
             this.btnAgregarSancion.UseVisualStyleBackColor = true;
             this.btnAgregarSancion.Click += new System.EventHandler(this.btnAgregarSancion_Click);
             // 
-            // btnBuscar
+            // txtListarApellido
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(258, 78);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(71, 26);
-            this.btnBuscar.TabIndex = 65;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtListarApellido.BackColor = System.Drawing.Color.MistyRose;
+            this.txtListarApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtListarApellido.Location = new System.Drawing.Point(120, 21);
+            this.txtListarApellido.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtListarApellido.Multiline = true;
+            this.txtListarApellido.Name = "txtListarApellido";
+            this.txtListarApellido.Size = new System.Drawing.Size(256, 22);
+            this.txtListarApellido.TabIndex = 72;
             // 
-            // cboAreaMod
+            // dgvListarApellido
             // 
-            this.cboAreaMod.BackColor = System.Drawing.Color.SeaShell;
-            this.cboAreaMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAreaMod.FormattingEnabled = true;
-            this.cboAreaMod.Location = new System.Drawing.Point(10, 293);
-            this.cboAreaMod.Name = "cboAreaMod";
-            this.cboAreaMod.Size = new System.Drawing.Size(190, 23);
-            this.cboAreaMod.TabIndex = 30;
+            this.dgvListarApellido.AllowUserToAddRows = false;
+            this.dgvListarApellido.AllowUserToDeleteRows = false;
+            this.dgvListarApellido.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListarApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListarApellido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarApellido.Location = new System.Drawing.Point(12, 49);
+            this.dgvListarApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListarApellido.Name = "dgvListarApellido";
+            this.dgvListarApellido.ReadOnly = true;
+            this.dgvListarApellido.RowHeadersWidth = 51;
+            this.dgvListarApellido.RowTemplate.Height = 24;
+            this.dgvListarApellido.Size = new System.Drawing.Size(513, 467);
+            this.dgvListarApellido.TabIndex = 73;
             // 
-            // label10
+            // dgvListarEstado
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label10.Location = new System.Drawing.Point(10, 274);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 16);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Area";
+            this.dgvListarEstado.AllowUserToAddRows = false;
+            this.dgvListarEstado.AllowUserToDeleteRows = false;
+            this.dgvListarEstado.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListarEstado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListarEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarEstado.Location = new System.Drawing.Point(9, 56);
+            this.dgvListarEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListarEstado.Name = "dgvListarEstado";
+            this.dgvListarEstado.ReadOnly = true;
+            this.dgvListarEstado.RowHeadersWidth = 51;
+            this.dgvListarEstado.RowTemplate.Height = 24;
+            this.dgvListarEstado.Size = new System.Drawing.Size(516, 456);
+            this.dgvListarEstado.TabIndex = 26;
+            // 
+            // dgvListar
+            // 
+            this.dgvListar.AllowUserToAddRows = false;
+            this.dgvListar.AllowUserToDeleteRows = false;
+            this.dgvListar.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListar.Location = new System.Drawing.Point(4, 39);
+            this.dgvListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListar.Name = "dgvListar";
+            this.dgvListar.ReadOnly = true;
+            this.dgvListar.RowHeadersWidth = 51;
+            this.dgvListar.RowTemplate.Height = 24;
+            this.dgvListar.Size = new System.Drawing.Size(525, 473);
+            this.dgvListar.TabIndex = 20;
             // 
             // frmAdmin
             // 
@@ -3060,16 +2982,10 @@
             this.tabPage4.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).EndInit();
-            this.tabPage15.ResumeLayout(false);
-            this.tabPage15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarPais)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
@@ -3143,6 +3059,9 @@
             this.panel12.ResumeLayout(false);
             this.tabPage24.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarApellido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarEstado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3197,46 +3116,33 @@
         private System.Windows.Forms.TextBox txtEliminarCuit;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.TabPage tabPage14;
-        private System.Windows.Forms.ComboBox cboListarApellido;
-        private System.Windows.Forms.Button btnBorrarApellido;
+        private System.Windows.Forms.Button btnListarApellidoBorrar;
         private System.Windows.Forms.Button btnListarApellido;
-        private System.Windows.Forms.DataGridView dgvListarApellido;
-        private System.Windows.Forms.TabPage tabPage15;
         private System.Windows.Forms.TabPage tabPage16;
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCancelarEliminar;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.Label label91;
-        private System.Windows.Forms.ComboBox cboListarPais;
-        private System.Windows.Forms.Button btnBorrarPais;
-        private System.Windows.Forms.Button btnListarPais;
-        private System.Windows.Forms.DataGridView dgvListarPais;
         private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.ComboBox cboListarEstado;
-        private System.Windows.Forms.Button btnListarBorrar;
+        private System.Windows.Forms.ComboBox cboListarEstados;
+        private System.Windows.Forms.Button btnListarEstadoBorrar;
         private System.Windows.Forms.Button btnListarEstado;
-        private System.Windows.Forms.DataGridView dgvListarEstado;
         private System.Windows.Forms.PictureBox pcbMinimizar;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEliminarPais;
-        private System.Windows.Forms.Button btnModificarPais;
         private System.Windows.Forms.Button btnAgregarPais;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnEliminarProvincia;
-        private System.Windows.Forms.Button btnModificarProvincia;
         private System.Windows.Forms.Button btnAgregarProvincias;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEliminarCiudad;
-        private System.Windows.Forms.Button btnModificarCiudad;
         private System.Windows.Forms.Button btnAgregarCiudad;
         private System.Windows.Forms.TabPage tabPage17;
         private System.Windows.Forms.Panel panel5;
@@ -3246,27 +3152,22 @@
         private System.Windows.Forms.TabPage tabPage18;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnEliminarDiscapacidad;
-        private System.Windows.Forms.Button btnModificarDiscapacidad;
         private System.Windows.Forms.Button btnAgregarDiscapacidad;
         private System.Windows.Forms.TabPage tabPage19;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnEliminarAlergia;
-        private System.Windows.Forms.Button btnModificarAlergia;
         private System.Windows.Forms.Button btnAgregarAlergia;
         private System.Windows.Forms.TabPage tabPage20;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnEliminarMedicamentos;
-        private System.Windows.Forms.Button btnModificarMedicamentos;
         private System.Windows.Forms.Button btnAgregarMedicamentos;
         private System.Windows.Forms.TabPage tabPage21;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnEliminarEnfermedades;
-        private System.Windows.Forms.Button btnModificarEnfermedades;
         private System.Windows.Forms.Button btnAgregarEnfermedades;
         private System.Windows.Forms.TabPage tabPage22;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnEliminarEstado;
-        private System.Windows.Forms.Button btnModificarEstado;
         private System.Windows.Forms.Button btnAgregarEstado;
         private System.Windows.Forms.TabControl tabAgregarEmpleados;
         private System.Windows.Forms.TabPage tabPaso1;
@@ -3386,5 +3287,10 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboAreaMod;
+        private System.Windows.Forms.Button btnListarTodo;
+        private System.Windows.Forms.TextBox txtListarApellido;
+        private System.Windows.Forms.DataGridView dgvListarApellido;
+        private System.Windows.Forms.DataGridView dgvListarEstado;
+        private System.Windows.Forms.DataGridView dgvListar;
     }
 }

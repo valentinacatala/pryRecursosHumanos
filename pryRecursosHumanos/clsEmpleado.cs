@@ -215,6 +215,13 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.eliminarLicencia(cuit, idLicencia);
         }
+
+		public static void actualizarEstadoEmpleado(int cuit, int id)
+		{
+
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.actualizarEstadoEmpleado(cuit, id);
+        }
         #endregion
 
         #region buscarEliminarEmpleado
@@ -269,74 +276,57 @@ namespace pryRecursosHumanos
                 ciudades.nombre as Ciudad,
                 estados.nombre as Estado,
                 titulos.nombre as Titulo,
-                tipodecontactos.nombre as Contacto,
                 empleados.Instagram 
                 from empleados, areas, ciudades, estados, titulos, tipodecontactos
 				WHERE empleados.IdArea = areas.IdAreas AND empleados.IdCiudad = ciudades.IdCiudad AND empleados.IdEstado = estados.IdEstado
-				AND empleados.IdTitulo = titulos.IdTitulo AND empleados.IdTipoDeContacto = tipodecontactos.IdTipoDeContacto";
+				AND empleados.IdTitulo = titulos.IdTitulo
+				ORDER BY empleados.Cuit";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
-        public static void listarEmpleadosEstado(DataGridView dgvGrilla)
+        public static void listarEmpleadosEstado(DataGridView dgvGrilla, int idEstado)
         {
             string comando;
-            comando = "select empleados.Cuit," +
-                "empleados.Nombre," +
-                "empleados.Apellido," +
-                "areas.nombre as Areas," +
-                "empleados.Domicilio," +
-                "empleados.Telefono," +
-                "empleados.DNI," +
-                "empleados.CorreoElectronico," +
-                "empleados.FechaDeNacimineto," +
-                "Paises.nombre as Pais," +
-                "estados.nombre as Estado," +
-                "titulos.nombre as Titulo," +
-                "tipodecontactos.nombre as Contacto," +
-                "empleados.Instagram " +
-                "from empleados, areas, paises, estados, titulos, tipodecontactos order by estados.nombre";
+            comando = $@"select empleados.Cuit,
+                empleados.Nombre,
+                empleados.Apellido,
+                areas.nombre as Areas,
+                empleados.Domicilio,
+                empleados.Telefono,
+                empleados.DNI,
+                empleados.CorreoElectronico,
+                empleados.FechaDeNacimineto,
+                ciudades.nombre as Ciudad,
+                estados.nombre as Estado,
+                titulos.nombre as Titulo,
+                empleados.Instagram 
+                from empleados, areas, ciudades, estados, titulos, tipodecontactos
+				WHERE empleados.IdArea = areas.IdAreas AND empleados.IdCiudad = ciudades.IdCiudad AND empleados.IdEstado = estados.IdEstado
+				AND empleados.IdTitulo = titulos.IdTitulo AND empleados.IdEstado = {idEstado}
+				ORDER BY empleados.Cuit";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }
-        public static void listarEmpleadosApellido(DataGridView dgvGrilla)
+        public static void listarEmpleadosApellido(DataGridView dgvGrilla, string apellido)
         {
             string comando;
-            comando = "select empleados.Cuit," +
-                "empleados.Nombre," +
-                "empleados.Apellido," +
-                "areas.nombre as Areas," +
-                "empleados.Domicilio," +
-                "empleados.Telefono," +
-                "empleados.DNI," +
-                "empleados.CorreoElectronico," +
-                "empleados.FechaDeNacimineto," +
-                "Paises.nombre as Pais," +
-                "estados.nombre as Estado," +
-                "titulos.nombre as Titulo," +
-                "tipodecontactos.nombre as Contacto," +
-                "empleados.Instagram " +
-                "from empleados, areas, paises, estados, titulos, tipodecontactos order by empleados.apellido";
-            clsConexionBaseDatos BD = new clsConexionBaseDatos();
-            BD.listarEmpleados(dgvGrilla, comando);
-        }
-        public static void listarEmpleadosPais(DataGridView dgvGrilla)
-        {
-            string comando;
-            comando = "select empleados.Cuit," +
-                "empleados.Nombre," +
-                "empleados.Apellido," +
-                "areas.nombre as Areas," +
-                "empleados.Domicilio," +
-                "empleados.Telefono," +
-                "empleados.DNI," +
-                "empleados.CorreoElectronico," +
-                "empleados.FechaDeNacimineto," +
-                "Paises.nombre as Pais," +
-                "estados.nombre as Estado," +
-                "titulos.nombre as Titulo," +
-                "tipodecontactos.nombre as Contacto," +
-                "empleados.Instagram " +
-                "from empleados, areas, paises, estados, titulos, tipodecontactos order by paises.nombre";
+            comando = $@"select empleados.Cuit,
+                empleados.Nombre,
+                empleados.Apellido,
+                areas.nombre as Areas,
+                empleados.Domicilio,
+                empleados.Telefono,
+                empleados.DNI,
+                empleados.CorreoElectronico,
+                empleados.FechaDeNacimineto,
+                ciudades.nombre as Ciudad,
+                estados.nombre as Estado,
+                titulos.nombre as Titulo,
+                empleados.Instagram 
+                from empleados, areas, ciudades, estados, titulos, tipodecontactos
+				WHERE empleados.IdArea = areas.IdAreas AND empleados.IdCiudad = ciudades.IdCiudad AND empleados.IdEstado = estados.IdEstado
+				AND empleados.IdTitulo = titulos.IdTitulo AND empleados.Apellido like '%{apellido}%'
+				ORDER BY empleados.Cuit";
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarEmpleados(dgvGrilla, comando);
         }

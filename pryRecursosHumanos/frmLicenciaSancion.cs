@@ -56,8 +56,10 @@ namespace pryRecursosHumanos
                         Nombre = selectedRow["Nombre"].ToString(),
                         Tiempo = (int)selectedRow["Tiempo"]
                     };
-                    clsEmpleado.agregarSancion(sancion, empleado, txtObservaciones.Text, dtpFechaInicio.Value);
+                    string fechaInicio = dtpFechaInicio.Value.ToString("dd/MM/yyyy");
+                    clsEmpleado.agregarSancion(sancion, empleado, txtObservaciones.Text, Convert.ToDateTime(fechaInicio));
                     clsSanciones.listarSancionesPorEmpleado(dgvListar, empleado.Cuit);
+                    clsEmpleado.actualizarEstadoEmpleado(empleado.Cuit, 2);
                 }
             }
             else
@@ -75,6 +77,7 @@ namespace pryRecursosHumanos
                     string fechaInicio = dtpFechaInicio.Value.ToString("dd/MM/yyyy");
                     clsEmpleado.agregarLicencia(licencia, empleado, Convert.ToDateTime(fechaInicio), txtObservaciones.Text);
                     clsLicencia.listarLicenciasPorEmpleado(dgvListar, empleado.Cuit);
+                    clsEmpleado.actualizarEstadoEmpleado(empleado.Cuit, 3);
                 }
             }
         }
