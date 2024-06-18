@@ -108,7 +108,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT * FROM Empleados WHERE Nombre = '{empleado.Cuit}'";
+                comando.CommandText = $"SELECT * FROM Empleados WHERE Cuit = {empleado.Cuit}";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tablaEmpleados = new DataTable();
@@ -1745,13 +1745,14 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT E.Nombre, E.Contagiosa FROM Enf_FM as EF, EnfermedadesPatologicas as E WHERE EF.IdFichaMedica = {idFichaMedica} AND E.IdEnfermedadesPatologicas = EF.IdEnfermedad";
+                comando.CommandText = $"SELECT E.IdEnfermedadesPatologicas as IdEnfermedad, E.Nombre, E.Contagiosa FROM Enf_FM as EF, EnfermedadesPatologicas as E WHERE EF.IdFichaMedica = {idFichaMedica} AND E.IdEnfermedadesPatologicas = EF.IdEnfermedad";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
                 dgvEnfermedades.DataSource = tabla;
+                dgvEnfermedades.Columns["IdEnfermedad"].Visible = false;
                
             }
             catch (Exception ex)
@@ -1782,6 +1783,30 @@ namespace pryRecursosHumanos
             {
                 MessageBox.Show(ex.Message);
                 return false;
+            }
+        }
+
+        public void eliminarEnfermedad(int idFichaMedica, int idEnfermedad)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"DELETE FROM Enf_FM WHERE IdFichaMedica = {idFichaMedica} AND IdEnfermedad = {idEnfermedad}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 
@@ -1826,13 +1851,14 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT M.Nombre, MF.Dosis FROM Med_FM as MF, Medicamentos as M WHERE MF.IdFichaMedica = {idFichaMedica} AND M.IdMedicamentos = MF.IdMedicamento";
+                comando.CommandText = $"SELECT M.IdMedicamentos, M.Nombre, MF.Dosis FROM Med_FM as MF, Medicamentos as M WHERE MF.IdFichaMedica = {idFichaMedica} AND M.IdMedicamentos = MF.IdMedicamento";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
                 dgvMedicamentos.DataSource = tabla;
+                dgvMedicamentos.Columns["IdMedicamentos"].Visible = false;
 
             }
             catch (Exception ex)
@@ -1863,6 +1889,30 @@ namespace pryRecursosHumanos
             {
                 MessageBox.Show(ex.Message);
                 return false;
+            }
+        }
+
+        public void eliminarMedicamento(int idFichaMedica, int idMedicamento)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"DELETE FROM Med_FM WHERE IdFichaMedica = {idFichaMedica} AND IdMedicamento = {idMedicamento}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 
@@ -1907,13 +1957,14 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT D.Nombre FROM Disc_FM as DF, Discapacidades as D WHERE DF.IdFichaMedica = {idFichaMedica} AND D.IdDiscapacidades = DF.IdDiscapacidad";
+                comando.CommandText = $"SELECT D.IdDiscapacidades, D.Nombre FROM Disc_FM as DF, Discapacidades as D WHERE DF.IdFichaMedica = {idFichaMedica} AND D.IdDiscapacidades = DF.IdDiscapacidad";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
                 dgvDiscapacidades.DataSource = tabla;
+                dgvDiscapacidades.Columns["IdDiscapacidades"].Visible = false;
 
             }
             catch (Exception ex)
@@ -1944,6 +1995,29 @@ namespace pryRecursosHumanos
             {
                 MessageBox.Show(ex.Message);
                 return false;
+            }
+        }
+        public void eliminarDiscapacidad(int idFichaMedica, int idDiscapacidad)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"DELETE FROM Disc_FM WHERE IdFichaMedica = {idFichaMedica} AND IdDiscapacidad = {idDiscapacidad}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 
@@ -1988,13 +2062,14 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT A.Nombre FROM Ale_FM as AF, Alergias as A WHERE AF.IdFichaMedica = {idFichaMedica} AND A.IdAlergias = AF.IdAlergia";
+                comando.CommandText = $"SELECT A.IdAlergias, A.Nombre FROM Ale_FM as AF, Alergias as A WHERE AF.IdFichaMedica = {idFichaMedica} AND A.IdAlergias = AF.IdAlergia";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
                 dgvAlergias.DataSource = tabla;
+                dgvAlergias.Columns["IdAlergias"].Visible = false;
 
             }
             catch (Exception ex)
@@ -2025,6 +2100,29 @@ namespace pryRecursosHumanos
             {
                 MessageBox.Show(ex.Message);
                 return false;
+            }
+        }
+        public void eliminarAlergia(int idFichaMedica, int idAlergia)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"DELETE FROM Ale_FM WHERE IdFichaMedica = {idFichaMedica} AND IdAlergia = {idAlergia}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
         #endregion

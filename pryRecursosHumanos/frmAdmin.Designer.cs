@@ -162,11 +162,6 @@
             this.tabPaso1 = new System.Windows.Forms.TabPage();
             this.label86 = new System.Windows.Forms.Label();
             this.btnCancelar1 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtNombreContacto = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.txtNumeroContacto = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
             this.btnSiguiente1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -219,30 +214,45 @@
             this.label29 = new System.Windows.Forms.Label();
             this.pbFotoEmpleado = new System.Windows.Forms.PictureBox();
             this.tabPaso3 = new System.Windows.Forms.TabPage();
+            this.lblFichaMedica = new System.Windows.Forms.Label();
+            this.btnBuscarCuit = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtBuscarCuit = new System.Windows.Forms.TextBox();
             this.button22 = new System.Windows.Forms.Button();
             this.btnGuardarFicha = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dgvDiscapacidades = new System.Windows.Forms.DataGridView();
+            this.btnAgregarDiscapacidadFM = new System.Windows.Forms.Button();
+            this.cboDiscapacidades = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.dgvEnfermedades = new System.Windows.Forms.DataGridView();
+            this.btnAgregarEnfermedad = new System.Windows.Forms.Button();
+            this.cboEnfermedades = new System.Windows.Forms.ComboBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtDosis = new System.Windows.Forms.TextBox();
+            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
+            this.btnAgregarMedicamento = new System.Windows.Forms.Button();
+            this.cboMedicamentos = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dgvAlergias = new System.Windows.Forms.DataGridView();
+            this.btnAgregarAlergiaFM = new System.Windows.Forms.Button();
+            this.cboAlergias = new System.Windows.Forms.ComboBox();
             this.tabPaso4 = new System.Windows.Forms.TabPage();
+            this.lblEmpleadoExiste = new System.Windows.Forms.Label();
+            this.btnBuscarSL = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.txtBuscarCuitSL = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.btnGuardarSanciones = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.label49 = new System.Windows.Forms.Label();
             this.btnLicencias = new System.Windows.Forms.Button();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.label50 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label45 = new System.Windows.Forms.Label();
             this.btnSanciones = new System.Windows.Forms.Button();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.label51 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.btnAgregarFalta = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.dtpAusencia = new System.Windows.Forms.DateTimePicker();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -292,25 +302,11 @@
             this.btnEliminarEstado = new System.Windows.Forms.Button();
             this.btnModificarEstado = new System.Windows.Forms.Button();
             this.btnAgregarEstado = new System.Windows.Forms.Button();
-            this.btnAgregarFalta = new System.Windows.Forms.Button();
-            this.cboEnfermedades = new System.Windows.Forms.ComboBox();
-            this.cboMedicamentos = new System.Windows.Forms.ComboBox();
-            this.cboDiscapacidades = new System.Windows.Forms.ComboBox();
-            this.cboAlergias = new System.Windows.Forms.ComboBox();
-            this.btnAgregarEnfermedad = new System.Windows.Forms.Button();
-            this.btnAgregarMedicamento = new System.Windows.Forms.Button();
-            this.btnAgregarAlergiaFM = new System.Windows.Forms.Button();
-            this.btnAgregarDiscapacidadFM = new System.Windows.Forms.Button();
-            this.dgvEnfermedades = new System.Windows.Forms.DataGridView();
-            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
-            this.dgvDiscapacidades = new System.Windows.Forms.DataGridView();
-            this.dgvAlergias = new System.Windows.Forms.DataGridView();
-            this.txtDosis = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.txtBuscarCuit = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.btnBuscarCuit = new System.Windows.Forms.Button();
-            this.lblFichaMedica = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtNombreContacto = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtNumeroContacto = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -341,7 +337,6 @@
             this.tabPage1.SuspendLayout();
             this.tabAgregarEmpleados.SuspendLayout();
             this.tabPaso1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -352,9 +347,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmpleado)).BeginInit();
             this.tabPaso3.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscapacidades)).BeginInit();
             this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermedades)).BeginInit();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlergias)).BeginInit();
             this.tabPaso4.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -379,10 +378,7 @@
             this.panel9.SuspendLayout();
             this.tabPage22.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermedades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscapacidades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlergias)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -474,7 +470,6 @@
             this.dgvListar.RowTemplate.Height = 24;
             this.dgvListar.Size = new System.Drawing.Size(526, 518);
             this.dgvListar.TabIndex = 15;
-            this.dgvListar.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage14
             // 
@@ -557,7 +552,6 @@
             this.dgvListarApellido.RowTemplate.Height = 24;
             this.dgvListarApellido.Size = new System.Drawing.Size(508, 458);
             this.dgvListarApellido.TabIndex = 15;
-            this.dgvListarApellido.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage15
             // 
@@ -640,7 +634,6 @@
             this.dgvListarPais.RowTemplate.Height = 24;
             this.dgvListarPais.Size = new System.Drawing.Size(508, 458);
             this.dgvListarPais.TabIndex = 20;
-            this.dgvListarPais.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage16
             // 
@@ -723,7 +716,6 @@
             this.dgvListarEstado.RowTemplate.Height = 24;
             this.dgvListarEstado.Size = new System.Drawing.Size(508, 458);
             this.dgvListarEstado.TabIndex = 20;
-            this.dgvListarEstado.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // tabPage3
             // 
@@ -1973,7 +1965,6 @@
             // 
             this.tabPaso1.Controls.Add(this.label86);
             this.tabPaso1.Controls.Add(this.btnCancelar1);
-            this.tabPaso1.Controls.Add(this.groupBox5);
             this.tabPaso1.Controls.Add(this.btnSiguiente1);
             this.tabPaso1.Controls.Add(this.groupBox4);
             this.tabPaso1.Controls.Add(this.groupBox3);
@@ -2007,62 +1998,6 @@
             this.btnCancelar1.TabIndex = 1;
             this.btnCancelar1.Text = "Cancelar";
             this.btnCancelar1.UseVisualStyleBackColor = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txtNombreContacto);
-            this.groupBox5.Controls.Add(this.label38);
-            this.groupBox5.Controls.Add(this.txtNumeroContacto);
-            this.groupBox5.Controls.Add(this.label39);
-            this.groupBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(270, 308);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(223, 129);
-            this.groupBox5.TabIndex = 36;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Tipo de Contactos";
-            // 
-            // txtNombreContacto
-            // 
-            this.txtNombreContacto.BackColor = System.Drawing.Color.SeaShell;
-            this.txtNombreContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtNombreContacto.Location = new System.Drawing.Point(10, 43);
-            this.txtNombreContacto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNombreContacto.Name = "txtNombreContacto";
-            this.txtNombreContacto.Size = new System.Drawing.Size(189, 22);
-            this.txtNombreContacto.TabIndex = 0;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label38.Location = new System.Drawing.Point(10, 73);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(131, 16);
-            this.label38.TabIndex = 6;
-            this.label38.Text = "Número del contacto";
-            // 
-            // txtNumeroContacto
-            // 
-            this.txtNumeroContacto.BackColor = System.Drawing.Color.SeaShell;
-            this.txtNumeroContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtNumeroContacto.Location = new System.Drawing.Point(10, 93);
-            this.txtNumeroContacto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNumeroContacto.Name = "txtNumeroContacto";
-            this.txtNumeroContacto.Size = new System.Drawing.Size(189, 22);
-            this.txtNumeroContacto.TabIndex = 1;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label39.Location = new System.Drawing.Point(10, 24);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(146, 16);
-            this.label39.TabIndex = 6;
-            this.label39.Text = "Nombre de un contacto";
             // 
             // btnSiguiente1
             // 
@@ -2687,6 +2622,47 @@
             this.tabPaso3.Text = "Ficha Medica";
             this.tabPaso3.UseVisualStyleBackColor = true;
             // 
+            // lblFichaMedica
+            // 
+            this.lblFichaMedica.AutoSize = true;
+            this.lblFichaMedica.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFichaMedica.Location = new System.Drawing.Point(318, 62);
+            this.lblFichaMedica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFichaMedica.Name = "lblFichaMedica";
+            this.lblFichaMedica.Size = new System.Drawing.Size(0, 15);
+            this.lblFichaMedica.TabIndex = 44;
+            // 
+            // btnBuscarCuit
+            // 
+            this.btnBuscarCuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBuscarCuit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarCuit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnBuscarCuit.Location = new System.Drawing.Point(220, 53);
+            this.btnBuscarCuit.Name = "btnBuscarCuit";
+            this.btnBuscarCuit.Size = new System.Drawing.Size(87, 30);
+            this.btnBuscarCuit.TabIndex = 43;
+            this.btnBuscarCuit.Text = "Buscar";
+            this.btnBuscarCuit.UseVisualStyleBackColor = false;
+            this.btnBuscarCuit.Click += new System.EventHandler(this.btnBuscarCuit_Click);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(22, 60);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(39, 15);
+            this.label42.TabIndex = 34;
+            this.label42.Text = "CUIT";
+            // 
+            // txtBuscarCuit
+            // 
+            this.txtBuscarCuit.Location = new System.Drawing.Point(68, 57);
+            this.txtBuscarCuit.Name = "txtBuscarCuit";
+            this.txtBuscarCuit.Size = new System.Drawing.Size(144, 23);
+            this.txtBuscarCuit.TabIndex = 34;
+            // 
             // button22
             // 
             this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -2725,6 +2701,47 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Discapacidades";
             // 
+            // dgvDiscapacidades
+            // 
+            this.dgvDiscapacidades.AllowUserToAddRows = false;
+            this.dgvDiscapacidades.AllowUserToDeleteRows = false;
+            this.dgvDiscapacidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiscapacidades.Location = new System.Drawing.Point(6, 51);
+            this.dgvDiscapacidades.Name = "dgvDiscapacidades";
+            this.dgvDiscapacidades.ReadOnly = true;
+            this.dgvDiscapacidades.Size = new System.Drawing.Size(237, 129);
+            this.dgvDiscapacidades.TabIndex = 14;
+            this.dgvDiscapacidades.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDiscapacidades_RowHeaderMouseDoubleClick);
+            // 
+            // btnAgregarDiscapacidadFM
+            // 
+            this.btnAgregarDiscapacidadFM.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarDiscapacidadFM.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarDiscapacidadFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarDiscapacidadFM.Enabled = false;
+            this.btnAgregarDiscapacidadFM.FlatAppearance.BorderSize = 0;
+            this.btnAgregarDiscapacidadFM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarDiscapacidadFM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarDiscapacidadFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarDiscapacidadFM.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarDiscapacidadFM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarDiscapacidadFM.Location = new System.Drawing.Point(201, 22);
+            this.btnAgregarDiscapacidadFM.Name = "btnAgregarDiscapacidadFM";
+            this.btnAgregarDiscapacidadFM.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarDiscapacidadFM.TabIndex = 12;
+            this.btnAgregarDiscapacidadFM.UseVisualStyleBackColor = false;
+            this.btnAgregarDiscapacidadFM.Click += new System.EventHandler(this.btnAgregarDiscapacidadFM_Click);
+            // 
+            // cboDiscapacidades
+            // 
+            this.cboDiscapacidades.BackColor = System.Drawing.Color.SeaShell;
+            this.cboDiscapacidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiscapacidades.FormattingEnabled = true;
+            this.cboDiscapacidades.Location = new System.Drawing.Point(6, 22);
+            this.cboDiscapacidades.Name = "cboDiscapacidades";
+            this.cboDiscapacidades.Size = new System.Drawing.Size(187, 23);
+            this.cboDiscapacidades.TabIndex = 3;
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -2748,6 +2765,47 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Enfermedades Patológicas";
             // 
+            // dgvEnfermedades
+            // 
+            this.dgvEnfermedades.AllowUserToAddRows = false;
+            this.dgvEnfermedades.AllowUserToDeleteRows = false;
+            this.dgvEnfermedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEnfermedades.Location = new System.Drawing.Point(6, 51);
+            this.dgvEnfermedades.Name = "dgvEnfermedades";
+            this.dgvEnfermedades.ReadOnly = true;
+            this.dgvEnfermedades.Size = new System.Drawing.Size(237, 123);
+            this.dgvEnfermedades.TabIndex = 12;
+            this.dgvEnfermedades.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEnfermedades_RowHeaderMouseDoubleClick);
+            // 
+            // btnAgregarEnfermedad
+            // 
+            this.btnAgregarEnfermedad.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarEnfermedad.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarEnfermedad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarEnfermedad.Enabled = false;
+            this.btnAgregarEnfermedad.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEnfermedad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarEnfermedad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEnfermedad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarEnfermedad.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarEnfermedad.Location = new System.Drawing.Point(201, 22);
+            this.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad";
+            this.btnAgregarEnfermedad.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarEnfermedad.TabIndex = 10;
+            this.btnAgregarEnfermedad.UseVisualStyleBackColor = false;
+            this.btnAgregarEnfermedad.Click += new System.EventHandler(this.btnAgregarEnfermedad_Click);
+            // 
+            // cboEnfermedades
+            // 
+            this.cboEnfermedades.BackColor = System.Drawing.Color.SeaShell;
+            this.cboEnfermedades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEnfermedades.FormattingEnabled = true;
+            this.cboEnfermedades.Location = new System.Drawing.Point(6, 22);
+            this.cboEnfermedades.Name = "cboEnfermedades";
+            this.cboEnfermedades.Size = new System.Drawing.Size(187, 23);
+            this.cboEnfermedades.TabIndex = 1;
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.label41);
@@ -2763,6 +2821,66 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Medicamentos";
             // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(7, 55);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(76, 15);
+            this.label41.TabIndex = 33;
+            this.label41.Text = "Dosis (mg)";
+            // 
+            // txtDosis
+            // 
+            this.txtDosis.Location = new System.Drawing.Point(90, 51);
+            this.txtDosis.Name = "txtDosis";
+            this.txtDosis.Size = new System.Drawing.Size(103, 23);
+            this.txtDosis.TabIndex = 14;
+            this.txtDosis.Text = "0";
+            // 
+            // dgvMedicamentos
+            // 
+            this.dgvMedicamentos.AllowUserToAddRows = false;
+            this.dgvMedicamentos.AllowUserToDeleteRows = false;
+            this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 82);
+            this.dgvMedicamentos.Name = "dgvMedicamentos";
+            this.dgvMedicamentos.ReadOnly = true;
+            this.dgvMedicamentos.Size = new System.Drawing.Size(237, 92);
+            this.dgvMedicamentos.TabIndex = 13;
+            this.dgvMedicamentos.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMedicamentos_RowHeaderMouseDoubleClick);
+            // 
+            // btnAgregarMedicamento
+            // 
+            this.btnAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarMedicamento.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarMedicamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarMedicamento.Enabled = false;
+            this.btnAgregarMedicamento.FlatAppearance.BorderSize = 0;
+            this.btnAgregarMedicamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarMedicamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMedicamento.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarMedicamento.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarMedicamento.Location = new System.Drawing.Point(199, 51);
+            this.btnAgregarMedicamento.Name = "btnAgregarMedicamento";
+            this.btnAgregarMedicamento.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarMedicamento.TabIndex = 11;
+            this.btnAgregarMedicamento.UseVisualStyleBackColor = false;
+            this.btnAgregarMedicamento.Click += new System.EventHandler(this.btnAgregarMedicamento_Click);
+            // 
+            // cboMedicamentos
+            // 
+            this.cboMedicamentos.BackColor = System.Drawing.Color.SeaShell;
+            this.cboMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMedicamentos.FormattingEnabled = true;
+            this.cboMedicamentos.Location = new System.Drawing.Point(6, 22);
+            this.cboMedicamentos.Name = "cboMedicamentos";
+            this.cboMedicamentos.Size = new System.Drawing.Size(187, 23);
+            this.cboMedicamentos.TabIndex = 2;
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.dgvAlergias);
@@ -2776,8 +2894,54 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Alérgias";
             // 
+            // dgvAlergias
+            // 
+            this.dgvAlergias.AllowUserToAddRows = false;
+            this.dgvAlergias.AllowUserToDeleteRows = false;
+            this.dgvAlergias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlergias.Location = new System.Drawing.Point(6, 51);
+            this.dgvAlergias.Name = "dgvAlergias";
+            this.dgvAlergias.ReadOnly = true;
+            this.dgvAlergias.Size = new System.Drawing.Size(237, 129);
+            this.dgvAlergias.TabIndex = 15;
+            this.dgvAlergias.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAlergias_RowHeaderMouseDoubleClick);
+            // 
+            // btnAgregarAlergiaFM
+            // 
+            this.btnAgregarAlergiaFM.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarAlergiaFM.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
+            this.btnAgregarAlergiaFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarAlergiaFM.Enabled = false;
+            this.btnAgregarAlergiaFM.FlatAppearance.BorderSize = 0;
+            this.btnAgregarAlergiaFM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregarAlergiaFM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarAlergiaFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAlergiaFM.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarAlergiaFM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarAlergiaFM.Location = new System.Drawing.Point(199, 21);
+            this.btnAgregarAlergiaFM.Name = "btnAgregarAlergiaFM";
+            this.btnAgregarAlergiaFM.Size = new System.Drawing.Size(21, 21);
+            this.btnAgregarAlergiaFM.TabIndex = 11;
+            this.btnAgregarAlergiaFM.UseVisualStyleBackColor = false;
+            this.btnAgregarAlergiaFM.Click += new System.EventHandler(this.btnAgregarAlergiaFM_Click);
+            // 
+            // cboAlergias
+            // 
+            this.cboAlergias.BackColor = System.Drawing.Color.SeaShell;
+            this.cboAlergias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAlergias.FormattingEnabled = true;
+            this.cboAlergias.Location = new System.Drawing.Point(6, 22);
+            this.cboAlergias.Name = "cboAlergias";
+            this.cboAlergias.Size = new System.Drawing.Size(187, 23);
+            this.cboAlergias.TabIndex = 4;
+            // 
             // tabPaso4
             // 
+            this.tabPaso4.Controls.Add(this.groupBox5);
+            this.tabPaso4.Controls.Add(this.lblEmpleadoExiste);
+            this.tabPaso4.Controls.Add(this.btnBuscarSL);
+            this.tabPaso4.Controls.Add(this.label43);
+            this.tabPaso4.Controls.Add(this.txtBuscarCuitSL);
             this.tabPaso4.Controls.Add(this.label37);
             this.tabPaso4.Controls.Add(this.btnGuardarSanciones);
             this.tabPaso4.Controls.Add(this.button5);
@@ -2791,6 +2955,47 @@
             this.tabPaso4.TabIndex = 3;
             this.tabPaso4.Text = "Sanciones - Licencias";
             this.tabPaso4.UseVisualStyleBackColor = true;
+            // 
+            // lblEmpleadoExiste
+            // 
+            this.lblEmpleadoExiste.AutoSize = true;
+            this.lblEmpleadoExiste.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleadoExiste.Location = new System.Drawing.Point(329, 76);
+            this.lblEmpleadoExiste.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmpleadoExiste.Name = "lblEmpleadoExiste";
+            this.lblEmpleadoExiste.Size = new System.Drawing.Size(0, 15);
+            this.lblEmpleadoExiste.TabIndex = 58;
+            // 
+            // btnBuscarSL
+            // 
+            this.btnBuscarSL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBuscarSL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarSL.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnBuscarSL.Location = new System.Drawing.Point(217, 67);
+            this.btnBuscarSL.Name = "btnBuscarSL";
+            this.btnBuscarSL.Size = new System.Drawing.Size(87, 30);
+            this.btnBuscarSL.TabIndex = 57;
+            this.btnBuscarSL.Text = "Buscar";
+            this.btnBuscarSL.UseVisualStyleBackColor = false;
+            this.btnBuscarSL.Click += new System.EventHandler(this.btnBuscarSL_Click);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(19, 74);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(39, 15);
+            this.label43.TabIndex = 55;
+            this.label43.Text = "CUIT";
+            // 
+            // txtBuscarCuitSL
+            // 
+            this.txtBuscarCuitSL.Location = new System.Drawing.Point(65, 71);
+            this.txtBuscarCuitSL.Name = "txtBuscarCuitSL";
+            this.txtBuscarCuitSL.Size = new System.Drawing.Size(144, 23);
+            this.txtBuscarCuitSL.TabIndex = 56;
             // 
             // label37
             // 
@@ -2828,36 +3033,21 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.label49);
             this.groupBox15.Controls.Add(this.btnLicencias);
-            this.groupBox15.Controls.Add(this.radioButton13);
-            this.groupBox15.Controls.Add(this.radioButton14);
-            this.groupBox15.Controls.Add(this.label50);
             this.groupBox15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(261, 56);
+            this.groupBox15.Location = new System.Drawing.Point(261, 138);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(253, 158);
+            this.groupBox15.Size = new System.Drawing.Size(253, 64);
             this.groupBox15.TabIndex = 42;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Licencias";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label49.Location = new System.Drawing.Point(7, 82);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(67, 16);
-            this.label49.TabIndex = 40;
-            this.label49.Text = "¿Cuál/es?";
             // 
             // btnLicencias
             // 
             this.btnLicencias.BackColor = System.Drawing.Color.MistyRose;
             this.btnLicencias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLicencias.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnLicencias.Location = new System.Drawing.Point(10, 102);
+            this.btnLicencias.Location = new System.Drawing.Point(6, 22);
             this.btnLicencias.Name = "btnLicencias";
             this.btnLicencias.Size = new System.Drawing.Size(83, 27);
             this.btnLicencias.TabIndex = 39;
@@ -2865,73 +3055,23 @@
             this.btnLicencias.UseVisualStyleBackColor = false;
             this.btnLicencias.Click += new System.EventHandler(this.btnLicencias_Click);
             // 
-            // radioButton13
-            // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton13.Location = new System.Drawing.Point(71, 44);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(43, 20);
-            this.radioButton13.TabIndex = 37;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "No";
-            this.radioButton13.UseVisualStyleBackColor = true;
-            // 
-            // radioButton14
-            // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton14.Location = new System.Drawing.Point(10, 44);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(37, 20);
-            this.radioButton14.TabIndex = 36;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "Si";
-            this.radioButton14.UseVisualStyleBackColor = true;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label50.Location = new System.Drawing.Point(7, 25);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(119, 16);
-            this.label50.TabIndex = 38;
-            this.label50.Text = "¿Agregar licencia?";
-            // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.label45);
             this.groupBox14.Controls.Add(this.btnSanciones);
-            this.groupBox14.Controls.Add(this.radioButton11);
-            this.groupBox14.Controls.Add(this.radioButton12);
-            this.groupBox14.Controls.Add(this.label51);
             this.groupBox14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(13, 56);
+            this.groupBox14.Location = new System.Drawing.Point(13, 138);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(242, 158);
+            this.groupBox14.Size = new System.Drawing.Size(242, 64);
             this.groupBox14.TabIndex = 0;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Sanciones";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label45.Location = new System.Drawing.Point(7, 87);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(67, 16);
-            this.label45.TabIndex = 35;
-            this.label45.Text = "¿Cuál/es?";
             // 
             // btnSanciones
             // 
             this.btnSanciones.BackColor = System.Drawing.Color.MistyRose;
             this.btnSanciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSanciones.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnSanciones.Location = new System.Drawing.Point(10, 107);
+            this.btnSanciones.Location = new System.Drawing.Point(10, 22);
             this.btnSanciones.Name = "btnSanciones";
             this.btnSanciones.Size = new System.Drawing.Size(83, 27);
             this.btnSanciones.TabIndex = 34;
@@ -2939,53 +3079,31 @@
             this.btnSanciones.UseVisualStyleBackColor = false;
             this.btnSanciones.Click += new System.EventHandler(this.btnSanciones_Click);
             // 
-            // radioButton11
-            // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton11.Location = new System.Drawing.Point(71, 49);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(43, 20);
-            this.radioButton11.TabIndex = 32;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "No";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButton12.Location = new System.Drawing.Point(10, 49);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(37, 20);
-            this.radioButton12.TabIndex = 31;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Si";
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label51.Location = new System.Drawing.Point(7, 30);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(120, 16);
-            this.label51.TabIndex = 33;
-            this.label51.Text = "¿Agregar sancion?";
-            // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.btnAgregarFalta);
             this.groupBox13.Controls.Add(this.label33);
             this.groupBox13.Controls.Add(this.dtpAusencia);
             this.groupBox13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(13, 233);
+            this.groupBox13.Location = new System.Drawing.Point(13, 208);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(227, 109);
+            this.groupBox13.Size = new System.Drawing.Size(501, 86);
             this.groupBox13.TabIndex = 40;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Presentismo";
+            // 
+            // btnAgregarFalta
+            // 
+            this.btnAgregarFalta.BackColor = System.Drawing.Color.MistyRose;
+            this.btnAgregarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarFalta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnAgregarFalta.Location = new System.Drawing.Point(224, 45);
+            this.btnAgregarFalta.Name = "btnAgregarFalta";
+            this.btnAgregarFalta.Size = new System.Drawing.Size(83, 27);
+            this.btnAgregarFalta.TabIndex = 36;
+            this.btnAgregarFalta.Text = "Agregar";
+            this.btnAgregarFalta.UseVisualStyleBackColor = false;
+            this.btnAgregarFalta.Click += new System.EventHandler(this.btnAgregarFalta_Click);
             // 
             // label33
             // 
@@ -3471,234 +3589,61 @@
             this.btnAgregarEstado.UseVisualStyleBackColor = true;
             this.btnAgregarEstado.Click += new System.EventHandler(this.btnAgregarEstado_Click);
             // 
-            // btnAgregarFalta
+            // groupBox5
             // 
-            this.btnAgregarFalta.BackColor = System.Drawing.Color.MistyRose;
-            this.btnAgregarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarFalta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarFalta.Location = new System.Drawing.Point(7, 73);
-            this.btnAgregarFalta.Name = "btnAgregarFalta";
-            this.btnAgregarFalta.Size = new System.Drawing.Size(83, 27);
-            this.btnAgregarFalta.TabIndex = 36;
-            this.btnAgregarFalta.Text = "Agregar";
-            this.btnAgregarFalta.UseVisualStyleBackColor = false;
-            this.btnAgregarFalta.Click += new System.EventHandler(this.btnAgregarFalta_Click);
+            this.groupBox5.Controls.Add(this.txtNombreContacto);
+            this.groupBox5.Controls.Add(this.label38);
+            this.groupBox5.Controls.Add(this.txtNumeroContacto);
+            this.groupBox5.Controls.Add(this.label39);
+            this.groupBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(13, 300);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(501, 129);
+            this.groupBox5.TabIndex = 59;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tipo de Contactos";
             // 
-            // cboEnfermedades
+            // txtNombreContacto
             // 
-            this.cboEnfermedades.BackColor = System.Drawing.Color.SeaShell;
-            this.cboEnfermedades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEnfermedades.FormattingEnabled = true;
-            this.cboEnfermedades.Location = new System.Drawing.Point(6, 22);
-            this.cboEnfermedades.Name = "cboEnfermedades";
-            this.cboEnfermedades.Size = new System.Drawing.Size(187, 23);
-            this.cboEnfermedades.TabIndex = 1;
+            this.txtNombreContacto.BackColor = System.Drawing.Color.SeaShell;
+            this.txtNombreContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNombreContacto.Location = new System.Drawing.Point(10, 43);
+            this.txtNombreContacto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNombreContacto.Name = "txtNombreContacto";
+            this.txtNombreContacto.Size = new System.Drawing.Size(189, 22);
+            this.txtNombreContacto.TabIndex = 0;
             // 
-            // cboMedicamentos
+            // label38
             // 
-            this.cboMedicamentos.BackColor = System.Drawing.Color.SeaShell;
-            this.cboMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMedicamentos.FormattingEnabled = true;
-            this.cboMedicamentos.Location = new System.Drawing.Point(6, 22);
-            this.cboMedicamentos.Name = "cboMedicamentos";
-            this.cboMedicamentos.Size = new System.Drawing.Size(187, 23);
-            this.cboMedicamentos.TabIndex = 2;
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label38.Location = new System.Drawing.Point(10, 73);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(131, 16);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "Número del contacto";
             // 
-            // cboDiscapacidades
+            // txtNumeroContacto
             // 
-            this.cboDiscapacidades.BackColor = System.Drawing.Color.SeaShell;
-            this.cboDiscapacidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDiscapacidades.FormattingEnabled = true;
-            this.cboDiscapacidades.Location = new System.Drawing.Point(6, 22);
-            this.cboDiscapacidades.Name = "cboDiscapacidades";
-            this.cboDiscapacidades.Size = new System.Drawing.Size(187, 23);
-            this.cboDiscapacidades.TabIndex = 3;
+            this.txtNumeroContacto.BackColor = System.Drawing.Color.SeaShell;
+            this.txtNumeroContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNumeroContacto.Location = new System.Drawing.Point(10, 93);
+            this.txtNumeroContacto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNumeroContacto.Name = "txtNumeroContacto";
+            this.txtNumeroContacto.Size = new System.Drawing.Size(189, 22);
+            this.txtNumeroContacto.TabIndex = 1;
             // 
-            // cboAlergias
+            // label39
             // 
-            this.cboAlergias.BackColor = System.Drawing.Color.SeaShell;
-            this.cboAlergias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAlergias.FormattingEnabled = true;
-            this.cboAlergias.Location = new System.Drawing.Point(6, 22);
-            this.cboAlergias.Name = "cboAlergias";
-            this.cboAlergias.Size = new System.Drawing.Size(187, 23);
-            this.cboAlergias.TabIndex = 4;
-            // 
-            // btnAgregarEnfermedad
-            // 
-            this.btnAgregarEnfermedad.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarEnfermedad.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
-            this.btnAgregarEnfermedad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarEnfermedad.FlatAppearance.BorderSize = 0;
-            this.btnAgregarEnfermedad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAgregarEnfermedad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.btnAgregarEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEnfermedad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarEnfermedad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAgregarEnfermedad.Location = new System.Drawing.Point(201, 22);
-            this.btnAgregarEnfermedad.Name = "btnAgregarEnfermedad";
-            this.btnAgregarEnfermedad.Size = new System.Drawing.Size(21, 21);
-            this.btnAgregarEnfermedad.TabIndex = 10;
-            this.btnAgregarEnfermedad.UseVisualStyleBackColor = false;
-            this.btnAgregarEnfermedad.Click += new System.EventHandler(this.btnAgregarEnfermedad_Click);
-            // 
-            // btnAgregarMedicamento
-            // 
-            this.btnAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarMedicamento.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
-            this.btnAgregarMedicamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarMedicamento.FlatAppearance.BorderSize = 0;
-            this.btnAgregarMedicamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAgregarMedicamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.btnAgregarMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarMedicamento.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarMedicamento.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAgregarMedicamento.Location = new System.Drawing.Point(199, 51);
-            this.btnAgregarMedicamento.Name = "btnAgregarMedicamento";
-            this.btnAgregarMedicamento.Size = new System.Drawing.Size(21, 21);
-            this.btnAgregarMedicamento.TabIndex = 11;
-            this.btnAgregarMedicamento.UseVisualStyleBackColor = false;
-            this.btnAgregarMedicamento.Click += new System.EventHandler(this.btnAgregarMedicamento_Click);
-            // 
-            // btnAgregarAlergiaFM
-            // 
-            this.btnAgregarAlergiaFM.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarAlergiaFM.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
-            this.btnAgregarAlergiaFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarAlergiaFM.FlatAppearance.BorderSize = 0;
-            this.btnAgregarAlergiaFM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAgregarAlergiaFM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.btnAgregarAlergiaFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarAlergiaFM.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarAlergiaFM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAgregarAlergiaFM.Location = new System.Drawing.Point(199, 21);
-            this.btnAgregarAlergiaFM.Name = "btnAgregarAlergiaFM";
-            this.btnAgregarAlergiaFM.Size = new System.Drawing.Size(21, 21);
-            this.btnAgregarAlergiaFM.TabIndex = 11;
-            this.btnAgregarAlergiaFM.UseVisualStyleBackColor = false;
-            this.btnAgregarAlergiaFM.Click += new System.EventHandler(this.btnAgregarAlergiaFM_Click);
-            // 
-            // btnAgregarDiscapacidadFM
-            // 
-            this.btnAgregarDiscapacidadFM.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarDiscapacidadFM.BackgroundImage = global::pryRecursosHumanos.Properties.Resources.mas;
-            this.btnAgregarDiscapacidadFM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarDiscapacidadFM.FlatAppearance.BorderSize = 0;
-            this.btnAgregarDiscapacidadFM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAgregarDiscapacidadFM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.btnAgregarDiscapacidadFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarDiscapacidadFM.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarDiscapacidadFM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAgregarDiscapacidadFM.Location = new System.Drawing.Point(201, 22);
-            this.btnAgregarDiscapacidadFM.Name = "btnAgregarDiscapacidadFM";
-            this.btnAgregarDiscapacidadFM.Size = new System.Drawing.Size(21, 21);
-            this.btnAgregarDiscapacidadFM.TabIndex = 12;
-            this.btnAgregarDiscapacidadFM.UseVisualStyleBackColor = false;
-            this.btnAgregarDiscapacidadFM.Click += new System.EventHandler(this.btnAgregarDiscapacidadFM_Click);
-            // 
-            // dgvEnfermedades
-            // 
-            this.dgvEnfermedades.AllowUserToAddRows = false;
-            this.dgvEnfermedades.AllowUserToDeleteRows = false;
-            this.dgvEnfermedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnfermedades.Location = new System.Drawing.Point(6, 51);
-            this.dgvEnfermedades.Name = "dgvEnfermedades";
-            this.dgvEnfermedades.ReadOnly = true;
-            this.dgvEnfermedades.Size = new System.Drawing.Size(237, 123);
-            this.dgvEnfermedades.TabIndex = 12;
-            // 
-            // dgvMedicamentos
-            // 
-            this.dgvMedicamentos.AllowUserToAddRows = false;
-            this.dgvMedicamentos.AllowUserToDeleteRows = false;
-            this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 82);
-            this.dgvMedicamentos.Name = "dgvMedicamentos";
-            this.dgvMedicamentos.ReadOnly = true;
-            this.dgvMedicamentos.Size = new System.Drawing.Size(237, 92);
-            this.dgvMedicamentos.TabIndex = 13;
-            // 
-            // dgvDiscapacidades
-            // 
-            this.dgvDiscapacidades.AllowUserToAddRows = false;
-            this.dgvDiscapacidades.AllowUserToDeleteRows = false;
-            this.dgvDiscapacidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDiscapacidades.Location = new System.Drawing.Point(6, 51);
-            this.dgvDiscapacidades.Name = "dgvDiscapacidades";
-            this.dgvDiscapacidades.ReadOnly = true;
-            this.dgvDiscapacidades.Size = new System.Drawing.Size(237, 129);
-            this.dgvDiscapacidades.TabIndex = 14;
-            // 
-            // dgvAlergias
-            // 
-            this.dgvAlergias.AllowUserToAddRows = false;
-            this.dgvAlergias.AllowUserToDeleteRows = false;
-            this.dgvAlergias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlergias.Location = new System.Drawing.Point(6, 51);
-            this.dgvAlergias.Name = "dgvAlergias";
-            this.dgvAlergias.ReadOnly = true;
-            this.dgvAlergias.Size = new System.Drawing.Size(237, 129);
-            this.dgvAlergias.TabIndex = 15;
-            // 
-            // txtDosis
-            // 
-            this.txtDosis.Location = new System.Drawing.Point(90, 51);
-            this.txtDosis.Name = "txtDosis";
-            this.txtDosis.Size = new System.Drawing.Size(103, 23);
-            this.txtDosis.TabIndex = 14;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(7, 55);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(76, 15);
-            this.label41.TabIndex = 33;
-            this.label41.Text = "Dosis (mg)";
-            // 
-            // txtBuscarCuit
-            // 
-            this.txtBuscarCuit.Location = new System.Drawing.Point(68, 57);
-            this.txtBuscarCuit.Name = "txtBuscarCuit";
-            this.txtBuscarCuit.Size = new System.Drawing.Size(144, 23);
-            this.txtBuscarCuit.TabIndex = 34;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(22, 60);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(39, 15);
-            this.label42.TabIndex = 34;
-            this.label42.Text = "CUIT";
-            // 
-            // btnBuscarCuit
-            // 
-            this.btnBuscarCuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnBuscarCuit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarCuit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnBuscarCuit.Location = new System.Drawing.Point(220, 53);
-            this.btnBuscarCuit.Name = "btnBuscarCuit";
-            this.btnBuscarCuit.Size = new System.Drawing.Size(87, 30);
-            this.btnBuscarCuit.TabIndex = 43;
-            this.btnBuscarCuit.Text = "Buscar";
-            this.btnBuscarCuit.UseVisualStyleBackColor = false;
-            this.btnBuscarCuit.Click += new System.EventHandler(this.btnBuscarCuit_Click);
-            // 
-            // lblFichaMedica
-            // 
-            this.lblFichaMedica.AutoSize = true;
-            this.lblFichaMedica.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFichaMedica.Location = new System.Drawing.Point(318, 62);
-            this.lblFichaMedica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFichaMedica.Name = "lblFichaMedica";
-            this.lblFichaMedica.Size = new System.Drawing.Size(115, 15);
-            this.lblFichaMedica.TabIndex = 44;
-            this.lblFichaMedica.Text = "Ficha Medica N°:";
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label39.Location = new System.Drawing.Point(10, 24);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(146, 16);
+            this.label39.TabIndex = 6;
+            this.label39.Text = "Nombre de un contacto";
             // 
             // frmAdmin
             // 
@@ -3757,8 +3702,6 @@
             this.tabAgregarEmpleados.ResumeLayout(false);
             this.tabPaso1.ResumeLayout(false);
             this.tabPaso1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -3776,16 +3719,18 @@
             this.tabPaso3.ResumeLayout(false);
             this.tabPaso3.PerformLayout();
             this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscapacidades)).EndInit();
             this.groupBox9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermedades)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
             this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlergias)).EndInit();
             this.tabPaso4.ResumeLayout(false);
             this.tabPaso4.PerformLayout();
             this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
             this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -3808,10 +3753,8 @@
             this.panel9.ResumeLayout(false);
             this.tabPage22.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermedades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscapacidades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlergias)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3872,11 +3815,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox pbFotoEmpleado;
         private System.Windows.Forms.Button btnCancelar1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtNombreContacto;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox txtNumeroContacto;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.TextBox txtCuit;
@@ -4020,16 +3958,8 @@
         private System.Windows.Forms.Button btnListarEstado;
         private System.Windows.Forms.DataGridView dgvListarEstado;
         private System.Windows.Forms.PictureBox pcbMinimizar;
-        private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button btnLicencias;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button btnSanciones;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Button btnFinRegistro;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabControl tabControl2;
@@ -4099,5 +4029,14 @@
         private System.Windows.Forms.Button btnBuscarCuit;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox txtBuscarCuit;
+        private System.Windows.Forms.Button btnBuscarSL;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox txtBuscarCuitSL;
+        private System.Windows.Forms.Label lblEmpleadoExiste;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txtNombreContacto;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox txtNumeroContacto;
+        private System.Windows.Forms.Label label39;
     }
 }

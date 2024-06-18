@@ -182,6 +182,12 @@ namespace pryRecursosHumanos
 
             BD.agregarEmpleado(nuevoEmpleado);
         }
+
+		public static bool validarEmpleado(clsEmpleado empleado)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			return !BD.validarEmpleado(empleado); // Retorno la negacion porque en clsConexion retorna true en caso de que no exista.
+        }
         #endregion
 
         #region sancionLicencia

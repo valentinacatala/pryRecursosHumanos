@@ -35,6 +35,7 @@ namespace pryRecursosHumanos
 			set { idDiscapacidad = value; }
 		}
 
+        #region Enfermedades
         public static void agregarEnfermedad(int idFichaMedica, int idEnfermedad)
         {
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
@@ -47,6 +48,14 @@ namespace pryRecursosHumanos
 			BD.listarEnfermedadesPorFicha(dgvEnfermedades, idFichaMedica);
         }
 
+        public static void eliminarEnfermedad(int idFichaMedica, int idEnfermedad) 
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.eliminarEnfermedad(idFichaMedica, idEnfermedad);
+        }
+        #endregion
+
+        #region Medicamentos
         public static void agregarMedicamento(int idFichaMedica, int idMedicamento, double dosis)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
@@ -58,7 +67,14 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarMedicamentosPorFicha(dgvMedicamentos, idFichaMedica);
         }
+        public static void eliminarMedicamento(int idFichaMedica, int idMedicamento) 
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.eliminarMedicamento(idFichaMedica, idMedicamento);
+        }
+        #endregion
 
+        #region Discapacidades
         public static void agregarDiscapacidad(int idFichaMedica, int idDiscapacidad)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
@@ -69,7 +85,14 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarDiscapacidadesPorFicha(dgvDiscapacidades, idFichaMedica);
         }
+        public static void eliminarDiscapacidad(int idFichaMedica, int idDiscapacidad) 
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.eliminarDiscapacidad(idFichaMedica, idDiscapacidad);
+        }
+        #endregion
 
+        #region Alergias
         public static void agregarAlergia(int idFichaMedica, int idAlergia)
         {
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
@@ -80,5 +103,11 @@ namespace pryRecursosHumanos
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
             BD.listarAlergiasPorFicha(dgvAlergias, idFichaMedica);
         }
+        public static void eliminarAlergia(int idFichaMedica, int idAlergia) 
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.eliminarAlergia(idFichaMedica, idAlergia);
+        }
+        #endregion
     }
 }

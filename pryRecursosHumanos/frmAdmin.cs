@@ -118,33 +118,42 @@ namespace pryRecursosHumanos
         private void btnFinRegistro_Click(object sender, EventArgs e)
         {
             clsEmpleado nuevoEmpleado = new clsEmpleado();
+            try
+            {
+                if (rbSi.Checked) idTitulo = Convert.ToInt32(cboTitulo.SelectedValue);
+                nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
+                nuevoEmpleado.IdArea = Convert.ToInt32(cboSeleccionarArea.SelectedValue);
+                nuevoEmpleado.Nombre = txtNombre.Text;
+                nuevoEmpleado.Apellido = txtApellido.Text;
+                nuevoEmpleado.Domicilio = txtDireccion.Text;
+                nuevoEmpleado.Telefono = txtTelefono.Text;
+                nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
+                nuevoEmpleado.Email = txtCorreo.Text;
+                nuevoEmpleado.FechaNacimiento = dtpFechaNacimiento.Value;
+                nuevoEmpleado.Foto = pbFotoEmpleado.ImageLocation.ToString();
+                nuevoEmpleado.IdCiudad = Convert.ToInt32(cboCuidad.SelectedValue);
+                nuevoEmpleado.IdEstado = Convert.ToInt32(cboEstadoEmpleado.SelectedValue);
+                nuevoEmpleado.IdTitulo = idTitulo;
+                nuevoEmpleado.Instagram = txtInstagram.Text;
 
-            if(rbSi.Checked) idTitulo = Convert.ToInt32(cboTitulo.SelectedValue);
-            nuevoEmpleado.Cuit = Convert.ToInt32(txtCuit.Text);
-            nuevoEmpleado.IdArea = Convert.ToInt32(cboSeleccionarArea.SelectedValue);
-            nuevoEmpleado.Nombre = txtNombre.Text;
-            nuevoEmpleado.Apellido = txtApellido.Text;
-            nuevoEmpleado.Domicilio = txtDireccion.Text;
-            nuevoEmpleado.Telefono = txtTelefono.Text;
-            nuevoEmpleado.DNI = Convert.ToInt32(txtDni.Text);
-            nuevoEmpleado.Email = txtCorreo.Text;
-            nuevoEmpleado.FechaNacimiento = dtpFechaNacimiento.Value;
-            nuevoEmpleado.Foto = pbFotoEmpleado.ImageLocation.ToString();
-            nuevoEmpleado.IdCiudad = Convert.ToInt32(cboCuidad.SelectedValue);
-            nuevoEmpleado.IdEstado = Convert.ToInt32(cboEstadoEmpleado.SelectedValue);
-            nuevoEmpleado.IdTitulo = idTitulo;
-            nuevoEmpleado.Instagram = txtInstagram.Text;
-
-            nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
-            nuevoEmpleado.asignarFichaMedica();
-            empleadoSeleccionado = nuevoEmpleado;
-            txtBuscarCuit.Text = empleadoSeleccionado.Cuit.ToString();
-            lblFichaMedica.Text = $"Ficha Medica N°: {empleadoSeleccionado.IdFichaMedica}";
-            dgvEnfermedades.DataSource = null;
-            dgvMedicamentos.DataSource = null;
-            dgvDiscapacidades.DataSource = null;
-            dgvAlergias.DataSource = null;
-            idTitulo = 1;
+                nuevoEmpleado.agregarEmpleado(nuevoEmpleado);
+                nuevoEmpleado.asignarFichaMedica();
+                empleadoSeleccionado = nuevoEmpleado;
+                txtBuscarCuit.Text = empleadoSeleccionado.Cuit.ToString();
+                lblFichaMedica.Text = $"Ficha Medica N°: {empleadoSeleccionado.IdFichaMedica}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dgvEnfermedades.DataSource = null;
+                dgvMedicamentos.DataSource = null;
+                dgvDiscapacidades.DataSource = null;
+                dgvAlergias.DataSource = null;
+                idTitulo = 1;
+            }
         }
 
         private void pbFotoEmpleado_Click(object sender, EventArgs e)
@@ -276,6 +285,7 @@ namespace pryRecursosHumanos
         {
             if(cboEnfermedades.SelectedValue != null)
             {
+                //empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(Convert.ToInt32(txtBuscarCuit.Text));
                 int idEnfermedad = Convert.ToInt32(cboEnfermedades.SelectedValue.ToString());
                 clsFichaMedica.agregarEnfermedad(empleadoSeleccionado.IdFichaMedica, idEnfermedad);
                 clsFichaMedica.listarEnfermedades(dgvEnfermedades, empleadoSeleccionado.IdFichaMedica);
@@ -286,10 +296,12 @@ namespace pryRecursosHumanos
         {
             if (cboMedicamentos.SelectedValue != null)
             {
+                //empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(Convert.ToInt32(txtBuscarCuit.Text));
                 int idMedicamento = Convert.ToInt32(cboMedicamentos.SelectedValue.ToString());
                 double dosis = Convert.ToDouble(txtDosis.Text);
                 clsFichaMedica.agregarMedicamento(empleadoSeleccionado.IdFichaMedica, idMedicamento, dosis);
                 clsFichaMedica.listarMedicamentos(dgvMedicamentos, empleadoSeleccionado.IdFichaMedica);
+                txtDosis.Text = "0";
             }
         }
 
@@ -297,6 +309,7 @@ namespace pryRecursosHumanos
         {
             if (cboDiscapacidades.SelectedValue != null)
             {
+                //empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(Convert.ToInt32(txtBuscarCuit.Text));
                 int idDiscapacidad = Convert.ToInt32(cboDiscapacidades.SelectedValue.ToString());
                 clsFichaMedica.agregarDiscapacidad(empleadoSeleccionado.IdFichaMedica, idDiscapacidad);
                 clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, empleadoSeleccionado.IdFichaMedica);
@@ -307,26 +320,124 @@ namespace pryRecursosHumanos
         {
             if (cboAlergias.SelectedValue != null)
             {
+                //empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(Convert.ToInt32(txtBuscarCuit.Text));
                 int idAlergia = Convert.ToInt32(cboAlergias.SelectedValue.ToString());
                 clsFichaMedica.agregarAlergia(empleadoSeleccionado.IdFichaMedica, idAlergia);
                 clsFichaMedica.listarAlergias(dgvAlergias, empleadoSeleccionado.IdFichaMedica);
             }
         }
 
-        private void dgvListar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnBuscarCuit_Click(object sender, EventArgs e)
         {
-
+            if(txtBuscarCuit.Text != String.Empty)
+            {
+                int cuit = Convert.ToInt32(txtBuscarCuit.Text);
+                empleadoSeleccionado.Cuit = cuit;
+                if (clsEmpleado.validarEmpleado(empleadoSeleccionado) == true)
+                {
+                    empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+                    lblFichaMedica.Text = "Usuario válido";
+                    lblFichaMedica.ForeColor = Color.Green;
+                    clsFichaMedica.listarEnfermedades(dgvEnfermedades, empleadoSeleccionado.IdFichaMedica);
+                    clsFichaMedica.listarMedicamentos(dgvMedicamentos, empleadoSeleccionado.IdFichaMedica);
+                    clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, empleadoSeleccionado.IdFichaMedica);
+                    clsFichaMedica.listarAlergias(dgvAlergias, empleadoSeleccionado.IdFichaMedica);
+                    btnAgregarEnfermedad.Enabled = true;
+                    btnAgregarMedicamento.Enabled = true;
+                    btnAgregarDiscapacidadFM.Enabled = true;
+                    btnAgregarAlergiaFM.Enabled = true;
+                }
+                else
+                {
+                    lblFichaMedica.Text = "Usuario inválido";
+                    lblFichaMedica.ForeColor = Color.Red;
+                    btnAgregarEnfermedad.Enabled = false;
+                    btnAgregarMedicamento.Enabled = false;
+                    btnAgregarDiscapacidadFM.Enabled = false;
+                    btnAgregarAlergiaFM.Enabled = false;
+                    dgvEnfermedades.DataSource = null;
+                    dgvMedicamentos.DataSource = null;
+                    dgvDiscapacidades.DataSource = null;
+                    dgvAlergias.DataSource = null;
+                }
+            }
         }
 
-        private void btnBuscarCuit_Click(object sender, EventArgs e)
+        private void btnBuscarSL_Click(object sender, EventArgs e)
+        {
+            if (txtBuscarCuitSL.Text != string.Empty)
+            {
+                int cuit = Convert.ToInt32(txtBuscarCuitSL.Text);
+                empleadoSeleccionado.Cuit = cuit;
+                if (clsEmpleado.validarEmpleado(empleadoSeleccionado) == true)
+                {
+                    lblEmpleadoExiste.ForeColor = Color.Green;
+                    lblEmpleadoExiste.Text = "Usuario válido";
+                    btnSanciones.Enabled = true;
+                    btnLicencias.Enabled = true;
+                    btnAgregarFalta.Enabled = true;
+                }
+                else
+                {
+                    lblEmpleadoExiste.ForeColor = Color.Red;
+                    lblEmpleadoExiste.Text = "Usuario inválido";
+                    btnSanciones.Enabled = false;
+                    btnLicencias.Enabled = false;
+                    btnAgregarFalta.Enabled = false;
+                }
+            }
+        }
+
+        private void dgvEnfermedades_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int cuit = Convert.ToInt32(txtBuscarCuit.Text);
             int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
-            lblFichaMedica.Text = $"Ficha Medica N°: {idFichaMedica}";
-            clsFichaMedica.listarEnfermedades(dgvEnfermedades, idFichaMedica);
-            clsFichaMedica.listarMedicamentos(dgvMedicamentos, idFichaMedica);
-            clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, idFichaMedica);
-            clsFichaMedica.listarAlergias(dgvAlergias, idFichaMedica);
+            int idEnfermedad = Convert.ToInt32(dgvEnfermedades.SelectedRows[0].Cells["IdEnfermedad"].Value);
+            DialogResult result = MessageBox.Show("¿Eliminar enfermedad?", "Aviso", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                clsFichaMedica.eliminarEnfermedad(idFichaMedica, idEnfermedad);
+                clsFichaMedica.listarEnfermedades(dgvEnfermedades, idFichaMedica);
+            }
+        }
+
+        private void dgvMedicamentos_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int cuit = Convert.ToInt32(txtBuscarCuit.Text);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            int idMedicamento = Convert.ToInt32(dgvMedicamentos.SelectedRows[0].Cells["IdMedicamentos"].Value);
+            DialogResult result = MessageBox.Show("¿Eliminar medicamento?", "Aviso", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                clsFichaMedica.eliminarMedicamento(idFichaMedica, idMedicamento);
+                clsFichaMedica.listarMedicamentos(dgvMedicamentos, idFichaMedica);
+            }
+        }
+
+        private void dgvDiscapacidades_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int cuit = Convert.ToInt32(txtBuscarCuit.Text);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            int idDiscapacidad = Convert.ToInt32(dgvDiscapacidades.SelectedRows[0].Cells["IdDiscapacidades"].Value);
+            DialogResult result = MessageBox.Show("¿Eliminar discapacidad?", "Aviso", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                clsFichaMedica.eliminarDiscapacidad(idFichaMedica, idDiscapacidad);
+                clsFichaMedica.listarDiscapacidades(dgvDiscapacidades, idFichaMedica);
+            }
+        }
+
+        private void dgvAlergias_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int cuit = Convert.ToInt32(txtBuscarCuit.Text);
+            int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
+            int idAlergia = Convert.ToInt32(dgvAlergias.SelectedRows[0].Cells["IdAlergias"].Value);
+            DialogResult result = MessageBox.Show("¿Eliminar alergia?", "Aviso", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                clsFichaMedica.eliminarAlergia(idFichaMedica, idAlergia);
+                clsFichaMedica.listarAlergias(dgvAlergias, idFichaMedica);
+            }
         }
     }
 }
