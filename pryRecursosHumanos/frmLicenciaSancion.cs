@@ -72,7 +72,8 @@ namespace pryRecursosHumanos
                         Nombre = selectedRow["Nombre"].ToString(),
                         Tiempo = (int)selectedRow["Tiempo"]
                     };
-                    clsEmpleado.agregarLicencia(licencia, empleado, estado,20);
+                    string fechaInicio = dtpFechaInicio.Value.ToString("dd/MM/yyyy");
+                    clsEmpleado.agregarLicencia(licencia, empleado, Convert.ToDateTime(fechaInicio), txtObservaciones.Text);
                     clsLicencia.listarLicenciasPorEmpleado(dgvListar, empleado.Cuit);
                 }
             }

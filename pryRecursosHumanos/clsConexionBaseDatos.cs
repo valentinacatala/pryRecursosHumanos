@@ -676,7 +676,7 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT L.IdLicencia, L.Nombre, LE.Cuit, LE.Estado, LE.Tiempo FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia";
+                comando.CommandText = $"SELECT L.IdLicencia, L.Nombre, LE.Cuit, LE.Fecha, LE.FechaFin, LE.Observaciones FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -690,7 +690,7 @@ namespace pryRecursosHumanos
             }
         }
 
-        public void agregarLicenciaAEmpleado(clsLicencia licencia,clsEmpleado empleado ,clsEstado Estado, int Tiempo)
+        public void agregarLicenciaAEmpleado(clsLicencia licencia,clsEmpleado empleado, DateTime fechaInicio, string observaciones )
         {
             try
             {
@@ -700,10 +700,9 @@ namespace pryRecursosHumanos
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
 
-                //int diasSancion = retornarDiasSancion(sancion);
-                //DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
-                comando.CommandText = $@"INSERT INTO Lic_Emp(IdLicencia, Cuit, Estado, Tiempo) 
-                                VALUES ({licencia.IdLicencia},{empleado.Cuit}, {Estado.IdEstado}, {licencia.Tiempo})";
+                DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
+                comando.CommandText = $@"INSERT INTO Lic_Emp(IdLicencia, Cuit, Fecha, FechaFin, Observaciones) 
+                                VALUES ({licencia.IdLicencia},{empleado.Cuit}, '{fechaInicio}', '{fechaFin}', '{observaciones}')";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();

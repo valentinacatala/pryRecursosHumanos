@@ -204,11 +204,11 @@ namespace pryRecursosHumanos
 			BD.eliminarSancion(cuit, idSancion);
 		}
 
-		public static void agregarLicencia(clsLicencia licencia, clsEmpleado empleado, clsEstado Estado, int Tiempo)
+		public static void agregarLicencia(clsLicencia licencia, clsEmpleado empleado, DateTime fechaInicio, string observaciones)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
 
-            BD.agregarLicenciaAEmpleado(licencia,empleado,Estado,Tiempo);
+            BD.agregarLicenciaAEmpleado(licencia,empleado, fechaInicio, observaciones);
         }
 
         public static void eliminarLicencia(int cuit, int idLicencia)
