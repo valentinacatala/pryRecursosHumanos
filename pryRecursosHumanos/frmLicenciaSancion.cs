@@ -26,14 +26,14 @@ namespace pryRecursosHumanos
             if(modo == "sanciones")
             {
                 lblNombreDato.Text = "Agregar sanciones";
-                lblTitulo.Text = "Sanciones";
+                lblTitulo.Text = $"Sanciones: {empleado.Cuit}";
                 clsSanciones.listarSanciones(cboDatos);
                 clsSanciones.listarSancionesPorEmpleado(dgvListar, empleado.Cuit);
             }
             else
             {
                 lblNombreDato.Text = "Agregar licencia";
-                lblTitulo.Text = "Licencias";
+                lblTitulo.Text = $"Licencias: {empleado.Cuit}";
                 clsLicencia.listarLicencias(cboDatos);
                 clsLicencia.listarLicenciasPorEmpleado(dgvListar, empleado.Cuit);
             }
@@ -73,6 +73,30 @@ namespace pryRecursosHumanos
                         Tiempo = (int)selectedRow["Tiempo"]
                     };
                     clsEmpleado.agregarLicencia(licencia, empleado, estado,20);
+                    clsLicencia.listarLicenciasPorEmpleado(dgvListar, empleado.Cuit);
+                }
+            }
+        }
+
+        private void dgvListar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if(modo == "sanciones")
+            {
+                int idSancion = Convert.ToInt32(dgvListar.SelectedRows[0].Cells["IdSancion"].Value);
+                DialogResult result = MessageBox.Show("¿Eliminar sancion?", "Aviso", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    clsEmpleado.eliminarSancion(empleado.Cuit, idSancion);
+                    clsSanciones.listarSancionesPorEmpleado(dgvListar, empleado.Cuit);
+                }
+            }
+            else
+            {
+                int idLicencia = Convert.ToInt32(dgvListar.SelectedRows[0].Cells["IdLicencia"].Value);
+                DialogResult result = MessageBox.Show("¿Eliminar licencia?", "Aviso", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    clsEmpleado.eliminarLicencia(empleado.Cuit, idLicencia);
                     clsLicencia.listarLicenciasPorEmpleado(dgvListar, empleado.Cuit);
                 }
             }

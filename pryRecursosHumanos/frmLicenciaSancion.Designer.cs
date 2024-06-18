@@ -86,6 +86,7 @@
             this.dgvListar.RowTemplate.Height = 24;
             this.dgvListar.Size = new System.Drawing.Size(597, 234);
             this.dgvListar.TabIndex = 16;
+            this.dgvListar.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListar_RowHeaderMouseDoubleClick);
             // 
             // panel1
             // 

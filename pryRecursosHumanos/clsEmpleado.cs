@@ -198,16 +198,28 @@ namespace pryRecursosHumanos
 			BD.agregarSancionAEmpleado(sancion, empleado, observaciones, fechaInicio);
         }
 
+		public static void eliminarSancion(int cuit, int idSancion)
+		{
+			clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.eliminarSancion(cuit, idSancion);
+		}
+
 		public static void agregarLicencia(clsLicencia licencia, clsEmpleado empleado, clsEstado Estado, int Tiempo)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
 
             BD.agregarLicenciaAEmpleado(licencia,empleado,Estado,Tiempo);
         }
+
+        public static void eliminarLicencia(int cuit, int idLicencia)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.eliminarLicencia(cuit, idLicencia);
+        }
         #endregion
 
         #region buscarEliminarEmpleado
-		public void buscarEmpleado(int cuit, Label lblNombre, Label lblApellido, Label lblEmail, Label lblDomicilio, Label lblTelefono, Label lblFechaIngreso, PictureBox PbFoto)
+        public void buscarEmpleado(int cuit, Label lblNombre, Label lblApellido, Label lblEmail, Label lblDomicilio, Label lblTelefono, Label lblFechaIngreso, PictureBox PbFoto)
 		{
 			clsConexionBaseDatos conexion = new clsConexionBaseDatos();
 			conexion.llenarDatosEmpleado(cuit,lblNombre,lblApellido,lblEmail,lblDomicilio,lblTelefono,lblFechaIngreso,PbFoto);

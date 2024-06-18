@@ -599,12 +599,13 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT S.Nombre, SE.Cuit, SE.Fecha, SE.FechaFin, SE.Observaciones FROM San_Emp as SE, Sanciones as S WHERE SE.Cuit={cuitEmpleado} AND S.IdSancion = SE.IdSancion";
+                comando.CommandText = $"SELECT S.IdSancion, S.Nombre, SE.Cuit, SE.Fecha, SE.FechaFin, SE.Observaciones FROM San_Emp as SE, Sanciones as S WHERE SE.Cuit={cuitEmpleado} AND S.IdSancion = SE.IdSancion";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
                 dgvSanciones.DataSource = tabla;
+                dgvSanciones.Columns["IdSancion"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -639,6 +640,30 @@ namespace pryRecursosHumanos
                 conexion.Close();
             }
         }
+
+        public void eliminarSancion(int cuit, int idSancion)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $@"DELETE FROM San_Emp WHERE IdSancion = {idSancion} AND Cuit = {cuit}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
         #endregion
 
         #region Licencias
@@ -651,12 +676,13 @@ namespace pryRecursosHumanos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = $"SELECT L.Nombre, LE.Cuit, LE.Estado, LE.Tiempo FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia";
+                comando.CommandText = $"SELECT L.IdLicencia, L.Nombre, LE.Cuit, LE.Estado, LE.Tiempo FROM Lic_Emp as LE, Licencias as L WHERE LE.Cuit = {cuitEmpleado} AND L.IdLicencia = LE.IdLicencia";
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
                 dgvLicencias.DataSource = tabla;
+                dgvLicencias.Columns["IdLicencia"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -678,6 +704,30 @@ namespace pryRecursosHumanos
                 //DateTime fechaFin = fechaInicio.AddDays(licencia.Tiempo);
                 comando.CommandText = $@"INSERT INTO Lic_Emp(IdLicencia, Cuit, Estado, Tiempo) 
                                 VALUES ({licencia.IdLicencia},{empleado.Cuit}, {Estado.IdEstado}, {licencia.Tiempo})";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        public void eliminarLicencia(int cuit, int idLicencia)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $@"DELETE FROM Lic_Emp WHERE IdLicencia = {idLicencia} AND Cuit = {cuit}";
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
