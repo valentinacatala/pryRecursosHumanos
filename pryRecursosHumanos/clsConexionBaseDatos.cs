@@ -1751,6 +1751,54 @@ namespace pryRecursosHumanos
                 return false;
             }
         }
+
+        public void listarFaltas(DataGridView dgvFaltas, int cuit)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"SELECT * FROM Presentismo WHERE Cuit = {cuit}";
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                dgvFaltas.DataSource = tabla;
+                dgvFaltas.Columns["Id"].Visible = false;
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void eliminarFaltas(int id)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = $"DELETE FROM Presentismo WHERE Id = {id}";
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
         #endregion
 
         #region FichaMedica

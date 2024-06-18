@@ -302,11 +302,13 @@
             this.btnEliminarEstado = new System.Windows.Forms.Button();
             this.btnModificarEstado = new System.Windows.Forms.Button();
             this.btnAgregarEstado = new System.Windows.Forms.Button();
+            this.tabPage23 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtNombreContacto = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.txtNumeroContacto = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
+            this.dgvFaltas = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -378,7 +380,9 @@
             this.panel9.SuspendLayout();
             this.tabPage22.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.tabPage23.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaltas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -1952,6 +1956,7 @@
             this.tabAgregarEmpleados.Controls.Add(this.tabPaso2);
             this.tabAgregarEmpleados.Controls.Add(this.tabPaso3);
             this.tabAgregarEmpleados.Controls.Add(this.tabPaso4);
+            this.tabAgregarEmpleados.Controls.Add(this.tabPage23);
             this.tabAgregarEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabAgregarEmpleados.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.tabAgregarEmpleados.HotTrack = true;
@@ -2937,7 +2942,6 @@
             // 
             // tabPaso4
             // 
-            this.tabPaso4.Controls.Add(this.groupBox5);
             this.tabPaso4.Controls.Add(this.lblEmpleadoExiste);
             this.tabPaso4.Controls.Add(this.btnBuscarSL);
             this.tabPaso4.Controls.Add(this.label43);
@@ -3081,13 +3085,14 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.dgvFaltas);
             this.groupBox13.Controls.Add(this.btnAgregarFalta);
             this.groupBox13.Controls.Add(this.label33);
             this.groupBox13.Controls.Add(this.dtpAusencia);
             this.groupBox13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.Location = new System.Drawing.Point(13, 208);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(501, 86);
+            this.groupBox13.Size = new System.Drawing.Size(501, 237);
             this.groupBox13.TabIndex = 40;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Presentismo";
@@ -3097,7 +3102,7 @@
             this.btnAgregarFalta.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarFalta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnAgregarFalta.Location = new System.Drawing.Point(224, 45);
+            this.btnAgregarFalta.Location = new System.Drawing.Point(224, 43);
             this.btnAgregarFalta.Name = "btnAgregarFalta";
             this.btnAgregarFalta.Size = new System.Drawing.Size(83, 27);
             this.btnAgregarFalta.TabIndex = 36;
@@ -3589,6 +3594,16 @@
             this.btnAgregarEstado.UseVisualStyleBackColor = true;
             this.btnAgregarEstado.Click += new System.EventHandler(this.btnAgregarEstado_Click);
             // 
+            // tabPage23
+            // 
+            this.tabPage23.Controls.Add(this.groupBox5);
+            this.tabPage23.Location = new System.Drawing.Point(4, 24);
+            this.tabPage23.Name = "tabPage23";
+            this.tabPage23.Size = new System.Drawing.Size(533, 531);
+            this.tabPage23.TabIndex = 4;
+            this.tabPage23.Text = "Contactos";
+            this.tabPage23.UseVisualStyleBackColor = true;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtNombreContacto);
@@ -3596,10 +3611,10 @@
             this.groupBox5.Controls.Add(this.txtNumeroContacto);
             this.groupBox5.Controls.Add(this.label39);
             this.groupBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(13, 300);
+            this.groupBox5.Location = new System.Drawing.Point(13, 14);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(501, 129);
-            this.groupBox5.TabIndex = 59;
+            this.groupBox5.TabIndex = 60;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tipo de Contactos";
             // 
@@ -3644,6 +3659,18 @@
             this.label39.Size = new System.Drawing.Size(146, 16);
             this.label39.TabIndex = 6;
             this.label39.Text = "Nombre de un contacto";
+            // 
+            // dgvFaltas
+            // 
+            this.dgvFaltas.AllowUserToAddRows = false;
+            this.dgvFaltas.AllowUserToDeleteRows = false;
+            this.dgvFaltas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFaltas.Location = new System.Drawing.Point(10, 78);
+            this.dgvFaltas.Name = "dgvFaltas";
+            this.dgvFaltas.ReadOnly = true;
+            this.dgvFaltas.Size = new System.Drawing.Size(485, 143);
+            this.dgvFaltas.TabIndex = 37;
+            this.dgvFaltas.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFaltas_RowHeaderMouseDoubleClick);
             // 
             // frmAdmin
             // 
@@ -3753,8 +3780,10 @@
             this.panel9.ResumeLayout(false);
             this.tabPage22.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.tabPage23.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaltas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4033,10 +4062,12 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox txtBuscarCuitSL;
         private System.Windows.Forms.Label lblEmpleadoExiste;
+        private System.Windows.Forms.TabPage tabPage23;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtNombreContacto;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox txtNumeroContacto;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.DataGridView dgvFaltas;
     }
 }

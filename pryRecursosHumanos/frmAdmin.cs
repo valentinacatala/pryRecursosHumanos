@@ -279,6 +279,7 @@ namespace pryRecursosHumanos
         private void btnAgregarFalta_Click(object sender, EventArgs e)
         {
             clsPresentismo.agregarFalta(empleadoSeleccionado.Cuit, dtpAusencia.Value.ToString("dd/MM/yyyy"));
+            clsPresentismo.listarFaltas(dgvFaltas, empleadoSeleccionado.Cuit);
         }
 
         private void btnAgregarEnfermedad_Click(object sender, EventArgs e)
@@ -373,6 +374,7 @@ namespace pryRecursosHumanos
                 {
                     lblEmpleadoExiste.ForeColor = Color.Green;
                     lblEmpleadoExiste.Text = "Usuario válido";
+                    clsPresentismo.listarFaltas(dgvFaltas, empleadoSeleccionado.Cuit);
                     btnSanciones.Enabled = true;
                     btnLicencias.Enabled = true;
                     btnAgregarFalta.Enabled = true;
@@ -384,6 +386,7 @@ namespace pryRecursosHumanos
                     btnSanciones.Enabled = false;
                     btnLicencias.Enabled = false;
                     btnAgregarFalta.Enabled = false;
+                    dgvFaltas.DataSource = null;
                 }
             }
         }
@@ -437,6 +440,17 @@ namespace pryRecursosHumanos
             {
                 clsFichaMedica.eliminarAlergia(idFichaMedica, idAlergia);
                 clsFichaMedica.listarAlergias(dgvAlergias, idFichaMedica);
+            }
+        }
+
+        private void dgvFaltas_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int id = Convert.ToInt32(dgvFaltas.SelectedRows[0].Cells["Id"].Value);
+            DialogResult result = MessageBox.Show("¿Eliminar falta?", "AVISO", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                clsPresentismo.eliminarFaltas(id);
+                clsPresentismo.listarFaltas(dgvFaltas, empleadoSeleccionado.Cuit);
             }
         }
     }

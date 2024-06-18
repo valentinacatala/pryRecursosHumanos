@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
@@ -31,5 +32,16 @@ namespace pryRecursosHumanos
 			BD.agregarFaltas(cuit, fecha);
 		}
 
+		public static void eliminarFaltas(int id)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.eliminarFaltas(id);
+        }
+
+		public static void listarFaltas(DataGridView dgvFaltas, int cuit)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarFaltas(dgvFaltas, cuit);
+        }
 	}
 }
