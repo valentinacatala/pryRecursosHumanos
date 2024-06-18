@@ -49,7 +49,7 @@ namespace pryRecursosHumanos
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
         private void frmAdmin_Load(object sender, EventArgs e)
-        {            
+        {
             clsPaises.listarPaises(cboEmpleadoPais);
             clsArea.listarArea(cboSeleccionarArea);
             clsArea.listarArea(cboAreaMod);
@@ -163,7 +163,7 @@ namespace pryRecursosHumanos
             openFileDialog.InitialDirectory = Application.StartupPath + "\\img";
             openFileDialog.Filter = "Archivos de imagen|*.png;*.jpg;*.jpeg|Todos los archivos|*.*";
             openFileDialog.RestoreDirectory = false;
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string rutaImagen = openFileDialog.FileName;
                 pbFotoEmpleado.ImageLocation = rutaImagen;
@@ -174,7 +174,7 @@ namespace pryRecursosHumanos
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 int cuit = Convert.ToInt32(txtEliminarCuit.Text);
-                clsEmpleado.buscarEmpleado(cuit,lblNombre,lblApellido,lblCorreo,lblDireccion,lblTelefono,lblFechaIngreso,pbEliminarFoto);
+                clsEmpleado.buscarEmpleado(cuit, lblNombre, lblApellido, lblCorreo, lblDireccion, lblTelefono, lblFechaIngreso, pbEliminarFoto);
                 e.Handled = true;
             }
         }
@@ -184,7 +184,7 @@ namespace pryRecursosHumanos
             bool eliminado = empleado.eliminarEmpleado(Convert.ToInt32(txtEliminarCuit.Text));
             if (eliminado)
             {
-                MessageBox.Show($"Empleado con CUIT {txtCuit.Text} eliminado correctamente","Eliminado",MessageBoxButtons.OK);
+                MessageBox.Show($"Empleado con CUIT {txtCuit.Text} eliminado correctamente", "Eliminado", MessageBoxButtons.OK);
             }
             else MessageBox.Show("El cuit ingresado no corresponde a ningun empleado");
         }
@@ -258,7 +258,7 @@ namespace pryRecursosHumanos
 
         private void cboUniversidad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboUniversidad.SelectedValue != null)
+            if (cboUniversidad.SelectedValue != null)
             {
                 int idUniversidad = Convert.ToInt32(cboUniversidad.SelectedValue.ToString());
                 clsTitulo.listarTitulos(cboTitulo, idUniversidad);
@@ -267,7 +267,7 @@ namespace pryRecursosHumanos
 
         private void cboTitulo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboTitulo.SelectedValue != null)
+            if (cboTitulo.SelectedValue != null)
             {
                 idTitulo = Convert.ToInt32(cboTitulo.SelectedValue.ToString());
             }
@@ -281,7 +281,7 @@ namespace pryRecursosHumanos
 
         private void btnAgregarEnfermedad_Click(object sender, EventArgs e)
         {
-            if(cboEnfermedades.SelectedValue != null)
+            if (cboEnfermedades.SelectedValue != null)
             {
                 //empleadoSeleccionado.IdFichaMedica = clsEmpleado.buscarFichaMedica(Convert.ToInt32(txtBuscarCuit.Text));
                 int idEnfermedad = Convert.ToInt32(cboEnfermedades.SelectedValue.ToString());
@@ -327,7 +327,7 @@ namespace pryRecursosHumanos
 
         private void btnBuscarCuit_Click(object sender, EventArgs e)
         {
-            if(txtBuscarCuit.Text != String.Empty)
+            if (txtBuscarCuit.Text != String.Empty)
             {
                 int cuit = Convert.ToInt32(txtBuscarCuit.Text);
                 empleadoSeleccionado.Cuit = cuit;
@@ -394,7 +394,7 @@ namespace pryRecursosHumanos
             int idFichaMedica = clsEmpleado.buscarFichaMedica(cuit);
             int idEnfermedad = Convert.ToInt32(dgvEnfermedades.SelectedRows[0].Cells["IdEnfermedad"].Value);
             DialogResult result = MessageBox.Show("¿Eliminar enfermedad?", "Aviso", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 clsFichaMedica.eliminarEnfermedad(idFichaMedica, idEnfermedad);
                 clsFichaMedica.listarEnfermedades(dgvEnfermedades, idFichaMedica);
@@ -444,11 +444,12 @@ namespace pryRecursosHumanos
         {
             int id = Convert.ToInt32(dgvFaltas.SelectedRows[0].Cells["Id"].Value);
             DialogResult result = MessageBox.Show("¿Eliminar falta?", "AVISO", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 clsPresentismo.eliminarFaltas(id);
                 clsPresentismo.listarFaltas(dgvFaltas, empleadoSeleccionado.Cuit);
             }
+        }
         private void btnAgregarSancion_Click(object sender, EventArgs e)
         {
             frmAgregarLicSan frmAgregarLicSan = new frmAgregarLicSan("Sancion");
@@ -460,161 +461,161 @@ namespace pryRecursosHumanos
             frmAgregarLicSan frmAgregarLicSan = new frmAgregarLicSan("Licencia");
             frmAgregarLicSan.ShowDialog();
         }
-        
-        #endregion
-        #region modificar
-        private void btnModificarArea_Click(object sender, EventArgs e)
-        {
-            frmModArea frmModArea = new frmModArea();
-            frmModArea.ShowDialog();
-        }
-        private void btnModificarLicencia_Click(object sender, EventArgs e)
-        {
-            frmModLicSan frmModLicSan = new frmModLicSan("Licencia");
-            frmModLicSan.ShowDialog();
-        }
 
-        private void btnModificarSancion_Click(object sender, EventArgs e)
-        {
-            frmModLicSan frmModLicSan = new frmModLicSan("Sancion");
-            frmModLicSan.ShowDialog();
-        }
-        #endregion
-        #region eliminar
-        private void btnEliminarEstado_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Estado");
-            frmEliminar.ShowDialog();
-        }
+            #endregion
+            #region modificar
+            private void btnModificarArea_Click(object sender, EventArgs e)
+            {
+                frmModArea frmModArea = new frmModArea();
+                frmModArea.ShowDialog();
+            }
+            private void btnModificarLicencia_Click(object sender, EventArgs e)
+            {
+                frmModLicSan frmModLicSan = new frmModLicSan("Licencia");
+                frmModLicSan.ShowDialog();
+            }
 
-        private void btnEliminarEnfermedades_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Enfermedad");
-            frmEliminar.ShowDialog();
-        }
+            private void btnModificarSancion_Click(object sender, EventArgs e)
+            {
+                frmModLicSan frmModLicSan = new frmModLicSan("Sancion");
+                frmModLicSan.ShowDialog();
+            }
+            #endregion
+            #region eliminar
+            private void btnEliminarEstado_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Estado");
+                frmEliminar.ShowDialog();
+            }
 
-        private void btnEliminarMedicamentos_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Medicamento");
-            frmEliminar.ShowDialog();
-        }
+            private void btnEliminarEnfermedades_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Enfermedad");
+                frmEliminar.ShowDialog();
+            }
 
-        private void btnEliminarAlergia_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Alergia");
-            frmEliminar.ShowDialog();
-        }
+            private void btnEliminarMedicamentos_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Medicamento");
+                frmEliminar.ShowDialog();
+            }
 
-        private void btnEliminarDiscapacidad_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Discapacidad");
-            frmEliminar.ShowDialog();
-        }
+            private void btnEliminarAlergia_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Alergia");
+                frmEliminar.ShowDialog();
+            }
 
-        private void btnEliminarArea_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Discapacidad");
-            frmEliminar.ShowDialog();
-        }
+            private void btnEliminarDiscapacidad_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Discapacidad");
+                frmEliminar.ShowDialog();
+            }
 
-        private void btnEliminarCiudad_Click(object sender, EventArgs e)
-        {
-            frmEliminarCiudad eliminarCiudad = new frmEliminarCiudad();
-            eliminarCiudad.ShowDialog();
-        }
+            private void btnEliminarArea_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Discapacidad");
+                frmEliminar.ShowDialog();
+            }
 
-        private void btnEliminarProvincia_Click(object sender, EventArgs e)
-        {
-            frmEliminarProvincia eliminarProvincia = new frmEliminarProvincia();
-            eliminarProvincia.ShowDialog();
-        }
+            private void btnEliminarCiudad_Click(object sender, EventArgs e)
+            {
+                frmEliminarCiudad eliminarCiudad = new frmEliminarCiudad();
+                eliminarCiudad.ShowDialog();
+            }
 
-        private void btnEliminarPais_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Pais");
-            frmEliminar.ShowDialog();
-        }
-        private void btnEliminarSancion_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Sancion");
-            frmEliminar.ShowDialog();
-        }
+            private void btnEliminarProvincia_Click(object sender, EventArgs e)
+            {
+                frmEliminarProvincia eliminarProvincia = new frmEliminarProvincia();
+                eliminarProvincia.ShowDialog();
+            }
 
-        private void btnEliminarLicencia_Click(object sender, EventArgs e)
-        {
-            frmEliminar frmEliminar = new frmEliminar("Licencia");
-            frmEliminar.ShowDialog();
-        }
-        #endregion
-        #region listar
-        private void btnListarPaises_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Pais");
-            frmListar.ShowDialog();
-        }
-       
-        private void btnListarSanciones_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Sancion");
-            frmListar.ShowDialog();
-        }
+            private void btnEliminarPais_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Pais");
+                frmEliminar.ShowDialog();
+            }
+            private void btnEliminarSancion_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Sancion");
+                frmEliminar.ShowDialog();
+            }
 
-        private void btnListarLicencias_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Licencia");
-            frmListar.ShowDialog();
-        }
+            private void btnEliminarLicencia_Click(object sender, EventArgs e)
+            {
+                frmEliminar frmEliminar = new frmEliminar("Licencia");
+                frmEliminar.ShowDialog();
+            }
+            #endregion
+            #region listar
+            private void btnListarPaises_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Pais");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarEstados_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Estado");
-            frmListar.ShowDialog();
-        }
+            private void btnListarSanciones_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Sancion");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarEnfermedades_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Enfermedad");
-            frmListar.ShowDialog();
-        }
+            private void btnListarLicencias_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Licencia");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarMedicamentos_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Medicamento");
-            frmListar.ShowDialog();
-        }
+            private void btnListarEstados_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Estado");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarAlergias_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Alergia");
-            frmListar.ShowDialog();
-        }
+            private void btnListarEnfermedades_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Enfermedad");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarDiscapacidades_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Discapacidad");
-            frmListar.ShowDialog();
-        }
+            private void btnListarMedicamentos_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Medicamento");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarAreas_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Area");
-            frmListar.ShowDialog();
-        }
+            private void btnListarAlergias_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Alergia");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarCiudades_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Ciudad");
-            frmListar.ShowDialog();
-        }
+            private void btnListarDiscapacidades_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Discapacidad");
+                frmListar.ShowDialog();
+            }
 
-        private void btnListarProvincias_Click(object sender, EventArgs e)
-        {
-            frmListar frmListar = new frmListar("Provincia");
-            frmListar.ShowDialog();
-        }
-        #endregion
+            private void btnListarAreas_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Area");
+                frmListar.ShowDialog();
+            }
 
-        #endregion
+            private void btnListarCiudades_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Ciudad");
+                frmListar.ShowDialog();
+            }
+
+            private void btnListarProvincias_Click(object sender, EventArgs e)
+            {
+                frmListar frmListar = new frmListar("Provincia");
+                frmListar.ShowDialog();
+            }
+            #endregion
+
+            #endregion
 
         private void btnListarApellido_Click(object sender, EventArgs e)
         {
@@ -633,12 +634,12 @@ namespace pryRecursosHumanos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            clsEmpleado.buscarEmpleado(Convert.ToInt32(txtCuitModificar.Text),txtModificarNombre,txtApellidoMod,txtDniMod,txtModificarCorreo,txtModificarDomicilio,txtModificarTelefono,dtpModificarFecha,txtModificarInstagram);
+            clsEmpleado.buscarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre, txtApellidoMod, txtDniMod, txtModificarCorreo, txtModificarDomicilio, txtModificarTelefono, dtpModificarFecha, txtModificarInstagram);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            clsEmpleado.modificarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre.Text, txtApellidoMod.Text, Convert.ToInt32(txtDniMod.Text), dtpModificarFecha.Value, txtModificarDomicilio.Text, txtModificarCorreo.Text, Convert.ToInt32(txtModificarTelefono.Text),  txtModificarInstagram.Text,Convert.ToInt32(cboAreaMod.SelectedValue));
+            clsEmpleado.modificarEmpleado(Convert.ToInt32(txtCuitModificar.Text), txtModificarNombre.Text, txtApellidoMod.Text, Convert.ToInt32(txtDniMod.Text), dtpModificarFecha.Value, txtModificarDomicilio.Text, txtModificarCorreo.Text, Convert.ToInt32(txtModificarTelefono.Text), txtModificarInstagram.Text, Convert.ToInt32(cboAreaMod.SelectedValue));
         }
     }
 }
