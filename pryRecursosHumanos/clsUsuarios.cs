@@ -46,5 +46,11 @@ namespace pryRecursosHumanos
             // LLENER LOS DATOS DEL USUARIO ANTES DE LLAMAR A ESTE METODO
             return BD.iniciarSesion(User);
         }
+        public static string buscarNombre(long cuit)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            return BD.nombreUsuario(cuit);
+            
+        }
     }
 }

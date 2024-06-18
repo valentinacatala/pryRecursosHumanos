@@ -170,11 +170,11 @@ namespace pryRecursosHumanos
         #endregion
 
         #region listarAgregarEmpleado
-        public void listarEmpleados(DataGridView dgvGrilla)
-		{
-			clsConexionBaseDatos BD = new clsConexionBaseDatos();
-			BD.listarEmpleados(dgvGrilla);
-		}
+  //      public void listarEmpleados(DataGridView dgvGrilla)
+		//{
+		//	clsConexionBaseDatos BD = new clsConexionBaseDatos();
+		//	BD.listarEmpleados(dgvGrilla);
+		//}
 
 		public void agregarEmpleado(clsEmpleado nuevoEmpleado)
 		{
@@ -194,7 +194,6 @@ namespace pryRecursosHumanos
         public static void agregarSancion(clsSanciones sancion, clsEmpleado empleado, string observaciones, DateTime fechaInicio)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
-
 			BD.agregarSancionAEmpleado(sancion, empleado, observaciones, fechaInicio);
         }
 
@@ -219,15 +218,25 @@ namespace pryRecursosHumanos
         #endregion
 
         #region buscarEliminarEmpleado
-        public void buscarEmpleado(int cuit, Label lblNombre, Label lblApellido, Label lblEmail, Label lblDomicilio, Label lblTelefono, Label lblFechaIngreso, PictureBox PbFoto)
+		public static void buscarEmpleado(int cuit, Label lblNombre, Label lblApellido, Label lblEmail, Label lblDomicilio, Label lblTelefono, Label lblFechaIngreso, PictureBox PbFoto)
 		{
 			clsConexionBaseDatos conexion = new clsConexionBaseDatos();
 			conexion.llenarDatosEmpleado(cuit,lblNombre,lblApellido,lblEmail,lblDomicilio,lblTelefono,lblFechaIngreso,PbFoto);
 		}
-		public bool eliminarEmpleado(int cuit)
+        public static void buscarEmpleado(int cuit,TextBox txtNombre, TextBox txtApellido, TextBox txtDni, TextBox txtEmail, TextBox txtDomicilio, TextBox txtTelefono,  DateTimePicker dtpFechaDeNacimiento, TextBox txtInstagram)
+        {
+            clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+            conexion.llenarDatosEmpleado(cuit,txtNombre,txtApellido,txtDni,txtEmail,txtDomicilio,txtTelefono,dtpFechaDeNacimiento,txtInstagram);
+        }
+        public bool eliminarEmpleado(int cuit)
 		{
             clsConexionBaseDatos conexion = new clsConexionBaseDatos();
 			return conexion.eliminarEmpleado(cuit);
+        }
+		public static void modificarEmpleado(int cuit, string nombre, string apellido, int dni, DateTime fechaNacimiento, string domicilio, string email, long telefono, string instagram, int idArea)
+		{
+            clsConexionBaseDatos conexion = new clsConexionBaseDatos();
+			conexion.modificarEmpleado(cuit,nombre,apellido,dni,fechaNacimiento,domicilio,email,telefono,instagram,idArea);
         }
 
         #endregion
@@ -244,5 +253,93 @@ namespace pryRecursosHumanos
             return BD.asignarFichaMedica(cuitEmpleado);
         }
 
+        #region listarEmpleados
+        public static void listarEmpleados(DataGridView dgvGrilla)
+        {
+            string comando;
+            comando = @"select empleados.Cuit,
+                empleados.Nombre,
+                empleados.Apellido,
+                areas.nombre as Areas,
+                empleados.Domicilio,
+                empleados.Telefono,
+                empleados.DNI,
+                empleados.CorreoElectronico,
+                empleados.FechaDeNacimineto,
+                ciudades.nombre as Ciudad,
+                estados.nombre as Estado,
+                titulos.nombre as Titulo,
+                tipodecontactos.nombre as Contacto,
+                empleados.Instagram 
+                from empleados, areas, ciudades, estados, titulos, tipodecontactos
+				WHERE empleados.IdArea = areas.IdAreas AND empleados.IdCiudad = ciudades.IdCiudad AND empleados.IdEstado = estados.IdEstado
+				AND empleados.IdTitulo = titulos.IdTitulo AND empleados.IdTipoDeContacto = tipodecontactos.IdTipoDeContacto";
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarEmpleados(dgvGrilla, comando);
+        }
+        public static void listarEmpleadosEstado(DataGridView dgvGrilla)
+        {
+            string comando;
+            comando = "select empleados.Cuit," +
+                "empleados.Nombre," +
+                "empleados.Apellido," +
+                "areas.nombre as Areas," +
+                "empleados.Domicilio," +
+                "empleados.Telefono," +
+                "empleados.DNI," +
+                "empleados.CorreoElectronico," +
+                "empleados.FechaDeNacimineto," +
+                "Paises.nombre as Pais," +
+                "estados.nombre as Estado," +
+                "titulos.nombre as Titulo," +
+                "tipodecontactos.nombre as Contacto," +
+                "empleados.Instagram " +
+                "from empleados, areas, paises, estados, titulos, tipodecontactos order by estados.nombre";
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarEmpleados(dgvGrilla, comando);
+        }
+        public static void listarEmpleadosApellido(DataGridView dgvGrilla)
+        {
+            string comando;
+            comando = "select empleados.Cuit," +
+                "empleados.Nombre," +
+                "empleados.Apellido," +
+                "areas.nombre as Areas," +
+                "empleados.Domicilio," +
+                "empleados.Telefono," +
+                "empleados.DNI," +
+                "empleados.CorreoElectronico," +
+                "empleados.FechaDeNacimineto," +
+                "Paises.nombre as Pais," +
+                "estados.nombre as Estado," +
+                "titulos.nombre as Titulo," +
+                "tipodecontactos.nombre as Contacto," +
+                "empleados.Instagram " +
+                "from empleados, areas, paises, estados, titulos, tipodecontactos order by empleados.apellido";
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarEmpleados(dgvGrilla, comando);
+        }
+        public static void listarEmpleadosPais(DataGridView dgvGrilla)
+        {
+            string comando;
+            comando = "select empleados.Cuit," +
+                "empleados.Nombre," +
+                "empleados.Apellido," +
+                "areas.nombre as Areas," +
+                "empleados.Domicilio," +
+                "empleados.Telefono," +
+                "empleados.DNI," +
+                "empleados.CorreoElectronico," +
+                "empleados.FechaDeNacimineto," +
+                "Paises.nombre as Pais," +
+                "estados.nombre as Estado," +
+                "titulos.nombre as Titulo," +
+                "tipodecontactos.nombre as Contacto," +
+                "empleados.Instagram " +
+                "from empleados, areas, paises, estados, titulos, tipodecontactos order by paises.nombre";
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarEmpleados(dgvGrilla, comando);
+        }
+        #endregion
     }
 }

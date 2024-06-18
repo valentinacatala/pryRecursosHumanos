@@ -28,11 +28,23 @@ namespace pryRecursosHumanos
 			clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.listarMedicamentos(cbMedicamentos);
 		}
-		public static void agregarMedicamento(DataGridView dgvGrilla,string nuevoMedicamento)
+        public static void listarMedicamentos(DataGridView dgvGrilla, string nuevoMedicamento)
+        {
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+            BD.listarMedicamento(dgvGrilla, nuevoMedicamento);
+        }
+        public static void agregarMedicamento(DataGridView dgvGrilla,string nuevoMedicamento)
 		{
             clsConexionBaseDatos BD = new clsConexionBaseDatos();
 			BD.agregarMedicamento(nuevoMedicamento);
 			BD.listarMedicamento(dgvGrilla,nuevoMedicamento);
+        }
+		public static void elimiarMedicamento(int idMedicamento,string nombreMedicamento,DataGridView dgvGrilla)
+		{
+            clsConexionBaseDatos BD = new clsConexionBaseDatos();
+			BD.eliminarMedicamento(idMedicamento, nombreMedicamento);
+            BD.listarMedicamento(dgvGrilla, nombreMedicamento);
+
         }
     }
 }

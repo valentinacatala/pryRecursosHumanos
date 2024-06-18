@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace pryRecursosHumanos
 {
-    public partial class frmArea : Form
+    public partial class frmModArea : Form
     {
-        public frmArea()
+        public frmModArea()
         {
             InitializeComponent();
+        }
+
+        private void pcbCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmModArea_Load(object sender, EventArgs e)
+        {
+            clsArea.listarArea(cboArea);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -22,17 +32,12 @@ namespace pryRecursosHumanos
             try
             {
                 int sueldo = Convert.ToInt32(txtSueldo.Text);
-                clsArea.agregarArea(txtNombre.Text.ToUpper(),sueldo,dgvListar);
+                clsArea.modArea(cboArea.SelectedText,sueldo,dgvListar,Convert.ToInt32(cboArea.SelectedValue));
             }
             catch (Exception)
             {
                 MessageBox.Show("Ingrese un numero en el campo 'Sueldo'");
             }
-        }
-
-        private void pcbCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

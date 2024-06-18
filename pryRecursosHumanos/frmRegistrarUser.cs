@@ -35,7 +35,7 @@ namespace pryRecursosHumanos
 
         private void pcbCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
