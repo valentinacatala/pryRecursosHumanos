@@ -201,17 +201,14 @@
             this.btnListarPaises = new System.Windows.Forms.Button();
             this.btnEliminarPais = new System.Windows.Forms.Button();
             this.btnAgregarPais = new System.Windows.Forms.Button();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnListarProvincias = new System.Windows.Forms.Button();
             this.btnEliminarProvincia = new System.Windows.Forms.Button();
             this.btnAgregarProvincias = new System.Windows.Forms.Button();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnListarCiudades = new System.Windows.Forms.Button();
             this.btnEliminarCiudad = new System.Windows.Forms.Button();
             this.btnAgregarCiudad = new System.Windows.Forms.Button();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnListarAreas = new System.Windows.Forms.Button();
             this.btnEliminarArea = new System.Windows.Forms.Button();
@@ -222,17 +219,14 @@
             this.btnListarDiscapacidades = new System.Windows.Forms.Button();
             this.btnEliminarDiscapacidad = new System.Windows.Forms.Button();
             this.btnAgregarDiscapacidad = new System.Windows.Forms.Button();
-            this.tabPage19 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnListarAlergias = new System.Windows.Forms.Button();
             this.btnEliminarAlergia = new System.Windows.Forms.Button();
             this.btnAgregarAlergia = new System.Windows.Forms.Button();
-            this.tabPage20 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnListarMedicamentos = new System.Windows.Forms.Button();
             this.btnEliminarMedicamentos = new System.Windows.Forms.Button();
             this.btnAgregarMedicamentos = new System.Windows.Forms.Button();
-            this.tabPage21 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnListarEnfermedades = new System.Windows.Forms.Button();
             this.btnEliminarEnfermedades = new System.Windows.Forms.Button();
@@ -242,13 +236,11 @@
             this.btnListarEstados = new System.Windows.Forms.Button();
             this.btnEliminarEstado = new System.Windows.Forms.Button();
             this.btnAgregarEstado = new System.Windows.Forms.Button();
-            this.tabPage23 = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnListarLicencias = new System.Windows.Forms.Button();
             this.btnEliminarLicencia = new System.Windows.Forms.Button();
             this.btnModificarLicencia = new System.Windows.Forms.Button();
             this.btnAgregarLicencia = new System.Windows.Forms.Button();
-            this.tabPage24 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnListarSanciones = new System.Windows.Forms.Button();
             this.btnEliminarSancion = new System.Windows.Forms.Button();
@@ -259,11 +251,23 @@
             this.btnListarUni = new System.Windows.Forms.Button();
             this.btnEliminarUni = new System.Windows.Forms.Button();
             this.btnAgregarUni = new System.Windows.Forms.Button();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnListarTitulo = new System.Windows.Forms.Button();
             this.btnEliminarTitulo = new System.Windows.Forms.Button();
             this.btnAgregarTitulo = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMinimizar)).BeginInit();
@@ -313,29 +317,20 @@
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage7.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.tabPage8.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.tabPage17.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabPage18.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.tabPage19.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.tabPage20.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.tabPage21.SuspendLayout();
             this.panel9.SuspendLayout();
             this.tabPage22.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.tabPage23.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.tabPage24.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.tabPage11.SuspendLayout();
             this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -2382,20 +2377,11 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Controls.Add(this.tabPage8);
-            this.tabControl2.Controls.Add(this.tabPage17);
             this.tabControl2.Controls.Add(this.tabPage18);
-            this.tabControl2.Controls.Add(this.tabPage19);
-            this.tabControl2.Controls.Add(this.tabPage20);
-            this.tabControl2.Controls.Add(this.tabPage21);
             this.tabControl2.Controls.Add(this.tabPage22);
-            this.tabControl2.Controls.Add(this.tabPage23);
-            this.tabControl2.Controls.Add(this.tabPage24);
             this.tabControl2.Controls.Add(this.tabPage10);
-            this.tabControl2.Controls.Add(this.tabPage11);
             this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl2.Location = new System.Drawing.Point(9, 12);
+            this.tabControl2.Location = new System.Drawing.Point(9, 6);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(510, 543);
@@ -2403,23 +2389,27 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.panel4);
+            this.tabPage6.Controls.Add(this.panel3);
             this.tabPage6.Controls.Add(this.panel1);
             this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(502, 494);
+            this.tabPage6.Size = new System.Drawing.Size(502, 510);
             this.tabPage6.TabIndex = 0;
-            this.tabPage6.Text = "Paises";
+            this.tabPage6.Text = "Datos 1";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.btnListarPaises);
             this.panel1.Controls.Add(this.btnEliminarPais);
             this.panel1.Controls.Add(this.btnAgregarPais);
-            this.panel1.Location = new System.Drawing.Point(114, 120);
+            this.panel1.Location = new System.Drawing.Point(6, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 245);
+            this.panel1.Size = new System.Drawing.Size(490, 122);
             this.panel1.TabIndex = 0;
             // 
             // btnListarPaises
@@ -2427,7 +2417,7 @@
             this.btnListarPaises.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarPaises.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarPaises.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarPaises.Location = new System.Drawing.Point(61, 95);
+            this.btnListarPaises.Location = new System.Drawing.Point(170, 56);
             this.btnListarPaises.Name = "btnListarPaises";
             this.btnListarPaises.Size = new System.Drawing.Size(145, 50);
             this.btnListarPaises.TabIndex = 3;
@@ -2440,7 +2430,7 @@
             this.btnEliminarPais.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarPais.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarPais.Location = new System.Drawing.Point(332, 56);
             this.btnEliminarPais.Name = "btnEliminarPais";
             this.btnEliminarPais.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarPais.TabIndex = 2;
@@ -2453,7 +2443,7 @@
             this.btnAgregarPais.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarPais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarPais.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarPais.Location = new System.Drawing.Point(10, 56);
             this.btnAgregarPais.Name = "btnAgregarPais";
             this.btnAgregarPais.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarPais.TabIndex = 0;
@@ -2461,25 +2451,15 @@
             this.btnAgregarPais.UseVisualStyleBackColor = false;
             this.btnAgregarPais.Click += new System.EventHandler(this.btnAgregarPais_Click);
             // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.panel3);
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(502, 494);
-            this.tabPage7.TabIndex = 1;
-            this.tabPage7.Text = "Provincias";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label36);
             this.panel3.Controls.Add(this.btnListarProvincias);
             this.panel3.Controls.Add(this.btnEliminarProvincia);
             this.panel3.Controls.Add(this.btnAgregarProvincias);
-            this.panel3.Location = new System.Drawing.Point(114, 120);
+            this.panel3.Location = new System.Drawing.Point(6, 343);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(261, 245);
+            this.panel3.Size = new System.Drawing.Size(490, 137);
             this.panel3.TabIndex = 1;
             // 
             // btnListarProvincias
@@ -2487,7 +2467,7 @@
             this.btnListarProvincias.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarProvincias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarProvincias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarProvincias.Location = new System.Drawing.Point(61, 95);
+            this.btnListarProvincias.Location = new System.Drawing.Point(170, 64);
             this.btnListarProvincias.Name = "btnListarProvincias";
             this.btnListarProvincias.Size = new System.Drawing.Size(145, 50);
             this.btnListarProvincias.TabIndex = 4;
@@ -2500,7 +2480,7 @@
             this.btnEliminarProvincia.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarProvincia.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarProvincia.Location = new System.Drawing.Point(332, 64);
             this.btnEliminarProvincia.Name = "btnEliminarProvincia";
             this.btnEliminarProvincia.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarProvincia.TabIndex = 2;
@@ -2513,7 +2493,7 @@
             this.btnAgregarProvincias.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarProvincias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarProvincias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProvincias.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarProvincias.Location = new System.Drawing.Point(10, 64);
             this.btnAgregarProvincias.Name = "btnAgregarProvincias";
             this.btnAgregarProvincias.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarProvincias.TabIndex = 0;
@@ -2521,24 +2501,15 @@
             this.btnAgregarProvincias.UseVisualStyleBackColor = false;
             this.btnAgregarProvincias.Click += new System.EventHandler(this.btnAgregarProvincias_Click);
             // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.panel4);
-            this.tabPage8.Location = new System.Drawing.Point(4, 29);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(502, 494);
-            this.tabPage8.TabIndex = 2;
-            this.tabPage8.Text = "Ciudades";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.btnListarCiudades);
             this.panel4.Controls.Add(this.btnEliminarCiudad);
             this.panel4.Controls.Add(this.btnAgregarCiudad);
-            this.panel4.Location = new System.Drawing.Point(114, 120);
+            this.panel4.Location = new System.Drawing.Point(6, 179);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(261, 245);
+            this.panel4.Size = new System.Drawing.Size(490, 128);
             this.panel4.TabIndex = 1;
             // 
             // btnListarCiudades
@@ -2546,7 +2517,7 @@
             this.btnListarCiudades.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarCiudades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarCiudades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarCiudades.Location = new System.Drawing.Point(61, 95);
+            this.btnListarCiudades.Location = new System.Drawing.Point(170, 59);
             this.btnListarCiudades.Name = "btnListarCiudades";
             this.btnListarCiudades.Size = new System.Drawing.Size(145, 50);
             this.btnListarCiudades.TabIndex = 4;
@@ -2559,7 +2530,7 @@
             this.btnEliminarCiudad.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCiudad.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarCiudad.Location = new System.Drawing.Point(332, 59);
             this.btnEliminarCiudad.Name = "btnEliminarCiudad";
             this.btnEliminarCiudad.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarCiudad.TabIndex = 2;
@@ -2572,7 +2543,7 @@
             this.btnAgregarCiudad.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCiudad.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarCiudad.Location = new System.Drawing.Point(10, 59);
             this.btnAgregarCiudad.Name = "btnAgregarCiudad";
             this.btnAgregarCiudad.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarCiudad.TabIndex = 0;
@@ -2580,25 +2551,16 @@
             this.btnAgregarCiudad.UseVisualStyleBackColor = false;
             this.btnAgregarCiudad.Click += new System.EventHandler(this.btnAgregarCiudad_Click);
             // 
-            // tabPage17
-            // 
-            this.tabPage17.Controls.Add(this.panel5);
-            this.tabPage17.Location = new System.Drawing.Point(4, 29);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(502, 494);
-            this.tabPage17.TabIndex = 3;
-            this.tabPage17.Text = "Area";
-            this.tabPage17.UseVisualStyleBackColor = true;
-            // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label47);
             this.panel5.Controls.Add(this.btnListarAreas);
             this.panel5.Controls.Add(this.btnEliminarArea);
             this.panel5.Controls.Add(this.btnModificarArea);
             this.panel5.Controls.Add(this.btnAgregarArea);
-            this.panel5.Location = new System.Drawing.Point(114, 120);
+            this.panel5.Location = new System.Drawing.Point(8, 140);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(261, 245);
+            this.panel5.Size = new System.Drawing.Size(487, 109);
             this.panel5.TabIndex = 1;
             // 
             // btnListarAreas
@@ -2606,9 +2568,9 @@
             this.btnListarAreas.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarAreas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarAreas.Location = new System.Drawing.Point(54, 192);
+            this.btnListarAreas.Location = new System.Drawing.Point(363, 46);
             this.btnListarAreas.Name = "btnListarAreas";
-            this.btnListarAreas.Size = new System.Drawing.Size(145, 50);
+            this.btnListarAreas.Size = new System.Drawing.Size(111, 50);
             this.btnListarAreas.TabIndex = 4;
             this.btnListarAreas.Text = "Listar";
             this.btnListarAreas.UseVisualStyleBackColor = false;
@@ -2619,9 +2581,9 @@
             this.btnEliminarArea.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarArea.Location = new System.Drawing.Point(54, 128);
+            this.btnEliminarArea.Location = new System.Drawing.Point(246, 46);
             this.btnEliminarArea.Name = "btnEliminarArea";
-            this.btnEliminarArea.Size = new System.Drawing.Size(145, 50);
+            this.btnEliminarArea.Size = new System.Drawing.Size(111, 50);
             this.btnEliminarArea.TabIndex = 2;
             this.btnEliminarArea.Text = "Eliminar";
             this.btnEliminarArea.UseVisualStyleBackColor = false;
@@ -2632,9 +2594,9 @@
             this.btnModificarArea.BackColor = System.Drawing.Color.MistyRose;
             this.btnModificarArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarArea.Location = new System.Drawing.Point(54, 65);
+            this.btnModificarArea.Location = new System.Drawing.Point(129, 46);
             this.btnModificarArea.Name = "btnModificarArea";
-            this.btnModificarArea.Size = new System.Drawing.Size(145, 50);
+            this.btnModificarArea.Size = new System.Drawing.Size(111, 50);
             this.btnModificarArea.TabIndex = 1;
             this.btnModificarArea.Text = "Modificar";
             this.btnModificarArea.UseVisualStyleBackColor = false;
@@ -2645,9 +2607,9 @@
             this.btnAgregarArea.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarArea.Location = new System.Drawing.Point(54, 3);
+            this.btnAgregarArea.Location = new System.Drawing.Point(12, 46);
             this.btnAgregarArea.Name = "btnAgregarArea";
-            this.btnAgregarArea.Size = new System.Drawing.Size(145, 50);
+            this.btnAgregarArea.Size = new System.Drawing.Size(111, 50);
             this.btnAgregarArea.TabIndex = 0;
             this.btnAgregarArea.Text = "Agregar";
             this.btnAgregarArea.UseVisualStyleBackColor = false;
@@ -2655,22 +2617,26 @@
             // 
             // tabPage18
             // 
+            this.tabPage18.Controls.Add(this.panel9);
+            this.tabPage18.Controls.Add(this.panel8);
+            this.tabPage18.Controls.Add(this.panel7);
             this.tabPage18.Controls.Add(this.panel6);
             this.tabPage18.Location = new System.Drawing.Point(4, 29);
             this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Size = new System.Drawing.Size(502, 494);
+            this.tabPage18.Size = new System.Drawing.Size(502, 510);
             this.tabPage18.TabIndex = 4;
-            this.tabPage18.Text = "Discapacidades";
+            this.tabPage18.Text = "Datos 2";
             this.tabPage18.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label38);
             this.panel6.Controls.Add(this.btnListarDiscapacidades);
             this.panel6.Controls.Add(this.btnEliminarDiscapacidad);
             this.panel6.Controls.Add(this.btnAgregarDiscapacidad);
-            this.panel6.Location = new System.Drawing.Point(114, 120);
+            this.panel6.Location = new System.Drawing.Point(8, 16);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(261, 245);
+            this.panel6.Size = new System.Drawing.Size(487, 109);
             this.panel6.TabIndex = 1;
             // 
             // btnListarDiscapacidades
@@ -2678,7 +2644,7 @@
             this.btnListarDiscapacidades.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarDiscapacidades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarDiscapacidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarDiscapacidades.Location = new System.Drawing.Point(61, 95);
+            this.btnListarDiscapacidades.Location = new System.Drawing.Point(172, 49);
             this.btnListarDiscapacidades.Name = "btnListarDiscapacidades";
             this.btnListarDiscapacidades.Size = new System.Drawing.Size(145, 50);
             this.btnListarDiscapacidades.TabIndex = 4;
@@ -2691,7 +2657,7 @@
             this.btnEliminarDiscapacidad.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarDiscapacidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarDiscapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarDiscapacidad.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarDiscapacidad.Location = new System.Drawing.Point(333, 49);
             this.btnEliminarDiscapacidad.Name = "btnEliminarDiscapacidad";
             this.btnEliminarDiscapacidad.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarDiscapacidad.TabIndex = 2;
@@ -2704,7 +2670,7 @@
             this.btnAgregarDiscapacidad.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarDiscapacidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarDiscapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDiscapacidad.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarDiscapacidad.Location = new System.Drawing.Point(13, 49);
             this.btnAgregarDiscapacidad.Name = "btnAgregarDiscapacidad";
             this.btnAgregarDiscapacidad.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarDiscapacidad.TabIndex = 0;
@@ -2712,24 +2678,15 @@
             this.btnAgregarDiscapacidad.UseVisualStyleBackColor = false;
             this.btnAgregarDiscapacidad.Click += new System.EventHandler(this.btnAgregarDiscapacidad_Click);
             // 
-            // tabPage19
-            // 
-            this.tabPage19.Controls.Add(this.panel7);
-            this.tabPage19.Location = new System.Drawing.Point(4, 29);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Size = new System.Drawing.Size(502, 494);
-            this.tabPage19.TabIndex = 5;
-            this.tabPage19.Text = "Alergias";
-            this.tabPage19.UseVisualStyleBackColor = true;
-            // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.label39);
             this.panel7.Controls.Add(this.btnListarAlergias);
             this.panel7.Controls.Add(this.btnEliminarAlergia);
             this.panel7.Controls.Add(this.btnAgregarAlergia);
-            this.panel7.Location = new System.Drawing.Point(114, 120);
+            this.panel7.Location = new System.Drawing.Point(8, 142);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(261, 245);
+            this.panel7.Size = new System.Drawing.Size(487, 109);
             this.panel7.TabIndex = 1;
             // 
             // btnListarAlergias
@@ -2737,7 +2694,7 @@
             this.btnListarAlergias.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarAlergias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarAlergias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarAlergias.Location = new System.Drawing.Point(61, 95);
+            this.btnListarAlergias.Location = new System.Drawing.Point(172, 49);
             this.btnListarAlergias.Name = "btnListarAlergias";
             this.btnListarAlergias.Size = new System.Drawing.Size(145, 50);
             this.btnListarAlergias.TabIndex = 4;
@@ -2750,7 +2707,7 @@
             this.btnEliminarAlergia.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarAlergia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarAlergia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarAlergia.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarAlergia.Location = new System.Drawing.Point(333, 49);
             this.btnEliminarAlergia.Name = "btnEliminarAlergia";
             this.btnEliminarAlergia.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarAlergia.TabIndex = 2;
@@ -2763,7 +2720,7 @@
             this.btnAgregarAlergia.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarAlergia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarAlergia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarAlergia.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarAlergia.Location = new System.Drawing.Point(13, 49);
             this.btnAgregarAlergia.Name = "btnAgregarAlergia";
             this.btnAgregarAlergia.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarAlergia.TabIndex = 0;
@@ -2771,24 +2728,15 @@
             this.btnAgregarAlergia.UseVisualStyleBackColor = false;
             this.btnAgregarAlergia.Click += new System.EventHandler(this.btnAgregarAlergia_Click);
             // 
-            // tabPage20
-            // 
-            this.tabPage20.Controls.Add(this.panel8);
-            this.tabPage20.Location = new System.Drawing.Point(4, 29);
-            this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(502, 494);
-            this.tabPage20.TabIndex = 6;
-            this.tabPage20.Text = "Medicamentos";
-            this.tabPage20.UseVisualStyleBackColor = true;
-            // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.label44);
             this.panel8.Controls.Add(this.btnListarMedicamentos);
             this.panel8.Controls.Add(this.btnEliminarMedicamentos);
             this.panel8.Controls.Add(this.btnAgregarMedicamentos);
-            this.panel8.Location = new System.Drawing.Point(114, 120);
+            this.panel8.Location = new System.Drawing.Point(8, 268);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(261, 245);
+            this.panel8.Size = new System.Drawing.Size(487, 109);
             this.panel8.TabIndex = 1;
             // 
             // btnListarMedicamentos
@@ -2796,7 +2744,7 @@
             this.btnListarMedicamentos.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarMedicamentos.Location = new System.Drawing.Point(61, 95);
+            this.btnListarMedicamentos.Location = new System.Drawing.Point(172, 45);
             this.btnListarMedicamentos.Name = "btnListarMedicamentos";
             this.btnListarMedicamentos.Size = new System.Drawing.Size(145, 50);
             this.btnListarMedicamentos.TabIndex = 4;
@@ -2809,7 +2757,7 @@
             this.btnEliminarMedicamentos.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMedicamentos.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarMedicamentos.Location = new System.Drawing.Point(333, 45);
             this.btnEliminarMedicamentos.Name = "btnEliminarMedicamentos";
             this.btnEliminarMedicamentos.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarMedicamentos.TabIndex = 2;
@@ -2822,7 +2770,7 @@
             this.btnAgregarMedicamentos.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarMedicamentos.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarMedicamentos.Location = new System.Drawing.Point(13, 45);
             this.btnAgregarMedicamentos.Name = "btnAgregarMedicamentos";
             this.btnAgregarMedicamentos.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarMedicamentos.TabIndex = 0;
@@ -2830,24 +2778,15 @@
             this.btnAgregarMedicamentos.UseVisualStyleBackColor = false;
             this.btnAgregarMedicamentos.Click += new System.EventHandler(this.btnAgregarMedicamentos_Click);
             // 
-            // tabPage21
-            // 
-            this.tabPage21.Controls.Add(this.panel9);
-            this.tabPage21.Location = new System.Drawing.Point(4, 29);
-            this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Size = new System.Drawing.Size(502, 494);
-            this.tabPage21.TabIndex = 7;
-            this.tabPage21.Text = "Enfermedades";
-            this.tabPage21.UseVisualStyleBackColor = true;
-            // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.label45);
             this.panel9.Controls.Add(this.btnListarEnfermedades);
             this.panel9.Controls.Add(this.btnEliminarEnfermedades);
             this.panel9.Controls.Add(this.btnAgregarEnfermedades);
-            this.panel9.Location = new System.Drawing.Point(114, 120);
+            this.panel9.Location = new System.Drawing.Point(8, 391);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(261, 245);
+            this.panel9.Size = new System.Drawing.Size(487, 109);
             this.panel9.TabIndex = 1;
             // 
             // btnListarEnfermedades
@@ -2855,7 +2794,7 @@
             this.btnListarEnfermedades.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarEnfermedades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarEnfermedades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarEnfermedades.Location = new System.Drawing.Point(61, 95);
+            this.btnListarEnfermedades.Location = new System.Drawing.Point(172, 46);
             this.btnListarEnfermedades.Name = "btnListarEnfermedades";
             this.btnListarEnfermedades.Size = new System.Drawing.Size(145, 50);
             this.btnListarEnfermedades.TabIndex = 4;
@@ -2868,7 +2807,7 @@
             this.btnEliminarEnfermedades.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarEnfermedades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarEnfermedades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarEnfermedades.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarEnfermedades.Location = new System.Drawing.Point(333, 46);
             this.btnEliminarEnfermedades.Name = "btnEliminarEnfermedades";
             this.btnEliminarEnfermedades.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarEnfermedades.TabIndex = 2;
@@ -2881,7 +2820,7 @@
             this.btnAgregarEnfermedades.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarEnfermedades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarEnfermedades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEnfermedades.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarEnfermedades.Location = new System.Drawing.Point(13, 46);
             this.btnAgregarEnfermedades.Name = "btnAgregarEnfermedades";
             this.btnAgregarEnfermedades.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarEnfermedades.TabIndex = 0;
@@ -2891,22 +2830,26 @@
             // 
             // tabPage22
             // 
+            this.tabPage22.Controls.Add(this.panel11);
+            this.tabPage22.Controls.Add(this.panel12);
+            this.tabPage22.Controls.Add(this.panel5);
             this.tabPage22.Controls.Add(this.panel10);
             this.tabPage22.Location = new System.Drawing.Point(4, 29);
             this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Size = new System.Drawing.Size(502, 494);
+            this.tabPage22.Size = new System.Drawing.Size(502, 510);
             this.tabPage22.TabIndex = 8;
-            this.tabPage22.Text = "Estado";
+            this.tabPage22.Text = "Datos 3";
             this.tabPage22.UseVisualStyleBackColor = true;
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.label46);
             this.panel10.Controls.Add(this.btnListarEstados);
             this.panel10.Controls.Add(this.btnEliminarEstado);
             this.panel10.Controls.Add(this.btnAgregarEstado);
-            this.panel10.Location = new System.Drawing.Point(114, 120);
+            this.panel10.Location = new System.Drawing.Point(8, 14);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(261, 245);
+            this.panel10.Size = new System.Drawing.Size(487, 109);
             this.panel10.TabIndex = 1;
             // 
             // btnListarEstados
@@ -2914,7 +2857,7 @@
             this.btnListarEstados.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarEstados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarEstados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarEstados.Location = new System.Drawing.Point(61, 95);
+            this.btnListarEstados.Location = new System.Drawing.Point(172, 46);
             this.btnListarEstados.Name = "btnListarEstados";
             this.btnListarEstados.Size = new System.Drawing.Size(145, 50);
             this.btnListarEstados.TabIndex = 4;
@@ -2927,7 +2870,7 @@
             this.btnEliminarEstado.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarEstado.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarEstado.Location = new System.Drawing.Point(328, 45);
             this.btnEliminarEstado.Name = "btnEliminarEstado";
             this.btnEliminarEstado.Size = new System.Drawing.Size(145, 50);
             this.btnEliminarEstado.TabIndex = 2;
@@ -2940,7 +2883,7 @@
             this.btnAgregarEstado.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEstado.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarEstado.Location = new System.Drawing.Point(14, 45);
             this.btnAgregarEstado.Name = "btnAgregarEstado";
             this.btnAgregarEstado.Size = new System.Drawing.Size(145, 50);
             this.btnAgregarEstado.TabIndex = 0;
@@ -2948,26 +2891,16 @@
             this.btnAgregarEstado.UseVisualStyleBackColor = false;
             this.btnAgregarEstado.Click += new System.EventHandler(this.btnAgregarEstado_Click);
             // 
-            // tabPage23
-            // 
-            this.tabPage23.Controls.Add(this.panel12);
-            this.tabPage23.Location = new System.Drawing.Point(4, 29);
-            this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage23.Size = new System.Drawing.Size(502, 494);
-            this.tabPage23.TabIndex = 9;
-            this.tabPage23.Text = "Licencias";
-            this.tabPage23.UseVisualStyleBackColor = true;
-            // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.label48);
             this.panel12.Controls.Add(this.btnListarLicencias);
             this.panel12.Controls.Add(this.btnEliminarLicencia);
             this.panel12.Controls.Add(this.btnModificarLicencia);
             this.panel12.Controls.Add(this.btnAgregarLicencia);
-            this.panel12.Location = new System.Drawing.Point(114, 120);
+            this.panel12.Location = new System.Drawing.Point(8, 266);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(261, 245);
+            this.panel12.Size = new System.Drawing.Size(487, 109);
             this.panel12.TabIndex = 2;
             // 
             // btnListarLicencias
@@ -2975,9 +2908,9 @@
             this.btnListarLicencias.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarLicencias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarLicencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarLicencias.Location = new System.Drawing.Point(60, 191);
+            this.btnListarLicencias.Location = new System.Drawing.Point(363, 46);
             this.btnListarLicencias.Name = "btnListarLicencias";
-            this.btnListarLicencias.Size = new System.Drawing.Size(145, 50);
+            this.btnListarLicencias.Size = new System.Drawing.Size(111, 50);
             this.btnListarLicencias.TabIndex = 4;
             this.btnListarLicencias.Text = "Listar";
             this.btnListarLicencias.UseVisualStyleBackColor = false;
@@ -2988,9 +2921,9 @@
             this.btnEliminarLicencia.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarLicencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarLicencia.Location = new System.Drawing.Point(60, 128);
+            this.btnEliminarLicencia.Location = new System.Drawing.Point(246, 46);
             this.btnEliminarLicencia.Name = "btnEliminarLicencia";
-            this.btnEliminarLicencia.Size = new System.Drawing.Size(145, 50);
+            this.btnEliminarLicencia.Size = new System.Drawing.Size(111, 50);
             this.btnEliminarLicencia.TabIndex = 2;
             this.btnEliminarLicencia.Text = "Eliminar";
             this.btnEliminarLicencia.UseVisualStyleBackColor = false;
@@ -3001,9 +2934,9 @@
             this.btnModificarLicencia.BackColor = System.Drawing.Color.MistyRose;
             this.btnModificarLicencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarLicencia.Location = new System.Drawing.Point(60, 63);
+            this.btnModificarLicencia.Location = new System.Drawing.Point(129, 46);
             this.btnModificarLicencia.Name = "btnModificarLicencia";
-            this.btnModificarLicencia.Size = new System.Drawing.Size(145, 50);
+            this.btnModificarLicencia.Size = new System.Drawing.Size(111, 50);
             this.btnModificarLicencia.TabIndex = 1;
             this.btnModificarLicencia.Text = "Modificar";
             this.btnModificarLicencia.UseVisualStyleBackColor = false;
@@ -3014,34 +2947,24 @@
             this.btnAgregarLicencia.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarLicencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarLicencia.Location = new System.Drawing.Point(60, 3);
+            this.btnAgregarLicencia.Location = new System.Drawing.Point(12, 46);
             this.btnAgregarLicencia.Name = "btnAgregarLicencia";
-            this.btnAgregarLicencia.Size = new System.Drawing.Size(145, 50);
+            this.btnAgregarLicencia.Size = new System.Drawing.Size(111, 50);
             this.btnAgregarLicencia.TabIndex = 0;
             this.btnAgregarLicencia.Text = "Agregar";
             this.btnAgregarLicencia.UseVisualStyleBackColor = false;
             this.btnAgregarLicencia.Click += new System.EventHandler(this.btnAgregarLicencia_Click);
             // 
-            // tabPage24
-            // 
-            this.tabPage24.Controls.Add(this.panel11);
-            this.tabPage24.Location = new System.Drawing.Point(4, 29);
-            this.tabPage24.Name = "tabPage24";
-            this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage24.Size = new System.Drawing.Size(502, 494);
-            this.tabPage24.TabIndex = 10;
-            this.tabPage24.Text = "Sanciones";
-            this.tabPage24.UseVisualStyleBackColor = true;
-            // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.label49);
             this.panel11.Controls.Add(this.btnListarSanciones);
             this.panel11.Controls.Add(this.btnEliminarSancion);
             this.panel11.Controls.Add(this.btnModificarSancion);
             this.panel11.Controls.Add(this.btnAgregarSancion);
-            this.panel11.Location = new System.Drawing.Point(114, 120);
+            this.panel11.Location = new System.Drawing.Point(8, 391);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(261, 245);
+            this.panel11.Size = new System.Drawing.Size(487, 109);
             this.panel11.TabIndex = 2;
             // 
             // btnListarSanciones
@@ -3049,9 +2972,9 @@
             this.btnListarSanciones.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarSanciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarSanciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarSanciones.Location = new System.Drawing.Point(58, 192);
+            this.btnListarSanciones.Location = new System.Drawing.Point(363, 46);
             this.btnListarSanciones.Name = "btnListarSanciones";
-            this.btnListarSanciones.Size = new System.Drawing.Size(145, 50);
+            this.btnListarSanciones.Size = new System.Drawing.Size(111, 50);
             this.btnListarSanciones.TabIndex = 4;
             this.btnListarSanciones.Text = "Listar";
             this.btnListarSanciones.UseVisualStyleBackColor = false;
@@ -3062,9 +2985,9 @@
             this.btnEliminarSancion.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarSancion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarSancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarSancion.Location = new System.Drawing.Point(58, 127);
+            this.btnEliminarSancion.Location = new System.Drawing.Point(246, 46);
             this.btnEliminarSancion.Name = "btnEliminarSancion";
-            this.btnEliminarSancion.Size = new System.Drawing.Size(145, 50);
+            this.btnEliminarSancion.Size = new System.Drawing.Size(111, 50);
             this.btnEliminarSancion.TabIndex = 2;
             this.btnEliminarSancion.Text = "Eliminar";
             this.btnEliminarSancion.UseVisualStyleBackColor = false;
@@ -3075,9 +2998,9 @@
             this.btnModificarSancion.BackColor = System.Drawing.Color.MistyRose;
             this.btnModificarSancion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarSancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarSancion.Location = new System.Drawing.Point(58, 65);
+            this.btnModificarSancion.Location = new System.Drawing.Point(129, 46);
             this.btnModificarSancion.Name = "btnModificarSancion";
-            this.btnModificarSancion.Size = new System.Drawing.Size(145, 50);
+            this.btnModificarSancion.Size = new System.Drawing.Size(111, 50);
             this.btnModificarSancion.TabIndex = 1;
             this.btnModificarSancion.Text = "Modificar";
             this.btnModificarSancion.UseVisualStyleBackColor = false;
@@ -3088,9 +3011,9 @@
             this.btnAgregarSancion.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarSancion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarSancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarSancion.Location = new System.Drawing.Point(58, 3);
+            this.btnAgregarSancion.Location = new System.Drawing.Point(12, 46);
             this.btnAgregarSancion.Name = "btnAgregarSancion";
-            this.btnAgregarSancion.Size = new System.Drawing.Size(145, 50);
+            this.btnAgregarSancion.Size = new System.Drawing.Size(111, 50);
             this.btnAgregarSancion.TabIndex = 0;
             this.btnAgregarSancion.Text = "Agregar";
             this.btnAgregarSancion.UseVisualStyleBackColor = false;
@@ -3098,23 +3021,25 @@
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.panel14);
             this.tabPage10.Controls.Add(this.panel13);
             this.tabPage10.Location = new System.Drawing.Point(4, 29);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(502, 494);
+            this.tabPage10.Size = new System.Drawing.Size(502, 510);
             this.tabPage10.TabIndex = 11;
-            this.tabPage10.Text = "Universidades";
+            this.tabPage10.Text = "Datos 4";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.label50);
             this.panel13.Controls.Add(this.btnListarUni);
             this.panel13.Controls.Add(this.btnEliminarUni);
             this.panel13.Controls.Add(this.btnAgregarUni);
-            this.panel13.Location = new System.Drawing.Point(114, 120);
+            this.panel13.Location = new System.Drawing.Point(6, 33);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(261, 245);
+            this.panel13.Size = new System.Drawing.Size(487, 198);
             this.panel13.TabIndex = 1;
             // 
             // btnListarUni
@@ -3122,9 +3047,9 @@
             this.btnListarUni.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarUni.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarUni.Location = new System.Drawing.Point(61, 95);
+            this.btnListarUni.Location = new System.Drawing.Point(168, 93);
             this.btnListarUni.Name = "btnListarUni";
-            this.btnListarUni.Size = new System.Drawing.Size(145, 50);
+            this.btnListarUni.Size = new System.Drawing.Size(145, 68);
             this.btnListarUni.TabIndex = 3;
             this.btnListarUni.Text = "Listar";
             this.btnListarUni.UseVisualStyleBackColor = false;
@@ -3135,9 +3060,9 @@
             this.btnEliminarUni.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarUni.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarUni.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarUni.Location = new System.Drawing.Point(327, 93);
             this.btnEliminarUni.Name = "btnEliminarUni";
-            this.btnEliminarUni.Size = new System.Drawing.Size(145, 50);
+            this.btnEliminarUni.Size = new System.Drawing.Size(145, 68);
             this.btnEliminarUni.TabIndex = 2;
             this.btnEliminarUni.Text = "Eliminar";
             this.btnEliminarUni.UseVisualStyleBackColor = false;
@@ -3148,33 +3073,23 @@
             this.btnAgregarUni.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarUni.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarUni.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarUni.Location = new System.Drawing.Point(12, 93);
             this.btnAgregarUni.Name = "btnAgregarUni";
-            this.btnAgregarUni.Size = new System.Drawing.Size(145, 50);
+            this.btnAgregarUni.Size = new System.Drawing.Size(145, 68);
             this.btnAgregarUni.TabIndex = 0;
             this.btnAgregarUni.Text = "Agregar";
             this.btnAgregarUni.UseVisualStyleBackColor = false;
             this.btnAgregarUni.Click += new System.EventHandler(this.btnAgregarUni_Click);
             // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.panel14);
-            this.tabPage11.Location = new System.Drawing.Point(4, 29);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(502, 510);
-            this.tabPage11.TabIndex = 12;
-            this.tabPage11.Text = "Titulos";
-            this.tabPage11.UseVisualStyleBackColor = true;
-            // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.label51);
             this.panel14.Controls.Add(this.btnListarTitulo);
             this.panel14.Controls.Add(this.btnEliminarTitulo);
             this.panel14.Controls.Add(this.btnAgregarTitulo);
-            this.panel14.Location = new System.Drawing.Point(114, 120);
+            this.panel14.Location = new System.Drawing.Point(6, 274);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(261, 245);
+            this.panel14.Size = new System.Drawing.Size(487, 198);
             this.panel14.TabIndex = 1;
             // 
             // btnListarTitulo
@@ -3182,9 +3097,9 @@
             this.btnListarTitulo.BackColor = System.Drawing.Color.MistyRose;
             this.btnListarTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListarTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarTitulo.Location = new System.Drawing.Point(61, 95);
+            this.btnListarTitulo.Location = new System.Drawing.Point(168, 96);
             this.btnListarTitulo.Name = "btnListarTitulo";
-            this.btnListarTitulo.Size = new System.Drawing.Size(145, 50);
+            this.btnListarTitulo.Size = new System.Drawing.Size(145, 68);
             this.btnListarTitulo.TabIndex = 3;
             this.btnListarTitulo.Text = "Listar";
             this.btnListarTitulo.UseVisualStyleBackColor = false;
@@ -3195,9 +3110,9 @@
             this.btnEliminarTitulo.BackColor = System.Drawing.Color.MistyRose;
             this.btnEliminarTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarTitulo.Location = new System.Drawing.Point(61, 174);
+            this.btnEliminarTitulo.Location = new System.Drawing.Point(327, 96);
             this.btnEliminarTitulo.Name = "btnEliminarTitulo";
-            this.btnEliminarTitulo.Size = new System.Drawing.Size(145, 50);
+            this.btnEliminarTitulo.Size = new System.Drawing.Size(145, 68);
             this.btnEliminarTitulo.TabIndex = 2;
             this.btnEliminarTitulo.Text = "Eliminar";
             this.btnEliminarTitulo.UseVisualStyleBackColor = false;
@@ -3208,13 +3123,143 @@
             this.btnAgregarTitulo.BackColor = System.Drawing.Color.MistyRose;
             this.btnAgregarTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarTitulo.Location = new System.Drawing.Point(61, 19);
+            this.btnAgregarTitulo.Location = new System.Drawing.Point(12, 96);
             this.btnAgregarTitulo.Name = "btnAgregarTitulo";
-            this.btnAgregarTitulo.Size = new System.Drawing.Size(145, 50);
+            this.btnAgregarTitulo.Size = new System.Drawing.Size(145, 68);
             this.btnAgregarTitulo.TabIndex = 0;
             this.btnAgregarTitulo.Text = "Agregar";
             this.btnAgregarTitulo.UseVisualStyleBackColor = false;
             this.btnAgregarTitulo.Click += new System.EventHandler(this.btnAgregarTitulo_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(209, 18);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 22);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "PAIS";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(196, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 22);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "CIUDAD";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(182, 22);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(116, 22);
+            this.label36.TabIndex = 5;
+            this.label36.Text = "PROVINCIA";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(154, 15);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(181, 22);
+            this.label38.TabIndex = 5;
+            this.label38.Text = "DISCAPACIDADES";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(192, 15);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(107, 22);
+            this.label39.TabIndex = 6;
+            this.label39.Text = "ALERGIAS";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(168, 13);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(167, 22);
+            this.label44.TabIndex = 7;
+            this.label44.Text = "MEDICAMENTOS";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(105, 15);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(317, 22);
+            this.label45.TabIndex = 7;
+            this.label45.Text = "ENFERMEDADES PATOLOGICAS";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(198, 14);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(91, 22);
+            this.label46.TabIndex = 6;
+            this.label46.Text = "ESTADO";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(212, 11);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(63, 22);
+            this.label47.TabIndex = 7;
+            this.label47.Text = "AREA";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(198, 15);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(99, 22);
+            this.label48.TabIndex = 7;
+            this.label48.Text = "LICENCIA";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(184, 11);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(124, 22);
+            this.label49.TabIndex = 7;
+            this.label49.Text = "SANCIONES";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(171, 39);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(142, 22);
+            this.label50.TabIndex = 7;
+            this.label50.Text = "UNIVERSIDAD";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(209, 39);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(81, 22);
+            this.label51.TabIndex = 7;
+            this.label51.Text = "TITULO";
             // 
             // frmAdmin
             // 
@@ -3298,30 +3343,34 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.tabPage17.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.tabPage18.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.tabPage19.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.tabPage20.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.tabPage21.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.tabPage22.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            this.tabPage23.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel12.ResumeLayout(false);
-            this.tabPage24.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.tabPage10.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            this.tabPage11.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3396,15 +3445,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEliminarPais;
         private System.Windows.Forms.Button btnAgregarPais;
-        private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnEliminarProvincia;
         private System.Windows.Forms.Button btnAgregarProvincias;
-        private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEliminarCiudad;
         private System.Windows.Forms.Button btnAgregarCiudad;
-        private System.Windows.Forms.TabPage tabPage17;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnEliminarArea;
         private System.Windows.Forms.Button btnModificarArea;
@@ -3413,15 +3459,12 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnEliminarDiscapacidad;
         private System.Windows.Forms.Button btnAgregarDiscapacidad;
-        private System.Windows.Forms.TabPage tabPage19;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnEliminarAlergia;
         private System.Windows.Forms.Button btnAgregarAlergia;
-        private System.Windows.Forms.TabPage tabPage20;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnEliminarMedicamentos;
         private System.Windows.Forms.Button btnAgregarMedicamentos;
-        private System.Windows.Forms.TabPage tabPage21;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnEliminarEnfermedades;
         private System.Windows.Forms.Button btnAgregarEnfermedades;
@@ -3523,12 +3566,10 @@
         private System.Windows.Forms.Button btnAgregarFalta;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.DateTimePicker dtpAusencia;
-        private System.Windows.Forms.TabPage tabPage23;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button btnEliminarLicencia;
         private System.Windows.Forms.Button btnModificarLicencia;
         private System.Windows.Forms.Button btnAgregarLicencia;
-        private System.Windows.Forms.TabPage tabPage24;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button btnEliminarSancion;
         private System.Windows.Forms.Button btnModificarSancion;
@@ -3553,7 +3594,6 @@
         private System.Windows.Forms.DataGridView dgvListarEstado;
         private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button btnListarUni;
         private System.Windows.Forms.Button btnEliminarUni;
@@ -3562,5 +3602,18 @@
         private System.Windows.Forms.Button btnListarTitulo;
         private System.Windows.Forms.Button btnEliminarTitulo;
         private System.Windows.Forms.Button btnAgregarTitulo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
     }
 }
